@@ -1,11 +1,10 @@
-import React from "react";
-import img from "../../../assets/mother.png";
+import img from "../../../../assets/mother.png";
 import "./section2.css";
-import Icon1 from "../../../assets/svg/blob1.svg";
-import Icon2 from "../../../assets/svg/blob2.svg";
-import Icon3 from "../../../assets/svg/blob3.svg";
+import Icon1 from "../../../../assets/svg/blob1.svg";
+import Icon2 from "../../../../assets/svg/blob2.svg";
+import Icon3 from "../../../../assets/svg/blob3.svg";
 
-import TextInsideImage from "../../../components/TextInsideImage";
+import TextInsideImage from "../../../../components/TextInsideImage";
 
 export default function Section2() {
   return (
