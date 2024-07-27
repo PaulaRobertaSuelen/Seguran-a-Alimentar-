@@ -5,7 +5,7 @@ export default function Navbar() {
 
         <nav>  
                 {/** esse é o bane da pagina inicial  */}
-            <img src={ Bane} alt="" />
+            <img src={Bane} alt="" />
 
                 {/** essa é a nav bar  */}
             < a href="/">Entra</a>&nbsp; &nbsp; &nbsp;
