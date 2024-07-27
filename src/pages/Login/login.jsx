@@ -1,7 +1,8 @@
 export default function Login( ){
     return (
         <>
-        <h1> peixe </h1>
+           {/** essa funcao fui criada para treino  */}
+        <h1> oi pessoas  </h1>
         </>
     )
 }
