@@ -1,17 +1,59 @@
-import Navbar from "../../components/Navbar/navbar"
-import Main from "../../components/main/Main"
- import Section1 from "./components/Section1/section1"
-import Section2 from "./components/Section2/section2"
+import Navbar from "../../components/Navbar/navbar";
+import * as S from "./styles";
 
-export default function Home(){
-    return(
-        <>
-        <Navbar/>
-          {/** esse foi um botao que eu criei com ananias */}
-        {/* <button onClick={() => navigation('/login')}>login</button> */}
-        <Main/>
-         <Section1/> 
-        <Section2/>
-        </>
-    )
+import Icon1 from "../../assets/svg/blob1.svg"
+import Icon2 from "../../assets/svg/blob2.svg"
+import Icon3 from "../../assets/svg/blob3.svg"
+import TextInsideImage from "../../components/TextInsideImage";
+
+import Img from "../../assets/mother.png"
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      {/** esse foi um botao que eu criei com ananias */}
+      {/* <button onClick={() => navigation('/login')}>login</button> */}
+      <h1>Como funciona?</h1>
+      
+      <S.Container>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <TextInsideImage
+            title="1"
+            image={Icon1}
+            text="Crie uma conta e faça seu login."
+          />
+          <TextInsideImage
+            title="2"
+            image={Icon2}
+            text="Escolha entre os planos grátis e premium que temos disponíveis."
+          />
+          <TextInsideImage
+            title="3"
+            image={Icon3}
+            text="Navegue e acesse as páginas e recursos ofertados para o seu plano escolhido."
+          />
+        </div>
+
+        <div className="main-container">
+          <S.Card>
+            <h1 className=""> Nutrição é para todos</h1>
+            <p>
+              O BemTEA foi projetado para facilitar o acesso de famílias com
+              crianças atípicas com informações sobre nutrição e estratégias
+              para descomplicar as horas das refeições. Acesse guias, quadros e
+              depoimentos e experiências em outros perfis.
+            </p>
+          </S.Card>
+          <img src={Img} alt="" className="mother" />
+        </div>
+      </S.Container>
+    </>
+  );
 }
