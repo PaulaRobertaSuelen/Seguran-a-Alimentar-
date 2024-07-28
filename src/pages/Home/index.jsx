@@ -1,12 +1,14 @@
 import Navbar from "../../components/Navbar/navbar";
 import * as S from "./styles";
 
-import Icon1 from "../../assets/svg/blob1.svg"
-import Icon2 from "../../assets/svg/blob2.svg"
-import Icon3 from "../../assets/svg/blob3.svg"
+import Icon1 from "../../assets/svg/blob1.svg";
+import Icon2 from "../../assets/svg/blob2.svg";
+import Icon3 from "../../assets/svg/blob3.svg";
+import Logo from "../../assets/logo.svg";
 import TextInsideImage from "../../components/TextInsideImage";
 
-import Img from "../../assets/mother.png"
+import Img from "../../assets/mother.png";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
       {/** esse foi um botao que eu criei com ananias */}
       {/* <button onClick={() => navigation('/login')}>login</button> */}
       <h1>Como funciona?</h1>
-      
+
       <S.Container>
         <div
           style={{
@@ -41,19 +43,20 @@ export default function Home() {
           />
         </div>
 
-        <div className="main-container">
-          <S.Card>
-            <h1 className=""> Nutrição é para todos</h1>
+        <S.Card>
+          <S.TextContainer>
+            <h1> Nutrição é para todos</h1>
             <p>
               O BemTEA foi projetado para facilitar o acesso de famílias com
               crianças atípicas com informações sobre nutrição e estratégias
               para descomplicar as horas das refeições. Acesse guias, quadros e
               depoimentos e experiências em outros perfis.
             </p>
-          </S.Card>
+          </S.TextContainer>
           <img src={Img} alt="" className="mother" />
-        </div>
+        </S.Card>
       </S.Container>
+      <Footer img={Logo} />
     </>
   );
 }

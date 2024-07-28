@@ -6,7 +6,6 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-
   > .text-container h1 {
     color: #44b2f0;
     text-align: center;
@@ -19,8 +18,27 @@ export const Container = styled.div`
     max-width: 400px;
     max-height: 400px;
   }
-`
+`;
 
 export const Card = styled.div`
-max-width: 60%;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & img {
+    max-width: 400px;
+    max-height: 400px;
+  }
+`;
+
+export const TextContainer = styled.div`
+  max-width: 60%;
+  & h1 {
+    color: #44b2f0;
+    text-align: center;
+  }
+  & p {
+    text-align: justify;
+    font-weight: 500;
+  }
+`;
+

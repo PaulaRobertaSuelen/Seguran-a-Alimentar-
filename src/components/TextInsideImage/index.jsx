@@ -5,18 +5,24 @@ export default function TextInsideImage({
   image,
   title,
   text,
+  imageStyles,
+  fontSize = 14,
   color,
   textStyles,
+  imageWidth = 300,
+  imageHeight = 300,
 }) {
   return (
     <div
       className="text-inside-img-ctn"
-      style={{ width: "300px", height: "300px" }}
+      style={{ width: imageWidth, height: imageHeight }}
     >
       <img
         src={image}
         alt=""
-        style={{ width: "300px", height: "300px" }}
+        style={imageStyles}
+        width={imageWidth}
+        height={imageHeight}
         className="text-inside-img-img"
       />
       <div className="text-inside-img-txt">
@@ -24,9 +30,9 @@ export default function TextInsideImage({
         <p
           style={{
             color: color,
-            fontSize: "14px",
+            fontSize: fontSize,
             ...textStyles,
-            maxWidth: "300px",
+            maxWidth: imageWidth * 0.6,
           }}
         >
           {text}
