@@ -1,19 +1,28 @@
-import Bane from "../../assets/bane.jpg"
+import React from "react";
+
+import * as S from "./styles"
+
+
 export default function Navbar() {
 
     return (
 
-        <nav>  
-                {/** esse é o bane da pagina inicial  */}
-            <img src={Bane} alt="" />
+        <>
 
-                {/** essa é a nav bar  */}
-            < a href="/">Entra</a>&nbsp; &nbsp; &nbsp;
-            < a href="/">Inicio</a>&nbsp; &nbsp; &nbsp;
-            < a href="/">Perfil</a>
+            <S.NavbarOpcoes>
 
-        </nav>
+                <S.BotaoEntrar>
+                    <a href="/">Entrar</a>
+                </S.BotaoEntrar>
 
+                <S.Opcoes>
+                    <a href="/">Início</a>
+                    <a href="/">Perfil</a>
+                </S.Opcoes>
+
+            </S.NavbarOpcoes>
+        
+        </>
 
     )
 }

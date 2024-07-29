@@ -1,5 +1,8 @@
 import React from "react";
 
+import Navbar from "../../components/Navbar/navbar"
+import Footer from "../../components/Footer/footer"
+
 import Logo from "../../assets/logo.png"
 import OndaUm from "../../assets/onda-um.png"
 import OndaDois from "../../assets/onda-dois.png"
@@ -12,6 +15,8 @@ export default function Home() {
     <>
 
     {/* A NAVBAR PRECISA SER INCLUÍDA AQUI ANTES DO BODY COMO HEADER */}
+
+    <Navbar />
 
 
     {/* ============================================================================================== */}
@@ -127,11 +132,10 @@ export default function Home() {
     {/* ============================================================================================== */}
     {/* FIM DO BODY */}
 
+    <Footer />
+
     {/* ============================================================================================== */}
     {/* AQUI ABAIXO DO BODY DEVE SER INCLUÍDO O FOOTER QUANDO ESTIVER PRONTO */}
-
-
-
 
     {/* ============================================================================================== */}
 
