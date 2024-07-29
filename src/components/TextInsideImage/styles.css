@@ -1,0 +1,17 @@
+.text-inside-img-ctn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.text-inside-img-txt {
+  z-index: 10;
+  text-align: center;
+}
+.text-inside-img-txt h1 {
+  line-height: 0.2rem;
+}
+.text-inside-img-img {
+  position: absolute;
+  z-index: 0;
+}
