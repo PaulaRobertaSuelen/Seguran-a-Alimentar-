@@ -10,15 +10,19 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   align-items: center;
   & img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 300px;
   }
 `;
 
 export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 60%;
   & h1 {
     color: #44b2f0;
@@ -27,6 +31,7 @@ export const TextContainer = styled.div`
   & p {
     text-align: justify;
     font-weight: 500;
+    max-width: 40vw;
   }
 `;
 

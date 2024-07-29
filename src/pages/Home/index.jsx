@@ -20,12 +20,12 @@ export default function Home() {
       <Navbar />
       {/** esse foi um botao que eu criei com ananias */}
       {/* <button onClick={() => navigation('/login')}>login</button> */}
-      <S.TitleSection>
-        <img src={Wave} alt="wave" />
-        <h1>Como funciona?</h1>
-        <img src={WaveTwo} alt="wave" />
-      </S.TitleSection>
       <S.Container>
+        <S.TitleSection>
+          <img src={Wave} alt="wave" />
+          <h1>Como funciona?</h1>
+          <img src={WaveTwo} alt="wave" />
+        </S.TitleSection>
         <div
           style={{
             display: "flex",
