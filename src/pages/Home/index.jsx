@@ -5,7 +5,11 @@ import Icon1 from "../../assets/svg/blob1.svg";
 import Icon2 from "../../assets/svg/blob2.svg";
 import Icon3 from "../../assets/svg/blob3.svg";
 import Logo from "../../assets/logo.svg";
+import Wave from "../../assets/svg/wave.svg";
+import WaveTwo from "../../assets/svg/wave-two.svg";
+
 import TextInsideImage from "../../components/TextInsideImage";
+import Button from "../../components/FormFields/Button";
 
 import Img from "../../assets/mother.png";
 import Footer from "../../components/Footer";
@@ -16,8 +20,11 @@ export default function Home() {
       <Navbar />
       {/** esse foi um botao que eu criei com ananias */}
       {/* <button onClick={() => navigation('/login')}>login</button> */}
-      <h1>Como funciona?</h1>
-
+      <S.TitleSection>
+        <img src={Wave} alt="wave" />
+        <h1>Como funciona?</h1>
+        <img src={WaveTwo} alt="wave" />
+      </S.TitleSection>
       <S.Container>
         <div
           style={{
@@ -55,7 +62,11 @@ export default function Home() {
           </S.TextContainer>
           <img src={Img} alt="" className="mother" />
         </S.Card>
+        <div className="enter-btn">
+          <Button>Entrar</Button>
+        </div>
       </S.Container>
+
       <Footer img={Logo} />
     </>
   );
