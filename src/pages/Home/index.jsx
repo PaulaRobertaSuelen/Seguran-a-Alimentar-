@@ -41,12 +41,12 @@ export default function Home() {
           <TextInsideImage
             title="2"
             image={Icon2}
-            text="Escolha entre os planos grátis e premium que temos disponíveis."
+            text="Encontre o melhor profissiol."
           />
           <TextInsideImage
             title="3"
             image={Icon3}
-            text="Navegue e acesse as páginas e recursos ofertados para o seu plano escolhido."
+            text="Navegue e acesse todos os nossos recursos."
           />
         </div>
 
