@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "../../components/Navbar/navbar"
-import Footer from "../../components/Footer/Footer"
+import Footer from "../../components/Footer/footer"
 
 import Logo from "../../assets/logo.png"
 import OndaUm from "../../assets/onda-um.png"
