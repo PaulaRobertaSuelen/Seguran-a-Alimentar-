@@ -1,94 +1,83 @@
-// ESSE COMPONENTE SERVE PARA CRIAR UM ELEMENTO DE TEXTO QUE PODE SER ALTERADO DINAMICAMENTE PELO USUÁRIO EM UM ARQUIVO JSX
-
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from "./styles"
+
+import Foto from "../../assets/foto-perfil-fernanda-silva.png"
 
 export default function Bio () {
 
-        const [descricao, setBio] = useState("Olá, muito prazer! Meu nome é Fernanda, sou nutricionista especializada em TEA.");
+    return (
 
-        const mudaBio = (event) => {
-            setBio(event.target.value);
-    };
+        <>
 
-        const [Valor, setValor] = useState("R$30");
+        <S.Bio>
 
-        const mudaValor = (event) => {
-            setValor(event.target.value);
-    };
+            <S.Cabecalho>
 
-        const [MeuNome, setMeuNome] = useState("Fernanda Silva");
+                <S.FotoPerfil src={Foto} alt="foto" />
 
-        const mudaNome = (event) => {
-        setMeuNome(event.target.value);
-    };
+                <S.Info>
 
-    const [Funcao, setFuncao] = useState("Fernanda Silva");
+                    <S.Nome>Fernanda Silva</S.Nome>
 
-        const mudaFuncao = (event) => {
-            setFuncao(event.target.value);
-    };
+                    <S.Titulo>Nutricionista</S.Titulo>
 
-    const [image, setImage] = useState(null);
+                    <S.Crn>CRN: 0/0000</S.Crn>
 
-    const mudaImagem = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            setImage(reader.result);
-        };
-        reader.readAsDataURL(file);
-        }
-    };
+                    <S.Valor>Valor da consulta: R$30</S.Valor>
 
+                </S.Info>
 
-return (
+            </S.Cabecalho>
 
-    <>
+            <S.Especialidades>
+                    <S.Tag>Nutrição em TEA</S.Tag>
+                    <S.Tag>Nutrição Funcional</S.Tag>
+                    <S.Tag>Nutrição Pediátrica</S.Tag>
+            </S.Especialidades>
 
-    <SobreMim>
-        <h1>Sobre mim:</h1>
-        <input type="text" value={descricao} onChange={mudaBio} placeholder="Digite sua bio..." />
-        <p>{descricao}</p>
-    </SobreMim>
+            <S.SobreMim>
 
-    <Valor>
-        <input 
-        type="text" 
-        value={Valor} 
-        onChange={mudaValor} 
-        placeholder="Digite o valor da consulta:"
-        />
-        <h1>{Valor}</h1>
-    </Valor>
+                <S.SobreMimTitulo>Sobre mim:</S.SobreMimTitulo>
 
-    <MeuNome>
-        <input 
-        type="text" 
-        value={MeuNome} 
-        onChange={mudaNome} 
-        placeholder="Digite seu nome:"
-        />
-        <h1>{MeuNome}</h1>
-    </MeuNome>
+                    <S.SobreMimTexto>
+                    Olá, muito prazer! Meu nome é Fernanda, sou nutricionista especializada em TEA.
+                    </S.SobreMimTexto>
 
-    <Funcao>
-        <input 
-        type="text" 
-        value={Funcao} 
-        onChange={mudaFuncao} 
-        placeholder="Digite seu nome:"
-        />
-        <h1>{Funcao}</h1>
-    </Funcao>
+                    <S.SobreMimTexto>
+                    A consulta nutricional tem como objetivo facilitar e auxiliar na resolução das suas queixas ou problemas relacionados à alimentação que surgirem durante nossos encontros.
+                    Juntos, buscaremos estratégias e intervenções viáveis para melhorar seus hábitos alimentares e promover uma vida mais saudável, abrindo novos caminhos para sua qualidade de vida. Nosso principal objetivo aqui é promover o autoconhecimento crítico e sem julgamentos em relação aos seus hábitos alimentares, fortalecendo a autocompaixão!
+                    Minha prática é orientada por abordagens personalizadas e integrativas, considerando suas necessidades e preferências individuais.
+                    </S.SobreMimTexto>
 
-    <S.EspacoFoto>
-    <S.InputArquivo type="file" accept="image/*" onChange={mudaImagem} />
-        {image && <S.FotoPerfil src={image} alt="Profile" />}
-    </S.EspacoFoto>
+                    <S.SobreMimTexto>
+                    Cada consulta terá a duração de 50 minutos.
+                    O ambiente para a realização das nossas sessões é preparado para garantir o sigilo e proporcionar conforto para ambos.
+                    Posso te ajudar? Quer saber mais sobre meu trabalho?
+                    </S.SobreMimTexto>
 
-    </>
+                    <S.SobreMimTexto>
+                    Instagram: @fernandanutrisilvatea
+                    </S.SobreMimTexto>
 
-    );
+            </S.SobreMim>
+
+            <S.Acoes>
+
+                <S.BotaoQueroMeConsultar>
+                    Quero me consultar
+                </S.BotaoQueroMeConsultar>
+
+                <S.Telefone>Telefone: 81 9 0000-0000</S.Telefone>    
+
+                <S.BotaoEditarPerfil>Editar Perfil</S.BotaoEditarPerfil>
+
+                <S.BotaoSairDaConta>Sair da conta</S.BotaoSairDaConta>
+
+            </S.Acoes>
+
+        </S.Bio>
+
+        </>
+
+);
 };
