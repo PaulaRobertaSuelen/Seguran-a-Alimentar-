@@ -8,6 +8,7 @@ import OndaUm from "../../assets/onda-um.png"
 import OndaDois from "../../assets/onda-dois.png"
 import Mother from "../../assets/mother.png"
 
+
 import * as S from "./styles";
 
 export default function Home() {
