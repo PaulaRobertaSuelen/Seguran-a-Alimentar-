@@ -1,21 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
-  background-color: #27dee8;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  margin-top: 20px;
-  font-size: 11px;
-  color: #222;
-  > img {
-    width: 50px;
-    height: 50px;
-  }
-`;
-
-export const Button = styled.button`
+export const SButton = styled.button`
   background-color: #33b44d;
   color: white;
   padding: 5px 15px;
@@ -38,3 +23,4 @@ export const Button = styled.button`
     opacity: 0.7;
   }
 `;
+
