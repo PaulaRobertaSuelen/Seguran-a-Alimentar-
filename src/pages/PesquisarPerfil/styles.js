@@ -12,7 +12,7 @@ export const Cabercario = styled.div`
         margin-right: 20px;
 
         input {
-        margin-top: 5px;
+        margin-top: 10px;
         padding: 5px;
         border: 1px solid #ccc;
         border-radius: 10px;
@@ -22,14 +22,14 @@ export const Cabercario = styled.div`
     button {
         border: 2px solid #33B44D;
         background-color: rgb( #DEEDF5);
-        border-radius: 10px;
+        border-radius: 40px;
         font-size: 20px;
-        margin-top: 30px;
-        padding: 5px;
+        margin-top: 50px;
+        padding: 6px;
     }
 
 `;
-export const Resultado = styled.p`
+export const Resultado = styled.div`
     margin: 8px;
     margin-left: 140px; //afasta do canto
     padding: 10px 20px ;
@@ -60,97 +60,93 @@ export const Container = styled.div`
 `; 
 
 export const Conteinerimagem = styled.div`
-
     width: 26%;
     display: flex;
     justify-content:center ;
 `;
 
 export const Caixa = styled.div`
-    font-size: 16px;
     flex-direction: column;
     display: flex;
-    gap: 20px;
+    margin: 10px;
+    gap: -10px;
     width: 74%;
+    
+
     h2{
-        font-size: 25px;
+        font-size: 32px;
         
     }
+    
     p{
-        font-size: 16px;
+        font-size: 17px;
         
     }
     h1{
-        font-size: 15px;
+        font-size: 18px;
         
-    }
-    input {
-    overflow: hidden;
-    justify-content: space-between;
-    width: (20% - 12px);
-    padding: 5px;
-    border: 3px solid #33B579;
-    border-radius: 20px; //aredonda
-    background-color: #33B44D;
-    color: #f9f9f9;
     }
     
 `;
 
 export const Btndiv = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     button {
-        margin: 30px;
+        margin: 10px;
         border: 3px solid #33B44D; 
         background-color: #33B44D; 
         color: #f9f9f9;
         font-size: 20px;
         border-radius: 30px; //aredonda
         margin-top: 10px;
+        margin-left: -200PX;
     }  
 `;
 
 export const Tags = styled.div`
     display: flex;
-    margin: 30px;
-    gap: 40px; // espaço entre as tegs (so fuciona com display flex)
-
+    gap: 50px; // espaço entre as tegs (so fuciona com display flex) 
 `;
 
-export const Bolha = styled.div`
-    position: relative; // ele deixa tudo dentro dele maleavel 
+export const Comp = styled.div`
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    margin: 40px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #33B579;
+    color: #ffffff;
+    border: 10px solid #33B579; //Cor da borda 
+    border-radius: 20px;  //Arredondamento da borda 
+    width: 200px;  //Largura do componente 
+    height: 30px; //Comprimeto do componente 
+    text-align: center; //Centralizar o texto 
+`;
+
+    export const Sens = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-        
-    & .fundo{
-        object-fit: cover;
-        max-height: 100vh;
-        width: 400px;
-        height: 400px;
-        margin-right: 90px;
-    }
-    & .frente{
-        position: absolute;
-        width:  250px ;
-        height: 250px ;
-        margin-right: 200px;
-    }
-
+    margin: 40px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #33B579;
+    color: #ffffff;
+    border: 10px solid #33B579;  //Cor da borda 
+    border-radius: 20px;  //Arredondamento da borda 
+    width: 200px;  //Largura do componente 
+    height: 30px; //Comprimeto do componente 
+    text-align: center;  //Centralizar o texto 
 `;
+
+
 export const Im = styled.img`
     width: 200px;
     height: 200px;
 
+
 `;
-export const Corpo = styled.div`
-    align-items: baseline;
-    font-size: 20px;
-    justify-content: space-between;
-    `;
-
-

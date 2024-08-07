@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar/navbar";
 import * as S from "./styles" 
+import Bolhas from "../../assets/bolhas.png"
 
 export default function Pesquisar(){
 
@@ -21,7 +22,8 @@ export default function Pesquisar(){
                                 <img src="src/assets/logoSemLetra.png" alt=" Logo" />
                             </S.Cabercario>
 
-                                <S.Resultado> Resultados:</S.Resultado>
+                                <S.Resultado><p>Resultados:</p></S.Resultado>
+
                             <S.Section>
                             <S.Container>
                                 
@@ -29,15 +31,17 @@ export default function Pesquisar(){
                                 <S.Im src="src/assets/criaça.png" alt="imagen de uma criança " />
                             </S.Conteinerimagem>  
 
-                                <S.Caixa>
+                            <S.Caixa>
                                     <h2> Entenda a seletividade alimentar</h2>
                                     <h1>Tags:</h1>
+                                    
                             <S.Tags>
-                                <input type="text" placeholder="Comportamento alimentar" />
-                                <input type="text" placeholder="Sensibilidade"/>
-                            </S.Tags>    
-                                        {/* </S.Container>S.Imag src = "src/assets/bolhas.png" alt = " imagen de bolhas"/>  */}
-                                        
+                                <S.Comp><p> Comportamento   Alimentar </p></S.Comp>
+                                <S.Sens><p>Sensibilidade</p></S.Sens>
+                                <S.Im src={Bolhas} alt=" imagen de bolhas"/>
+                            </S.Tags> 
+
+                                    
                                     <h1>Conteúdo:</h1>
                                     <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). 
                                         Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito 
@@ -46,7 +50,7 @@ export default function Pesquisar(){
                             <S.Btndiv>
                                     <button>Ver mais </button>
                             </S.Btndiv>          
-                                </S.Caixa>
+                            </S.Caixa>
                                 
                             </S.Container>
                             </S.Section>
