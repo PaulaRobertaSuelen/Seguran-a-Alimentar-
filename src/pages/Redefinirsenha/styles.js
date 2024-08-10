@@ -51,30 +51,19 @@ export const RightSide = styled.div`
 
 export const Content = styled.div`
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
 `;
 
 export const RedefinirTitleContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
-    .icon {
-        width: 40px;
-        height: 40px;
-        margin-left: 10px;
-    }
+    margin-bottom: 20px;
 `;
 
 export const RedefinirTitle = styled.h1`
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bold;
-`;
-
-export const RedefinirText = styled.p`
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 90px;
 `;
 
 export const InputContainer = styled.div`
@@ -82,19 +71,19 @@ export const InputContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    padding: 60px;
+    padding: 50px;
     border-radius: 10px;
 `;
 
 export const InputWrapper = styled.div`
     position: relative;
     width: 300px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 `;
 
 export const Input = styled.input`
     width: 100%;
-    padding: 10px;
+    padding: 10px 40px 10px 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
@@ -112,8 +101,25 @@ export const Icon = styled.div`
     }
 `;
 
+export const LockIcon = styled.div`
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+`;
+
+export const PasswordStrength = styled.p`
+    text-align: left;
+    width: 300px;
+    color: ${({ theme }) => (theme === 'strong' ? '#28a745' : '#dc3545')};
+    font-size: 0.9rem;
+    margin-top: -15px;
+    margin-bottom: 15px;
+`;
+
 export const Button = styled.button`
-    width: 100%;
+    width: 100px;
     padding: 10px;
     background-color: #28a745;
     color: white;
