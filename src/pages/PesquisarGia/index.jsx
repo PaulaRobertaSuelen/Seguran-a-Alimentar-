@@ -1,8 +1,8 @@
-import Navbar from "../../components/Navbar/navbar";
-import * as S from "./styles" 
-import Bolhas from "../../assets/bolhas.png"
 
-export default function Pesquisar(){
+import Navbar from "../../components/Navbar/navbar"
+import * as S from "./styles" 
+
+export default function PesquisarGia(){
 
         return(
             
@@ -18,8 +18,18 @@ export default function Pesquisar(){
                                     <p>Pesquisar por nome</p>
                                     <input type="text" placeholder=" Maria da Silva"/>
                                 </div>
-                                <button>Buscar</button>
-                                <img src="src/assets/logoSemLetra.png" alt=" Logo" />
+                                <button>                            
+                                            <div>
+                                                <span>
+                                                <p>Buscar</p><p></p>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>
+                                                <p>Buscar</p><p></p>
+                                                </span>
+                                            </div>
+                                </button>
                             </S.Cabercario>
 
                                 <S.Resultado><p>Resultados:</p></S.Resultado>
@@ -29,6 +39,7 @@ export default function Pesquisar(){
                                 
                             <S.Conteinerimagem>
                                 <S.Im src="src/assets/criaça.png" alt="imagen de uma criança " />
+                                
                             </S.Conteinerimagem>  
 
                             <S.Caixa>
@@ -38,7 +49,6 @@ export default function Pesquisar(){
                             <S.Tags>
                                 <S.Comp><p> Comportamento   Alimentar </p></S.Comp>
                                 <S.Sens><p>Sensibilidade</p></S.Sens>
-                                <S.Im src={Bolhas} alt=" imagen de bolhas"/>
                             </S.Tags> 
 
                                     

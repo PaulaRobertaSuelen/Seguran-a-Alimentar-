@@ -1,11 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 
 import Navbar from "../../components/Navbar/navbar"
 import Footer from "../../components/Footer/Footer"
-
 import Logo from "../../assets/logo.png"
-import OndaUm from "../../assets/onda-um.png"
-import OndaDois from "../../assets/onda-dois.png"
 import Mother from "../../assets/mother.png"
 
 
@@ -79,10 +77,7 @@ export default function Home() {
 
         <S.TituloComoFunciona>
 
-          <img src={OndaUm} alt="onda-um" />
           <h1>Como funciona?</h1>
-          <img src={OndaDois} alt="onda-dois" />
-
         </S.TituloComoFunciona>
 
         <S.PassoAPasso>
