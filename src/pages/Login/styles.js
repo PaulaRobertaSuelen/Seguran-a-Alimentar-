@@ -73,3 +73,38 @@ export const LostPass = styled.div`
         cursor: pointer;
     }
 `;
+export const ContainerForgot = styled.div`
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+export const ContainerText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+        line-height: 2em;
+        text-align: center;
+    }
+    & p {
+        font-size: 14px;
+        width: 70%;
+        text-align: center;
+    }
+`;
+export const ContainerForm = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    & a {
+        text-align: center;
+        color: #4a4a4a;
+        font-size: 14px;
+    }
+`;
