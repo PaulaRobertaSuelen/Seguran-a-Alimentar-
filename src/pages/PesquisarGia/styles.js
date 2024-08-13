@@ -168,11 +168,10 @@ export const Comp = styled.div`
     padding: 10px;
     background-color: #33B579;
     color: #ffffff;
-    border: 10px solid #33B579; //Cor da borda 
-    border-radius: 20px;  //Arredondamento da borda 
-    width: 200px;  //Largura do componente 
-    height: 30px; //Comprimeto do componente 
-    text-align: center; //Centralizar o texto 
+    border-radius: 20px;   
+    width: 200px;   
+    height: 30px; 
+    text-align: center; 
 `;
 
     export const Sens = styled.div`
@@ -183,12 +182,11 @@ export const Comp = styled.div`
     margin-right: 20px;
     padding: 10px;
     background-color: #33B579;
-    color: #ffffff;
-    border: 10px solid #33B579;  //Cor da borda 
-    border-radius: 20px;  //Arredondamento da borda 
-    width: 200px;  //Largura do componente 
-    height: 30px; //Comprimeto do componente 
-    text-align: center;  //Centralizar o texto 
+    color: #ffffff;  
+    border-radius: 20px;  
+    width: 200px;   
+    height: 30px; 
+    text-align: center; 
 `;
 
 
