@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
-// import Login from "../pages/Login/login";
+import Login from "../pages/Login/login";
 import Home from "../pages/Home/home.jsx"
-import Cadastro from "../pages/Cadastro/index.jsx";
+import PesquisarGia from "../pages/PesquisarGia/index.jsx";
+import PesquisarProficional from "../pages/PesquisarProficional/index.jsx"
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +11,18 @@ export const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/cadastro",
-    element: <Cadastro />,
+    path: "/login",
+    element: <Login />,
   },
+
+  {
+    path: "/pesquisarGia",
+    element: <PesquisarGia/>
+  },
+  {
+      path: "/PesquisarProficional",
+      element: <PesquisarProficional/> 
+
+  },
+  
 ]);
