@@ -52,7 +52,7 @@ export default function Cadastro() {
                 {/* <img src={iconeAutismo} alt="icone" /> */}
             </S.Redefinir>
 
-           
+
 
             
             <S.FormContainer>
