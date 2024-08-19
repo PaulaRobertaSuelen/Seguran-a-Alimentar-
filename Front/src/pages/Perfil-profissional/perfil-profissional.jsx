@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 import Bio from "../../components/Bio/bio"
 import Navbar from "../../components/Navbar/navbar"
-import Footer from "../../components/Footer/footer"
+import Footer from "../../components/Footer/Footer"
 
 export default function PerfilProfissional() {
     return (

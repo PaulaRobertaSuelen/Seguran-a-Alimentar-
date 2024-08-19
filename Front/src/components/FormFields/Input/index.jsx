@@ -3,6 +3,7 @@ import * as S from './styles';
 
 const TextInput = ({
     label,
+    name,
     placeholder,
     styles,
     onChange,
@@ -17,6 +18,7 @@ const TextInput = ({
             <S.InputContainer>
                 {iconLeft && <S.Icon>{iconLeft}</S.Icon>}
                 <S.Input
+                    name={name}
                     type={type}
                     placeholder={placeholder}
                     onChange={onChange}
