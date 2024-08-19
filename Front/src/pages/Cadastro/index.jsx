@@ -1,119 +1,100 @@
-import { useState } from 'react';
-// import Ondatwo from '../../assets/svg/ondaOne.svg';
-import Logo from '../../assets/logo.png';
+import { MdEmail, MdLock, MdRemoveRedEye } from 'react-icons/md';
+import { FaUserAlt } from 'react-icons/fa';
 import * as S from './styles';
-// import BotaoVoltar from '../../components/BotaoVoltar';
-// import iconeAutismo from '../../assets/svg/iconeAutismo.svg';
-// import VerificadorSenha from '../../components/VerificadorSenha';
-import { MdEmail } from "react-icons/md";
-import { IoPerson } from "react-icons/io5";
-import { TbLockFilled } from "react-icons/tb";
+import Onda from '../../assets/svg/ondaOne.svg';
+import Logo from '../../assets/svg/logoS.svg';
+import Button from '../../components/FormFields/Button';
+import TextInput from '../../components/FormFields/Input';
+import Checkbox from '../../components/FormFields/CheckBox';
+import useAuth from '../../services/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro() {
-    const [novaSenha, setNovaSenha] = useState('');
-    const [confirmarSenha, setConfirmarSenha] = useState('');
+    const { register } = useAuth();
+    const navigate = useNavigate();
 
-    const handleNovaSenhaChange = (event) => {
-        setNovaSenha(event.target.value);
-    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = {
+            nome: formData.get('nome'),
+            email: formData.get('email'),
+            senha: formData.get('senha'),
+            confirmSenha: formData.get('confirmSenha'),
+            termos: formData.get('termos'),
+        };
 
-    const handleConfirmarSenhaChange = (event) => {
-        setConfirmarSenha(event.target.value);
-    };
+        if (data.senha !== data.confirmSenha) {
+            return alert('As senhas precisam ser iguais');
+        }
 
-    const handleRedefinirSenha = () => {
-        // Lógica para redefinir a senha
-        console.log('Senha redefinida:', novaSenha);
+        if (!data.termos) {
+            return alert('Aceite os termos de uso');
+        }
+
+        return register(data)
+            .then((response) => {
+                alert('Registro realizado com sucesso!');
+                navigate('/login');
+            })
+            .catch((error) => {
+                alert(error.response.data.error);
+            });
     };
 
     return (
-        <S.Pai>
-             <S.Tela>
-                <S.Logo>
-                    {/* <img src={Ondatwo} alt="Back" /> */}
-                    <img src={Logo} alt="Logo" />
-                    
-                </S.Logo>
-                {/* <S.ImagemBack>
-                <img src={Ondatwo} alt="Back" />
-                </S.ImagemBack>
-                 */}
-            </S.Tela>
-
-            <S.Conteiner>
-
-            {/* <S.Botaodecima>
-                <BotaoVoltar />
-             </S.Botaodecima> */}
-
-
-            <S.Redefinir>
-                <S.CadastroTitle>CADASTRO</S.CadastroTitle>
-                {/* <img src={iconeAutismo} alt="icone" /> */}
-            </S.Redefinir>
-
-
-
-            
+        <S.Container>
+            <S.AsideContainer>
+                <img src={Onda} className="background" alt="" />
+                <img src={Logo} className="logo" alt="" />
+            </S.AsideContainer>
             <S.FormContainer>
-            <S.Teste> 
-                <S.InputContainer>
-                    {/* <S.InputLabel> NOME </S.InputLabel> */}
-                    <S.IconContainer>
-                    <IoPerson size={35} color="#4377FF"/>
-                    </S.IconContainer>
-                    <S.Input
-                        type=""
-                        placeholder="Digite seu Nome"
-                    />
-                </S.InputContainer>
-                <S.InputContainer>
-                    {/* <S.InputLabel> E-mail </S.InputLabel> */}
-                    <S.IconContainer>
-                    <MdEmail size={35} color="#4377FF"/>
-                    </S.IconContainer>
-                    <S.Input
-                        type="" 
-                        placeholder="Digite seu e-mail"
-                    />
-                </S.InputContainer>
+                <S.Login>
+                    <h1>Cadastro</h1>
 
-                <S.InputContainer>
-                    {/* <S.InputLabel> SENHA </S.InputLabel> */}
-                    <S.IconContainer>
-                    <TbLockFilled size={35} color="#4377FF"/>
-                    </S.IconContainer>
-                    <S.Input
-                        type="password"
-                        value={novaSenha}
-                        onChange={handleNovaSenhaChange}
-                        placeholder="Digite sua senha"
-                    />
-                </S.InputContainer>
+                    <form onSubmit={handleSubmit}>
+                        <TextInput
+                            name={'nome'}
+                            label="Nome"
+                            iconLeft={<FaUserAlt color="#4377FF" />}
+                        />
+                        <TextInput
+                            name={'email'}
+                            label="Email"
+                            iconLeft={<MdEmail color="#4377FF" />}
+                        />
+                        <TextInput
+                            name={'senha'}
+                            label="Senha"
+                            iconLeft={<MdLock color="#4377ff" />}
+                            iconRight={<MdRemoveRedEye color="#4377ff" />}
+                            type="password"
+                        />
+                        <TextInput
+                            name={'confirmSenha'}
+                            label="Confirmar senha"
+                            iconLeft={<MdLock color="#4377ff" />}
+                            iconRight={<MdRemoveRedEye color="#4377ff" />}
+                            type="password"
+                        />
 
-                <S.InputContainer>
-                    {/* <S.InputLabel> CONFIRMAR SENHA </S.InputLabel> */}
-                <S.IconContainer>
-                    <TbLockFilled size={35} color="#4377FF"/>
-                    </S.IconContainer>
-                    <S.Input
-                        type="password"
-                        value={confirmarSenha}
-                        onChange={handleConfirmarSenhaChange}
-                        placeholder="Confirmar senha"
-                    />
-                </S.InputContainer>
-                    <S.Imput><input type="checkbox"
-                    size={20} color="#4377FF"/> 
-                    <S.Termos>li e aceito os termos de uso</S.Termos>
-                    </S.Imput>
-                    <S.BotaoRedefinir onClick={handleRedefinirSenha}>
-                    Cadastrar
-                    </S.BotaoRedefinir>
-                    </S.Teste>
-                </S.FormContainer>
-            </S.Conteiner>
- 
-        </S.Pai>
+                        <S.LostPass>
+                            <Checkbox
+                                name={'termos'}
+                                label="Li e aceito os termos de uso"
+                            />
+                        </S.LostPass>
+                        <Button
+                            styles={{
+                                padding: '10px',
+                                width: '80%',
+                            }}
+                        >
+                            Cadastrar
+                        </Button>
+                    </form>
+                </S.Login>
+            </S.FormContainer>
+        </S.Container>
     );
 }

@@ -7,9 +7,27 @@ import TextInput from '../../components/FormFields/Input';
 import Checkbox from '../../components/FormFields/CheckBox';
 import Modal from '../../components/Modal/index';
 import { useState } from 'react';
+import useAuth from '../../services/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
+    const navigate = useNavigate();
+    const { login } = useAuth();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const senha = event.target.senha.value;
+        login({ email, senha })
+            .then((response) => {
+                alert('Login realizado com sucesso!');
+                navigate('/');
+            })
+            .catch((error) => {
+                alert(error.response.data.error);
+            });
+    };
 
     return (
         <S.Container>
@@ -21,12 +39,14 @@ export default function Login() {
                 <S.Login>
                     <h1>LOGIN</h1>
 
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <TextInput
+                            name="email"
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                         />
                         <TextInput
+                            name="senha"
                             label="Senha"
                             iconLeft={<MdLock color="#4377ff" />}
                             iconRight={<MdRemoveRedEye color="#4377ff" />}
@@ -38,15 +58,15 @@ export default function Login() {
                             <Checkbox label="Lembre-se" />
                             <a>Esqueceu a senha? </a>
                         </S.LostPass>
+                        <Button
+                            styles={{
+                                padding: '10px',
+                                width: '80%',
+                            }}
+                        >
+                            Entrar
+                        </Button>
                     </form>
-                    <Button
-                        styles={{
-                            padding: '10px',
-                            width: '80%',
-                        }}
-                    >
-                        Entrar
-                    </Button>
                     <p>
                         Não tem uma conta? <a>Cadastre-se</a>
                     </p>
