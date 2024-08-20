@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '../pages/Login/login.jsx';
+import Login from '../pages/Login/index.jsx';
 import Home from '../pages/Home/index.jsx';
-import Redefinirsenha from '../pages/Redefinirsenha';
+import Redefinirsenha from '../pages/Redefinirsenha/index.jsx';
 import PesquisarGia from '../pages/PesquisarGia';
 import PesquisarProficional from '../pages/PesquisarProficional';
 import PerfilProfissional from '../pages/Perfil-profissional/perfil-profissional';
