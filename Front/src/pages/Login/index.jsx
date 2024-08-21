@@ -15,6 +15,10 @@ export default function Login() {
     const navigate = useNavigate();
     const { login } = useAuth();
 
+
+    const handleButtonClick = () => {
+        navigate('/cadastro');  }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -45,30 +49,26 @@ export default function Login() {
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                         />
-                        <TextInput
-                            name="senha"
-                            label="Senha"
-                            iconLeft={<MdLock color="#4377ff" />}
-                            iconRight={<MdRemoveRedEye color="#4377ff" />}
-                            type="password"
-                        />
+                        <TextInput name="senha" label="Senha" password />
                         <S.LostPass
                             onClick={() => setOpenEsqueciMinhaSenha(true)}
                         >
                             <Checkbox label="Lembre-se" />
                             <a>Esqueceu a senha? </a>
                         </S.LostPass>
-                        <Button
-                            styles={{
-                                padding: '10px',
-                                width: '80%',
-                            }}
-                        >
-                            Entrar
-                        </Button>
+                        <S.Bat>
+                            <Button
+                                styles={{
+                                    padding: '10px',
+                                    width: '80%',
+                                }}
+                            >
+                                Entrar
+                            </Button>
+                        </S.Bat>
                     </form>
                     <p>
-                        Não tem uma conta? <a>Cadastre-se</a>
+                        Não tem uma conta? <a onClick={handleButtonClick} >Cadastre-se</a>
                     </p>
                 </S.Login>
             </S.FormContainer>
@@ -92,6 +92,7 @@ export default function Login() {
                                 width: '80%',
                             }}
                         />
+
                         <Button styles={{ width: '60%', padding: '10px' }}>
                             Próximo
                         </Button>
@@ -103,4 +104,4 @@ export default function Login() {
             </Modal>
         </S.Container>
     );
-}
+} 

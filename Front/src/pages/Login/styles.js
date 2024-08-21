@@ -108,3 +108,12 @@ export const ContainerForm = styled.div`
         font-size: 14px;
     }
 `;
+
+export const Bat = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+`;
