@@ -13,11 +13,11 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const { login } = useAuth();
-
+    const { login, userByEmail } = useAuth();
 
     const handleButtonClick = () => {
-        navigate('/cadastro');  }
+        navigate('/cadastro');
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -27,6 +27,19 @@ export default function Login() {
             .then((response) => {
                 alert('Login realizado com sucesso!');
                 navigate('/');
+            })
+            .catch((error) => {
+                alert(error.response.data.error);
+            });
+    };
+
+
+    const handlePesquisarEmail = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        userByEmail(email)
+            .then((response) => {
+                navigate('/redefinirsenha');
             })
             .catch((error) => {
                 alert(error.response.data.error);
@@ -50,11 +63,11 @@ export default function Login() {
                             iconLeft={<MdEmail color="#4377FF" />}
                         />
                         <TextInput name="senha" label="Senha" password />
-                        <S.LostPass
-                            onClick={() => setOpenEsqueciMinhaSenha(true)}
-                        >
+                        <S.LostPass>
                             <Checkbox label="Lembre-se" />
-                            <a>Esqueceu a senha? </a>
+                            <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
+                                Esqueceu a senha?{' '}
+                            </a>
                         </S.LostPass>
                         <S.Bat>
                             <Button
@@ -68,7 +81,8 @@ export default function Login() {
                         </S.Bat>
                     </form>
                     <p>
-                        Não tem uma conta? <a onClick={handleButtonClick} >Cadastre-se</a>
+                        Não tem uma conta?{' '}
+                        <a onClick={handleButtonClick}>Cadastre-se</a>
                     </p>
                 </S.Login>
             </S.FormContainer>
@@ -80,12 +94,12 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail e
-                            enviaremos um link.
+                            Para redefinir a sua senha, informe e-mail de cadastro.
                         </p>
                     </S.ContainerText>
-                    <S.ContainerForm>
+                    <S.ContainerForm onSubmit={handlePesquisarEmail}>
                         <TextInput
+                            name="email"
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                             styles={{
@@ -104,4 +118,4 @@ export default function Login() {
             </Modal>
         </S.Container>
     );
-} 
+}
