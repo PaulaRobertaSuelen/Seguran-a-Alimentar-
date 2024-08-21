@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '../pages/Login/login.jsx';
+import Login from '../pages/Login/';
 import Home from '../pages/Home/index.jsx';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGia from '../pages/PesquisarGia';

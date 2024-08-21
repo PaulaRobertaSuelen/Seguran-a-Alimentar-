@@ -1,9 +1,7 @@
 import React from 'react';
 import './styles.css'
 import Navbar from '../../components/Navbar/navbar.jsx'
-import { BiBookmarkPlus } from "react-icons/bi";
-import { BiCalendarAlt } from "react-icons/bi";
-import { BiComment } from "react-icons/bi";
+
 
 
 const App = () => {
@@ -14,18 +12,11 @@ const App = () => {
         <h1>Entenda a seletividade alimentar</h1> <br /><br />
       </header>
             
-      <section className='icons'>
-        <div className='icon-container'>
-      <BiBookmarkPlus />
-      <BiCalendarAlt />
-      <BiComment />
-         </div>
-       </section>
 
     <div className="container">
         <main>
         <section className="intro">
-        <img src="src/pages/Guia/Img_Guia/seletividade-alimentar 1.png" alt="Guia" /> 
+        <img src="src/assets/seletividade-alimentar 1.png" alt="Guia" /> 
           <h2>O que é Seletividade Alimentar?</h2> <br />
           <p>
             Seletividade alimentar refere-se à tendência de uma pessoa preferir certos alimentos e evitar outros, muitas vezes com base em fatores sensoriais, emocionais ou psicológicos. Essa seletividade pode variar de leve a extrema e pode se manifestar de diferentes maneiras:
@@ -59,7 +50,7 @@ const App = () => {
           </ul>
         </section>
 
-        <section className="ages">
+        <section className="Diferentes Idades">
           <h3>Seletividade Alimentar em Diferentes Idades</h3> <br />
           <h4>Infância</h4> <br />
           <ul>
@@ -79,7 +70,7 @@ const App = () => {
           </ul>
         </section>
 
-        <section className="impact">
+        <section className="impacto">
           <h3>Impacto da Seletividade Alimentar</h3> <br />
           <h4>Aspectos Positivos</h4> <br />
           <ul>
@@ -94,7 +85,7 @@ const App = () => {
           </ul>
         </section>
 
-        <section className="management">
+        <section className="Gerenciar a Seletividade">
           <h3>Como Gerenciar a Seletividade Alimentar</h3> <br />
           <ul>
             <li><b>Educação e Consciência:</b> 
