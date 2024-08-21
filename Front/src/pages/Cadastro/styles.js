@@ -28,11 +28,14 @@ export const FormContainer = styled.div`
     width: 100%;
 `;
 export const Button = styled.div`
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     padding-left: 15px;
     padding-top: 5px;
+                                padding: '10px',
+                                width: '30%', */
+                                
 `;
 export const Cadastro = styled.div`
     display: flex;
@@ -74,13 +77,13 @@ export const LostPass = styled.div`
         cursor: pointer;
     }
 `;
-export const ContainerForgot = styled.div`
-    width: 40vw;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-`;
+// export const ContainerForgot = styled.div`
+//     width: 40vw;
+//     height: 70vh;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+// `;
 
 export const ContainerText = styled.div`
     display: flex;
@@ -111,7 +114,9 @@ export const ContainerForm = styled.div`
         
 `;
 
-export const But = styled.div`
+
+// import styled from 'styled-components';
+// import OndaOne from '../../assets/svg/ondaOne.svg';
 
 display: flex;
     justify-content: center;
