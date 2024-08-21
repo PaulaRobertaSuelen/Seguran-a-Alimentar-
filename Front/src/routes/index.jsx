@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Login from '../pages/Login/index';
 import Home from '../pages/Home';
 import Redefinirsenha from '../pages/Redefinirsenha';
-import PesquisarGia from '../pages/PesquisarGia';
+import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
 export const router = createBrowserRouter([
     {
@@ -19,8 +19,8 @@ export const router = createBrowserRouter([
         element: <Redefinirsenha />,
     },
     {
-        path: '/PesquisarGia',
-        element: <PesquisarGia/>,
+        path: '/PesquisarGuia',
+        element: <PesquisarGuia/>,
     },
     {
         path: '/PesquisarProficional',
