@@ -1,20 +1,48 @@
-import Navbar from "../../components/Navbar/navbar"
-import * as S from "./styles" 
+import Navbar from '../../components/Navbar';
+import * as S from './styles';
 
-export default function PesquisarProficional(){
+export default function PesquisarProficional() {
+    return (
+        <>
+            <Navbar />
+            <S.Cabercario>
+                <div>
+                    <p>Filtro</p>
+                    <input type="text" placeholder="Nutricionista" />
+                </div>
+                <div>
+                    <p>Pesquisar por nome</p>
+                    <input type="text" placeholder="" />
+                </div>
+                <button>
+                    <div>
+                        <span>
+                            <p>Buscar</p>
+                            <p></p>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <p> Buscar </p>
+                            <p></p>
+                        </span>
+                    </div>
+                </button>
+            </S.Cabercario>
 
         return(
             
-                <>
+                
                     <Navbar/>
+                    
                             <S.Cabercario>
                                 
                                 <div>
-                                    <p>Filtro</p>
+                                    <h3>Filtro</h3>
                                     <input type="text" placeholder="Nutricionista"/>
                                 </div>
                                 <div>
-                                    <p>Pesquisar por nome</p>
+                                    <h3>Pesquisar por nome</h3>
                                     <input type="text" placeholder=""/>
                                 </div>
                                 <button>                            
@@ -23,28 +51,30 @@ export default function PesquisarProficional(){
                                                 <p>Buscar</p><p></p>
                                                 </span>
                                             </div>
-                                            <div>
-                                                <span>
-                                                <p> Buscar </p><p></p>
-                                                </span>
-                                            </div>
                                 </button>
                             </S.Cabercario>
 
-                                <S.Resultado><p>Resultados:</p></S.Resultado>
 
                             <S.Section>
                             <S.Container>
                                 
-                            <S.Conteinerimagem>
-                                <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
-                                
-                            </S.Conteinerimagem>  
+                        <S.ConteinerIm>
+                            <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
+                        </S.ConteinerIm>  
 
-                            <S.Caixa>
-
+                        <S.Tags>
+                            <S.Comp>
+                                <p> Nutrição materno infantil </p>
+                            </S.Comp>
+                            <S.Sens>
+                                <p> Comportamento alimentar </p>
+                            </S.Sens>
+                        </S.Tags>
+                                <S.Caixa>
+                                    
+                        
                                     <h2> Fernanda Santos</h2>
-                                    <h1> Nutricionista</h1> 
+                                    <p> Nutricionista</p> 
                                     
                             <S.Tags>
                                 <S.Comp><p> Nutrição materno infantil </p></S.Comp>
@@ -58,16 +88,85 @@ export default function PesquisarProficional(){
                             <S.Btndiv>
                                     <button>  
                                             
-                                        <p>ver mais</p><p></p>
+                                        <p> ver Perfil </p><p></p>
                                     </button>
                             </S.Btndiv>          
                             </S.Caixa>
                                 
                             </S.Container>
                             </S.Section>
+                                
+
+                                {/* segunda tela de perfil de proficional */}
+
+
+                        <S.SectionDois>
+
+                            <S.ContainerDois>
+                                    <S.Conteinerimagem>
+                                        <S.ImDois src="src/assets/julia.png" alt="foto do proficional " />
+                                    </S.Conteinerimagem>  
+
+                                <S.CaixaDois>
+
+                                    <h2> Julia Mendes</h2>
+                                    <p> Nutricionista</p> 
+
+                                    <S.TagsDois>
+                                    <S.Comp><p> Nutrição materno infantil </p></S.Comp>
+                                    <S.SensDois><p> Comportamento alimentar </p></S.SensDois>
+                                    </S.TagsDois> 
+
+
+                                    <h1>Conteúdo:</h1>
+                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+
+                                    <S.BtndivDois>
+                                    <button>  
+                                            
+                                        <p> ver Perfil </p><p></p>
+                                    </button>
+                                    </S.BtndivDois>          
+                                    </S.CaixaDois>
+                            </S.ContainerDois>
+                        </S.SectionDois>
+
+
+                                {/* terceiro perfil do proficional */}
 
 
 
+                                <S.SectionTres>
+                                    <S.ContainerTres>
+
+                                        <S.ConteinerImTres>
+                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do proficional " />
+                                        </S.ConteinerImTres>  
+
+                                        <S.CaixaTres>
+
+                                                <h2> Pedro Aschoff</h2>
+                                                <p> Nutricionista</p> 
+
+                                                <S.TagsTres>
+                                                <S.Comp><p> Nutrição materno infantil </p></S.Comp>
+                                                <S.SensTres><p> Comportamento alimentar </p></S.SensTres>
+                                                </S.TagsTres> 
+
+
+                                                <h1>Conteúdo:</h1>
+                                                <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+
+                                            <S.BtndivTres>
+                                                <button>  
+                                                    <p>ver perfil</p>
+                                                </button>
+                                            </S.BtndivTres>          
+                                        </S.CaixaTres>
+
+                                    </S.ContainerTres>
+                                </S.SectionTres>
+                                
                 </>
         )
     }

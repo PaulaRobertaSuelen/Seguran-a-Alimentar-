@@ -7,7 +7,11 @@ export default function Footer() {
     return (
         <S.Footer>
         <img src={Logo} alt="logo" />
-        <p>Copyright © 2024 - 2024 BemTEA - todos os direitos reservados.</p>
+        <p>BemTEA - Todos os direitos reservados - CNPJ: **.***.***/****-**
+                    Rua só Deus saber, 7 - Recife - PE CEP *****-***
+                E-mail:  Telefone +55 (81) *****-**** 2024-2024
+        </p>
+            <p>BemTEA é protegido pela lei de direitos autorais. Não é permitido copia ou reproduzir conteúdo do site em qualquer veículo de comunicação.</p>
         <S.Button
             onClick={() =>
                 window.scrollTo({

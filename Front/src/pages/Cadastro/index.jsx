@@ -53,7 +53,7 @@ export default function Cadastro() {
                 <img src={Logo} className="logo" alt="" />
             </S.AsideContainer>
             <S.FormContainer>
-                <S.Login>
+                <S.Cadastro>
                     <h1>Cadastro</h1>
 
                     <form onSubmit={handleSubmit}>
@@ -67,19 +67,11 @@ export default function Cadastro() {
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                         />
-                        <TextInput
-                            name={'senha'}
-                            label="Senha"
-                            iconLeft={<MdLock color="#4377ff" />}
-                            iconRight={<MdRemoveRedEye color="#4377ff" />}
-                            type="password"
-                        />
+                        <TextInput name={'senha'} label="Senha" password />
                         <TextInput
                             name={'confirmSenha'}
                             label="Confirmar senha"
-                            iconLeft={<MdLock color="#4377ff" />}
-                            iconRight={<MdRemoveRedEye color="#4377ff" />}
-                            type="password"
+                            password
                         />
 
                         <S.LostPass>
@@ -92,7 +84,7 @@ export default function Cadastro() {
                             Cadastrar
                         </Button>
                     </form>
-                </S.Login>
+                </S.Cadastro>
             </S.FormContainer>
         </S.Container>
     );
