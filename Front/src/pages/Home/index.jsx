@@ -1,6 +1,6 @@
-//import React from 'react';
+import React from 'react';
 
-import Navbar from '../../components/Navbar/navbar';
+import Navbar from '../../components/Navbar/index';
 import Footer from '../../components/Footer/Footer';
 
 import Logo from '../../assets/logo.png';

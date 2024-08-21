@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
+import PerfilProfissional from '../pages/Perfil-profissional/perfil-profissional';
+import Cadastro from '../pages/Cadastro';
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -24,6 +26,14 @@ export const router = createBrowserRouter([
     },
     {
         path: '/PesquisarProficional',
-        element: <PesquisarProficional/>,
+        element: <PesquisarProficional />,
+    },
+    {
+        path: '/perfilprofissional',
+        element: <PerfilProfissional />,
+    },
+    {
+        path: '/cadastro',
+        element: <Cadastro />,
     },
 ]);

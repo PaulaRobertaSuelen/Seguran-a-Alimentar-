@@ -1,11 +1,38 @@
-import Navbar from "../../components/Navbar/navbar"
-import * as S from "./styles" 
+import Navbar from '../../components/Navbar';
+import * as S from './styles';
 
-export default function PesquisarProficional(){
+export default function PesquisarProficional() {
+    return (
+        <>
+            <Navbar />
+            <S.Cabercario>
+                <div>
+                    <p>Filtro</p>
+                    <input type="text" placeholder="Nutricionista" />
+                </div>
+                <div>
+                    <p>Pesquisar por nome</p>
+                    <input type="text" placeholder="" />
+                </div>
+                <button>
+                    <div>
+                        <span>
+                            <p>Buscar</p>
+                            <p></p>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <p> Buscar </p>
+                            <p></p>
+                        </span>
+                    </div>
+                </button>
+            </S.Cabercario>
 
         return(
             
-                <>
+                
                     <Navbar/>
                     
                             <S.Cabercario>
@@ -35,8 +62,17 @@ export default function PesquisarProficional(){
                             <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
                         </S.ConteinerIm>  
 
-                            <S.Caixa>
-
+                        <S.Tags>
+                            <S.Comp>
+                                <p> Nutrição materno infantil </p>
+                            </S.Comp>
+                            <S.Sens>
+                                <p> Comportamento alimentar </p>
+                            </S.Sens>
+                        </S.Tags>
+                                <S.Caixa>
+                                    
+                        
                                     <h2> Fernanda Santos</h2>
                                     <p> Nutricionista</p> 
                                     
