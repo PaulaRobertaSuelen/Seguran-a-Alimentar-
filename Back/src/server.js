@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const pool = require("./connection");
+// const transporter = require("./connection");
 
 const saltRounds = 10;
 
@@ -69,6 +70,33 @@ app.post("/register", async (req, res) => {
     );
 
     res.status(201).json({ message: "Usuário criado com sucesso" });
+  } catch (error) {
+    console.error("Erro ao realizar registro:", error);
+    res.status(500).json({ error: "Erro interno do servidor" });
+  }
+});
+
+app.get("/user/:email", async (req, res) => {
+  const email = req.params.email;
+
+  try {
+    const [results] = await pool.query(
+      "SELECT * FROM usuario WHERE email = ?",
+      [email]
+    );
+
+    if (!results[0]) {
+      return res.status(404).json({ error: "O email solicitado não existe." });
+    }
+
+    return res.status(200).json({
+      message: "Email encontrado com sucesso!",
+      data: {
+        id: results[0].id,
+        email: results[0].email,
+        nome: results[0].nome,
+      },
+    });
   } catch (error) {
     console.error("Erro ao realizar registro:", error);
     res.status(500).json({ error: "Erro interno do servidor" });

@@ -13,7 +13,11 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const { login } = useAuth();
+    const { login, userByEmail } = useAuth();
+
+    const handleButtonClick = () => {
+        navigate('/cadastro');
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -23,6 +27,19 @@ export default function Login() {
             .then((response) => {
                 alert('Login realizado com sucesso!');
                 navigate('/');
+            })
+            .catch((error) => {
+                alert(error.response.data.error);
+            });
+    };
+
+
+    const handlePesquisarEmail = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        userByEmail(email)
+            .then((response) => {
+                navigate('/redefinirsenha');
             })
             .catch((error) => {
                 alert(error.response.data.error);
@@ -45,30 +62,27 @@ export default function Login() {
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                         />
-                        <TextInput
-                            name="senha"
-                            label="Senha"
-                            iconLeft={<MdLock color="#4377ff" />}
-                            iconRight={<MdRemoveRedEye color="#4377ff" />}
-                            type="password"
-                        />
-                        <S.LostPass
-                            onClick={() => setOpenEsqueciMinhaSenha(true)}
-                        >
+                        <TextInput name="senha" label="Senha" password />
+                        <S.LostPass>
                             <Checkbox label="Lembre-se" />
-                            <a>Esqueceu a senha? </a>
+                            <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
+                                Esqueceu a senha?{' '}
+                            </a>
                         </S.LostPass>
-                        <Button
-                            styles={{
-                                padding: '10px',
-                                width: '80%',
-                            }}
-                        >
-                            Entrar
-                        </Button>
+                        <S.Bat>
+                            <Button
+                                styles={{
+                                    padding: '10px',
+                                    width: '80%',
+                                }}
+                            >
+                                Entrar
+                            </Button>
+                        </S.Bat>
                     </form>
                     <p>
-                        Não tem uma conta? <a>Cadastre-se</a>
+                        Não tem uma conta?{' '}
+                        <a onClick={handleButtonClick}>Cadastre-se</a>
                     </p>
                 </S.Login>
             </S.FormContainer>
@@ -80,18 +94,19 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail e
-                            enviaremos um link.
+                            Para redefinir a sua senha, informe e-mail de cadastro.
                         </p>
                     </S.ContainerText>
-                    <S.ContainerForm>
+                    <S.ContainerForm onSubmit={handlePesquisarEmail}>
                         <TextInput
+                            name="email"
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
                             styles={{
                                 width: '80%',
                             }}
                         />
+
                         <Button styles={{ width: '60%', padding: '10px' }}>
                             Próximo
                         </Button>

@@ -1,189 +1,277 @@
 import styled from 'styled-components';
-import ImagemDeFundo from '../../assets/menina-comendo.jpg';
-import Icon1 from '../../assets/svg/blob1.svg';
-import Icon2 from '../../assets/svg/blob2.svg';
-import Icon3 from '../../assets/svg/blob3.svg';
+import OndasComeco from '../../assets/ondas-do-comeco.png';
 
-// ESTILIZANDO A COR DE FUNDO GERAL DA PÁGINA E AS MARGENS PARA DEIXAR O CONTEÚDO MAIS NO MEIO DA PÁGINA
-export const Body = styled.div`
-    background-color: #deedf5;
-    margin-left: 150px;
-    margin-right: 150px;
+export const OndasEstilo = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 137%;
+    background-image: url(${OndasComeco});
+    background-size: cover;
+    z-index: -1;
 `;
 
-// ESTILIZANDO A PARTE DA IMAGEM DE FUNDO, LOGO, TÍTULO E BOTÃO DE "SAIBA MAIS"
+export const BodyUm = styled.div`
+    margin: 0 auto;
+    width: calc(100% - 500px);
+    max-width: 1200px;
+`;
 
 export const BackgroundContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background-image: url(${ImagemDeFundo});
-    background-size: cover;
-    background-position: center;
-`;
-
-export const OverlayContent = styled.div`
+    margin-top: 13%;
+    gap: 10px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    margin-left: 2%;
-    margin-right: 10%;
-    height: 100%;
 `;
-export const Logo = styled.div`
-    margin-bottom: 20px;
-`;
-export const TituloEBotao = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+export const ComendoLegumes = styled.img`
+    width: 450px;
+    height: 310px;
 `;
 
 export const TituloUm = styled.div`
-    background-color: rgba(68, 178, 240, 0.6);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 10px;
+    color: #101066;
+    text-align: left;
+    h1{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 10%;
+    }
+    width: 40%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-60px);
 `;
 
-export const BotaoSaibaMais = styled.button`
-    margin-top: 3%;
-    border-radius: 5px;
-    justify-self: center;
-    background-color: #33b44d;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    padding: 10px;
+export const NosConheca = styled.div`
+    margin-top: 16%;
+    color: #101066;
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+        margin-top: 2%;
+    }
 `;
 
-// ESTILIZANDO A PARTE DO "IREMOS TE AJUDAR"
+export const QuadroConhecer = styled.div`
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+`;
 
-export const IremosAjudar = styled.div`
+export const TextosConhecer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-`;
-
-export const TituloIremosTeAjudar = styled.div`
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    color: #44b2f0;
-    margin-bottom: 10px;
 `;
 
-export const TextoDeAjuda = styled.div`
-    justify-content: left;
-    margin-left: 20%;
-    margin-right: 20%;
-    span {
-        color: #44b2f0;
+export const Card = styled.div`
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    height: 150px;
+    width: 500px;
+`;
+
+export const Barra = styled.div`
+    background-color: #101066;
+    width: 80px;
+    border-radius: 20px;
+`;
+
+export const Descricao = styled.div`
+    flex-direction: column;
+    padding: 10px;
+`;
+
+export const Mae = styled.img`
+    height: 350px;
+    width: 320px;
+`;
+
+export const VideoContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+
+    @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    }
+`;
+
+export const OndasMeio = styled.img`
+    position: absolute;
+    width: 100%;
+    transform: translateY(-60%);
+    z-index: -1;
+`;
+
+export const BodyDois = styled.div`
+    background-color: #101066;
+    margin-top: 17%;
+`;
+
+export const ConteudoDois = styled.div`
+    margin-left: 250px;
+    margin-right: 250px;
+    h1{
+        color: white;
+        font-size: 32;
+        margin-bottom: 2%;
+    }
+`;
+
+export const ComoFunciona = styled.div`
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+`;
+
+export const TextoFunciona = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: left;
+    p{
+        color: #101066;
+    }
+    span{
+        font-weight: bold;
+    }
+    gap: 10px;
+`;
+
+export const BarraDois = styled.div`
+    background-color: #7499E8;
+    width: 40px;
+    border-radius: 20px;
+`;
+
+export const FotoComputador = styled.img`
+    margin-top: 2%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+`;
+
+export const Compromisso = styled.div`
+    margin-top: 10%;
+    margin-bottom: 10%;
+`;
+
+export const ViMiId = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10%;
+`;
+
+export const ViMiIdConteudo = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #4377FF, #163882);
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    width: 250px;
+    box-sizing: border-box;
+    color: white;
+    h2{
+        font-size: 32px;
+        justify-self: center;
+        font-weight: bold;
+    }
+    p{
+        font-size: 15px;
         font-weight: bold;
     }
 `;
 
-export const BotaoQueroComecar = styled.button`
-    margin-top: 3%;
-    border-radius: 5px;
-    align-self: center;
-    background-color: #33b44d;
-    color: white;
-    font-weight: bold;
-    border: none;
+export const Visao = styled.img`
+    height: 100px;
+    width: 100px;
+`;
+
+export const Missao = styled.img`
+    height: 100px;
+    width: 100px;
+`;
+
+export const Ideal = styled.img`
+    height: 100px;
+    width: 100px;
+`;
+
+export const DuvidasFrequentes = styled.div`
+    h1{
+        color: white;
+        font-size: 32;
+        font-weight: bold;
+    }
+    width: 100%;
+`;
+
+export const FaqContainer = styled.div`
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5%;
+`;
+
+export const FaqItem = styled.div`
+    margin-bottom: 10px;
     cursor: pointer;
-    text-align: center;
+    background-color: white;
     padding: 10px;
-`;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    color: #101066;
+    font-size: 15px;
+    font-weight: bold;
 
-// ESTILIZANDO A PARTE DO "COMO FUNCIONA?"
-
-export const ComoFunciona = styled.div``;
-
-export const TituloComoFunciona = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-export const PassoAPasso = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-
-export const Passo = styled.div`
-    position: relative;
-    height: 50vh;
-    width: 50vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    color: black;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-`;
-
-export const PassoUm = styled(Passo)`
-    background-image: url(${Icon1});
-`;
-
-export const PassoDois = styled(Passo)`
-    background-image: url(${Icon2});
-`;
-
-export const PassoTres = styled(Passo)`
-    background-image: url(${Icon3});
-`;
-
-export const TextoPasso = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: bolder;
-    h1 {
-        margin-bottom: 10px;
-    }
-    p {
-        margin-top: 0;
+    &:hover {
+    background-color: #DEEDF5;
     }
 `;
 
-// ESTILIZANDO A PARTE "NUTRIÇÃO É PARA TODOS"
+export const FaqAnswer = styled.div`
+    display: ${props => (props.show ? 'block' : 'none')};
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 3px solid #007bff;
+    border-radius: 5px;
+    margin-top: 5px;
+`;
 
-export const NutricaoParaTodos = styled.div`
-    margin-top: 10%;
-    margin-bottom: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+export const OndasFinal = styled.img`
     width: 100%;
 `;
-
-export const NutricaoTitulo = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-    h1 {
-        color: #44b2f0;
-        margin: 0;
-    }
-    p {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-`;
-
-export const NutricaoImagem = styled.div``;

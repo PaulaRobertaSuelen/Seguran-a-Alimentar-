@@ -9,5 +9,9 @@ export default function useAuth() {
         return await api.post('/register', data);
     };
 
-    return { login, register };
+    const userByEmail = async (email) => {
+        return await api.get(`/user/${email}`);
+    };
+
+    return { login, register, userByEmail };
 }
