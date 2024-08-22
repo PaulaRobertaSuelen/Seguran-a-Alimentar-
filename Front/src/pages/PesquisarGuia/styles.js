@@ -8,7 +8,7 @@ export const Cabercario = styled.div`
     background-repeat: no-repeat; //para ivita repetiçao
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 150px;
 
     div {
         display: flex;
@@ -84,6 +84,7 @@ export const Caixa = styled.div`
     flex-direction: column;
     display: flex;
     margin: 10px;
+    margin-top: 70px;
     gap: -10px;
     width: 74%;
 

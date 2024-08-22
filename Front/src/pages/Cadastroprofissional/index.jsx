@@ -87,7 +87,9 @@ export default function Cadastroprofissional() {
                                 <a href="#terms">termos de uso</a>
                             </label>
                         </S.Terms>
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">
+                            <a href="/perfilprofissional">Cadastrar</a>
+                        </button>
                     </S.Form>
                 </S.FormSection>
             </S.Container>

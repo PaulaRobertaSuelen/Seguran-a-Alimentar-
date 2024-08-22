@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-    background-color: #27dee8;
+    background-color: #deedf5;
     display: flex;
     justify-content: space-around;
     align-items: center;
