@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoEyeSharp, IoEyeOffSharp, IoLockClosedSharp } from 'react-icons/io5';
 import Ondatwo from '../../assets/svg/ondaOne.svg';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/svg/logoS.svg';
 import * as S from './styles';
 
 function RedefinirSenha() {
@@ -9,6 +9,7 @@ function RedefinirSenha() {
     const [inputValue, setInputValue] = useState('');
     const [confirmInputValue, setConfirmInputValue] = useState('');
     const [passwordStrength, setPasswordStrength] = useState('');
+    const [passwordMatch, setPasswordMatch] = useState(true);
 
     const togglePasswordVisibility = () => {
         setInputType((prevType) =>
@@ -25,21 +26,39 @@ function RedefinirSenha() {
         } else {
             setPasswordStrength('Senha fraca');
         }
+
+        // Verifica se as senhas coincidem
+        setPasswordMatch(value === confirmInputValue);
+    };
+
+    const handleConfirmPasswordChange = (e) => {
+        const value = e.target.value;
+        setConfirmInputValue(value);
+
+        // Verifica se as senhas coincidem
+        setPasswordMatch(inputValue === value);
+    };
+
+    const handleSubmit = () => {
+        if (passwordMatch && inputValue.length > 8) {
+            // Lógica para redefinir a senha
+            alert('Senha redefinida com sucesso!');
+        } else {
+            alert('Verifique se as senhas coincidem e se a senha é forte.');
+        }
     };
 
     return (
         <S.Container>
-            <S.LeftSide>
-                <S.Logo>
-                    <img src={Logo} alt="Logo" />
-                </S.Logo>
-                <S.BackgroundImg src={Ondatwo} alt="Background" />
-            </S.LeftSide>
-            <S.RightSide>
+            <S.AsideContainer>
+                <img src={Ondatwo} className="background" alt="Background" />
+                <img src={Logo} className="logo" alt="Logo" />
+            </S.AsideContainer>
+            <S.FormContainer>
                 <S.Content>
-                    <S.RedefinirTitleContainer>
-                        <S.RedefinirTitle>Redefinir sua senha</S.RedefinirTitle>
-                    </S.RedefinirTitleContainer>
+                    <S.TitleContainer>
+                        <S.Title>Redefinir sua senha</S.Title>
+                    </S.TitleContainer>
                     <S.InputContainer>
                         <S.InputWrapper>
                             <S.LockIcon>
@@ -70,9 +89,7 @@ function RedefinirSenha() {
                                 type={inputType}
                                 placeholder="Confirme sua nova senha"
                                 value={confirmInputValue}
-                                onChange={(e) =>
-                                    setConfirmInputValue(e.target.value)
-                                }
+                                onChange={handleConfirmPasswordChange}
                             />
                             <S.Icon onClick={togglePasswordVisibility}>
                                 {inputType === 'password' ? (
@@ -82,10 +99,20 @@ function RedefinirSenha() {
                                 )}
                             </S.Icon>
                         </S.InputWrapper>
-                        <S.Button>Redefinir</S.Button>
+                        {!passwordMatch && (
+                            <S.PasswordStrength theme="error">
+                                As senhas não coincidem
+                            </S.PasswordStrength>
+                        )}
+                        <S.Button
+                            onClick={handleSubmit}
+                            disabled={!passwordMatch || inputValue.length <= 8}
+                        >
+                            Redefinir
+                        </S.Button>
                     </S.InputContainer>
                 </S.Content>
-            </S.RightSide>
+            </S.FormContainer>
         </S.Container>
     );
 }
