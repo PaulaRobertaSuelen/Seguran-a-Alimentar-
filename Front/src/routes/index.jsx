@@ -1,12 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '../pages/Login/login.jsx';
+import Login from '../pages/Login/index.jsx';
 import Home from '../pages/Home/index.jsx';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
 import PerfilProfissional from '../pages/Perfil-profissional/perfil-profissional';
 import Cadastro from '../pages/Cadastro';
+import Guia from '../pages/Guia/index.jsx';
+import TEA from '../pages/Guia-TEA nas escolas/index.jsx'
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -35,5 +37,9 @@ export const router = createBrowserRouter([
     {
         path: '/cadastro',
         element: <Cadastro />,
+    },
+    {
+        path: '/Guia',
+        element: <Guia/>,
     },
 ]);

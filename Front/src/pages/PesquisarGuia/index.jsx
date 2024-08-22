@@ -1,5 +1,5 @@
 
-import Navbar from "../../components/Navbar/navbar"
+import Navbar from "../../components/Navbar/index.jsx"
 import * as S from "./styles" 
 
 export default function PesquisarGia(){
