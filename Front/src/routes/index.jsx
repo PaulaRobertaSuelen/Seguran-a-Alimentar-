@@ -5,7 +5,7 @@ import Home from '../pages/Home/index.jsx';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
-import PerfilProfissional from '../pages/Perfil-profissional/perfil-profissional';
+import PerfilProfissional from '../pages/Perfil-profissional/index.jsx';
 import Cadastro from '../pages/Cadastro';
 export const router = createBrowserRouter([
     {
