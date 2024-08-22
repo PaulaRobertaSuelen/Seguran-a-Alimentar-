@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Navbar from '../../components/Navbar/navbar';
+import Navbar from '../../components/Navbar/index';
 import Footer from '../../components/Footer/Footer';
 
 import Ondas3 from "../../assets/ondas-final.png";

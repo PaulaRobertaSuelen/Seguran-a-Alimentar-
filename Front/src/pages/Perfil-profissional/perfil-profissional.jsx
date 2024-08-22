@@ -1,26 +1,20 @@
-import React from "react";
-import * as S from "./styles";
+import React from 'react';
+import * as S from './styles';
 
-import Bio from "../../components/Bio/bio"
-import Navbar from "../../components/Navbar/navbar"
-import Footer from "../../components/Footer/footer"
+import Bio from '../../components/Bio/bio';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 export default function PerfilProfissional() {
     return (
-
         <>
+            <Navbar />
 
-        <Navbar />
+            <S.Body>
+                <Bio />
+            </S.Body>
 
-        <S.Body>
-
-        <Bio />
-
-        </S.Body>
-
-        <Footer />
-        
+            <Footer />
         </>
-
     );
 }
