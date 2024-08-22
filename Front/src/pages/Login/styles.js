@@ -95,7 +95,7 @@ export const ContainerText = styled.div`
         text-align: center;
     }
 `;
-export const ContainerForm = styled.div`
+export const ContainerForm = styled.form`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,4 +107,13 @@ export const ContainerForm = styled.div`
         color: #4a4a4a;
         font-size: 14px;
     }
+`;
+
+export const Bat = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
 `;

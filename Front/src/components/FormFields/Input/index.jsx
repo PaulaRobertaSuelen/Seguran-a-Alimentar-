@@ -1,5 +1,7 @@
 import React from 'react';
 import * as S from './styles';
+import { IoMdEye, IoIosEyeOff } from 'react-icons/io';
+import { MdLock } from 'react-icons/md';
 
 const TextInput = ({
     label,
@@ -10,21 +12,35 @@ const TextInput = ({
     onBlur,
     iconLeft,
     iconRight,
+    password = false,
     type = 'text',
 }) => {
+    const [openEye, setOpenEye] = React.useState(true);
+
+    const handleEye = () => {
+        setOpenEye(!openEye);
+    };
+
     return (
         <S.Container styles={styles}>
             {label && <S.Label>{label}</S.Label>}
             <S.InputContainer>
-                {iconLeft && <S.Icon>{iconLeft}</S.Icon>}
+                {iconLeft && !password && <S.Icon>{iconLeft}</S.Icon>}
+                {password && <MdLock color="#4377ff" />}
                 <S.Input
                     name={name}
-                    type={type}
+                    type={openEye && password ? 'password' : type}
                     placeholder={placeholder}
                     onChange={onChange}
                     onBlur={onBlur}
                 />
-                {iconRight && <S.Icon>{iconRight}</S.Icon>}
+                {password &&
+                    (openEye ? (
+                        <IoMdEye color="#4377ff" onClick={handleEye} />
+                    ) : (
+                        <IoIosEyeOff color="#4377ff" onClick={handleEye} />
+                    ))}
+                {iconRight && !password && <S.Icon>{iconRight}</S.Icon>}
             </S.InputContainer>
         </S.Container>
     );

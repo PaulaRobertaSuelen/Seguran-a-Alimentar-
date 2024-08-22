@@ -1,4 +1,5 @@
 const mysql = require("mysql2/promise");
+// const nodemailer = require("nodemailer");
 
 const connection = mysql.createPool({
   host: "localhost",
