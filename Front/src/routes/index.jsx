@@ -1,13 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '../pages/Login/index.jsx'
-import Home from '../pages/Home/index.jsx';
+import Login from '../pages/Login/index';
+import Home from '../pages/Home';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
 import PerfilProfissional from '../pages/Perfil-profissional/index.jsx';
 import Cadastro from '../pages/Cadastro';
-import Cadastroprofissional from '../pages/Cadastroprofissional';
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -36,9 +35,5 @@ export const router = createBrowserRouter([
     {
         path: '/cadastro',
         element: <Cadastro />,
-    },
-    {
-        path: '/cadastroprofissional',
-        element: <Cadastroprofissional />,
     },
 ]);

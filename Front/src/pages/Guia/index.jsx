@@ -1,31 +1,24 @@
 import React from 'react';
-import './styles.css'
-import Navbar from '../../components/Navbar/navbar.jsx'
-import { BiBookmarkPlus } from "react-icons/bi";
-import { BiCalendarAlt } from "react-icons/bi";
-import { BiComment } from "react-icons/bi";
+import './styles.css';
+import Navbar from '../../components/Navbar/index.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
-
-const App = () => {
+const Guia = () => {
   return (
     <> 
     <Navbar />
-      <header>
-        <h1>Entenda a seletividade alimentar</h1> <br /><br />
-      </header>
-            
-      <section className='icons'>
-        <div className='icon-container'>
-      <BiBookmarkPlus />
-      <BiCalendarAlt />
-      <BiComment />
-         </div>
-       </section>
 
+    <header>
+        <h1>Seletividade Alimentar</h1>
+    </header>
+
+    <br />
     <div className="container">
         <main>
+            <div className='seletividade'>
+             < img src="/src/assets/seletividade-alimentar 1.png" alt="Guia" />   
+            </div>
         <section className="intro">
-        <img src="src/pages/Guia/Img_Guia/seletividade-alimentar 1.png" alt="Guia" /> 
           <h2>O que é Seletividade Alimentar?</h2> <br />
           <p>
             Seletividade alimentar refere-se à tendência de uma pessoa preferir certos alimentos e evitar outros, muitas vezes com base em fatores sensoriais, emocionais ou psicológicos. Essa seletividade pode variar de leve a extrema e pode se manifestar de diferentes maneiras:
@@ -34,6 +27,10 @@ const App = () => {
         
         <section className="content">
           <h3>1. Fatores Sensoriais</h3> <br />
+          <div className='sensorial'>
+            <img src="/src/assets/Fatores Sensoriais.png" alt="" />
+          </div>
+          <br />
           <ul>
             <li><b>Sabor:</b> Algumas pessoas têm aversões a sabores específicos, como amargo ou picante, que podem afetar suas escolhas alimentares.</li> <br />
             <li><b>Textura:</b> A textura dos alimentos pode ser um fator importante. Alimentos crocantes, cremosos ou pegajosos podem ser preferidos ou evitados.</li> <br />
@@ -41,18 +38,27 @@ const App = () => {
           </ul>
           
           <h3>2. Fatores Emocionais e Psicológicos</h3> <br />
+          <div className='psicologicos'>
+            <img src="/src/assets/Psicológicos a alimentos.jpg" alt="" />
+          </div>
+          <br />
           <ul>
             <li><b>Experiências Passadas:</b> Traumas alimentares ou experiências negativas associadas a certos alimentos podem levar a aversões duradouras.</li> <br />
             <li><b>Associar Comida a Emoções:</b> Alimentos podem estar ligados a experiências emocionais ou culturais, afetando a forma como são percebidos e aceitos.</li> <br />
           </ul>
 
           <h3>3. Fatores Culturais e Ambientais</h3> <br />
+          <div className='fatores'>
+            <img src="/src/assets/fatores.webp" alt="" />
+          </div>
+          <br />
           <ul>
             <li><b>Tradições Culturais:</b> As tradições e hábitos alimentares da família e da cultura podem influenciar as preferências alimentares e a seletividade.</li> <br />
             <li><b>Exposição:</b> A quantidade e a forma como os alimentos são introduzidos na dieta desde a infância podem moldar as preferências alimentares.</li> <br />
           </ul>
 
           <h3>4. Fatores de Saúde</h3> <br />
+          
           <ul>
             <li><b>Sensibilidades e Intolerâncias:</b> Condições como intolerância à lactose ou alergias alimentares podem levar a uma seletividade alimentar.</li> <br />
             <li><b>Problemas Digestivos:</b> Algumas pessoas podem evitar certos alimentos devido a desconforto digestivo ou problemas gastrointestinais.</li> <br />
@@ -61,6 +67,10 @@ const App = () => {
 
         <section className="ages">
           <h3>Seletividade Alimentar em Diferentes Idades</h3> <br />
+          <div className='alimentar'>
+            <img src="/src/assets/alimentar.jpeg" alt="" />
+          </div>
+          <br />
           <h4>Infância</h4> <br />
           <ul>
             <li>Desenvolvimento do Paladar: A exposição repetida a novos alimentos pode ajudar a ampliar as preferências alimentares das crianças.</li> <br />
@@ -81,6 +91,10 @@ const App = () => {
 
         <section className="impact">
           <h3>Impacto da Seletividade Alimentar</h3> <br />
+          <div className='impactos'>
+            <img src="/src/assets/impactos.jpeg" alt="" />
+          </div>
+          <br />
           <h4>Aspectos Positivos</h4> <br />
           <ul>
             <li><b>Controle e Satisfação:</b> Ter controle sobre o que se come pode levar a uma maior satisfação pessoal e bem-estar.</li> <br />
@@ -128,8 +142,9 @@ const App = () => {
         <p>Entender a seletividade alimentar é o primeiro passo para gerenciar e melhorar suas escolhas alimentares. Com conhecimento e estratégias adequadas, é possível equilibrar preferências pessoais com necessidades nutricionais e manter uma dieta saudável e satisfatória.</p>
       </footer>
     </div>
+    <Footer />
     </>
   );
 };
 
-export default App;
+export default Guia;
