@@ -1,9 +1,8 @@
-// src/components/Navbar/styles.js
 import styled from 'styled-components';
 
 export const NavbarOpcoes = styled.div`
     display: flex;
-    background-color: #101066; /* Azul escuro */
+    background-color: #101066;
     color: #ffffff;
     justify-content: space-between;
     align-items: center;
