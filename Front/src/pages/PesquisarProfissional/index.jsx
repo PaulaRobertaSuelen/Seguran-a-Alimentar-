@@ -18,43 +18,11 @@ export default function PesquisarProficional() {
                     <div>
                         <span>
                             <p>Buscar</p>
-                            <p></p>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <p> Buscar </p>
-                            <p></p>
                         </span>
                     </div>
                 </button>
             </S.Cabercario>
-
-        return(
-            
-                
-                    <Navbar/>
                     
-                            <S.Cabercario>
-                                
-                                <div>
-                                    <h3>Filtro</h3>
-                                    <input type="text" placeholder="Nutricionista"/>
-                                </div>
-                                <div>
-                                    <h3>Pesquisar por nome</h3>
-                                    <input type="text" placeholder=""/>
-                                </div>
-                                <button>                            
-                                            <div>
-                                                <span>
-                                                <p>Buscar</p><p></p>
-                                                </span>
-                                            </div>
-                                </button>
-                            </S.Cabercario>
-
-
                             <S.Section>
                             <S.Container>
                                 
@@ -62,14 +30,7 @@ export default function PesquisarProficional() {
                             <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
                         </S.ConteinerIm>  
 
-                        <S.Tags>
-                            <S.Comp>
-                                <p> Nutrição materno infantil </p>
-                            </S.Comp>
-                            <S.Sens>
-                                <p> Comportamento alimentar </p>
-                            </S.Sens>
-                        </S.Tags>
+                        
                                 <S.Caixa>
                                     
                         
@@ -88,7 +49,7 @@ export default function PesquisarProficional() {
                             <S.Btndiv>
                                     <button>  
                                             
-                                        <p> ver Perfil </p><p></p>
+                                        <p> ver Perfil </p>
                                     </button>
                             </S.Btndiv>          
                             </S.Caixa>
@@ -124,7 +85,7 @@ export default function PesquisarProficional() {
                                     <S.BtndivDois>
                                     <button>  
                                             
-                                        <p> ver Perfil </p><p></p>
+                                        <p> ver Perfil </p>
                                     </button>
                                     </S.BtndivDois>          
                                     </S.CaixaDois>
