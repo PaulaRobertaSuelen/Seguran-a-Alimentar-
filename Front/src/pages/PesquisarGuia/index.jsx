@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar/index';
 import * as S from './styles';
 
-export default function PesquisarGia() {
+export default function PesquisarGuia() {
     return (
         <>
             <Navbar />
@@ -67,7 +67,7 @@ export default function PesquisarGia() {
                 </S.Container>
             </S.Section>
 
-            {/* sengada parte do GIA */}
+            {/* segunda parte do GUIA */}
 
             <S.SectionDois>
                 <S.ContainerDois>

@@ -16,7 +16,7 @@ export default function Footer() {
                 permitido copia ou reproduzir conteúdo do site em qualquer
                 veículo de comunicação.
             </p>
-            <S.Button
+            {/* <S.Button
                 onClick={() =>
                     window.scrollTo({
                         top: 0,
@@ -25,7 +25,7 @@ export default function Footer() {
                 }
             >
                 Voltar para o topo
-            </S.Button>
+            </S.Button> */}
         </S.Footer>
     );
 }
