@@ -118,12 +118,12 @@ export const ContainerForm = styled.div`
 // import styled from 'styled-components';
 // import OndaOne from '../../assets/svg/ondaOne.svg';
 
-display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-top: 20px;
+// display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 8px;
+//     margin-top: 20px;
 
-`;
+// `;
 
