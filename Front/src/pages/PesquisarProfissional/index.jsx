@@ -1,39 +1,10 @@
 import Navbar from '../../components/Navbar';
 import * as S from './styles';
 
-export default function PesquisarProficional() {
+export default function PesquisarProfissional() {
     return (
         <>
             <Navbar />
-            <S.Cabercario>
-                <div>
-                    <p>Filtro</p>
-                    <input type="text" placeholder="Nutricionista" />
-                </div>
-                <div>
-                    <p>Pesquisar por nome</p>
-                    <input type="text" placeholder="" />
-                </div>
-                <button>
-                    <div>
-                        <span>
-                            <p>Buscar</p>
-                            <p></p>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <p> Buscar </p>
-                            <p></p>
-                        </span>
-                    </div>
-                </button>
-            </S.Cabercario>
-
-        return(
-            
-                
-                    <Navbar/>
                     
                             <S.Cabercario>
                                 
@@ -59,17 +30,9 @@ export default function PesquisarProficional() {
                             <S.Container>
                                 
                         <S.ConteinerIm>
-                            <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
+                            <S.Im src="src/assets/fotoProfissional.png" alt="foto da profissional " />
                         </S.ConteinerIm>  
 
-                        <S.Tags>
-                            <S.Comp>
-                                <p> Nutrição materno infantil </p>
-                            </S.Comp>
-                            <S.Sens>
-                                <p> Comportamento alimentar </p>
-                            </S.Sens>
-                        </S.Tags>
                                 <S.Caixa>
                                     
                         
@@ -88,7 +51,7 @@ export default function PesquisarProficional() {
                             <S.Btndiv>
                                     <button>  
                                             
-                                        <p> ver Perfil </p><p></p>
+                                        <p> ver Perfil </p>
                                     </button>
                             </S.Btndiv>          
                             </S.Caixa>
@@ -97,14 +60,14 @@ export default function PesquisarProficional() {
                             </S.Section>
                                 
 
-                                {/* segunda tela de perfil de proficional */}
+                                {/* segunda tela de perfil de profissional */}
 
 
                         <S.SectionDois>
 
                             <S.ContainerDois>
                                     <S.Conteinerimagem>
-                                        <S.ImDois src="src/assets/julia.png" alt="foto do proficional " />
+                                        <S.ImDois src="src/assets/julia.png" alt="foto do profissional " />
                                     </S.Conteinerimagem>  
 
                                 <S.CaixaDois>
@@ -132,7 +95,7 @@ export default function PesquisarProficional() {
                         </S.SectionDois>
 
 
-                                {/* terceiro perfil do proficional */}
+                                {/* terceiro perfil do profissional */}
 
 
 
@@ -140,7 +103,7 @@ export default function PesquisarProficional() {
                                     <S.ContainerTres>
 
                                         <S.ConteinerImTres>
-                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do proficional " />
+                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do profissional " />
                                         </S.ConteinerImTres>  
 
                                         <S.CaixaTres>

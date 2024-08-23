@@ -95,7 +95,7 @@ export const ContainerText = styled.div`
         text-align: center;
     }
 `;
-export const ContainerForm = styled.div`
+export const ContainerForm = styled.form`
     display: flex;
     justify-content: center;
     flex-direction: column;

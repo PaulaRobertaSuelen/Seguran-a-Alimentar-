@@ -9,9 +9,7 @@ import Checkbox from '../../components/FormFields/CheckBox';
 import useAuth from '../../services/useAuth';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function Cadastro() {
-
     const { register } = useAuth();
     const navigate = useNavigate();
 
@@ -43,8 +41,6 @@ export default function Cadastro() {
                 alert(error.response.data.error);
             });
     };
-
-    
 
     return (
         <S.Container>
@@ -80,9 +76,11 @@ export default function Cadastro() {
                                 label="Li e aceito os termos de uso"
                             />
                         </S.LostPass>
-                        <Button>
-                            Cadastrar
-                        </Button>
+                        <S.But>
+                            <Button styles={{ width: '60%', padding: '10px' }}>
+                                Cadastrar
+                            </Button>
+                        </S.But>
                     </form>
                 </S.Cadastro>
             </S.FormContainer>

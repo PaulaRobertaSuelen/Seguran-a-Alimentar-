@@ -133,7 +133,7 @@ export const PasswordStrength = styled.p`
     color: ${({ theme }) =>
         theme === 'error'
             ? '#dc3545'
-            : theme === 'strong'? '#28a745': '#dc3545'};
+            : theme === 'strong'? '#28a745': '#28a745'};
     font-size: 0.9rem;
     margin-top: -15px;
     margin-bottom: 15px;
