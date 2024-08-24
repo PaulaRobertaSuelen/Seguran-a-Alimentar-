@@ -236,6 +236,7 @@ export const DuvidasFrequentes = styled.div`
         font-weight: bold;
     }
     width: 100%;
+    padding: 20px;
 `;
 
 export const FaqContainer = styled.div`

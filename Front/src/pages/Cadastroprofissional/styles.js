@@ -106,10 +106,16 @@ export const Form = styled.form`
 `;
 
 export const Terms = styled.div`
-    margin: 20px 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-align: center;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 10px;
+    /* text-align: center;
+    justify-content: center; */
+
+    .check {
+        width: 10%;
+    }
 
     a {
         color: #101066;
