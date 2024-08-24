@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar';
 import * as S from './styles';
 
-export default function PesquisarProficional() {
+export default function PesquisarProfissional() {
     return (
         <>
             <Navbar />
@@ -19,14 +19,33 @@ export default function PesquisarProficional() {
                 </button>
             </S.Cabercario>
                     
+                            <S.Cabercario>
+                                
+                                <div>
+                                    <h3>Filtro</h3>
+                                    <input type="text" placeholder="Nutricionista"/>
+                                </div>
+                                <div>
+                                    <h3>Pesquisar por nome</h3>
+                                    <input type="text" placeholder=""/>
+                                </div>
+                                <button>                            
+                                            <div>
+                                                <span>
+                                                <p>Buscar</p><p></p>
+                                                </span>
+                                            </div>
+                                </button>
+                            </S.Cabercario>
+
+
                             <S.Section>
                             <S.Container>
                                 
                         <S.ConteinerIm>
-                            <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
+                            <S.Im src="src/assets/fotoProfissional.png" alt="foto da profissional " />
                         </S.ConteinerIm>  
 
-                        
                                 <S.Caixa>
                                     
                         
@@ -55,14 +74,14 @@ export default function PesquisarProficional() {
                             </S.Section>
                                 
 
-                                {/* segunda tela de perfil de proficional */}
+                                {/* segunda tela de perfil de profissional */}
 
 
                         <S.SectionDois>
 
                             <S.ContainerDois>
                                     <S.Conteinerimagem>
-                                        <S.ImDois src="src/assets/julia.png" alt="foto do proficional " />
+                                        <S.ImDois src="src/assets/julia.png" alt="foto do profissional " />
                                     </S.Conteinerimagem>  
 
                                 <S.CaixaDois>
@@ -89,7 +108,7 @@ export default function PesquisarProficional() {
                         </S.SectionDois>
 
 
-                                {/* terceiro perfil do proficional */}
+                                {/* terceiro perfil do profissional */}
 
 
 
@@ -97,7 +116,7 @@ export default function PesquisarProficional() {
                                     <S.ContainerTres>
 
                                         <S.ConteinerImTres>
-                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do proficional " />
+                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do profissional " />
                                         </S.ConteinerImTres>  
 
                                         <S.CaixaTres>

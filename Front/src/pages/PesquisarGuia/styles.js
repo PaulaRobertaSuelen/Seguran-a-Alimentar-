@@ -28,7 +28,7 @@ export const Cabercario = styled.div`
             
         }
     }
-    /* butao de Buscar */
+    /* botão de Buscar */
     button {
             font-weight: bold;
             color: white;
@@ -55,14 +55,15 @@ export const Section = styled.section`
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    height: 280px;
+    height: 400px;
     width: 60%;
     max-width: 1082px;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
-    position: relative; //ela cria uma relaçao entre tegs com display absolute
+    position: relative; //ela cria uma relação entre tags com display absolute
+    padding-top: 10px;
 `;
 
 export const Conteinerimagem = styled.div`
@@ -166,9 +167,9 @@ export const SectionDois = styled.section`
 
 export const ContainerDois = styled.div`
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     align-items: center;
-    height: 280px;
+    height: 400px;
     width: 64%;
     max-width: 1082px;
     border-radius: 10px;

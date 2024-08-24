@@ -29,7 +29,7 @@ export const Cabercario = styled.div`
         cursor: pointer;
         }
     }
-        /* butao de Buscar */
+        /* botão de Buscar */
 button {
             
             font-weight: bold;
@@ -65,7 +65,7 @@ export const Container = styled.div`
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
-    position: relative; //ela cria uma relaçao entre tegs com display absolute
+    position: relative; //ela cria uma relação entre tags com display absolute
 `; 
 
 export const Conteinerimagem = styled.div`
@@ -125,7 +125,7 @@ export const Btndiv = styled.div`
 
 export const Tags = styled.div`
     display: flex;
-    gap: 10px; // espaço entre as tegs (so fuciona com display flex) 
+    gap: 10px; // espaço entre as tags (só fuciona com display flex) 
 `;
 
 export const Comp = styled.div`
@@ -171,7 +171,7 @@ export const Im = styled.img`
 
 
 
-//segunda tela de Styles do proficional 
+//segunda tela de Styles do profissional 
 
 
 
@@ -250,7 +250,7 @@ export const BtndivDois = styled.div`
 
 export const TagsDois = styled.div`
     display: flex;
-    gap: 10px; // espaço entre as tegs (so fuciona com display flex) 
+    gap: 10px; // espaço entre as tags (só fuciona com display flex) 
 `;
 
 export const CompDois = styled.div`
@@ -296,7 +296,7 @@ export const ImDois = styled.img`
 
 
 
-//  terceira tela styles do proficional 
+//  terceira tela styles do profissional 
 
 
 
