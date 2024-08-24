@@ -7,6 +7,7 @@ import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProficional from '../pages/PesquisarProficional';
 import PerfilProfissional from '../pages/Perfil-profissional/index.jsx';
 import Cadastro from '../pages/Cadastro';
+import Paginaperfil from '../pages/Paginaperfil/index.jsx';
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -35,5 +36,9 @@ export const router = createBrowserRouter([
     {
         path: '/cadastro',
         element: <Cadastro />,
+    },
+    {
+        path: '/Paginaperfil',
+        element: <Paginaperfil />,
     },
 ]);
