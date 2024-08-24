@@ -15,11 +15,7 @@ export default function PesquisarProficional() {
                     <input type="text" placeholder="" />
                 </div>
                 <button>
-                    <div>
-                        <span>
-                            <p>Buscar</p>
-                        </span>
-                    </div>
+                    Buscar
                 </button>
             </S.Cabercario>
                     
@@ -44,12 +40,13 @@ export default function PesquisarProficional() {
 
                                     
                                     <h1>Conteúdo:</h1>
-                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA).
+                                    Ela se caracteriza pela recusa em experimentar novos  alimentos,
+                                    um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
 
                             <S.Btndiv>
-                                    <button>  
-                                            
-                                        <p> ver Perfil </p>
+                                    <button> 
+                                    ver perfil
                                     </button>
                             </S.Btndiv>          
                             </S.Caixa>
@@ -84,8 +81,7 @@ export default function PesquisarProficional() {
 
                                     <S.BtndivDois>
                                     <button>  
-                                            
-                                        <p> ver Perfil </p>
+                                    ver Perfil
                                     </button>
                                     </S.BtndivDois>          
                                     </S.CaixaDois>
@@ -120,7 +116,7 @@ export default function PesquisarProficional() {
 
                                             <S.BtndivTres>
                                                 <button>  
-                                                    <p>ver perfil</p>
+                                                ver perfil
                                                 </button>
                                             </S.BtndivTres>          
                                         </S.CaixaTres>
