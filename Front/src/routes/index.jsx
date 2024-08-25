@@ -38,12 +38,4 @@ export const router = createBrowserRouter([
         path: '/cadastro',
         element: <Cadastro />,
     },
-    {
-        path: '/Guia',
-        element: <Guia />
-    },
-    {
-        path: '/cadastroprofissional',
-        element: <CadastroProfissional />
-    },
 ]);
