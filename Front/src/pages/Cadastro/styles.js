@@ -109,16 +109,11 @@ export const ContainerForm = styled.form`
     }
 `;
 
-
-// import styled from 'styled-components';
-// import OndaOne from '../../assets/svg/ondaOne.svg';
-
-// display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 8px;
-//     margin-top: 20px;
-
-// `;
-
+export const But = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+`;
