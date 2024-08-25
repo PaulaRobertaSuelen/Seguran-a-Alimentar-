@@ -31,19 +31,10 @@ export const Opcoes = styled.div`
     }
 `;
 
-export const BotaoEntrar = styled.button`
-    margin-right: 250px;
-    border-radius: 8px;
-    background-color: #33b44d;
-    color: white;
-    font-weight: bold;
+export const Botaoperfil = styled.button`
+    margin-right: 300px;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     text-align: center;
-    padding: 10px;
-    a {
-        text-decoration: none;
-        color: inherit;
-        padding: 10px 15px;
-    }
 `;

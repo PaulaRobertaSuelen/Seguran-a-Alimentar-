@@ -14,14 +14,9 @@ export default function PesquisarGuia() {
                     <h3>Pesquisar por nome</h3>
                     <input type="text" placeholder=" " />
                 </div>
-                <button>
-                    <div>
-                        <span>
-                            <p>Buscar</p>
-                            <p></p>
-                        </span>
-                    </div>
-                </button>
+                    <button>
+                        buscar
+                    </button>
             </S.Cabercario>
 
             <S.Section>
@@ -59,8 +54,7 @@ export default function PesquisarGuia() {
 
                         <S.Btndiv>
                             <button>
-                                {' '}
-                                <p>Ver mais</p>{' '}
+                            ver mais
                             </button>
                         </S.Btndiv>
                     </S.Caixa>
@@ -103,8 +97,7 @@ export default function PesquisarGuia() {
 
                         <S.BtndivDois>
                             <button>
-                                {' '}
-                                <p> Ver mais</p>{' '}
+                                ver mais
                             </button>
                         </S.BtndivDois>
                     </S.CaixaDois>

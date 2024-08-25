@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 export const Cabercario = styled.div`
     display: flex;
-    background-size: cover; //
-    background-position: 'center';
+    background-size: cover; 
+    background-position: "center";
     height: 30vh;
-    background-repeat: no-repeat; //para evitar repetição
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 150px;
+    padding: 20px;
+    font-size: 20px;
 
     div {
         display: flex;
         flex-direction: column;
         margin-right: 10px;
-
+        
         input {
             margin: 10px;
             border: none;
@@ -24,34 +24,25 @@ export const Cabercario = styled.div`
             border-radius: 20rem;
             color: black;
             cursor: pointer;
+            
+            
         }
     }
     /* botão de Buscar */
     button {
-        padding: 1.3em 3em;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        color: #000;
-        background-color: #fff;
-        border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
-    }
-
-    button:hover {
-        background-color: #23c483;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-    }
-
-    button:active {
-        transform: translateY(-1px);
+            font-weight: bold;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 95.02px;
+            height: 42.66px;
+            border: none;
+            background-color: #33B44D;
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
     }
 `;
 
@@ -85,8 +76,7 @@ export const Caixa = styled.div`
     flex-direction: column;
     display: flex;
     margin: 10px;
-    /* margin-top: 70px; */
-    gap: -10px;
+    margin-top: 10px;
     width: 74%;
 
     h2 {
@@ -106,38 +96,26 @@ export const Btndiv = styled.div`
     display: flex;
     justify-content: center;
     button {
-        margin: 20px;
-        padding: 1.3em 3em;
-        font-size: 10px;
-        margin-left: -200px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        color: #000;
-        background-color: #deedf5;
-        border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
-    }
-
-    button:hover {
-        background-color: #23c483;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-    }
-
-    button:active {
-        transform: translateY(-1px);
+        font-weight: bold;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: #33B44D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -150%;
+            margin-top: -90px;
     }
 `;
 
 export const Tags = styled.div`
     display: flex;
-    gap: 0px; // espaço entre as tags (só fuciona com display flex)
+    gap: 10px; 
 `;
 
 export const Comp = styled.div`
@@ -172,8 +150,10 @@ export const Sens = styled.div`
 `;
 
 export const Im = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
+
 `;
 
 // segunda perte do styles do pesquisar guia
@@ -229,32 +209,20 @@ export const BtndivDois = styled.div`
     display: flex;
     justify-content: center;
     button {
-        margin-top: 20px;
-        padding: 1.3em 3em;
-        font-size: 10px;
-        margin-left: -200px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        color: #000;
-        background-color: #deedf5;
-        border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
-    }
-
-    button:hover {
-        background-color: #23c483;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-    }
-
-    button:active {
-        transform: translateY(-1px);
+        font-weight: bold;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: #33B44D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -158%;
+            margin-top: -50px;
     }
 `;
 
@@ -295,6 +263,7 @@ export const SensDois = styled.div`
 `;
 
 export const ImDois = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
 `;
