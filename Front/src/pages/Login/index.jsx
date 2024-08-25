@@ -24,8 +24,7 @@ export default function Login() {
         const email = event.target.email.value;
         const senha = event.target.senha.value;
         login({ email, senha })
-            .then((response) => {
-                alert('Login realizado com sucesso!');
+            .then(() => {
                 navigate('/');
             })
             .catch((error) => {
@@ -33,13 +32,12 @@ export default function Login() {
             });
     };
 
-
     const handlePesquisarEmail = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
         userByEmail(email)
             .then((response) => {
-                navigate('/redefinirsenha');
+                navigate(`/Redefinirsenha/${response.data.data.id}`);
             })
             .catch((error) => {
                 alert(error.response.data.error);
@@ -94,7 +92,8 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail de cadastro.
+                            Para redefinir a sua senha, informe e-mail de
+                            cadastro.
                         </p>
                     </S.ContainerText>
                     <S.ContainerForm onSubmit={handlePesquisarEmail}>

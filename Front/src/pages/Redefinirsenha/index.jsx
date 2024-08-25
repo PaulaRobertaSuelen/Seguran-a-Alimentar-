@@ -3,8 +3,15 @@ import { IoEyeSharp, IoEyeOffSharp, IoLockClosedSharp } from 'react-icons/io5';
 import Ondatwo from '../../assets/svg/ondaOne.svg';
 import Logo from '../../assets/svg/logoS.svg';
 import * as S from './styles';
+import { useNavigate, useParams } from 'react-router-dom';
+import useAuth from '../../services/useAuth';
+import TextInput from '../../components/FormFields/Input';
 
 function RedefinirSenha() {
+    const params = useParams();
+    const navigate = useNavigate();
+
+    const { updateUser } = useAuth();
     const [inputType, setInputType] = useState('password');
     const [inputValue, setInputValue] = useState('');
     const [confirmInputValue, setConfirmInputValue] = useState('');
@@ -39,10 +46,19 @@ function RedefinirSenha() {
         setPasswordMatch(inputValue === value);
     };
 
-    const handleSubmit = () => {
-        if (passwordMatch && inputValue.length > 8) {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (passwordMatch && inputValue.length >= 8) {
+            const novaSenha = event.target.password.value;
             // Lógica para redefinir a senha
-            alert('Senha redefinida com sucesso!');
+            updateUser(params.id, { senha: novaSenha })
+                .then((res) => {
+                    alert(res.data.message);
+                    navigate('/login');
+                })
+                .catch((err) => {
+                    alert(err.response.data.error);
+                });
         } else {
             alert('Verifique se as senhas coincidem e se a senha é forte.');
         }
@@ -59,54 +75,34 @@ function RedefinirSenha() {
                     <S.TitleContainer>
                         <S.Title>Redefinir sua senha</S.Title>
                     </S.TitleContainer>
-                    <S.InputContainer>
-                        <S.InputWrapper>
-                            <S.LockIcon>
-                                <IoLockClosedSharp />
-                            </S.LockIcon>
-                            <S.Input
-                                type={inputType}
-                                placeholder="Digite sua nova senha"
-                                value={inputValue}
-                                onChange={handlePasswordChange}
-                            />
-                            <S.Icon onClick={togglePasswordVisibility}>
-                                {inputType === 'password' ? (
-                                    <IoEyeSharp />
-                                ) : (
-                                    <IoEyeOffSharp />
-                                )}
-                            </S.Icon>
-                        </S.InputWrapper>
+                    <S.InputContainer onSubmit={handleSubmit}>
+                        <TextInput
+                            name="password"
+                            label="Nova Senha"
+                            password
+                            value={inputValue}
+                            onChange={handlePasswordChange}
+                            placeholder="********"
+                        />
                         <S.PasswordStrength>
                             {passwordStrength}
                         </S.PasswordStrength>
-                        <S.InputWrapper>
-                            <S.LockIcon>
-                                <IoLockClosedSharp />
-                            </S.LockIcon>
-                            <S.Input
-                                type={inputType}
-                                placeholder="Confirme sua nova senha"
-                                value={confirmInputValue}
-                                onChange={handleConfirmPasswordChange}
-                            />
-                            <S.Icon onClick={togglePasswordVisibility}>
-                                {inputType === 'password' ? (
-                                    <IoEyeSharp />
-                                ) : (
-                                    <IoEyeOffSharp />
-                                )}
-                            </S.Icon>
-                        </S.InputWrapper>
+                        <TextInput
+                            name="confirmPassword"
+                            label="Confirmar Senha"
+                            password
+                            value={confirmInputValue}
+                            onChange={handleConfirmPasswordChange}
+                            placeholder="********"
+                        />
                         {!passwordMatch && (
                             <S.PasswordStrength theme="error">
                                 As senhas não coincidem
                             </S.PasswordStrength>
                         )}
                         <S.Button
-                            onClick={handleSubmit}
-                            disabled={!passwordMatch || inputValue.length <= 8}
+                            type="submit"
+                            disabled={!passwordMatch || inputValue.length < 8}
                         >
                             Redefinir
                         </S.Button>
