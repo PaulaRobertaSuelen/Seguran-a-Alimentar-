@@ -13,5 +13,9 @@ export default function useAuth() {
         return await api.get(`/user/${email}`);
     };
 
-    return { login, register, userByEmail };
+    const updateUser = async (id, data) => {
+        return await api.patch(`/user/${id}`, data);
+    };
+
+    return { login, register, userByEmail, updateUser };
 }
