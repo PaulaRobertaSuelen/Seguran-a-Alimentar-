@@ -4,10 +4,11 @@ import Login from '../pages/Login/index';
 import Home from '../pages/Home';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
-import PesquisarProficional from '../pages/PesquisarProficional';
-import PerfilProfissional from '../pages/Perfil-profissional/index.jsx';
+import PesquisarProfissional from '../pages/PesquisarProfissional';
 import Cadastro from '../pages/Cadastro';
 import Guia from '../pages/Guia/index.jsx';
+import CadastroProfissional from '../pages/Cadastroprofissional';
+import Perfilprofissional from '../pages/Perfilprofissional';
 
 export const router = createBrowserRouter([
     {
@@ -27,12 +28,12 @@ export const router = createBrowserRouter([
         element: <PesquisarGuia />,
     },
     {
-        path: '/PesquisarProficional',
-        element: <PesquisarProficional />,
+        path: '/PesquisarProfissional',
+        element: <PesquisarProfissional />,
     },
     {
         path: '/perfilprofissional',
-        element: <PerfilProfissional />,
+        element: <Perfilprofissional />,
     },
     {
         path: '/cadastro',

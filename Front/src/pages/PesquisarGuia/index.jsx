@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar/index';
 import * as S from './styles';
 
-export default function PesquisarGia() {
+export default function PesquisarGuia() {
     return (
         <>
             <Navbar />
@@ -14,14 +14,9 @@ export default function PesquisarGia() {
                     <h3>Pesquisar por nome</h3>
                     <input type="text" placeholder=" " />
                 </div>
-                <button>
-                    <div>
-                        <span>
-                            <p>Buscar</p>
-                            <p></p>
-                        </span>
-                    </div>
-                </button>
+                    <button>
+                        buscar
+                    </button>
             </S.Cabercario>
 
             <S.Section>
@@ -59,15 +54,14 @@ export default function PesquisarGia() {
 
                         <S.Btndiv>
                             <button>
-                                {' '}
-                                <p>Ver mais</p>{' '}
+                            ver mais
                             </button>
                         </S.Btndiv>
                     </S.Caixa>
                 </S.Container>
             </S.Section>
 
-            {/* sengada parte do GIA */}
+            {/* segunda parte do GUIA */}
 
             <S.SectionDois>
                 <S.ContainerDois>
@@ -103,8 +97,7 @@ export default function PesquisarGia() {
 
                         <S.BtndivDois>
                             <button>
-                                {' '}
-                                <p> Ver mais</p>{' '}
+                                ver mais
                             </button>
                         </S.BtndivDois>
                     </S.CaixaDois>

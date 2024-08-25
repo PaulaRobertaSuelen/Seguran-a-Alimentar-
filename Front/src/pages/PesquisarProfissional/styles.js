@@ -3,58 +3,49 @@ import styled from 'styled-components';
 
 export const Cabercario = styled.div`
     display: flex;
-    background-size: cover; //
+    background-size: cover; 
     background-position: "center";
     height: 30vh;
-    background-repeat: no-repeat; //para ivita repetiçao
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+    font-size: 25px;
+    
     ;
 
     div {
         display: flex;
         flex-direction: column;
         margin-right: 20px;
-
-        input {
-    margin: 20px;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    width: 14em;
-    border-radius: 20rem;
-    color: black;
-    cursor: pointer;
+        align-items: baseline;
+    input {
+        margin: 20px;
+        border: none;
+        padding: 10px;
+        font-size: 1rem;
+        width: 14em;
+        border-radius: 20rem;
+        color: black;
+        cursor: pointer;
         }
     }
-        /* butao de Buscar */
+        /* botão de Buscar */
 button {
-    padding: 1.3em 3em;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    
-}
+            
+            font-weight: bold;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 95.02px;
+            height: 42.66px;
+            border: none;
+            background-color: #33B44D;
+            display: flex;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
 
-button:hover {
-    background-color: #23c483;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-}
-
-button:active {
-    transform: translateY(-1px);
 }
 `;
 export const Section = styled.section`
@@ -67,14 +58,14 @@ export const Container = styled.div`
     display: flex;
     margin: 50px;
     align-items: center;
-    height: 380px;
-    width: 100%;
-    max-width: 1082px;
+    height: 300px;
+    width: 70%;
+    max-width: -1082px;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
-    position: relative; //ela cria uma relaçao entre tegs com display absolute
+    position: relative; //ela cria uma relação entre tags com display absolute
 `; 
 
 export const Conteinerimagem = styled.div`
@@ -111,40 +102,30 @@ export const Btndiv = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
+
+        //butao ver perfil
+
     button {
-        margin: 20px;
-    padding: 1.3em 3em;
-    font-size: 10px;
-    margin-left: -200PX;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #DEEDF5;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+            font-weight: bold;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: #33B44D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -145%;
+            margin-top: -60px;
 }
-
-button:hover {
-    background-color: #23c483;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-}
-
-button:active {
-    transform: translateY(-1px);
-}
-        
 `;
 
 export const Tags = styled.div`
     display: flex;
-    gap: 10px; // espaço entre as tegs (so fuciona com display flex) 
+    gap: 10px; // espaço entre as tags (só fuciona com display flex) 
 `;
 
 export const Comp = styled.div`
@@ -157,10 +138,10 @@ export const Comp = styled.div`
     padding: 10px;
     background-color: #101066;
     color: #ffffff;
-    border: 10px solid #101066; //Cor da borda 
-    border-radius: 20px;  //Arredondamento da borda 
-    width: 200px;  //Largura do componente 
-    height: 10px; //Comprimeto do componente 
+    border: 10px solid #101066; 
+    border-radius: 20px; 
+    width: 200px;  
+    height: 10px;  
     text-align: center; //Centralizar o texto 
 `;
 
@@ -173,23 +154,24 @@ export const Comp = styled.div`
     padding: 10px;
     background-color: #101066;
     color: #ffffff;
-    border: 10px solid #101066;  //Cor da borda 
-    border-radius: 20px;  //Arredondamento da borda 
-    width: 200px;  //Largura do componente 
-    height: 30px; //Comprimeto do componente 
+    border: 10px solid #101066; 
+    border-radius: 20px;  
+    width: 200px;  
+    height: 30px;  
     text-align: center;  //Centralizar o texto 
 `;
 
 export const Im = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
 `;
 
 
 
 
 
-//segunda tela de Styles do proficional 
+//segunda tela de Styles do profissional 
 
 
 
@@ -202,17 +184,16 @@ justify-content: center;
 
 export const ContainerDois = styled.div`
     display: flex;
-    margin: 30px;
+    margin: 50px;
     align-items: center;
-    height: 380px;
-    width: 100%;
-    max-width: 1082px;
+    height: 300px;
+    width: 70%;
+    max-width: -1082px;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
-    position: relative; //ela cria uma relaçao entre tegs com display absolute
-
+    position: relative;
 `;
 export const ConteinerIm = styled.div`
     width: 26%;
@@ -249,38 +230,27 @@ export const BtndivDois = styled.div`
         display: flex;
         justify-content: center;
     button {
-        margin: 20px;
-    padding: 1.3em 3em;
-    font-size: 10px;
-    margin-left: -200PX;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #DEEDF5;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    border-radius: 1rem;
     cursor: pointer;
-    outline: none;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #33B44D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -145%;
+    margin-top: -60px;
 }
 
-button:hover {
-    background-color: #23c483;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-}
-
-button:active {
-    transform: translateY(-1px);
-}
 `;
 
 export const TagsDois = styled.div`
     display: flex;
-    gap: 10px; // espaço entre as tegs (so fuciona com display flex) 
+    gap: 10px; // espaço entre as tags (só fuciona com display flex) 
 `;
 
 export const CompDois = styled.div`
@@ -318,14 +288,15 @@ export const CompDois = styled.div`
 
 
 export const ImDois = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
 `;
 
 
 
 
-//  terceira tela styles do proficional 
+//  terceira tela styles do profissional 
 
 
 
@@ -337,16 +308,16 @@ justify-content: center;
 
 export const ContainerTres = styled.div`
     display: flex;
-    margin: 30px;
+    margin: 50px;
     align-items: center;
-    height: 380px;
-    width: 100%;
-    max-width: 1082px;
+    height: 300px;
+    width: 70%;
+    max-width: -1082px;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 20px;
-     position: relative; //ela cria uma relaçao entre tegs com display absolute
+    position: relative;
 
 `;
 export const ConteinerImTres = styled.div`
@@ -383,40 +354,28 @@ export const BtndivTres = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
+
     button {
-    margin: 20px;
-    padding: 1.3em 3em;
-    font-size: 10px;
-    margin-left: -200PX;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #DEEDF5;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+  font-weight: bold;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 13px;
+  background-color: #33B44D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -145%;
+    margin-top: -60px;
 }
-
-button:hover {
-    background-color: #23c483;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-}
-
-button:active {
-    transform: translateY(-1px);
-}
-
 `;
 
 export const TagsTres = styled.div`
     display: flex;
-     gap: 10px; // espaço entre as tegs (so fuciona com display flex) 
+    gap: 10px; 
 `;
 
 export const CompTres = styled.div`
@@ -429,11 +388,11 @@ export const CompTres = styled.div`
     padding: 10px;
     background-color: beige ;
     color: #ffffff;
-    border: 10px solid ; //Cor da borda 
-    border-radius: 20px;  //Arredondamento da borda 
-    width: 200px;  //Largura do componente 
-     height: 30px; //Comprimeto do componente 
-    text-align: center; //Centralizar o texto 
+    border: 10px solid ; 
+    border-radius: 20px;   
+    width: 200px;   
+    height: 30px; 
+    text-align: center; 
 `;
 
     export const SensTres = styled.div`
@@ -445,14 +404,14 @@ export const CompTres = styled.div`
     padding: 10px;
     background-color:  #101066;
     color: #ffffff;
-     border: 10px solid #101066;  //Cor da borda 
-     border-radius: 20px;  //Arredondamento da borda 
-     width: 200px;  //Largura do componente 
-     height: 30px; //Comprimeto do componente 
-   text-align: center;  //Centralizar o texto 
+    border: 10px solid #101066; 
+    border-radius: 20px;  
+    width: 200px;  
+    height: 30px; 
+    text-align: center;  
 `;
-
     export const ImTres = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin-top: -90px;
 `;

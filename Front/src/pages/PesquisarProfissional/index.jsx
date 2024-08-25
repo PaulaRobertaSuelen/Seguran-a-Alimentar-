@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar';
 import * as S from './styles';
 
-export default function PesquisarProficional() {
+export default function PesquisarProfissional() {
     return (
         <>
             <Navbar />
@@ -15,25 +15,9 @@ export default function PesquisarProficional() {
                     <input type="text" placeholder="" />
                 </div>
                 <button>
-                    <div>
-                        <span>
-                            <p>Buscar</p>
-                            <p></p>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <p> Buscar </p>
-                            <p></p>
-                        </span>
-                    </div>
+                    Buscar
                 </button>
             </S.Cabercario>
-
-        return(
-            
-                
-                    <Navbar/>
                     
                             <S.Cabercario>
                                 
@@ -59,17 +43,9 @@ export default function PesquisarProficional() {
                             <S.Container>
                                 
                         <S.ConteinerIm>
-                            <S.Im src="src/assets/fotoProficional.png" alt="foto da proficional " />
+                            <S.Im src="src/assets/fotoProfissional.png" alt="foto da profissional " />
                         </S.ConteinerIm>  
 
-                        <S.Tags>
-                            <S.Comp>
-                                <p> Nutrição materno infantil </p>
-                            </S.Comp>
-                            <S.Sens>
-                                <p> Comportamento alimentar </p>
-                            </S.Sens>
-                        </S.Tags>
                                 <S.Caixa>
                                     
                         
@@ -83,12 +59,13 @@ export default function PesquisarProficional() {
 
                                     
                                     <h1>Conteúdo:</h1>
-                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA).
+                                    Ela se caracteriza pela recusa em experimentar novos  alimentos,
+                                    um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
 
                             <S.Btndiv>
-                                    <button>  
-                                            
-                                        <p> ver Perfil </p><p></p>
+                                    <button> 
+                                    ver perfil
                                     </button>
                             </S.Btndiv>          
                             </S.Caixa>
@@ -97,14 +74,14 @@ export default function PesquisarProficional() {
                             </S.Section>
                                 
 
-                                {/* segunda tela de perfil de proficional */}
+                                {/* segunda tela de perfil de profissional */}
 
 
                         <S.SectionDois>
 
                             <S.ContainerDois>
                                     <S.Conteinerimagem>
-                                        <S.ImDois src="src/assets/julia.png" alt="foto do proficional " />
+                                        <S.ImDois src="src/assets/julia.png" alt="foto do profissional " />
                                     </S.Conteinerimagem>  
 
                                 <S.CaixaDois>
@@ -123,8 +100,7 @@ export default function PesquisarProficional() {
 
                                     <S.BtndivDois>
                                     <button>  
-                                            
-                                        <p> ver Perfil </p><p></p>
+                                    ver Perfil
                                     </button>
                                     </S.BtndivDois>          
                                     </S.CaixaDois>
@@ -132,7 +108,7 @@ export default function PesquisarProficional() {
                         </S.SectionDois>
 
 
-                                {/* terceiro perfil do proficional */}
+                                {/* terceiro perfil do profissional */}
 
 
 
@@ -140,7 +116,7 @@ export default function PesquisarProficional() {
                                     <S.ContainerTres>
 
                                         <S.ConteinerImTres>
-                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do proficional " />
+                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do profissional " />
                                         </S.ConteinerImTres>  
 
                                         <S.CaixaTres>
@@ -159,7 +135,7 @@ export default function PesquisarProficional() {
 
                                             <S.BtndivTres>
                                                 <button>  
-                                                    <p>ver perfil</p>
+                                                ver perfil
                                                 </button>
                                             </S.BtndivTres>          
                                         </S.CaixaTres>

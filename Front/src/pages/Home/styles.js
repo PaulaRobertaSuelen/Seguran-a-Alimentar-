@@ -33,11 +33,11 @@ export const ComendoLegumes = styled.img`
 export const TituloUm = styled.div`
     color: #101066;
     text-align: left;
-    h1{
+    h1 {
         font-size: 36px;
         font-weight: bold;
     }
-    h2{
+    h2 {
         font-size: 20px;
         font-weight: normal;
         margin-top: 10%;
@@ -50,13 +50,13 @@ export const TituloUm = styled.div`
 export const NosConheca = styled.div`
     margin-top: 16%;
     color: #101066;
-    h1{
+    h1 {
         font-size: 32px;
     }
-    h2{
+    h2 {
         font-size: 20px;
     }
-    p{
+    p {
         font-size: 15px;
         margin-top: 2%;
     }
@@ -112,8 +112,8 @@ export const VideoContainer = styled.div`
     height: 315px;
 
     @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
+        width: 100%;
+        height: auto;
     }
 `;
 
@@ -132,7 +132,7 @@ export const BodyDois = styled.div`
 export const ConteudoDois = styled.div`
     margin-left: 250px;
     margin-right: 250px;
-    h1{
+    h1 {
         color: white;
         font-size: 32;
         margin-bottom: 2%;
@@ -157,17 +157,17 @@ export const TextoFunciona = styled.div`
     padding: 10px;
     align-items: center;
     text-align: left;
-    p{
+    p {
         color: #101066;
     }
-    span{
+    span {
         font-weight: bold;
     }
     gap: 10px;
 `;
 
 export const BarraDois = styled.div`
-    background-color: #7499E8;
+    background-color: #7499e8;
     width: 40px;
     border-radius: 20px;
 `;
@@ -195,7 +195,7 @@ export const ViMiId = styled.div`
 export const ViMiIdConteudo = styled.div`
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #4377FF, #163882);
+    background: linear-gradient(to bottom, #4377ff, #163882);
     border-radius: 20px;
     padding: 10px;
     gap: 10px;
@@ -203,12 +203,12 @@ export const ViMiIdConteudo = styled.div`
     width: 250px;
     box-sizing: border-box;
     color: white;
-    h2{
+    h2 {
         font-size: 32px;
         justify-self: center;
         font-weight: bold;
     }
-    p{
+    p {
         font-size: 15px;
         font-weight: bold;
     }
@@ -230,16 +230,17 @@ export const Ideal = styled.img`
 `;
 
 export const DuvidasFrequentes = styled.div`
-    h1{
+    h1 {
         color: white;
         font-size: 32;
         font-weight: bold;
     }
     width: 100%;
+    padding: 20px;
 `;
 
 export const FaqContainer = styled.div`
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     border-radius: 20px;
     padding: 10px;
     width: 100%;
@@ -258,12 +259,12 @@ export const FaqItem = styled.div`
     font-weight: bold;
 
     &:hover {
-    background-color: #DEEDF5;
+        background-color: #deedf5;
     }
 `;
 
 export const FaqAnswer = styled.div`
-    display: ${props => (props.show ? 'block' : 'none')};
+    display: ${(props) => (props.show ? 'block' : 'none')};
     padding: 10px;
     background-color: #f0f0f0;
     border-left: 3px solid #007bff;
@@ -271,7 +272,7 @@ export const FaqAnswer = styled.div`
     margin-top: 5px;
 `;
 
-
-export const OndasFinal = styled.img`
+export const footer = styled.img`
     width: 100%;
+    margin-bottom: 10px;
 `;

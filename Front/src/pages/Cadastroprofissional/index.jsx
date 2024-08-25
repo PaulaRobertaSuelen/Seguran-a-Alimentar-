@@ -81,13 +81,14 @@ export default function Cadastroprofissional() {
                             required
                         />
                         <S.Terms>
-                            <input type="checkbox" id="terms" required />
+                        <input className='check' type="checkbox"  required />
                             <label htmlFor="terms">
-                                Li e aceito os{' '}
-                                <a href="#terms">termos de uso</a>
+                                Li e aceito os <a href="#terms">termos de uso</a>
                             </label>
                         </S.Terms>
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">
+                            <a href="/perfilprofissional">Cadastrar</a>
+                        </button>
                     </S.Form>
                 </S.FormSection>
             </S.Container>
