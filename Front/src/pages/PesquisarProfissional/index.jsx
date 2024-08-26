@@ -32,14 +32,10 @@ export default function PesquisarProfissional() {
                         <h2> Fernanda Santos</h2>
                         <p> Nutricionista</p>
 
-                        <S.TagsDois>
-                            <S.CompDois>
-                                <p> Nutrição materno infantil </p>
-                            </S.CompDois>
-                            <S.SensDois>
-                                <p> Comportamento alimentar </p>
-                            </S.SensDois>
-                        </S.TagsDois>
+                            <S.ContainerDois>
+                                    <S.ConteinerIm>
+                                        <S.ImDois src="src/assets/foto-perfil-fernanda-silva.png" alt="foto do profissional " />
+                                    </S.ConteinerIm>  
 
                         <h1>Conteúdo:</h1>
                         <p>
