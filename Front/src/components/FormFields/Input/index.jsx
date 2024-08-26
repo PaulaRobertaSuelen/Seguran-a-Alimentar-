@@ -8,6 +8,7 @@ const TextInput = ({
     name,
     placeholder,
     styles,
+    value,
     onChange,
     onBlur,
     iconLeft,
@@ -33,6 +34,7 @@ const TextInput = ({
                     placeholder={placeholder}
                     onChange={onChange}
                     onBlur={onBlur}
+                    value={value}
                 />
                 {password &&
                     (openEye ? (

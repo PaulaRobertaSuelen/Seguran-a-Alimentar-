@@ -5,12 +5,7 @@ import Home from '../pages/Home';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProfissional from '../pages/PesquisarProfissional';
-import PerfilProfissional from '../pages/Perfil-profissional/index.jsx';
 import Cadastro from '../pages/Cadastro';
-import Cadastroprofissional from '../pages/Cadastroprofissional/index.jsx';
-import Guia from '../pages/Guia/index.jsx';
-import Paginaperfil from '../pages/Paginaperfil/index.jsx';
-
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -21,7 +16,7 @@ export const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: '/Redefinirsenha',
+        path: '/Redefinirsenha/:id',
         element: <Redefinirsenha />,
     },
     {
@@ -29,27 +24,15 @@ export const router = createBrowserRouter([
         element: <PesquisarGuia />,
     },
     {
-        path: '/PesquisarProfissional',
+        path: '/Pesquisarprofissional',
         element: <PesquisarProfissional />,
     },
     {
         path: '/perfilprofissional',
-        element: <PerfilProfissional />,
+        element: <Perfilprofissional />,
     },
     {
         path: '/cadastro',
         element: <Cadastro />,
-    },
-    {
-        path: '/cadastroprofissional',
-        element: <Cadastroprofissional />,
-    },
-    {
-        path: '/Guia',
-        element: <Guia />,
-    },
-    {
-        path: '/Paginaperfil',
-        element: <Paginaperfil />,
     },
 ]);

@@ -25,8 +25,7 @@ export default function Login() {
         const email = event.target.email.value;
         const senha = event.target.senha.value;
         login({ email, senha })
-            .then((response) => {
-                alert('Login realizado com sucesso!');
+            .then(() => {
                 navigate('/');
             })
             .catch((error) => {
@@ -39,7 +38,7 @@ export default function Login() {
         const email = event.target.email.value;
         userByEmail(email)
             .then((response) => {
-                navigate('/redefinirsenha');
+                navigate(`/Redefinirsenha/${response.data.data.id}`);
             })
             .catch((error) => {
                 alert(error.response.data.error);
@@ -86,6 +85,7 @@ export default function Login() {
                     </p>
                 </S.Login>
             </S.FormContainer>
+
             <Modal
                 isOpen={openEsqueciMinhaSenha}
                 handleClose={() => setOpenEsqueciMinhaSenha(false)}
