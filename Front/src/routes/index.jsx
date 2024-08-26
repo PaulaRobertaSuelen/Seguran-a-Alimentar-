@@ -8,7 +8,9 @@ import PesquisarProfissional from '../pages/PesquisarProfissional';
 import Cadastro from '../pages/Cadastro';
 import Guia from '../pages/Guia/index.jsx';
 import CadastroProfissional from '../pages/Cadastroprofissional';
-import Perfilprofissional from '../pages/Perfilprofissional'
+import Perfilprofissional from '../pages/Perfilprofissional/index.jsx'
+import PerfilPrivado from '../pages/PerfilPrivado/index.jsx';
+
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -27,7 +29,7 @@ export const router = createBrowserRouter([
         element: <PesquisarGuia />,
     },
     {
-        path: '/PesquisarProfissional',
+        path: '/Pesquisarprofissional',
         element: <PesquisarProfissional />,
     },
     {
@@ -37,5 +39,9 @@ export const router = createBrowserRouter([
     {
         path: '/cadastro',
         element: <Cadastro />,
+    },
+    {
+        path: '/perfilprivado',
+        element: <PerfilPrivado />,
     },
 ]);

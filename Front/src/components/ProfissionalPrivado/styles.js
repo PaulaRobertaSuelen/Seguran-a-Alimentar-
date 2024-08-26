@@ -57,6 +57,21 @@ export const Botoes = styled.div`
     margin-bottom: 30px;
 `;
 
+export const Assinatura = styled.button`
+    background-color: #6827E8;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    &:hover {
+            background-color: #40198C;
+        }
+`;
+
 export const Contato = styled.button`
     background-color: #33B44D;
     color: white;

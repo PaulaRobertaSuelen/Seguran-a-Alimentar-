@@ -1,36 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
+
 import FotoPorfissional from '../../assets/fotoProfissional.png'
 
-const Perfiledit = () => {
-    return (
-        <S.Container>
-            <S.Fotoprof src={FotoPorfissional} alt="Fotoprof" />
-            <S.Info>
-                <h2>Fernanda Santos</h2>
-            </S.Info>
-            <S.Info>
-            Nutricionista
-            </S.Info>
-            <S.Info>
-            CRN: 00/00000
-            </S.Info>
-            <S.ConfgButton>
-                Assinatura
-            </S.ConfgButton>
+import ContatoPopUp from '../../components/Contato/index';
 
-            <S.ContratarButton>
-                Contate-me
-            </S.ContratarButton>
-            
+export default function Perfiledit(
 
-            <S.Info>
-                <p>Nutrição em TEA</p>
-                {/* <p>Nutrição materno infantil</p> */}
-                <p>Comportamento alimentar</p>
-            </S.Info>
-        </S.Container>
-    );
+){
+
+    const handleClick = () => {
+        window.open('https://www.whatsapp.com/?lang=pt_BR', '_blank');
+    };
+
+        return (
+            <S.Container>
+                <S.Fotoprof src={FotoPorfissional} alt="Fotoprof" />
+                <S.Info>
+                    <S.Nome>Fernanda Santos</S.Nome>
+                    <S.Especialidade>NUTRICIONISTA</S.Especialidade>
+                    <S.CRN>CRN: 00/00000</S.CRN>
+                </S.Info>
+                <S.Botoes>
+                    <S.Contato onClick={handleClick}>Contate-me</S.Contato>
+                </S.Botoes>
+                <S.Tags>
+                    <S.TagInfo>Nutrição em TEA</S.TagInfo>
+                    <S.TagInfo>Comportamento alimentar</S.TagInfo>
+                </S.Tags>
+            </S.Container>
+        );
 };
-
-export default Perfiledit;

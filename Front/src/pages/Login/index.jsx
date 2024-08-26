@@ -86,6 +86,7 @@ export default function Login() {
                     </p>
                 </S.Login>
             </S.FormContainer>
+
             <Modal
                 isOpen={openEsqueciMinhaSenha}
                 handleClose={() => setOpenEsqueciMinhaSenha(false)}

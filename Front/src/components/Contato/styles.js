@@ -7,6 +7,7 @@ export const Modal = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);  /* Escurece a página atrás do pop-up */
+    backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     align-items: center;
