@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar/index';
 import * as S from './styles';
+//import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
 export default function PesquisarGuia() {
     return (
@@ -73,7 +74,7 @@ export default function PesquisarGuia() {
                     </S.ConteinerImDois>
 
                     <S.CaixaDois>
-                        <h2> Como lidar com a seletividade alimentar</h2>
+                        <h2>seletividade alimentar como lida</h2>
                         <h1>Tags:</h1>
 
                         <S.TagsDois>
@@ -87,7 +88,7 @@ export default function PesquisarGuia() {
 
                         <h1>Conteúdo:</h1>
                         <p>
-                            {' '}
+                            
                             Lidar com a seletividade alimentar, especialmente em
                             crianças com necessidades especiais, pode ser
                             desafiador, mas existem várias estratégias eficazes

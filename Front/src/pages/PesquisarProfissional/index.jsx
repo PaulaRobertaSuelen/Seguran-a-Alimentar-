@@ -18,61 +18,6 @@ export default function PesquisarProfissional() {
                     Buscar
                 </button>
             </S.Cabercario>
-                    
-                            <S.Cabercario>
-                                
-                                <div>
-                                    <h3>Filtro</h3>
-                                    <input type="text" placeholder="Nutricionista"/>
-                                </div>
-                                <div>
-                                    <h3>Pesquisar por nome</h3>
-                                    <input type="text" placeholder=""/>
-                                </div>
-                                <button>                            
-                                            <div>
-                                                <span>
-                                                <p>Buscar</p><p></p>
-                                                </span>
-                                            </div>
-                                </button>
-                            </S.Cabercario>
-
-
-                            <S.Section>
-                            <S.Container>
-                                
-                        <S.ConteinerIm>
-                            <S.Im src="src/assets/fotoProfissional.png" alt="foto da profissional " />
-                        </S.ConteinerIm>  
-
-                                <S.Caixa>
-                                    
-                        
-                                    <h2> Fernanda Santos</h2>
-                                    <p> Nutricionista</p> 
-                                    
-                            <S.Tags>
-                                <S.Comp><p> Nutrição materno infantil </p></S.Comp>
-                                <S.Sens><p> Comportamento alimentar </p></S.Sens>
-                            </S.Tags> 
-
-                                    
-                                    <h1>Conteúdo:</h1>
-                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA).
-                                    Ela se caracteriza pela recusa em experimentar novos  alimentos,
-                                    um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
-
-                            <S.Btndiv>
-                                    <button> 
-                                    ver perfil
-                                    </button>
-                            </S.Btndiv>          
-                            </S.Caixa>
-                                
-                            </S.Container>
-                            </S.Section>
-                                
 
                                 {/* segunda tela de perfil de profissional */}
 
@@ -80,17 +25,17 @@ export default function PesquisarProfissional() {
                         <S.SectionDois>
 
                             <S.ContainerDois>
-                                    <S.Conteinerimagem>
-                                        <S.ImDois src="src/assets/julia.png" alt="foto do profissional " />
-                                    </S.Conteinerimagem>  
+                                    <S.ConteinerIm>
+                                        <S.ImDois src="src//assets/foto-perfil-fernanda-silva.png" alt="foto do profissional " />
+                                    </S.ConteinerIm>  
 
                                 <S.CaixaDois>
 
-                                    <h2> Julia Mendes</h2>
+                                    <h2> Fernanda Santos</h2>
                                     <p> Nutricionista</p> 
 
                                     <S.TagsDois>
-                                    <S.Comp><p> Nutrição materno infantil </p></S.Comp>
+                                    <S.CompDois><p> Nutrição materno infantil </p></S.CompDois>
                                     <S.SensDois><p> Comportamento alimentar </p></S.SensDois>
                                     </S.TagsDois> 
 
@@ -125,7 +70,7 @@ export default function PesquisarProfissional() {
                                                 <p> Nutricionista</p> 
 
                                                 <S.TagsTres>
-                                                <S.Comp><p> Nutrição materno infantil </p></S.Comp>
+                                                <S.CompTres><p> Nutrição materno infantil </p></S.CompTres>
                                                 <S.SensTres><p> Comportamento alimentar </p></S.SensTres>
                                                 </S.TagsTres> 
 
@@ -142,7 +87,10 @@ export default function PesquisarProfissional() {
 
                                     </S.ContainerTres>
                                 </S.SectionTres>
-                                
+
+
+
+
                 </>
         )
     }

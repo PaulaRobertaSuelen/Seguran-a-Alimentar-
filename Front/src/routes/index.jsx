@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: '/Redefinirsenha',
+        path: '/Redefinirsenha/:id',
         element: <Redefinirsenha />,
     },
     {
@@ -43,5 +43,13 @@ export const router = createBrowserRouter([
     {
         path: '/perfilprivado',
         element: <PerfilPrivado />,
+    },
+    {
+        path: '/guia',
+        element: <Guia />,
+    },
+    {
+        path: '/cadastroprofissional',
+        element: <CadastroProfissional />,
     },
 ]);

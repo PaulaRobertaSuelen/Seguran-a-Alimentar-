@@ -36,7 +36,7 @@ export const FormContainer = styled.div`
 
 // Container para o título e formulário
 export const Content = styled.div`
-    text-align: center;
+    /* text-align: center; */
     margin-top: 40px;
 `;
 
@@ -77,11 +77,11 @@ export const Title = styled.h1`
 `;
 
 // Contêiner para os campos de entrada
-export const InputContainer = styled.div`
+export const InputContainer = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: transparent;
+    /* background-color: transparent; */
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -133,16 +133,19 @@ export const PasswordStrength = styled.p`
     color: ${({ theme }) =>
         theme === 'error'
             ? '#dc3545'
-            : theme === 'strong'? '#28a745': '#28a745'};
-    font-size: 0.9rem;
-    margin-top: -15px;
-    margin-bottom: 15px;
+            : theme === 'strong'
+              ? '#28a745'
+              : '#28a745'};
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
 `;
 
 // Botão para redefinir senha
 export const Button = styled.button`
     width: 50%;
     padding: 10px;
+    margin-top: 20px;
     background-color: #28a745;
     color: white;
     border: none;
