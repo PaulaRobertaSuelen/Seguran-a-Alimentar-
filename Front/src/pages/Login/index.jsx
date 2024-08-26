@@ -1,14 +1,15 @@
 import { MdEmail, MdLock, MdRemoveRedEye } from 'react-icons/md';
 import * as S from './styles';
+import { useState } from 'react';
+import useAuth from '../../services/useAuth';
+import { useNavigate } from 'react-router-dom';
+
 import Onda from '../../assets/svg/ondaOne.svg';
 import Logo from '../../assets/svg/logoS.svg';
 import Button from '../../components/FormFields/Button';
 import TextInput from '../../components/FormFields/Input';
 import Checkbox from '../../components/FormFields/CheckBox';
 import Modal from '../../components/Modal/index';
-import { useState } from 'react';
-import useAuth from '../../services/useAuth';
-import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
@@ -32,7 +33,6 @@ export default function Login() {
                 alert(error.response.data.error);
             });
     };
-
 
     const handlePesquisarEmail = (event) => {
         event.preventDefault();
@@ -94,7 +94,8 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail de cadastro.
+                            Para redefinir a sua senha, informe e-mail de
+                            cadastro.
                         </p>
                     </S.ContainerText>
                     <S.ContainerForm onSubmit={handlePesquisarEmail}>
