@@ -1,17 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import Login from '../pages/Login/index';
-import Home from '../pages/Home';
+import Home from '../pages/Home/index';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProfissional from '../pages/PesquisarProfissional';
 import Cadastro from '../pages/Cadastro';
-import Guia from '../pages/Guia/index.jsx';
-//import CadastroProfissional from '../pages/Cadastroprofissional';
-import Perfilprofissional from '../pages/Perfilprofissional';
-import SobreNos from '../pages/SobreNos';
-
-
+import CadastroProfissional from '../pages/Cadastroprofissional/index';
+import PerfilPrivado from '../pages/PerfilPrivado/index';
+import PerfilProfissional from '../pages/Perfilprofissional/index';
+import Guia from '../pages/Guia/index';
+import PaginaPerfil from '../pages/Paginaperfil/index';
+import SobreNos from '../pages/SobreNos/index';
 
 export const router = createBrowserRouter([
     {
@@ -23,31 +23,43 @@ export const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: '/Redefinirsenha/:id',
+        path: '/redefinirsenha/:id',
         element: <Redefinirsenha />,
     },
     {
-        path: '/PesquisarGuia',
+        path: '/pesquisarguia',
         element: <PesquisarGuia />,
     },
     {
-        path: '/PesquisarProfissional',
+        path: '/pesquisarprofissional',
         element: <PesquisarProfissional />,
     },
     {
         path: '/perfilprofissional',
-        element: <Perfilprofissional />,
+        element: <PerfilProfissional />,
     },
     {
         path: '/cadastro',
         element: <Cadastro />,
     },
     {
-        path: '/Guia',
+        path: '/cadastroprofissional',
+        element: <CadastroProfissional />,
+    },
+    {
+        path: '/perfilprivado',
+        element: <PerfilPrivado />,
+    },
+    {
+        path: '/guia',
         element: <Guia />,
     },
     {
-        path: '/sobreNos',
-        element: <SobreNos/>
+        path: '/paginaperfil',
+        element: <PaginaPerfil />,
+    },
+    {
+        path: '/sobrenos',
+        element: <SobreNos/>,
     },
 ]);

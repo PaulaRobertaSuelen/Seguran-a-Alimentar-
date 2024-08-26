@@ -1,21 +1,28 @@
 import React from 'react';
 import * as S from './styles';
+import { Link } from 'react-router-dom'; // Importando Link do react-router-dom
+
+import homem from '../../assets/homem.jpg';
+import hbarba from '../../assets/hbarba.jpg';
+import mperfil from '../../assets/mperfil.png';
 
 const HistoricoPesquisa = () => {
     const historico = [
-        { nome: 'Fernanda Santos', imagem: '/path/to/image1.png' },
-        { nome: 'Carlos Miranda', imagem: '/path/to/image2.png' },
-        { nome: 'Bruna Alves', imagem: '/path/to/image3.png' },
+        { nome: 'Fernanda Santos', imagem: mperfil },
+        { nome: 'Carlos Miranda', imagem: homem },
+        { nome: 'Bruno Alves', imagem: hbarba },
     ];
 
     return (
         <S.Container>
-            <h2>Historico de pesquisa</h2>
+            <h2>Histórico de pesquisa</h2>
             {historico.map((item, index) => (
                 <S.Item key={index}>
                     <S.ProfileImage src={item.imagem} alt={item.nome} />
                     <S.ProfileInfo>{item.nome}</S.ProfileInfo>
-                    <S.ViewButton>ver perfil</S.ViewButton>
+                    <S.ViewButton as={Link} to="/perfilprofissional">
+                        ver perfil
+                    </S.ViewButton>
                 </S.Item>
             ))}
         </S.Container>

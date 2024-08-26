@@ -20,6 +20,7 @@ export const Avatar = styled.img`
 
 export const Info = styled.div`
     margin: 15px 0;
+    font-size: 18px;
     text-align: center;
 
     p {
