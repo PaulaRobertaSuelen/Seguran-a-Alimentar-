@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/index';
 import Footer from '../../components/Footer/Footer';
 
-import Ondas3 from '../../assets/ondas-final.png';
 import Mother from '../../assets/mother.png';
 import FotoPC from '../../assets/foto-computador.png';
 import Olho from '../../assets/olho.png';
@@ -12,7 +11,7 @@ import Lampada from '../../assets/lampada.png';
 import OndasDoMeio from '../../assets/ondas-do-meio.png';
 import Legumes from '../../assets/comendo-legumes.png';
 
-import * as S from './styles';
+import * as S from './styles.js';
 
 const faqs = [
     {

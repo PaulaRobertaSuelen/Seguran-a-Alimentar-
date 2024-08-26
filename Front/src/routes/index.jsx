@@ -1,11 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import Login from '../pages/Login/index';
-import Home from '../pages/Home';
+import Home from '../pages/Home/index';
 import Redefinirsenha from '../pages/Redefinirsenha';
 import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProfissional from '../pages/PesquisarProfissional';
 import Cadastro from '../pages/Cadastro';
+import CadastroProfissional from '../pages/Cadastroprofissional/index';
+import PerfilPrivado from '../pages/PerfilPrivado/index';
+import PerfilProfissional from '../pages/Perfilprofissional/index';
+import Guia from '../pages/Guia/index';
+import PaginaPerfil from '../pages/Paginaperfil/index';
+
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -16,23 +22,39 @@ export const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: '/Redefinirsenha/:id',
+        path: '/redefinirsenha/:id',
         element: <Redefinirsenha />,
     },
     {
-        path: '/PesquisarGuia',
+        path: '/pesquisarguia',
         element: <PesquisarGuia />,
     },
     {
-        path: '/Pesquisarprofissional',
+        path: '/pesquisarprofissional',
         element: <PesquisarProfissional />,
     },
     {
         path: '/perfilprofissional',
-        element: <Perfilprofissional />,
+        element: <PerfilProfissional />,
     },
     {
         path: '/cadastro',
         element: <Cadastro />,
+    },
+    {
+        path: '/cadastroprofissional',
+        element: <CadastroProfissional />,
+    },
+    {
+        path: '/perfilprivado',
+        element: <PerfilPrivado />,
+    },
+    {
+        path: '/guia',
+        element: <Guia />,
+    },
+    {
+        path: '/paginaperfil',
+        element: <PaginaPerfil />,
     },
 ]);
