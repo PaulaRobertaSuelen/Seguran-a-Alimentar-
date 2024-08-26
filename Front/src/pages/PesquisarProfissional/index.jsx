@@ -26,7 +26,7 @@ export default function PesquisarProfissional() {
 
                             <S.ContainerDois>
                                     <S.ConteinerIm>
-                                        <S.ImDois src="src//assets/foto-perfil-fernanda-silva.png" alt="foto do profissional " />
+                                        <S.ImDois src="src/assets/foto-perfil-fernanda-silva.png" alt="foto do profissional " />
                                     </S.ConteinerIm>  
 
                                 <S.CaixaDois>

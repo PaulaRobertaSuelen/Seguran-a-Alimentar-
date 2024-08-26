@@ -7,8 +7,11 @@ import PesquisarGuia from '../pages/PesquisarGuia';
 import PesquisarProfissional from '../pages/PesquisarProfissional';
 import Cadastro from '../pages/Cadastro';
 import Guia from '../pages/Guia/index.jsx';
-import CadastroProfissional from '../pages/Cadastroprofissional';
+//import CadastroProfissional from '../pages/Cadastroprofissional';
 import Perfilprofissional from '../pages/Perfilprofissional';
+import SobreNos from '../pages/SobreNos';
+
+
 
 export const router = createBrowserRouter([
     {
@@ -42,5 +45,9 @@ export const router = createBrowserRouter([
     {
         path: '/Guia',
         element: <Guia />,
+    },
+    {
+        path: '/sobreNos',
+        element: <SobreNos/>
     },
 ]);
