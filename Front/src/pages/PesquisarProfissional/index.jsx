@@ -1,4 +1,4 @@
-import Navbar from '../../components/Navbar';
+import Navbarlogin from '../../components/Navbarlogin';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
@@ -21,83 +21,90 @@ export default function PesquisarProfissional() {
                     <p>Pesquisar por nome</p>
                     <input type="text" placeholder="" />
                 </div>
-                <button>
-                    Buscar
-                </button>
+                <button>Buscar</button>
             </S.Cabercario>
 
-                                {/* segunda tela de perfil de profissional */}
+            {/* segunda tela de perfil de profissional */}
 
+            <S.SectionDois>
+                <S.ContainerDois>
+                    <S.ConteinerIm>
+                        <S.ImDois
+                            src="src//assets/foto-perfil-fernanda-silva.png"
+                            alt="foto do profissional "
+                        />
+                    </S.ConteinerIm>
 
-                        <S.SectionDois>
+                    <S.CaixaDois>
+                        <h2> Fernanda Santos</h2>
+                        <p> Nutricionista</p>
 
-                            <S.ContainerDois>
-                                    <S.ConteinerIm>
-                                        <S.ImDois src="src/assets/foto-perfil-fernanda-silva.png" alt="foto do profissional " />
-                                    </S.ConteinerIm>  
+                        <S.TagsDois>
+                            <S.CompDois>
+                                <p> Nutrição materno infantil </p>
+                            </S.CompDois>
+                            <S.SensDois>
+                                <p> Comportamento alimentar </p>
+                            </S.SensDois>
+                        </S.TagsDois>
 
-                                <S.CaixaDois>
+                        <h1>Conteúdo:</h1>
+                        <p>
+                            {' '}
+                            A seletividade alimentar é comum em crianças com
+                            Transtorno do Espectro Autista (TEA). Ela se
+                            caracteriza pela recusa em experimentar novos
+                            alimentos, um repertório restrito de alimentos
+                            aceitos e resistência a pratos novos...
+                        </p>
 
-                                    <h2> Fernanda Santos</h2>
-                                    <p> Nutricionista</p> 
+                        <S.BtndivDois>
+                            <button>ver Perfil</button>
+                        </S.BtndivDois>
+                    </S.CaixaDois>
+                </S.ContainerDois>
+            </S.SectionDois>
 
-                                    <S.TagsDois>
-                                    <S.CompDois><p> Nutrição materno infantil </p></S.CompDois>
-                                    <S.SensDois><p> Comportamento alimentar </p></S.SensDois>
-                                    </S.TagsDois> 
+            {/* terceiro perfil do profissional */}
 
+            <S.SectionTres>
+                <S.ContainerTres>
+                    <S.ConteinerImTres>
+                        <S.ImTres
+                            src="src/assets/Pedro.png"
+                            alt="foto do profissional "
+                        />
+                    </S.ConteinerImTres>
 
-                                    <h1>Conteúdo:</h1>
-                                    <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                    <S.CaixaTres>
+                        <h2> Pedro Aschoff</h2>
+                        <p> Nutricionista</p>
 
-                                    <S.BtndivDois>
-                                    <button>  
-                                    ver Perfil
-                                    </button>
-                                    </S.BtndivDois>          
-                                    </S.CaixaDois>
-                            </S.ContainerDois>
-                        </S.SectionDois>
+                        <S.TagsTres>
+                            <S.CompTres>
+                                <p> Nutrição materno infantil </p>
+                            </S.CompTres>
+                            <S.SensTres>
+                                <p> Comportamento alimentar </p>
+                            </S.SensTres>
+                        </S.TagsTres>
 
+                        <h1>Conteúdo:</h1>
+                        <p>
+                            {' '}
+                            A seletividade alimentar é comum em crianças com
+                            Transtorno do Espectro Autista (TEA). Ela se
+                            caracteriza pela recusa em experimentar novos
+                            alimentos, um repertório restrito de alimentos
+                            aceitos e resistência a pratos novos...
+                        </p>
 
-                                {/* terceiro perfil do profissional */}
-
-
-
-                                <S.SectionTres>
-                                    <S.ContainerTres>
-
-                                        <S.ConteinerImTres>
-                                            <S.ImTres src="src/assets/Pedro.png" alt="foto do profissional " />
-                                        </S.ConteinerImTres>  
-
-                                        <S.CaixaTres>
-
-                                                <h2> Pedro Aschoff</h2>
-                                                <p> Nutricionista</p> 
-
-                                                <S.TagsTres>
-                                                <S.CompTres><p> Nutrição materno infantil </p></S.CompTres>
-                                                <S.SensTres><p> Comportamento alimentar </p></S.SensTres>
-                                                </S.TagsTres> 
-
-
-                                                <h1>Conteúdo:</h1>
-                                                <p> A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
-
-                                            <S.BtndivTres>
-                                                <button>  
-                                                ver perfil
-                                                </button>
-                                            </S.BtndivTres>          
-                                        </S.CaixaTres>
-
-                                    </S.ContainerTres>
-                                </S.SectionTres>
-
-
-
-
-                </>
-        )
-    }
+                        <S.BtndivTres>
+                            <button>ver perfil</button>
+                        </S.BtndivTres>
+                    </S.CaixaTres>
+                </S.ContainerTres>
+            </S.SectionTres>
+        </>
+    );
+}

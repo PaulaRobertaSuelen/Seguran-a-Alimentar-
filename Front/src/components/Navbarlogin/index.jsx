@@ -11,10 +11,9 @@ export default function Navbar() {
                 <img src={logonavbar} alt="Logo" />
             </S.LogoWrapper>
             <S.Opcoes>
-                <a href="/cadastroprofissional">Sou Profissional</a>
-                <a href="/">Início</a>
-                <a href="/PesquisarProficional">Serviços</a>
-                <a href="/PesquisarGuia">Guias</a>
+                <a href="/Homelogin">Início</a>
+                <a href="/PesquisarProfissional">Serviços</a>
+                <a href="/Pguialogin">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
                 <a href="/Paginaperfil">

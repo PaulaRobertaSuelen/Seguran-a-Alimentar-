@@ -12,7 +12,9 @@ const Perfiluser = () => {
                 <p>Email: vaquinha123@gmail.com</p>
                 <p>Telefone: 0000-0000</p>
             </S.Info>
-            <S.LogoutButton>Sair</S.LogoutButton>
+            <S.LogoutButton as="a" href="/">
+                Sair
+            </S.LogoutButton>
         </S.Container>
     );
 };
