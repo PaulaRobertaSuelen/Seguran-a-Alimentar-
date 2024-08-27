@@ -5,7 +5,14 @@ export default function PesquisarProfissional() {
     return (
         <>
             <Navbar />
-            <S.Cabercario>
+
+                        <S.OndasEstilo>
+                            <p> </p>
+                            
+                        </S.OndasEstilo>
+
+
+                <S.Cabercario>
                 <div>
                     <p>Filtro</p>
                     <input type="text" placeholder="Nutricionista" />
