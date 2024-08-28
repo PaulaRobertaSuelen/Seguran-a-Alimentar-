@@ -48,11 +48,11 @@ export default  function SobreNois () {
                                                                 <p>Somos uma equipe dedicada de seis pessoas que compartilham a paixão por ajudar pais, mães e responsáveis a lidar com a seletividade alimentar em crianças autistas. Nosso objetivo é fornecer suporte, informações e estratégias para tornar as refeições um momento mais agradável e nutritivo para todos.</p>
                                                             </S.TexT>
                                                     </S.Caixa>
+                                                        
+                                                        <S.CaixaDois>                                                                
+                                                            <S.ContImagems>
 
-                                                            <S.CaixaDois>
-                                                                <S.ContImagems>
-                                                                            <p>Membros</p>
-                                                                    <S.ContImgUm>
+                                                                <S.ContImgUm>
                                                                     <S.ImgUm src= "src/assets/ItalaS.png" alt= "foto de Itala"/>
                                                                     <p> Itala Samara </p> 
                                                                     </S.ContImgUm>
@@ -82,8 +82,8 @@ export default  function SobreNois () {
                                                                             <p>Reynan Pires</p>
                                                                     </S.ContImgSexto> 
 
-                                                                </S.ContImagems>
-                                                            </S.CaixaDois>
+                                                            </S.ContImagems>
+                                                        </S.CaixaDois>
                                             </S.ContAzul>
 
 

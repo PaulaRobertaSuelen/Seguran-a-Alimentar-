@@ -4,7 +4,7 @@ import * as S from './styles';
 export default function PesquisarProfissional() {
     return (
         <>
-            <Navbar />
+            <Navbarlogin />
 
                         <S.OndasEstilo>
                             <p> </p>

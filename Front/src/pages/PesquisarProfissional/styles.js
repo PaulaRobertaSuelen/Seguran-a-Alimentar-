@@ -4,7 +4,7 @@ import OndasDoComeco from '../../assets/ondas-do-comeco.png';
 export const OndasEstilo = styled.div`
     position: absolute;
     width: 100%;
-    height: 110%;
+    height: 140%;
     background-image: url(${OndasDoComeco});
     background-size: cover;
     z-index: -1;
