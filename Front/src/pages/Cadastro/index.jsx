@@ -77,7 +77,7 @@ export default function Cadastro() {
                             />
                         </S.LostPass>
                         <S.But>
-                            <Button styles={{ width: '60%', padding: '10px' }}>
+                            <Button styles={{ width: '40%', padding: '10px' }}>
                                 Cadastrar
                             </Button>
                         </S.But>

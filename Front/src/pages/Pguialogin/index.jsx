@@ -1,11 +1,11 @@
-import Navbar from '../../components/Navbar/index';
+import Navbarlogin from '../../components/Navbarlogin/index';
 import * as S from './styles';
 //import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
-export default function PesquisarGuia() {
+export default function Pguialogin() {
     return (
         <>
-            <Navbar />
+            <Navbarlogin />
             <S.Cabercario>
                 <div>
                     <h3>Filtro</h3>

@@ -90,7 +90,7 @@ export const Sair = styled.button`
     color: red;
 
     &:hover {
-        color: #333;
+        color: pink;
     }
 
     &:focus {

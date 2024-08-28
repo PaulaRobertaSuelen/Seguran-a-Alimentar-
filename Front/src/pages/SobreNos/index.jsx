@@ -1,12 +1,18 @@
 
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar';
 import * as S from './styles';
+
+
 
 export default  function SobreNois () {
     return(
             <>
                     
-                    <Navbar/>
+                <Navbar/>
+
+                        <S.OndasEstilo>
+                            <p> </p>
+                        </S.OndasEstilo>
 
                             <S.Tag>
                                     <h2> SOBRE NÓS </h2>
@@ -14,7 +20,8 @@ export default  function SobreNois () {
 
                                     <S.TexUm>
                                         <p>
-                                        No BEM TEA, facilitamos o acesso entre pais e profissionais especializados para melhorar a alimentação de crianças com Transtorno do Espectro Autista (TEA). Nosso site oferece guias e uma rede de especialistas para ajudar os pais a promoverem uma alimentação saudável para seus filhos.
+                                        No BEM TEA, facilitamos o acesso entre pais e profissionais especializados para melhorar a alimentação de crianças com Transtorno do Espectro Autista (TEA).
+                                        Nosso site oferece guias e uma rede de especialistas para ajudar os pais a promoverem uma alimentação saudável para seus filhos.
                                         </p>
                                     </S.TexUm>
 
@@ -40,10 +47,12 @@ export default  function SobreNois () {
                                                             <S.TexT>
                                                                 <p>Somos uma equipe dedicada de seis pessoas que compartilham a paixão por ajudar pais, mães e responsáveis a lidar com a seletividade alimentar em crianças autistas. Nosso objetivo é fornecer suporte, informações e estratégias para tornar as refeições um momento mais agradável e nutritivo para todos.</p>
                                                             </S.TexT>
+                                                    </S.Caixa>
+                                                        
+                                                        <S.CaixaDois>                                                                
+                                                            <S.ContImagems>
 
-                                                                <S.ContImagems>
-                                                                            <p>Membros</p>
-                                                                    <S.ContImgUm>
+                                                                <S.ContImgUm>
                                                                     <S.ImgUm src= "src/assets/ItalaS.png" alt= "foto de Itala"/>
                                                                     <p> Itala Samara </p> 
                                                                     </S.ContImgUm>
@@ -63,25 +72,21 @@ export default  function SobreNois () {
                                                                         <p>Paula Roberta</p>
                                                                     </S.ContImgQuatro>
 
-                                                                    {/* <S.ContImgQuinto>
-
+                                                                    <S.ContImgQuinto>
+                                                                        <S.ImgQuinto src= "src/assets/Gustavo.png" alt= "foto de gustavo"/>
+                                                                            <p> Gustavo  Santos</p>
                                                                     </S.ContImgQuinto>
 
                                                                     <S.ContImgSexto>
+                                                                        <S.ImgSexto src= "src/assets/Reyna.png" alt= "foto de Reynan"/>
+                                                                            <p>Reynan Pires</p>
+                                                                    </S.ContImgSexto> 
 
-                                                                    </S.ContImgSexto> */}
-
-
-
-                                                                </S.ContImagems>
-
-                                                                
-                                                    </S.Caixa>
+                                                            </S.ContImagems>
+                                                        </S.CaixaDois>
                                             </S.ContAzul>
 
 
             </>
     )
 }
-
-
