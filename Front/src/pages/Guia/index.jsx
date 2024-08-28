@@ -1,181 +1,92 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/index.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
-import * as S from './styles.js';
-
+import * as S from './styles';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const Guia = () => {
-  return (
-    <>
-      <Navbar />
-      <S.Header>
-        <h1>Seletividade Alimentar</h1>
-      </S.Header>
-      <br />
+    return (
+        <>
+        <Navbar />
+        <img src="/src/assets/svg/ondaleve.svg" alt="" />
       <S.Container>
-        <S.Main>
-          <S.ImageContainer className="seletividade">
-            <img src="/src/assets/seletividade-alimentar 1.png" alt="Guia" />
-          </S.ImageContainer> <br />
-            <S.datapubli>
-                <p>Postado 22 Jul, 2024</p>
-            </S.datapubli>
-            <br />
-          <S.Section className="intro">
-            <h2>O que é Seletividade Alimentar?</h2>
-            <br />
-            <p>
-              Seletividade alimentar refere-se à tendência de uma pessoa preferir certos alimentos e evitar outros, muitas vezes com base em fatores sensoriais, emocionais ou psicológicos. Essa seletividade pode variar de leve a extrema e pode se manifestar de diferentes maneiras:
-            </p>
-            <br />
-          </S.Section>
-          <S.Section className="content">
-            <h3>1. Fatores Sensoriais</h3>
-            <br />
-            <S.ImageContainer className="sensorial">
-              <img src="/src/assets/Fatores Sensoriais.png" alt="" />
-            </S.ImageContainer>
-            <br />
-            <S.UnorderedList>
-              <li><b>Sabor:</b> Algumas pessoas têm aversões a sabores específicos, como amargo ou picante, que podem afetar suas escolhas alimentares.</li>
-              <br />
-              <li><b>Textura:</b> A textura dos alimentos pode ser um fator importante. Alimentos crocantes, cremosos ou pegajosos podem ser preferidos ou evitados.</li>
-              <br />
-              <li><b>Aparência:</b> A cor e a aparência dos alimentos também podem influenciar a aceitação. Alimentos que não parecem apetitosos podem ser rejeitados.</li>
-              <br />
-            </S.UnorderedList>
-            <h3>2. Fatores Emocionais e Psicológicos</h3>
-            <br />
-            <S.ImageContainer className="psicologicos">
-              <img src="/src/assets/Psicológicos a alimentos.jpg" alt="" />
-            </S.ImageContainer>
-            <br />
-            <S.UnorderedList>
-              <li><b>Experiências Passadas:</b> Traumas alimentares ou experiências negativas associadas a certos alimentos podem levar a aversões duradouras.</li>
-              <br />
-              <li><b>Associar Comida a Emoções:</b> Alimentos podem estar ligados a experiências emocionais ou culturais, afetando a forma como são percebidos e aceitos.</li>
-              <br />
-            </S.UnorderedList>
-            <h3>3. Fatores Culturais e Ambientais</h3>
-            <br />
-            <S.ImageContainer className="fatores">
-              <img src="/src/assets/fatores.webp" alt="" />
-            </S.ImageContainer>
-            <br />
-            <S.UnorderedList>
-              <li><b>Tradições Culturais:</b> As tradições e hábitos alimentares da família e da cultura podem influenciar as preferências alimentares e a seletividade.</li>
-              <br />
-              <li><b>Exposição:</b> A quantidade e a forma como os alimentos são introduzidos na dieta desde a infância podem moldar as preferências alimentares.</li>
-              <br />
-            </S.UnorderedList>
-            <h3>4. Fatores de Saúde</h3>
-            <br />
-            <S.UnorderedList>
-              <li><b>Sensibilidades e Intolerâncias:</b> Condições como intolerância à lactose ou alergias alimentares podem levar a uma seletividade alimentar.</li>
-              <br />
-              <li><b>Problemas Digestivos:</b> Algumas pessoas podem evitar certos alimentos devido a desconforto digestivo ou problemas gastrointestinais.</li>
-              <br />
-            </S.UnorderedList>
-          </S.Section>
-          <S.Section className="ages">
-            <h3>Seletividade Alimentar em Diferentes Idades</h3>
-            <br />
-            <S.ImageContainer className="alimentar">
-              <img src="/src/assets/alimentar.jpeg" alt="" />
-            </S.ImageContainer> <br />
-            <br />
-            <h4>Infância</h4>
-            <br />
-            <S.UnorderedList>
-              <li>Desenvolvimento do Paladar: A exposição repetida a novos alimentos pode ajudar a ampliar as preferências alimentares das crianças.</li>
-              <br />
-            </S.UnorderedList>
-            <h4>Adolescência</h4>
-            <br />
-            <S.UnorderedList>
-              <li>Mudanças de Sabor: Durante a adolescência, os sabores e as preferências alimentares podem mudar. Isso pode ser influenciado por mudanças hormonais e sociais.</li>
-              <br />
-              <li>Influências Sociais: Amigos e mídias sociais podem impactar as escolhas alimentares dos adolescentes.</li>
-              <br />
-            </S.UnorderedList>
-            <h4>Adulto</h4>
-            <br />
-            <S.UnorderedList>
-              <li>Rotina e Preferências: Adultos podem ter preferências alimentares mais consolidadas, mas também podem experimentar mudanças devido a mudanças de saúde ou estilo de vida.</li>
-              <br />
-              <li>Necessidades Nutricionais: As escolhas alimentares podem ser ajustadas para atender a necessidades nutricionais específicas, como perda de peso ou gerenciamento de condições de saúde.</li>
-              <br />
-            </S.UnorderedList>
-          </S.Section>
-          <S.Section className="impact">
-            <h3>Impacto da Seletividade Alimentar</h3>
-            <br />
-            <S.ImageContainer className="impactos">
-              <img src="/src/assets/impactos.jpeg" alt="" />
-            </S.ImageContainer>
-            <br />
-            <h4>Aspectos Positivos</h4>
-            <br />
-            <S.UnorderedList>
-              <li><b>Controle e Satisfação:</b> Ter controle sobre o que se come pode levar a uma maior satisfação pessoal e bem-estar.</li>
-              <br />
-              <li><b>Evitação de Alimentos Não Saudáveis:</b> Às vezes, a seletividade pode resultar na eliminação de alimentos processados ou menos saudáveis.</li>
-              <br />
-            </S.UnorderedList>
-            <h4>Aspectos Negativos</h4>
-            <br />
-            <S.UnorderedList>
-              <li><b>Desbalanço Nutricional:</b> A seletividade alimentar pode levar a deficiências nutricionais se não há esforço para se alimentar adequadamente.</li>
-              <br />
-              <li><b>Problemas Sociais:</b> Pode causar dificuldades em situações sociais, como refeições em grupo ou outras interações alimentares.</li>
-              <br />
-            </S.UnorderedList>
-          </S.Section>
-          <S.Section className="management">
-            <h3>Como Gerenciar a Seletividade Alimentar</h3>
-            <br />
-            <S.UnorderedList>
-              <li><b>Educação e Consciência:</b>
-                <S.UnorderedList>
-                  <li>Entenda suas Preferências: Reflita sobre o que você gosta e não gosta e por quê.</li>
-                  <br />
-                  <li>Aprenda Sobre Nutrição: Conheça os nutrientes necessários e como obtê-los de diferentes fontes alimentares.</li>
-                  <br />
-                </S.UnorderedList>
-              </li>
-              <li><b>Introduza Novos Alimentos Gradualmente:</b>
-                <S.UnorderedList>
-                  <li>Experimentos: Tente introduzir novos alimentos de forma gradual e em pequenas quantidades.</li>
-                  <br />
-                  <li>Combinações: Misture novos alimentos com aqueles que você já gosta para facilitar a aceitação.</li>
-                  <br />
-                </S.UnorderedList>
-              </li>
-              <li><b>Adapte a Preparação e o Cozimento:</b>
-                <S.UnorderedList>
-                  <li>Textura e Temperatura: Experimente diferentes métodos de preparo para encontrar formas de tornar os alimentos mais agradáveis.</li>
-                  <br />
-                </S.UnorderedList>
-              </li>
-              <li><b>Busque Suporte Profissional:</b>
-                <S.UnorderedList>
-                  <li>Consultoria Nutricional: Um nutricionista pode ajudar a criar um plano alimentar equilibrado e diversificado.</li>
-                  <br />
-                  <li>Aconselhamento Psicológico: Se a seletividade alimentar está afetando sua qualidade de vida ou suas relações sociais, a ajuda de um psicólogo pode ser útil.</li>
-                </S.UnorderedList>
-              </li>
-            </S.UnorderedList>
-          </S.Section>
-        </S.Main>
-        <S.FooterStyled>
-          <h3>Conclusão</h3>
-          <br />
-          <p>Entender a seletividade alimentar é o primeiro passo para gerenciar e melhorar suas escolhas alimentares. Com conhecimento e estratégias adequadas, é possível equilibrar preferências pessoais com necessidades nutricionais e manter uma dieta saudável e satisfatória.</p>
-        </S.FooterStyled>
-      </S.Container>
-      <Footer />
-    </>
-  );
-};
+        <S.Image src="/src/assets/Component 13.png" alt="Criança recusando comida" />
+        <S.SectionTitleT><h1>O que é Seletividade Alimentar?</h1></S.SectionTitleT> <br />
+        <S.Paragraph>
+          Seletividade alimentar refere-se à tendência de uma pessoa preferir certos <br />
+          alimentos e evitar outros, muitas vezes com base em fatores sensoriais, <br />
+          emocionais ou psicológicos. Essa seletividade pode variar de leve a extrema <br />
+          e pode se manifestar de diferentes maneiras:
+        </S.Paragraph> <br />
+        <S.SectionTitle>1. Fatores Sensoriais</S.SectionTitle>
+        <S.List>
+          <S.ListItem>Sabor: Algumas pessoas têm aversões a sabores específicos, como amargo ou <br /> picante, que podem afetar suas escolhas alimentares.</S.ListItem> <br />
+          <S.ListItem>Textura: A textura dos alimentos pode ser um fator importante. Alimentos <br /> crocantes, cremosos ou pegajosos podem ser preferidos ou evitados.</S.ListItem> <br />
+          <S.ListItem>Aparência: A cor e a aparência dos alimentos também podem influenciar a <br /> aceitação. Alimentos que não parecem apetitosos podem ser rejeitados.</S.ListItem> <br />
+        </S.List>
+        <S.SectionTitleFT><p> 2. Fatores Emocionais e Psicológicos</p></S.SectionTitleFT>
+        <S.List>
+          <S.ListItem2> <p> Experiências Passadas: Traumas alimentares ou experiências negativas <br /> associadas a certos alimentos podem levar a aversões duradouras.</p> </S.ListItem2> <br />
+          <S.ListItem2>Associar Comida a Emoções: Alimentos podem estar ligados a experiências <br /> emocionais ou culturais, afetando a forma como são percebidos e aceitos.</S.ListItem2> <br />
+        </S.List>
+        <S.SectionTitle>3. Fatores de Saúde</S.SectionTitle>
+        <S.List>
+          <S.ListItem3>Sensibilidades e Intolerâncias: Condições como intolerância à lactose <br /> ou alergias alimentares podem levar a uma seletividade alimentar.</S.ListItem3> <br />
+          <S.ListItem3>Problemas Digestivos: Algumas pessoas podem evitar certos <br /> alimentos devido a desconforto digestivo ou problemas <br /> gastrointestinais.</S.ListItem3> <br />
+        </S.List>
+        <S.SectionTitleT><h1>Impacto da Seletividade Alimentar</h1></S.SectionTitleT> <br />
+        <S.SectionTitle>Aspectos Positivos</S.SectionTitle>
+        <S.List>
+          <S.ListItemAP>Controle e Satisfação: Ter controle sobre o que se come pode levar a uma <br /> maior satisfação pessoal e bem-estar.</S.ListItemAP> <br />
+          <S.ListItemAP>Evitação de Alimentos Não Saudáveis: Às vezes, a seletividade pode resultar <br /> na eliminação de alimentos processados ou menos saudáveis.</S.ListItemAP> <br />
+        </S.List>
+        <S.SectionTitle>Aspectos Negativos</S.SectionTitle>
+        <S.List>
+          <S.ListItemAN>Desbalanço Nutricional: A seletividade alimentar pode levar a deficiências <br /> nutricionais se não for abordada adequadamente.</S.ListItemAN> <br />
+          <S.ListItemAN>Problemas Sociais: Pode causar dificuldades em situações sociais, como <br /> refeições em grupo ou eventos familiares.</S.ListItemAN> <br />
+        </S.List>
+        <S.SectionTitleGSA><h1>Como Gerenciar a Seletividade Alimentar</h1></S.SectionTitleGSA> <br />
+        <S.SectionTitleEC><p>1. Educação e Consciência</p></S.SectionTitleEC> <br />
+        <S.List>
+          <S.ListItem>Entenda suas Preferências: Reflita sobre o que você gosta e não gosta e por quê.</S.ListItem> <br />
+          <S.ListItem>Aprenda Sobre Nutrição: Conheça os nutrientes necessários e como obtê-los de <br /> diferentes fontes alimentares.</S.ListItem> <br />
+        </S.List>
+        <S.SectionTitleIAG><p>2. Introduza Novos Alimentos Gradualmente</p></S.SectionTitleIAG> <br />
+        <S.List>
+          <S.ListItemIA><p>Experimentos: Tente introduzir novos alimentos de forma gradual e em <br /> pequenas quantidades.</p></S.ListItemIA> <br />
+          <S.ListItemIA><p>Combinações: Misture novos alimentos com aqueles que você já gosta para <br /> facilitar a aceitação.</p></S.ListItemIA> <br />
+        </S.List>
+        <S.SectionTitleAPC><p>3. Adapte a Preparação e o Cozimento</p></S.SectionTitleAPC> <br />
+        <S.List>
+          <S.ListItem>Textura e Temperatura: Experimente diferentes métodos de preparo para encontrar <br /> formas de tornar os alimentos mais agradáveis.</S.ListItem> <br />
+        </S.List>
+        <S.SectionTitleBSP>4. Busque Suporte Profissional</S.SectionTitleBSP> <br />
+        <S.List>
+          <S.ListItem>Consultoria Nutricional: Um nutricionista pode ajudar a criar um plano alimentar <br /> equilibrado e diversificado.</S.ListItem> <br />
+          <S.ListItem>Aconselhamento Psicológico: Se a seletividade alimentar está afetando sua <br /> qualidade de vida ou suas relações sociais, a ajuda de um psicólogo pode ser útil.</S.ListItem> <br />
+        </S.List>
 
-export default Guia;
+            <Footer />
+      </S.Container>
+
+        <S.CardETM>
+                <S.Image src="/src/assets/Component 14.png" alt="Criança comendo com a ajuda de uma pessoa adulta" />
+                <S.CardButton>saiba mais!</S.CardButton>
+            </S.CardETM>
+            <S.CardPP>
+                <S.Image src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
+                <S.formBTT action="PesquisarProfissional">
+                <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
+                </S.formBTT>
+            </S.CardPP>
+            <S.CardSA>
+                <S.Image src="/src/assets/Component 16.png" alt="Logo da Bem Tea" />
+                <S.formBTT action="SobreNos">
+                <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
+            </S.formBTT>
+            </S.CardSA>
+
+      </>
+    );
+  };
+  
+  export default Guia;

@@ -4,7 +4,7 @@ import * as S from './styles';
 
 
 
-export default  function SobreNois () {
+export default function SobreNos () {
     return(
             <>
                     
