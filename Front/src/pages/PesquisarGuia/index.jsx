@@ -1,102 +1,115 @@
+import { useState } from 'react';
+import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/index';
+import Menino from '../../assets/criança.png';
 import * as S from './styles';
-//import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
 export default function PesquisarGuia() {
+    
+    const [guia, setGuia] = useState('');
+    const [nome, setNome] = useState('');
+
+    const handleBuscarClick = () => {
+        
+        alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
+    };
+
+    const handleVerMaisClick = () => {
+        
+        alert("Ver mais conteúdo!");
+    };
+
     return (
         <>
-            <Navbar />
-            <S.Cabercario>
-                <div>
-                    <h3>Filtro</h3>
-                    <input type="text" placeholder="Guia" />
-                </div>
-                <div>
-                    <h3>Pesquisar por nome</h3>
-                    <input type="text" placeholder=" " />
-                </div>
-                <button>buscar</button>
-            </S.Cabercario>
+                        <Navbar />
 
-            <S.Section>
-                <S.Container>
-                    <S.Conteinerimagem>
-                        <S.Im
-                            src="src/assets/criaça.png"
-                            alt="imagen de uma criança "
-                        />
-                    </S.Conteinerimagem>
+                            <S.OndasEstilo>
+                                <p> </p>
+                            </S.OndasEstilo>
 
-                    <S.Caixa>
-                        <h2> Entenda a seletividade alimentar</h2>
-                        <h1>Tags:</h1>
+                                        <S.Cabercario>
+                                            
+                                                <h1>Filtro</h1>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Guia"
+                                                    value={guia}
+                                                    onChange={(e) => setGuia(e.target.value)} />
+                                            
+                                            
+                                                <h1>Pesquisar por nome</h1>
+                                                <input
+                                                    type="text"
+                                                    placeholder=" "
+                                                    value={nome}
+                                                    onChange={(e) => setNome(e.target.value)} />
+                                            
+                                            <div>
+                                                <button onClick={handleBuscarClick}>Buscar</button>
+                                            </div>
+                                        </S.Cabercario>
 
-                        <S.Tags>
-                            <S.Comp>
-                                <p> Comportamento Alimentar </p>
-                            </S.Comp>
-                            <S.Sens>
-                                <p>Sensibilidade</p>
-                            </S.Sens>
-                        </S.Tags>
+                                            <S.ConteinerUm>
+                                            <S.ConteinerImagem
+                                                    src={Menino} alt="foto de uma criança-chupando-laranja"/>
 
-                        <h1>Conteúdo:</h1>
-                        <p>
-                            A seletividade alimentar é um comportamento comum em
-                            crianças, especialmente naquelas com necessidades
-                            especiais, como o Transtorno do Espectro Autista
-                            (TEA). Esse termo refere-se à preferência restrita
-                            por certos alimentos e a recusa em consumir outros,
-                            muitas vezes baseada em fatores como textura, cor,
-                            sabor, ou apresentação do alimento.{' '}
-                        </p>
+                                                            <S.TituloUm>
+                                                                <h2>Entenda a seletividade alimentar</h2>
+                                                            </S.TituloUm>
+                                                    
+                                                                <S.TitulUM>
+                                                                    <p>Comportamento alimentar</p>
+                                                                </S.TitulUM>
 
-                        <S.Btndiv>
-                            <button>ver mais</button>
-                        </S.Btndiv>
-                    </S.Caixa>
-                </S.Container>
-            </S.Section>
+                                                                <S.TituloSegundo>
+                                                                    <p>Seletividade</p>
+                                                                </S.TituloSegundo>
 
-            {/* segunda parte do GUIA */}
+                                                                <S.TituloTres>
+                                                                    <h1>Conteúdo:</h1>
+                                                                </S.TituloTres>
 
-            <S.SectionDois>
-                <S.ContainerDois>
-                    <S.ConteinerImDois>
-                        <S.ImDois
-                            src="src/assets/foto-feliz.png"
-                            alt="imagen de uma criança com a mae "
-                        />
-                    </S.ConteinerImDois>
+                                                                <S.TextoUm>
+                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                                                </S.TextoUm>
 
-                    <S.CaixaDois>
-                        <h2>seletividade alimentar como lida</h2>
-                        <h1>Tags:</h1>
+                                                                <S.ButaoVerMaisUm>
+                                                                    <button onClick={handleVerMaisClick}>Ver mais</button>
+                                                                </S.ButaoVerMaisUm>
+                                            </S.ConteinerUm>
 
-                        <S.TagsDois>
-                            <S.CompDois>
-                                <p> Modelagem e incetivo </p>
-                            </S.CompDois>
-                            <S.SensDois>
-                                <p> refeiçao atraente</p>
-                            </S.SensDois>
-                        </S.TagsDois>
 
-                        <h1>Conteúdo:</h1>
-                        <p>
-                            Lidar com a seletividade alimentar, especialmente em
-                            crianças com necessidades especiais, pode ser
-                            desafiador, mas existem várias estratégias eficazes
-                            que podem ajudar. Aqui estão algumas abordagens
-                            práticas:
-                        </p>
 
-                        <S.BtndivDois>
-                            <button>ver mais</button>
-                        </S.BtndivDois>
-                    </S.CaixaDois>
-                </S.ContainerDois>
-            </S.SectionDois>
+                                            <S.ConteinerDois>
+                                            <S.ConteinerImagemD
+                                                    src={Menino} alt="foto de uma criança-chupando-laranja"/>
+
+                                                            <S.TituloD>
+                                                                <h2>Entenda a seletividade alimentar</h2>
+                                                            </S.TituloD>
+                                                    
+                                                                <S.TitulD>
+                                                                    <p>Comportamento alimentar</p>
+                                                                </S.TitulD>
+
+                                                                <S.TituloS>
+                                                                    <p>Seletividade</p>
+                                                                </S.TituloS>
+
+                                                                <S.TituloT>
+                                                                    <h1>Conteúdo:</h1>
+                                                                </S.TituloT>
+
+                                                                <S.TextoU>
+                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                                                </S.TextoU>
+
+                                                                <S.ButaoVerMaisU>
+                                                                    <button onClick={handleVerMaisClick}>Ver mais</button>
+                                                                </S.ButaoVerMaisU>
+                                            </S.ConteinerDois>
+
+                                <Footer/>
         </>
     );
 }
