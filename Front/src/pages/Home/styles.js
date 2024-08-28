@@ -108,8 +108,8 @@ export const VideoContainer = styled.div`
     margin: 0 auto;
     margin-top: 15%;
     width: 100%;
-    max-width: 1100px;
-    height: 518px;
+    max-width: 650px;
+    height: 400px;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -204,7 +204,7 @@ export const ViMiIdConteudo = styled.div`
     box-sizing: border-box;
     color: white;
     h2 {
-        font-size: 32px;
+        font-size: 20px;
         justify-self: center;
         font-weight: bold;
     }
@@ -215,18 +215,18 @@ export const ViMiIdConteudo = styled.div`
 `;
 
 export const Visao = styled.img`
-    height: 100px;
-    width: 100px;
+       height: 50%;
+       width: 38%;
 `;
 
 export const Missao = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 38%;
 `;
 
 export const Ideal = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 38%;
 `;
 
 export const DuvidasFrequentes = styled.div`
