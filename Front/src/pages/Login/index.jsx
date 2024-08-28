@@ -26,7 +26,7 @@ export default function Login() {
         const senha = event.target.senha.value;
         login({ email, senha })
             .then(() => {
-                navigate('/');
+                navigate('/Homelogin');
             })
             .catch((error) => {
                 alert(error.response.data.error);
@@ -72,7 +72,7 @@ export default function Login() {
                             <Button
                                 styles={{
                                     padding: '10px',
-                                    width: '80%',
+                                    width: '40%',
                                 }}
                             >
                                 Entrar

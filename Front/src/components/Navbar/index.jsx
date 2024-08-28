@@ -11,7 +11,7 @@ export default function Navbar() {
             <S.Opcoes>
                 <a href="/cadastroprofissional">Sou Profissional</a>
                 <a href="/">Início</a>
-                <a href="/PesquisarProficional">Serviços</a>
+                <a href="/Cadastro">Serviços</a>
                 <a href="/PesquisarGuia">Guias</a>
             </S.Opcoes>
             <S.BotaoEntrar>

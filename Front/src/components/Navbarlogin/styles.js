@@ -11,13 +11,14 @@ export const NavbarOpcoes = styled.div`
 
 export const LogoWrapper = styled.div`
     display: flex;
-    margin-left: 210px;
+    margin-left: 280px;
     align-items: center;
 `;
 
 export const Opcoes = styled.div`
     display: flex;
     gap: 20px;
+
     a {
         text-decoration: none;
         color: inherit;
@@ -32,7 +33,7 @@ export const Opcoes = styled.div`
 `;
 
 export const Botaoperfil = styled.button`
-    margin-right: 300px;
+    margin-right: 350px;
     background-color: transparent;
     border: none;
     cursor: pointer;

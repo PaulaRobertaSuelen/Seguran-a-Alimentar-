@@ -13,6 +13,9 @@ import Guia from '../pages/Guia/index';
 import PaginaPerfil from '../pages/Paginaperfil/index';
 import SobreNos from '../pages/SobreNos/index';
 import Pagamento from '../pages/Pagamento/index';
+import Homelogin from '../pages/Homelogin/index';
+import Pguialogin from '../pages/Pguialogin/index';
+import SobreNos from '../pages/SobreNos/index'
 
 export const router = createBrowserRouter([
     {
@@ -60,8 +63,16 @@ export const router = createBrowserRouter([
         element: <PaginaPerfil />,
     },
     {
-        path: '/sobrenos',
-        element: <SobreNos/>,
+        path: '/Homelogin',
+        element: <Homelogin />,
+    },
+    {
+        path: '/Pguialogin',
+        element: <Pguialogin />,
+    },
+    {
+        path: '/SobreNos',
+        element: <SobreNos/>
     },
     {
         path: '/pagamento',
