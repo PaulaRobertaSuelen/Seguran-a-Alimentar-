@@ -80,7 +80,9 @@ const Guia = () => {
             </S.CardPP>
             <S.CardSA>
                 <S.Image src="/src/assets/Component 16.png" alt="Logo da Bem Tea" />
-                <S.CardButton>saiba mais!</S.CardButton>
+                <S.formBTT action="SobreNos">
+                <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
+            </S.formBTT>
             </S.CardSA>
 
       </>
