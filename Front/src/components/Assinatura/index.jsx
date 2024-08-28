@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
-import PayPalPayment from '../PayPal/index';
-
 import * as S from './styles';
 
 export default function Assinatura(
     { isOpen, closeModal }
 ) {
+
+    const handleClick = () => {
+        window.open('/pagamento', '_blank');
+    };
+
     return (
 
             isOpen && (
@@ -23,7 +26,7 @@ export default function Assinatura(
                         <S.Dias>31</S.Dias>
                     </S.Status>
                     <S.Pagamento>
-                        <PayPalPayment/>
+                        <S.BotaoAssinatura onClick={handleClick}>Assine aqui</S.BotaoAssinatura>
                     </S.Pagamento>
                     <S.Sair onClick={closeModal}>Sair</S.Sair>
                 </S.Conteudo>

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+
 import * as S from './styles';
 
 export default function Pagamento() {
@@ -7,8 +9,8 @@ export default function Pagamento() {
         <div>
             <S.Container>
                 <S.Title>
-                    <S.PayPalScriptProvider options={{ "client-id": "AUeO65CgP0LpJvr7RZjPgeCp7Ptx36IgqM5CaKgcsOPEQQZT4kOWkizsb3wyZOhWP85v_IqiCz5cu_E9", currency: "BRL" }}>
-                        <S.PayPalButtons
+                    <PayPalScriptProvider options={{ "client-id": "AUeO65CgP0LpJvr7RZjPgeCp7Ptx36IgqM5CaKgcsOPEQQZT4kOWkizsb3wyZOhWP85v_IqiCz5cu_E9", currency: "BRL" }}>
+                        <PayPalButtons
                             createOrder={(data, actions) => {
                             return actions.order.create({
                                 purchase_units: [{
@@ -33,7 +35,7 @@ export default function Pagamento() {
                                 alert('Erro ao processar o pagamento: ' + err);
                             }}
                         />
-                    </S.PayPalScriptProvider>
+                    </PayPalScriptProvider>
                 </S.Title>
             </S.Container>
         </div>

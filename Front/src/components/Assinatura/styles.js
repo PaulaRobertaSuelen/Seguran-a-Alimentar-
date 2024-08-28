@@ -97,3 +97,20 @@ export const Sair = styled.button`
         outline: none;
     }
 `;
+
+export const BotaoAssinatura = styled.button`
+    background-color: #33B44D;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 200px;
+    &:hover {
+            background-color: #1C682C;
+        }
+`;
