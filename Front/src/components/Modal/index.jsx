@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles';
 import { MdClose } from 'react-icons/md';
 
-export default function index({ isOpen, children, handleClose }) {
+export default function Modal({ isOpen, children, handleClose }) {
     if (isOpen) {
         return (
             <S.Background>
