@@ -18,30 +18,28 @@ export const Cabercario = styled.div`
     align-items: center;
     padding: 20px;
     h1 {
-        margin-left: 20px;
-        margin-bottom: 4rem;
         
-
+        margin-bottom: 3rem;
+        align-items: baseline;
         font-size: 1rem;
+        margin-bottom: 6rem;
+
+        text-align: left; 
     }
 
     input {
-        margin: 20px;
+        margin: 1rem;
         border: none;
         padding: 10px;
-        font-size: 1rem;
-        width: 14em;
+        width: 13rem;
         border-radius: 20rem;
         color: black;
         cursor: pointer;
-    }
-
-    div {
-        display: flex;
-       
+    };
+    
 
         //butao de buscar
-    }
+    
     button {
         padding: 10px 20px;
         border: unset;
@@ -87,8 +85,8 @@ export const ConteinerUm = styled.div`
     display: flex;
     margin: 20px;
     align-items: center;
-    height: 23rem;
-    width: 48rem;
+    height: 18rem;
+    width: 50rem;
     margin-left: 15rem;
     border-radius: 20px;
     background-color: #f9f9f9;
@@ -121,7 +119,7 @@ export const SubTituloUM = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -16rem;
+        margin-left: -18rem;
         margin-bottom: 6rem;
     }
 `;
@@ -132,7 +130,7 @@ export const TituloSegubd = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -3rem;
+        margin-left: -5rem;
         margin-bottom: 6rem;
     }
 `;
@@ -140,7 +138,7 @@ export const TituloSegubd = styled.div`
 export const TituloDois = styled.div`
     h1 {
         font-size: 1rem;
-        margin-left: -29rem;
+        margin-left: -28rem;
         margin-top: 1rem;
     }
 `;
@@ -158,7 +156,7 @@ export const TextoUm= styled.div`
 export const ButaoVerPerfilsUm = styled.div`
     button {
         padding: 10px 20px;
-        margin-left: -45rem;
+        margin-left: -46rem;
         margin-top: 12rem;
         background-color: #33b44d;
         color: white;
@@ -175,10 +173,10 @@ export const ButaoVerPerfilsUm = styled.div`
         
 export const ConteinerDois = styled.div`
 display: flex;
-margin: 20px;
+margin: 50px;
 align-items: center;
-height: 23rem;
-width: 48rem;
+height: 18rem;
+width: 50rem;
 margin-left: 15rem;
 border-radius: 20px;
 background-color: #f9f9f9;
@@ -200,7 +198,7 @@ h2 {
     font-size: 2rem;
     width: 100%;
     margin-bottom: 14rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
     white-space: nowrap;
 }
 `;
@@ -211,7 +209,7 @@ p {
     color: #101066;
     font-weight: 700;
     white-space: nowrap;
-    margin-left: -13rem;
+    margin-left: -16rem;
     margin-bottom: 6rem;
 }
 `;
@@ -222,7 +220,7 @@ p {
     color: #101066;
     font-weight: 700;
     white-space: nowrap;
-    margin-left: 0rem;
+    margin-left: -2rem;
     margin-bottom: 6rem;
 }
 `;
@@ -240,7 +238,7 @@ p {
     font-size: 1rem;
     color: black;
     line-height: 1.3;
-    margin-left: -29rem;
+    margin-left: -30rem;
     margin-top: 9rem;
 }
 `;
@@ -248,7 +246,7 @@ p {
 export const ButaoVerPerfilsU = styled.div`
 button {
     padding: 10px 20px;
-    margin-left: -45rem;
+    margin-left: -46rem;
     margin-top: 12rem;
     background-color: #33b44d;
     color: white;
@@ -257,3 +255,91 @@ button {
     cursor: pointer;
 }
 `;
+
+        //terceira parta do profissional
+
+
+        export const ConteinerTres = styled.div`
+        display: flex;
+        margin: 50px;
+        align-items: center;
+        height: 18rem;
+        width: 50rem;
+        margin-left: 15rem;
+        border-radius: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+        position: relative;
+        `;
+        
+        export const ConteinerImagemTres = styled.img`
+        max-width: 9rem;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 5rem;
+        `;
+        
+        export const TituloTerceiro = styled.div`
+        h2 {
+            display: flex;
+            font-size: 2rem;
+            width: 100%;
+            margin-bottom: 14rem;
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+        `;
+        
+        export const SubTituloTer = styled.div`
+        p {
+            font-size: 1rem;
+            color: #101066;
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: -14rem;
+            margin-bottom: 6rem;
+        }
+        `;
+        
+        export const TituloTres = styled.div`
+        p {
+            font-size: 1rem;
+            color: #101066;
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: 0rem;
+            margin-bottom: 6rem;
+        }
+        `;
+        
+        export const TituloTre = styled.div`
+        h1 {
+            font-size: 1rem;
+            margin-left: -29rem;
+            margin-top: 1rem;
+        }
+        `;
+        
+        export const TextoTres= styled.div`
+        p {
+            font-size: 1rem;
+            color: black;
+            line-height: 1.3;
+            margin-left: -30rem;
+            margin-top: 9rem;
+        }
+        `;
+        
+        export const ButaoVerPerfilsTres = styled.div`
+        button {
+            padding: 10px 20px;
+            margin-left: -46rem;
+            margin-top: 12rem;
+            background-color: #33b44d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        `;

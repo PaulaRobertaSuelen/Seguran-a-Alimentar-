@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
+import Marta from '../../assets/Marta.png'
 import Carlos from '../../assets/Carlos.png'
 import * as S from './styles';
 
@@ -112,6 +113,40 @@ export default function PesquisarProfissional() {
                                                                     <button onClick={handleVerMaisClick}>Ver Perfil</button>
                                                                 </S.ButaoVerPerfilsU>
                                             </S.ConteinerDois>
+
+
+                                            {/* treceira parte do Profissional */}
+
+
+                                            <S.ConteinerTres>
+                                            <S.ConteinerImagemTres
+                                                    src={Marta} alt="foto da Profissional"/>
+
+                                                            <S.TituloTerceiro>
+                                                                <h2>Marta Portela</h2>
+                                                            </S.TituloTerceiro>
+                                                    
+                                                                <S.SubTituloTer>
+                                                                    <p>Nutrição materno infantil</p>
+                                                                </S.SubTituloTer>
+
+                                                                <S.TituloTres>
+                                                                    <p>Comportamento alimentar</p>
+                                                                </S.TituloTres>
+
+                                                                <S.TituloTre>
+                                                                    <h1>Conteúdo:</h1>
+                                                                </S.TituloTre>
+
+                                                                <S.TextoTres>
+                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro  Autista (TEA). Ela se caracteriza pela recusa em experimentar novos  alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                                                </S.TextoTres>
+
+                                                                <S.ButaoVerPerfilsTres>
+                                                                    <button>Ver Perfil</button>
+                                                                </S.ButaoVerPerfilsTres>
+                                            </S.ConteinerTres>
+
 
 
 
