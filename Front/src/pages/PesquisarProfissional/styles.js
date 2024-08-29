@@ -20,8 +20,7 @@ export const Cabercario = styled.div`
     h1 {
         margin-left: 20px;
         margin-bottom: 4rem;
-        flex-direction: column;
-        align-items: baseline;
+        
 
         font-size: 1rem;
     }
