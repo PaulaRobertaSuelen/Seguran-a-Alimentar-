@@ -14,7 +14,8 @@ import PaginaPerfil from '../pages/Paginaperfil/index';
 import Pagamento from '../pages/Pagamento/index';
 import Homelogin from '../pages/Homelogin/index';
 import Pguialogin from '../pages/Pguialogin/index';
-import SobreNos from '../pages/SobreNos/index'
+import SobreNos from '../pages/SobreNos/index';
+import GuiaSeletividadeComoLida from '../pages/GuiaSeletividadeComoLida';
 
 export const router = createBrowserRouter([
     {
@@ -76,5 +77,9 @@ export const router = createBrowserRouter([
     {
         path: '/pagamento',
         element: <Pagamento/>,
+    },
+    {
+        path: '/guiaSeletividadeComoLida',
+        element: <GuiaSeletividadeComoLida/>,
     },
 ]);
