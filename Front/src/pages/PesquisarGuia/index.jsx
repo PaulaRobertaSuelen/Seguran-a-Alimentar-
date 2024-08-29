@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/index';
 import Menino from '../../assets/criança.png';
+import Feliz from '../../assets/Feliz.png'
 import * as S from './styles';
 
 export default function PesquisarGuia() {
@@ -71,6 +72,7 @@ export default function PesquisarGuia() {
 
                                                                 <S.TextoUm>
                                                                     <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                                                    
                                                                 </S.TextoUm>
 
                                                                 <S.ButaoVerMaisUm>
@@ -82,10 +84,10 @@ export default function PesquisarGuia() {
 
                                             <S.ConteinerDois>
                                             <S.ConteinerImagemD
-                                                    src={Menino} alt="foto de uma criança-chupando-laranja"/>
+                                                    src={Feliz} alt="foto de uma criança feliz"/>
 
                                                             <S.TituloD>
-                                                                <h2>Entenda a seletividade alimentar</h2>
+                                                                <h2>Seletividade Alimentar, como lidar</h2>
                                                             </S.TituloD>
                                                     
                                                                 <S.TitulD>
@@ -101,7 +103,8 @@ export default function PesquisarGuia() {
                                                                 </S.TituloT>
 
                                                                 <S.TextoU>
-                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
+                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do 
+                                                                        Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
                                                                 </S.TextoU>
 
                                                                 <S.ButaoVerMaisU>
