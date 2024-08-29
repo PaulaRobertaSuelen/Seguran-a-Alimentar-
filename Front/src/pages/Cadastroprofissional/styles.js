@@ -92,12 +92,15 @@ export const Form = styled.form`
     }
 
     button {
+        text-decoration-style: none;
         background-color: #10b981;
         color: white;
+        font-weight: bold;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        color: white;
 
         &:hover {
             background-color: #059669;
