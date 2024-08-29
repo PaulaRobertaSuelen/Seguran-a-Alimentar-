@@ -5,6 +5,11 @@ import * as S from './styles';
 export default function Assinatura(
     { isOpen, closeModal }
 ) {
+
+    const handleClick = () => {
+        window.open('/pagamento', '_blank');
+    };
+
     return (
 
             isOpen && (
@@ -20,7 +25,9 @@ export default function Assinatura(
                         <S.Vigencia>Dias restantes:</S.Vigencia>
                         <S.Dias>31</S.Dias>
                     </S.Status>
-                    <S.Pagamento>Aqui fica a área de pagamento</S.Pagamento>
+                    <S.Pagamento>
+                        <S.BotaoAssinatura onClick={handleClick}>Assine aqui</S.BotaoAssinatura>
+                    </S.Pagamento>
                     <S.Sair onClick={closeModal}>Sair</S.Sair>
                 </S.Conteudo>
             </S.Modal>

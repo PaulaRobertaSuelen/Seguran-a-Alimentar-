@@ -107,9 +107,9 @@ export const VideoContainer = styled.div`
     justify-content: center;
     margin: 0 auto;
     margin-top: 15%;
-    width: 80%;
-    max-width: 560px;
-    height: 315px;
+    width: 100%;
+    max-width: 650px;
+    height: 400px;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -204,7 +204,7 @@ export const ViMiIdConteudo = styled.div`
     box-sizing: border-box;
     color: white;
     h2 {
-        font-size: 32px;
+        font-size: 20px;
         justify-self: center;
         font-weight: bold;
     }
@@ -215,18 +215,18 @@ export const ViMiIdConteudo = styled.div`
 `;
 
 export const Visao = styled.img`
-    height: 100px;
-    width: 100px;
+       height: 50%;
+       width: 38%;
 `;
 
 export const Missao = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 38%;
 `;
 
 export const Ideal = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 50%;
+    width: 38%;
 `;
 
 export const DuvidasFrequentes = styled.div`
@@ -234,9 +234,11 @@ export const DuvidasFrequentes = styled.div`
         color: white;
         font-size: 32;
         font-weight: bold;
+            
     }
     width: 100%;
     padding: 20px;
+    margin-left: auto;
 `;
 
 export const FaqContainer = styled.div`
@@ -245,6 +247,7 @@ export const FaqContainer = styled.div`
     padding: 10px;
     width: 100%;
     margin-bottom: 5%;
+    margin-left: '20px';
 `;
 
 export const FaqItem = styled.div`
@@ -257,6 +260,14 @@ export const FaqItem = styled.div`
     color: #101066;
     font-size: 15px;
     font-weight: bold;
+    
+
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    
 
     &:hover {
         background-color: #deedf5;

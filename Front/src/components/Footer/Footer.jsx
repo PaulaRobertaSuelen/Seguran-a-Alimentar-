@@ -1,4 +1,6 @@
 import * as S from './styles';
+import { FaCircleArrowUp } from 'react-icons/fa6';
+import { IoLogoYoutube, IoLogoFacebook } from 'react-icons/io';
 
 import Logo from '../../assets/logo.png';
 
@@ -6,17 +8,24 @@ export default function Footer() {
     return (
         <S.Footer>
             <img src={Logo} alt="logo" />
-            <p>
-                BemTEA - Todos os direitos reservados - CNPJ: **.***.***/****-**
-                Rua só Deus saber, 7 - Recife - PE CEP *****-*** E-mail:
-                Telefone +55 (81) *****-**** 2024-2024
+
+            <div className="icons">
+                <a href="https://www.facebook.com/people/Bemtea-Start/pfbid02AStKsyD8qTTxzPWmu2J5C1F9oqGtttUPu9sZ9CxeJjtT8ny3weCbWqTv2KPi8XAVl/">
+                    <IoLogoFacebook fontSize={24} color="#101066" />
+                </a>
+                <a href="https://www.youtube.com/watch?v=YaoHN6Z3WsI ">
+                    <IoLogoYoutube fontSize={24} color="#101066" />
+                </a>
+            </div>
+            <p className="email">
+                <span>E-mail:</span> start.segurancaalimentar@gmail.com
             </p>
-            <p>
+            <p className="copyright">
                 BemTEA é protegido pela lei de direitos autorais. Não é
                 permitido copia ou reproduzir conteúdo do site em qualquer
                 veículo de comunicação.
             </p>
-            {/* <S.Button
+            <S.Button
                 onClick={() =>
                     window.scrollTo({
                         top: 0,
@@ -24,8 +33,8 @@ export default function Footer() {
                     })
                 }
             >
-                Voltar para o topo
-            </S.Button> */}
+                <FaCircleArrowUp fontSize={24} />
+            </S.Button>
         </S.Footer>
     );
 }

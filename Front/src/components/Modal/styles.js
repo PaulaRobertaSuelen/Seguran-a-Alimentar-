@@ -7,6 +7,7 @@ const Background = styled.div`
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 `;
 
@@ -16,9 +17,11 @@ const Modal = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-    background-color: #DEEDF5;;
+    background-color: #deedf5;
     border-radius: 8px;
     color: black;
+    max-height: 90vh;
+    overflow: auto;
 `;
 
 const Button = styled.button`

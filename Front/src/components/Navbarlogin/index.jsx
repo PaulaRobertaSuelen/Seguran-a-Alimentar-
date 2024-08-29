@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
 
 import logonavbar from '../../assets/svg/logonavbar.svg';
-import puser from '../../assets/svg/puser.svg';
+import User from '../../assets/svg/puser.svg';
+import { FaUserCircle } from 'react-icons/fa';
 
 export default function Navbar() {
+
+    const [isCardVisible, setIsCardVisible] = useState(false);
+
+    const toggleCardVisibility = () => {
+    setIsCardVisible(!isCardVisible);
+    };
+
+    const handleClick = () => {
+        window.location.href = '/';
+    };
+
     return (
         <S.NavbarOpcoes>
             <S.LogoWrapper>
@@ -16,9 +28,22 @@ export default function Navbar() {
                 <a href="/Pguialogin">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
-                <a href="/Paginaperfil">
-                    <img src={puser} alt="Logo" />
-                </a>
+            <S.AvatarButton onClick={toggleCardVisibility}>
+                <FaUserCircle size={30} />
+                {isCardVisible && (
+                    <S.Card>
+                        <S.Info>
+                            <p>Usuário:</p>
+                            <S.Dados>Maria Silva</S.Dados>
+                            <p>Email:</p>
+                            <S.Dados>silvamaria@gmail.com</S.Dados>
+                            <p>Telefone:</p>
+                            <S.Dados>00 0 0000-0000</S.Dados>
+                        </S.Info>
+                        <S.Sair onClick={handleClick}>Sair</S.Sair>
+                    </S.Card>
+                    )}
+            </S.AvatarButton>
             </S.Botaoperfil>
         </S.NavbarOpcoes>
     );

@@ -10,6 +10,7 @@ import Mira from '../../assets/mira.png';
 import Lampada from '../../assets/lampada.png';
 import OndasDoMeio from '../../assets/ondas-do-meio.png';
 import Legumes from '../../assets/comendo-legumes.png';
+import { IoIosArrowDropdown } from "react-icons/io";
 
 import * as S from './styles.js';
 
@@ -189,6 +190,7 @@ export default function Home() {
                                         onClick={() => toggleAnswer(index)}
                                     >
                                         {faq.question}
+                                         <IoIosArrowDropdown style={{ marginLeft: 'auto', fontSize: '25px', marginTop: '-20' }} />
                                         <S.FaqAnswer
                                             show={visibleAnswer === index}
                                         >
