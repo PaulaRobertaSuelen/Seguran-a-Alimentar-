@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
 import { IoMdEye, IoIosEyeOff } from 'react-icons/io';
 import { MdLock } from 'react-icons/md';
 
-const TextInput = ({
+function TextInput  ({
     label,
     name,
     placeholder,
@@ -15,8 +15,8 @@ const TextInput = ({
     iconRight,
     password = false,
     type = 'text',
-}) => {
-    const [openEye, setOpenEye] = React.useState(true);
+})  {
+    const [openEye, setOpenEye] = useState(true);
 
     const handleEye = () => {
         setOpenEye(!openEye);

@@ -1,4 +1,4 @@
-import { MdEmail, MdLock, MdRemoveRedEye } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 import * as S from './styles';
 import { useState } from 'react';
 import useAuth from '../../services/useAuth';
