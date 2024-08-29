@@ -5,8 +5,12 @@ import Ondaleve from '../../assets/svg/ondaleve.svg';
 import Localizacao from '../../assets/svg/localizacao.svg';
 import Celular from '../../assets/svg/celular.svg';
 import Cartao from '../../assets/svg/cartao.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastroprofissional() {
+
+    const navigate = useNavigate()
+
     return (
         <S.PageWrapper backgroundImage={Ondaleve}>
             <Navbar />
@@ -86,8 +90,8 @@ export default function Cadastroprofissional() {
                                 Li e aceito os <a href="#terms">termos de uso</a>
                             </label>
                         </S.Terms>
-                        <button type="submit">
-                            <a href="/perfilprofissional">Cadastrar</a>
+                        <button type="submit" onClick={() => navigate('/perfilprivado')}>
+                        Cadastrar
                         </button>
                     </S.Form>
                 </S.FormSection>

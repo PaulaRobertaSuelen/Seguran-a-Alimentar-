@@ -51,13 +51,13 @@ export const NosConheca = styled.div`
     margin-top: 16%;
     color: #101066;
     h1 {
-        font-size: 32px;
+        font-size: 26px;
     }
     h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
     p {
-        font-size: 15px;
+        font-size: 14px;
         margin-top: 2%;
     }
 `;
@@ -108,8 +108,8 @@ export const VideoContainer = styled.div`
     margin: 0 auto;
     margin-top: 15%;
     width: 100%;
-    max-width: 1100px;
-    height: 518px;
+    max-width: 650px;
+    height: 380px;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -134,7 +134,7 @@ export const ConteudoDois = styled.div`
     margin-right: 250px;
     h1 {
         color: white;
-        font-size: 32;
+        font-size: 26px;
         margin-bottom: 2%;
     }
 `;
@@ -159,6 +159,7 @@ export const TextoFunciona = styled.div`
     text-align: left;
     p {
         color: #101066;
+        font-size: 14px;
     }
     span {
         font-weight: bold;
@@ -168,7 +169,7 @@ export const TextoFunciona = styled.div`
 
 export const BarraDois = styled.div`
     background-color: #7499e8;
-    width: 40px;
+    width: 35px;
     border-radius: 20px;
 `;
 
@@ -183,6 +184,9 @@ export const FotoComputador = styled.img`
 export const Compromisso = styled.div`
     margin-top: 10%;
     margin-bottom: 10%;
+    h1{
+        font-size: 26px;
+    }
 `;
 
 export const ViMiId = styled.div`
@@ -200,39 +204,39 @@ export const ViMiIdConteudo = styled.div`
     padding: 10px;
     gap: 10px;
     align-items: center;
-    width: 250px;
+    width: 220px;
     box-sizing: border-box;
     color: white;
     h2 {
-        font-size: 32px;
+        font-size: 18px;
         justify-self: center;
         font-weight: bold;
     }
     p {
-        font-size: 15px;
-        font-weight: bold;
+        font-size: 14px;
+        font-weight: normal;
     }
 `;
 
 export const Visao = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 38%;
+    width: 44%;
 `;
 
 export const Missao = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 38%;
+    width: 44%;
 `;
 
 export const Ideal = styled.img`
-    height: 100px;
-    width: 100px;
+    height: 38%;
+    width: 44%;
 `;
 
 export const DuvidasFrequentes = styled.div`
     h1 {
         color: white;
-        font-size: 32;
+        font-size: 26px;
         font-weight: bold;
             
     }
@@ -264,8 +268,8 @@ export const FaqItem = styled.div`
 
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-direction: column;
     
     
 
@@ -281,6 +285,7 @@ export const FaqAnswer = styled.div`
     border-left: 3px solid #007bff;
     border-radius: 5px;
     margin-top: 5px;
+    margin-bottom: 20px;
 `;
 
 export const footer = styled.img`
