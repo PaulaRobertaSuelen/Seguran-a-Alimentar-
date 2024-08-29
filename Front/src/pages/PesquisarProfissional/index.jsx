@@ -52,7 +52,9 @@ export default function PesquisarProfissional() {
                         </p>
 
                         <S.BtndivDois>
-                            <button>ver Perfil</button>
+                            <a href="/Perfilprofissional">
+                                <button>ver Perfil</button>
+                            </a>
                         </S.BtndivDois>
                     </S.CaixaDois>
                 </S.ContainerDois>
