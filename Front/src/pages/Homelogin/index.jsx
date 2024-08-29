@@ -186,17 +186,13 @@ export default function Homelogin() {
                         <S.FaqContainer>
                             {faqs.map((faq, index) => (
                                 <div key={index}>
-                                    <S.FaqItem
-                                        onClick={() => toggleAnswer(index)}
-                                    >
-                                        {faq.question}
-                                         <IoIosArrowDropdown style={{ marginLeft: 'auto', fontSize: '25px', marginTop: '-20' }} />
-                                        <S.FaqAnswer
-                                            show={visibleAnswer === index}
-                                        >
-                                            {faq.answer}
-                                        </S.FaqAnswer>
-                                    </S.FaqItem>
+                                <S.FaqItem onClick={() => toggleAnswer(index)}>
+                                    <span>{faq.question}</span>
+                                    <IoIosArrowDropdown style={{ fontSize: '25px' }} />
+                                </S.FaqItem>
+                            <S.FaqAnswer show={visibleAnswer === index}>
+                                {faq.answer}
+                            </S.FaqAnswer>
                                 </div>
                             ))}
                         </S.FaqContainer>
