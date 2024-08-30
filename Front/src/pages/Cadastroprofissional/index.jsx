@@ -8,8 +8,7 @@ import Cartao from '../../assets/svg/cartao.svg';
 import { useNavigate } from 'react-router-dom';
 
 export default function Cadastroprofissional() {
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
         <S.PageWrapper backgroundImage={Ondaleve}>
@@ -85,13 +84,17 @@ export default function Cadastroprofissional() {
                             required
                         />
                         <S.Terms>
-                        <input className='check' type="checkbox"  required />
+                            <input className="check" type="checkbox" required />
                             <label htmlFor="terms">
-                                Li e aceito os <a href="#terms">termos de uso</a>
+                                Li e aceito os{' '}
+                                <a href="#terms">termos de uso</a>
                             </label>
                         </S.Terms>
-                        <button type="submit" onClick={() => navigate('/perfilprivado')}>
-                        Cadastrar
+                        <button
+                            type="submit"
+                            onClick={() => navigate('/Homepro')}
+                        >
+                            Cadastrar
                         </button>
                     </S.Form>
                 </S.FormSection>

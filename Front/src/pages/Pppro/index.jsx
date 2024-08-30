@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
-import Navbarlogin from '../../components/Navbarlogin/index';
+import Navbarpro from '../../components/NavbarPro';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
@@ -20,7 +20,7 @@ export default function PesquisarProfissional() {
 
     return (
         <>
-            <Navbarlogin />
+            <Navbarpro />
 
             <S.OndasEstilo>
                 <p> </p>

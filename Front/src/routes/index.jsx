@@ -16,6 +16,10 @@ import Homelogin from '../pages/Homelogin/index';
 import Pguialogin from '../pages/Pguialogin/index';
 import SobreNos from '../pages/SobreNos/index';
 import GuiaSeletividadeComolida from '../pages/GuiaSeletividadeComoLida/index';
+import Homepro from '../pages/Homepro/index';
+import Pppro from '../pages/Pppro/index';
+import Pgpro from '../pages/Pgpro/index';
+import Ppcarlos from '../pages/Ppcarlos/index';
 import { Pagamento } from '../components/Assinatura/styles';
 
 export const router = createBrowserRouter([
@@ -86,5 +90,21 @@ export const router = createBrowserRouter([
     {
         path: '/GuiaSeletividadeComolida',
         element: <GuiaSeletividadeComolida />,
+    },
+    {
+        path: '/Homepro',
+        element: <Homepro />,
+    },
+    {
+        path: '/Pppro',
+        element: <Pppro />,
+    },
+    {
+        path: '/Pgpro',
+        element: <Pgpro />,
+    },
+    {
+        path: '/Ppcarlos',
+        element: <Ppcarlos />,
     },
 ]);
