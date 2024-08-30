@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/FooterUser/index';
 import Navbarlogin from '../../components/Navbarlogin/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';

@@ -1,4 +1,5 @@
 import Navbarpro from '../../components/NavbarPro/index';
+import FooterPro from '../../components/FooterPro/index';
 import * as S from './styles';
 //import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
@@ -97,6 +98,7 @@ export default function Pguialogin() {
                     </S.CaixaDois>
                 </S.ContainerDois>
             </S.SectionDois>
+            <FooterPro />
         </>
     );
 }

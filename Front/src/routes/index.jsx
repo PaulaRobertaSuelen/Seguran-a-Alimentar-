@@ -21,6 +21,8 @@ import Pppro from '../pages/Pppro/index';
 import Pgpro from '../pages/Pgpro/index';
 import Ppcarlos from '../pages/Ppcarlos/index';
 import { Pagamento } from '../components/Assinatura/styles';
+import SNosUser from '../pages/SNosUser/index';
+import SNosPro from '../pages/SNosPro/index';
 
 export const router = createBrowserRouter([
     {
@@ -106,5 +108,13 @@ export const router = createBrowserRouter([
     {
         path: '/Ppcarlos',
         element: <Ppcarlos />,
+    },
+    {
+        path: '/SNosUser',
+        element: <SNosUser />,
+    },
+    {
+        path: '/SNosPro',
+        element: <SNosPro />,
     },
 ]);

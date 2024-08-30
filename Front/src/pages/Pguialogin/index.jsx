@@ -1,4 +1,5 @@
 import Navbarlogin from '../../components/Navbarlogin/index';
+import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 //import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
@@ -97,6 +98,7 @@ export default function Pguialogin() {
                     </S.CaixaDois>
                 </S.ContainerDois>
             </S.SectionDois>
+            <FooterUser />
         </>
     );
 }
