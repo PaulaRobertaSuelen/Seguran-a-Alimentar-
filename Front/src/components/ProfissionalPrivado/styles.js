@@ -93,10 +93,29 @@ export const Tags = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 `;
 
 export const TagInfo = styled.text`
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
+`;
+
+export const Sair = styled.button`
+    width: 35px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+
+    &:hover {
+        color: pink;
+    }
+
+    &:focus {
+        outline: none;
+    }
 `;
