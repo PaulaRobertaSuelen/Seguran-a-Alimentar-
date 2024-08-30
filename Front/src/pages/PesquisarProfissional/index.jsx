@@ -4,23 +4,30 @@ import Navbar from '../../components/Navbar/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png'
 import Carlos from '../../assets/Carlos.png'
+//import ModalPesquisa from '../../components/ModalPesquisar';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
-    
     const [Nutricionista, setNutricionista] = useState('');
     const [nome, setNome] = useState('');
+    // const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false); 
+    // const [searchResultado, setSearchResultado] = useState([]); 
 
     const handleBuscarClick = () => {
-        
-        alert(`Buscando por Nutricionista: ${Nutricionista}, Nome: ${nome}`);
-    };
+    
+    // Simula uma pesquisa
+    //const resultado = [
+    // `Nutricionista: ${Nutricionista}`,
+    // `Nome: ${nome}`
+    // ];
+    // setSearchResultado(resultado); 
+    // setIsModalPesquisarOpen(true); 
+  };
 
-    const handleVerMaisClick = () => {
-        
-        alert("Ver Perfil!");
-    };
-
+  const handleVerMaisClick = () => {
+    alert("Ver Perfil!");
+  };
+    
     return (
         <>
                         <Navbar />
@@ -49,6 +56,8 @@ export default function PesquisarProfissional() {
                                             <div>
                                                 <button onClick={handleBuscarClick}>Buscar</button>
                                             </div>
+    
+
                                         </S.Cabercario>
 
                                             <S.ConteinerUm>
@@ -56,7 +65,7 @@ export default function PesquisarProfissional() {
                                                     src={Fernanda} alt="foto da Profissional"/>
 
                                                             <S.TituloUm>
-                                                                <h2>Fernanda Santos</h2>
+                                                                <h1>Fernanda Santos</h1>
                                                             </S.TituloUm>
                                                     
                                                                 <S.SubTituloUM>
@@ -147,11 +156,9 @@ export default function PesquisarProfissional() {
                                                                 </S.ButaoVerPerfilsTres>
                                             </S.ConteinerTres>
 
-
-
-
-
                                 <Footer/>
+
+            {/* <ModalPesquisa isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}searchResults={searchResults}/> */}
         </>
     );
 }

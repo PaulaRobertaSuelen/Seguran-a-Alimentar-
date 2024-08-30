@@ -103,7 +103,7 @@ export const ConteinerImagemP = styled.img`
 `;
 
 export const TituloUm = styled.div`
-    h2 {
+    h1 {
         display: flex;
         font-size: 2rem;
         width: 100%;
@@ -167,7 +167,7 @@ export const ButaoVerPerfilsUm = styled.div`
 `;
 
 
-        //segunda parte dp Proficional
+        //segunda parte do Proficional
 
 
         
@@ -193,7 +193,7 @@ margin-bottom: 5rem;
 `;
 
 export const TituloPrimeiro = styled.div`
-h2 {
+h1 {
     display: flex;
     font-size: 2rem;
     width: 100%;
@@ -227,8 +227,8 @@ p {
 
 export const TituloD = styled.div`
 h1 {
-    font-size: 1rem;
-    margin-left: -29rem;
+    font-size: 18px;
+    margin-left: -28rem;
     margin-top: 1rem;
 }
 `;
@@ -238,7 +238,7 @@ p {
     font-size: 1rem;
     color: black;
     line-height: 1.3;
-    margin-left: -30rem;
+    margin-left: -33rem;
     margin-top: 9rem;
 }
 `;
