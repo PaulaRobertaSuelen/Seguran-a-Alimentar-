@@ -22,32 +22,35 @@ export default function PesquisarGuia() {
 
     return (
         <>
-                        <Navbar />
+                <Navbar />
 
-                            <S.OndasEstilo>
-                                <p> </p>
-                            </S.OndasEstilo>
+                    <S.OndasEstilo>
+                        <p> </p>
+                    </S.OndasEstilo>
 
-                                        <S.Cabercario>
+                        <S.Cabercario>
                                             
-                                                <h1>Filtro</h1>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Guia"
-                                                    value={guia}
-                                                    onChange={(e) => setGuia(e.target.value)} />
+                            <S.DivFil>
+                            <h1>Filtro</h1>
+                            <input type="text"placeholder="Guia" value={guia} onChange={(e) => setGuia(e.target.value)} />
+                            </S.DivFil>
+                                                
                                             
+                            <S.DivPesq>
+                                <h1>Pesquisar por nome</h1>
+                                <input type="text"placeholder=" "value={nome}onChange={(e) => setNome(e.target.value)} />
+                            </S.DivPesq>
+                                                
                                             
-                                                <h1>Pesquisar por nome</h1>
-                                                <input
-                                                    type="text"
-                                                    placeholder=" "
-                                                    value={nome}
-                                                    onChange={(e) => setNome(e.target.value)} />
-                                            
-                                            <div>
+                                            <S.But>
                                                 <button onClick={handleBuscarClick}>Buscar</button>
-                                            </div>
+                                            </S.But>
+
+
+
+
+
+
                                         </S.Cabercario>
 
                                             <S.ConteinerUm>
@@ -55,7 +58,7 @@ export default function PesquisarGuia() {
                                                     src={Menino} alt="foto de uma criança-chupando-laranja"/>
 
                                                             <S.TituloUm>
-                                                                <h2>Entenda a seletividade alimentar</h2>
+                                                                <h1>Entenda a seletividade alimentar</h1>
                                                             </S.TituloUm>
                                                     
                                                                 <S.TitulUM>
@@ -67,7 +70,7 @@ export default function PesquisarGuia() {
                                                                 </S.TituloSegundo>
 
                                                                 <S.TituloTres>
-                                                                    <h1>Conteúdo:</h1>
+                                                                    <h1>Conteúdo:</h1>.
                                                                 </S.TituloTres>
 
                                                                 <S.TextoUm>
@@ -76,7 +79,8 @@ export default function PesquisarGuia() {
                                                                 </S.TextoUm>
 
                                                                 <S.ButaoVerMaisUm>
-                                                                    <button onClick={handleVerMaisClick}>Ver mais</button>
+                                                                <button type= "submit"onClick={() => navigator('/guia')}>Ver Mais</button>
+
                                                                 </S.ButaoVerMaisUm>
                                             </S.ConteinerUm>
 
@@ -87,7 +91,7 @@ export default function PesquisarGuia() {
                                                     src={Feliz} alt="foto de uma criança feliz"/>
 
                                                             <S.TituloD>
-                                                                <h2>Seletividade Alimentar, como lidar</h2>
+                                                                <h1>Seletividade Alimentar, como lidar</h1>
                                                             </S.TituloD>
                                                     
                                                                 <S.TitulD>
