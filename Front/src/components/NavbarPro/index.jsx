@@ -1,6 +1,8 @@
 import React from 'react';
 import * as S from './styles';
+
 import logonavbar from '../../assets/svg/logonavbar.svg';
+import puser from '../../assets/svg/puser.svg';
 
 export default function Navbar() {
     return (
@@ -9,14 +11,15 @@ export default function Navbar() {
                 <img src={logonavbar} alt="Logo" />
             </S.LogoWrapper>
             <S.Opcoes>
-                <a href="/cadastroprofissional">Sou Profissional</a>
-                <a href="/">Início</a>
-                <a href="/Login">Serviços</a>
-                <a href="/PesquisarGuia">Guias</a>
+                <a href="/Homelogin">Início</a>
+                <a href="/PesquisarProfissional">Serviços</a>
+                <a href="/Pguialogin">Guias</a>
             </S.Opcoes>
-            <S.BotaoEntrar>
-                <a href="/login">Entrar</a>
-            </S.BotaoEntrar>
+            <S.Botaoperfil>
+                <a href="/PerfilPrivado">
+                    <img src={puser} alt="Logo" />
+                </a>
+            </S.Botaoperfil>
         </S.NavbarOpcoes>
     );
 }

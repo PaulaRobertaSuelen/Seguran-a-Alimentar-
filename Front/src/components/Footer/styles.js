@@ -14,7 +14,7 @@ export const Footer = styled.footer`
         width: 70px;
         height: 70px;
         position: absolute;
-        left: 20px;
+        left: 150px;
         @media (max-width: 700px) {
             position: initial;
         }
@@ -40,7 +40,7 @@ export const Footer = styled.footer`
 
 export const Button = styled.button`
     position: absolute;
-    right: 10px;
+    right: 100px;
     top: -40px;
     background-color: #2727e8;
     width: 50px;

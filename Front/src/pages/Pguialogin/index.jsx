@@ -22,7 +22,7 @@ export default function Pguialogin() {
                 <S.Container>
                     <S.Conteinerimagem>
                         <S.Im
-                            src="src/assets/criaça.png"
+                            src="src\assets\criança.png"
                             alt="imagen de uma criança "
                         />
                     </S.Conteinerimagem>

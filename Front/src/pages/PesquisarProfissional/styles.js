@@ -41,15 +41,18 @@ export const Cabercario = styled.div`
         //butao de buscar
     
     button {
-        padding: 10px 20px;
+        width: 50px;
+        height: 40px;
+        align-items: center;
+        padding: 5px 10px;
         border: unset;
-        border-radius: 1rem;
+        border-radius: 16px;
         color: #888888;
         z-index: 1;
         background: #ffffff;
         position: relative;
-        font-weight: 1000;
-        font-size: 1rem;
+        /* font-weight: 1000; */
+        font-size: 12px;
         -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
         box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
         transition: all 250ms;
