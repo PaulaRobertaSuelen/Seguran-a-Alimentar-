@@ -18,7 +18,7 @@ export const Paragraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
-  margin-left: -360px;
+  margin-left: -370px;
 `;
 
 export const List = styled.ul`
@@ -37,7 +37,7 @@ export const ListItem = styled.li`
 `;
 
  export const Image = styled.img`
-  width: 100%;
+  width: 65%;
   max-width: 950px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -56,15 +56,15 @@ export const CardButton = styled.button`
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: -50px;
-  max-width: 120px;
+  margin-top: -5px;
+  max-width: 110px;
 `;
 
 export const SectionTitleT = styled.h1`
     font-size: 13px;
     font-weight: bold;
     color: #3771C8;
-    margin-left: -560px;
+    margin-left: -425px;
     flex-direction: column;
 `;
 
@@ -75,7 +75,7 @@ export const formBTT = styled.form`
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: -55px;
+  margin-top: -30px;
 `;
 
 export const CardETM = styled.div`
@@ -118,4 +118,9 @@ export const CardSA = styled.div`
   margin-left: 900px;
   margin-top: 50px;
   max-width: 250px;
+`;
+
+export const Image2 = styled.img`
+    width: 100%;
+    margin-top: -5px;
 `;

@@ -1,10 +1,15 @@
 import * as S from './styles';
 import { FaCircleArrowUp } from 'react-icons/fa6';
 import { IoLogoYoutube, IoLogoFacebook } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../assets/logo.png';
 
 export default function Footer() {
+    const navigate = useNavigate();
+    const handleClique = () => {
+        navigate('/SobreNos');
+    };
     return (
         <S.Footer>
             <img src={Logo} alt="logo" />
@@ -35,6 +40,8 @@ export default function Footer() {
             >
                 <FaCircleArrowUp fontSize={24} />
             </S.Button>
+
+            <a onClick={handleClique}>Sobre Nós</a>
         </S.Footer>
     );
 }

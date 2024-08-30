@@ -36,7 +36,19 @@ export const Footer = styled.footer`
         display: flex;
         gap: 10px;
     }
-`;
+
+    & a {
+        display: flex;
+        font-size: 20px;
+        cursor: pointer;
+        color: #333;
+        &:hover {
+      color: #000; /* Cor mais escura ao passar o mouse */
+      text-decoration: underline; /* Sublinhado ao passar o mouse */
+    }
+    }
+    
+  `;
 
 export const Button = styled.button`
     position: absolute;
@@ -65,3 +77,4 @@ export const Button = styled.button`
         opacity: 0.7;
     }
 `;
+
