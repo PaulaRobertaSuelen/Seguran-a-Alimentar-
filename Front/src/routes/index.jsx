@@ -12,10 +12,11 @@ import PerfilProfissional from '../pages/Perfilprofissional/index';
 import Guia from '../pages/Guia/index';
 import Guialogin from '../pages/Guialogin';
 import PaginaPerfil from '../pages/Paginaperfil/index';
-import Pagamento from '../pages/Pagamento/index';
 import Homelogin from '../pages/Homelogin/index';
 import Pguialogin from '../pages/Pguialogin/index';
 import SobreNos from '../pages/SobreNos/index';
+import GuiaSeletividadeComolida from '../pages/GuiaSeletividadeComoLida/index';
+import { Pagamento } from '../components/Assinatura/styles';
 
 export const router = createBrowserRouter([
     {
@@ -81,5 +82,9 @@ export const router = createBrowserRouter([
     {
         path: '/Guialogin',
         element: <Guialogin />,
+    },
+    {
+        path: '/GuiaSeletividadeComolida',
+        element: <GuiaSeletividadeComolida />,
     },
 ]);

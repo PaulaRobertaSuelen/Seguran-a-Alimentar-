@@ -11,23 +11,21 @@ export const OndasEstilo = styled.div`
 `;
 export const Cabercario = styled.div`
     display: flex;
-    background-size: cover;
+    background-size: cover; //
     background-position: 'center';
     height: 30vh;
-    justify-content: center;
+    background-repeat: no-repeat; //para ivita repetiçao
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    h1 {
-        margin-left: 10px;
-        margin-bottom: 80px;
+    padding: 150px;
+
+    div {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-
-        font-size: 1rem;
+        margin-right: 10px;
     }
-
     input {
-        margin: 20px;
+        margin: 10px;
         border: none;
         padding: 10px;
         font-size: 1rem;
@@ -37,12 +35,7 @@ export const Cabercario = styled.div`
         cursor: pointer;
     }
 
-    div {
-        display: flex;
-        justify-content: center;
-
-        //butao de buscar
-    }
+    //butao de buscar
     button {
         padding: 10px 20px;
         border: unset;
@@ -88,9 +81,9 @@ export const ConteinerUm = styled.div`
     display: flex;
     margin: 20px;
     align-items: center;
-    height: 23rem;
-    width: 48rem;
-    margin-left: 15rem;
+    height: 18rem;
+    width: 50rem;
+    margin-left: 18rem;
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -99,7 +92,7 @@ export const ConteinerUm = styled.div`
 `;
 
 export const ConteinerImagem = styled.img`
-    max-width: 10rem;
+    max-width: 9rem;
     height: auto;
     margin-left: 2rem;
     margin-bottom: 5rem;
@@ -122,7 +115,7 @@ export const TitulUM = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -29rem;
+        margin-left: -32rem;
         margin-bottom: 6rem;
     }
 `;
@@ -133,7 +126,7 @@ export const TituloSegundo = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -15rem;
+        margin-left: -17rem;
         margin-bottom: 6rem;
     }
 `;
@@ -151,7 +144,7 @@ export const TextoUm = styled.div`
         font-size: 1rem;
         color: black;
         line-height: 1.3;
-        margin-left: -33rem;
+        margin-left: -35rem;
         margin-top: 9rem;
     }
 `;
@@ -160,7 +153,7 @@ export const ButaoVerMaisUm = styled.div`
     button {
         padding: 10px 20px;
         margin-left: -47rem;
-        margin-top: 12rem;
+        margin-top: 10rem;
         background-color: #33b44d;
         color: white;
         border: none;

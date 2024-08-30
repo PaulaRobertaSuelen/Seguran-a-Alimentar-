@@ -14,26 +14,11 @@ export const Container = styled.div`
   margin-top: -900px;
 `;
 
-export const Title = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-`;
-
 export const Paragraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
-  margin-left: -415px;
-`;
-
-export const SectionTitle = styled.h3`
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: -500px;
-  color: #3771C8;
-  margin-left: -800px;
+  margin-left: -360px;
 `;
 
 export const List = styled.ul`
@@ -43,8 +28,12 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style-type: disc;
-  margin-left: -400px;
+  margin-left: -240px;
   text-align: justify;
+  list-style: none;
+  span {
+        font-weight: bold;
+    }
 `;
 
  export const Image = styled.img`
@@ -79,36 +68,6 @@ export const SectionTitleT = styled.h1`
     flex-direction: column;
 `;
 
-export const ListItem2 = styled.p`
-    margin-left: -430px;
-    
-    
-`;
-
-export const ListItem3 = styled.p`
-    margin-left: -470px;
-    
-    
-`;
-
-export const ListItemAP = styled.p`
-    margin-left: -420px;
-    
-    
-`;
-
-export const ListItemAN = styled.p`
-    margin-left: -450px;
-    
-`;
-
-export const SectionTitleGSA = styled.h1`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -490px;
-`;
-
 export const formBTT = styled.form`
     background-color: #33B44D;
   color: #fff;
@@ -119,77 +78,31 @@ export const formBTT = styled.form`
   margin-top: -55px;
 `;
 
-export const SectionTitleFT = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -650px;
-    font-size: large;
-`;
-
-export const SectionTitleEC = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -755px;
-    font-size: large;
-`;
-
-export const SectionTitleIAG = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -615px;
-    font-size: large;
-`;
-
-export const ListItemIA = styled.p`
-    margin-left: -450px;
-`;
-
-export const SectionTitleAPC = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -660px;
-    font-size: large;
-`;
-
-export const SectionTitleBSP = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -725px;
-    font-size: large;
-`;
-
 export const CardETM = styled.div`
     display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: -1600px;
-  max-width: 300px;
+  margin-left: 900px;
+  margin-top: -800px;
   max-width: 250px;
 `;
 
 export const CardPP = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: -10px;
-  max-width: 300px;
+  margin-left: 900px;
+  margin-top: 50px;
   max-width: 250px;
 `;
 
@@ -199,11 +112,10 @@ export const CardSA = styled.div`
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: 30px;
-  max-width: 300px;
+  margin-left: 900px;
+  margin-top: 50px;
   max-width: 250px;
 `;

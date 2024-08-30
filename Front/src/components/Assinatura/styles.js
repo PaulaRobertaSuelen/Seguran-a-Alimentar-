@@ -78,6 +78,12 @@ export const Dias = styled.text`
 export const Pagamento = styled.div`
     margin-top: 5%;
     margin-bottom: 5%;
+    p{
+        color: white;
+        font: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
 `;
 
 export const Sair = styled.button`
@@ -113,4 +119,25 @@ export const BotaoAssinatura = styled.button`
     &:hover {
             background-color: #1C682C;
         }
+`;
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Title = styled.h1`
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+`;
+
+export const PayPalScriptProvider = styled.div`
+
+`;
+
+export const PayPalButtons = styled.button`
+
 `;
