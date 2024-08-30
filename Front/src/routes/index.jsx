@@ -87,4 +87,5 @@ export const router = createBrowserRouter([
         path: '/GuiaSeletividadeComolida',
         element: <GuiaSeletividadeComolida />,
     },
+    
 ]);
