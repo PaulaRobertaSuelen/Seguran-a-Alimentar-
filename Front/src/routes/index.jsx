@@ -20,6 +20,7 @@ import Homepro from '../pages/Homepro/index';
 import Pppro from '../pages/Pppro/index';
 import Pgpro from '../pages/Pgpro/index';
 import Ppcarlos from '../pages/Ppcarlos/index';
+import Perfilmarta from '../pages/Perfilmarta/index';
 import { Pagamento } from '../components/Assinatura/styles';
 
 export const router = createBrowserRouter([
@@ -106,5 +107,9 @@ export const router = createBrowserRouter([
     {
         path: '/Ppcarlos',
         element: <Ppcarlos />,
+    },
+    {
+        path: '/Perfilmarta',
+        element: <Perfilmarta />,
     },
 ]);

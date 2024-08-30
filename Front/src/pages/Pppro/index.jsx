@@ -1,17 +1,26 @@
 import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
-import Navbarpro from '../../components/NavbarPro';
+import Navbarpro from '../../components/NavbarPro/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
+//import ModalPesquisa from '../../components/ModalPesquisar';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
     const [Nutricionista, setNutricionista] = useState('');
     const [nome, setNome] = useState('');
+    // const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false);
+    // const [searchResultado, setSearchResultado] = useState([]);
 
     const handleBuscarClick = () => {
-        alert(`Buscando por Nutricionista: ${Nutricionista}, Nome: ${nome}`);
+        // Simula uma pesquisa
+        //const resultado = [
+        // `Nutricionista: ${Nutricionista}`,
+        // `Nome: ${nome}`
+        // ];
+        // setSearchResultado(resultado);
+        // setIsModalPesquisarOpen(true);
     };
 
     const handleVerMaisClick = () => {
@@ -27,32 +36,36 @@ export default function PesquisarProfissional() {
             </S.OndasEstilo>
 
             <S.Cabercario>
-                <h1>Filtro</h1>
-                <input
-                    type="text"
-                    placeholder="Nutricionista"
-                    value={Nutricionista}
-                    onChange={(e) => setNutricionista(e.target.value)}
-                />
+                <S.DivFiltro>
+                    <h1>Filtro</h1>
+                    <input
+                        type="text"
+                        placeholder="Nutricionista"
+                        value={Nutricionista}
+                        onChange={(e) => setNutricionista(e.target.value)}
+                    />
+                </S.DivFiltro>
 
-                <h1>Pesquisar por nome</h1>
-                <input
-                    type="text"
-                    placeholder=" "
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                />
+                <S.DivPesq>
+                    <h1>Pesquisar por nome</h1>
+                    <input
+                        type="text"
+                        placeholder=" "
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                    />
+                </S.DivPesq>
 
-                <div>
+                <S.Butao>
                     <button onClick={handleBuscarClick}>Buscar</button>
-                </div>
+                </S.Butao>
             </S.Cabercario>
 
             <S.ConteinerUm>
                 <S.ConteinerImagemP src={Fernanda} alt="foto da Profissional" />
 
                 <S.TituloUm>
-                    <h2>Fernanda Santos</h2>
+                    <h1>Fernanda Santos</h1>
                 </S.TituloUm>
 
                 <S.SubTituloUM>
@@ -78,7 +91,7 @@ export default function PesquisarProfissional() {
                 </S.TextoUm>
 
                 <S.ButaoVerPerfilsUm>
-                    <button onClick={handleVerMaisClick}>Ver Perfil</button>
+                    <button onClick="submit">Ver Perfil</button>
                 </S.ButaoVerPerfilsUm>
             </S.ConteinerUm>
 
@@ -88,7 +101,7 @@ export default function PesquisarProfissional() {
                 <S.ConteinerImagemD src={Carlos} alt="foto do Profissional" />
 
                 <S.TituloPrimeiro>
-                    <h2>Carlos Aschoff</h2>
+                    <h1>Carlos Aschoff</h1>
                 </S.TituloPrimeiro>
 
                 <S.SubTituloPrimeiro>
@@ -124,7 +137,7 @@ export default function PesquisarProfissional() {
                 <S.ConteinerImagemTres src={Marta} alt="foto da Profissional" />
 
                 <S.TituloTerceiro>
-                    <h2>Marta Portela</h2>
+                    <h1>Marta Portela</h1>
                 </S.TituloTerceiro>
 
                 <S.SubTituloTer>
@@ -155,6 +168,8 @@ export default function PesquisarProfissional() {
             </S.ConteinerTres>
 
             <Footer />
+
+            {/* <ModalPesquisa isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}searchResults={searchResults}/> */}
         </>
     );
 }

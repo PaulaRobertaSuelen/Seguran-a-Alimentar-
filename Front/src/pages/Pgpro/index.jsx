@@ -1,102 +1,141 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
 import Navbarpro from '../../components/NavbarPro/index';
+import Menino from '../../assets/criança.png';
+import Feliz from '../../assets/Feliz.png';
 import * as S from './styles';
-//import ondas-do-comeco from './src/assets/ondas-do-comeco.png'
 
-export default function Pguialogin() {
+export default function Pgpro() {
+    const [guia, setGuia] = useState('');
+    const [nome, setNome] = useState('');
+    const navigate = useNavigate(); // Hook para navegação
+
+    const handleBuscarClick = () => {
+        alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
+    };
+
+    const handleVerMaisClick = () => {
+        navigate('/Guia'); // Redireciona para a rota /Guia
+    };
+
+    const handleVerMaisComoLidarClick = () => {
+        navigate('/GuiaSeletividadeComolida'); // Redireciona para a rota /GuiaSeletividadeComoLidar
+    };
+
     return (
         <>
             <Navbarpro />
+
+            <S.OndasEstilo>
+                <p> </p>
+            </S.OndasEstilo>
+
             <S.Cabercario>
-                <div>
-                    <h3>Filtro</h3>
-                    <input type="text" placeholder="Guia" />
-                </div>
-                <div>
-                    <h3>Pesquisar por nome</h3>
-                    <input type="text" placeholder=" " />
-                </div>
-                <button>buscar</button>
+                <S.DivFil>
+                    <h1>Filtro</h1>
+                    <input
+                        type="text"
+                        placeholder="Guia"
+                        value={guia}
+                        onChange={(e) => setGuia(e.target.value)}
+                    />
+                </S.DivFil>
+
+                <S.DivPesq>
+                    <h1>Pesquisar por nome</h1>
+                    <input
+                        type="text"
+                        placeholder=" "
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                    />
+                </S.DivPesq>
+
+                <S.But>
+                    <button onClick={handleBuscarClick}>Buscar</button>
+                </S.But>
             </S.Cabercario>
 
-            <S.Section>
-                <S.Container>
-                    <S.Conteinerimagem>
-                        <S.Im
-                            src="src\assets\criança.png"
-                            alt="imagen de uma criança "
-                        />
-                    </S.Conteinerimagem>
+            <S.ConteinerUm>
+                <S.ConteinerImagem
+                    src={Menino}
+                    alt="foto de uma criança-chupando-laranja"
+                />
 
-                    <S.Caixa>
-                        <h2> Entenda a seletividade alimentar</h2>
-                        <h1>Tags:</h1>
+                <S.TituloUm>
+                    <h1>Entenda a seletividade alimentar</h1>
+                </S.TituloUm>
 
-                        <S.Tags>
-                            <S.Comp>
-                                <p> Comportamento Alimentar </p>
-                            </S.Comp>
-                            <S.Sens>
-                                <p>Sensibilidade</p>
-                            </S.Sens>
-                        </S.Tags>
+                <S.TitulUM>
+                    <p>Comportamento alimentar</p>
+                </S.TitulUM>
 
-                        <h1>Conteúdo:</h1>
-                        <p>
-                            A seletividade alimentar é um comportamento comum em
-                            crianças, especialmente naquelas com necessidades
-                            especiais, como o Transtorno do Espectro Autista
-                            (TEA). Esse termo refere-se à preferência restrita
-                            por certos alimentos e a recusa em consumir outros,
-                            muitas vezes baseada em fatores como textura, cor,
-                            sabor, ou apresentação do alimento.{' '}
-                        </p>
+                <S.TituloSegundo>
+                    <p>Seletividade</p>
+                </S.TituloSegundo>
 
-                        <S.Btndiv>
-                            <button>ver mais</button>
-                        </S.Btndiv>
-                    </S.Caixa>
-                </S.Container>
-            </S.Section>
+                <S.TituloTres>
+                    <h1>Conteúdo:</h1>.
+                </S.TituloTres>
 
-            {/* segunda parte do GUIA */}
+                <S.TextoUm>
+                    <p>
+                        A seletividade alimentar é comum em crianças com
+                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        pela recusa em experimentar novos alimentos, um
+                        repertório restrito de alimentos aceitos e resistência a
+                        pratos novos...
+                    </p>
+                </S.TextoUm>
 
-            <S.SectionDois>
-                <S.ContainerDois>
-                    <S.ConteinerImDois>
-                        <S.ImDois
-                            src="src/assets/foto-feliz.png"
-                            alt="imagen de uma criança com a mae "
-                        />
-                    </S.ConteinerImDois>
+                <S.ButaoVerMaisUm>
+                    <button type="submit" onClick={handleVerMaisClick}>
+                        Ver Mais
+                    </button>
+                </S.ButaoVerMaisUm>
+            </S.ConteinerUm>
 
-                    <S.CaixaDois>
-                        <h2>seletividade alimentar como lida</h2>
-                        <h1>Tags:</h1>
+            <S.ConteinerDois>
+                <S.ConteinerImagemD
+                    src={Feliz}
+                    alt="foto de uma criança feliz"
+                />
 
-                        <S.TagsDois>
-                            <S.CompDois>
-                                <p> Modelagem e incetivo </p>
-                            </S.CompDois>
-                            <S.SensDois>
-                                <p> refeiçao atraente</p>
-                            </S.SensDois>
-                        </S.TagsDois>
+                <S.TituloD>
+                    <h1>Seletividade Alimentar, como lidar</h1>
+                </S.TituloD>
 
-                        <h1>Conteúdo:</h1>
-                        <p>
-                            Lidar com a seletividade alimentar, especialmente em
-                            crianças com necessidades especiais, pode ser
-                            desafiador, mas existem várias estratégias eficazes
-                            que podem ajudar. Aqui estão algumas abordagens
-                            práticas:
-                        </p>
+                <S.TitulD>
+                    <p>Comportamento alimentar</p>
+                </S.TitulD>
 
-                        <S.BtndivDois>
-                            <button>ver mais</button>
-                        </S.BtndivDois>
-                    </S.CaixaDois>
-                </S.ContainerDois>
-            </S.SectionDois>
+                <S.TituloS>
+                    <p>Seletividade</p>
+                </S.TituloS>
+
+                <S.TituloT>
+                    <h1>Conteúdo:</h1>
+                </S.TituloT>
+
+                <S.TextoU>
+                    <p>
+                        A seletividade alimentar é comum em crianças com
+                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        pela recusa em experimentar novos alimentos, um
+                        repertório restrito de alimentos aceitos e resistência a
+                        pratos novos...
+                    </p>
+                </S.TextoU>
+
+                <S.ButaoVerMaisU>
+                    <button onClick={handleVerMaisComoLidarClick}>
+                        Ver mais
+                    </button>
+                </S.ButaoVerMaisU>
+            </S.ConteinerDois>
+
+            <Footer />
         </>
     );
 }
