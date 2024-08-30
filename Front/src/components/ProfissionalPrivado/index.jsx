@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import * as S from './styles';
 
 import FotoPorfissional from '../../assets/fotoProfissional.png';
@@ -14,6 +16,8 @@ export default function Perfiledit() {
     const [isModalOpen2, setIsModalOpen2] = useState(false);
     const openModal2 = () => setIsModalOpen2(true);
     const closeModal2 = () => setIsModalOpen2(false);
+
+    const navigate = useNavigate()
 
     return (
         <S.Container>
@@ -36,6 +40,7 @@ export default function Perfiledit() {
                 <S.TagInfo>Nutrição em TEA</S.TagInfo>
                 <S.TagInfo>Comportamento alimentar</S.TagInfo>
             </S.Tags>
+            <S.Sair onClick={() => navigate('/')}>Sair</S.Sair>
         </S.Container>
     );
 }
