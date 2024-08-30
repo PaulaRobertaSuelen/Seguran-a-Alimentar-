@@ -17,7 +17,7 @@ export const LogoWrapper = styled.div`
 
 export const Opcoes = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 30px;
 
     a {
         text-decoration: none;
@@ -46,9 +46,7 @@ export const AvatarButton = styled.div`
     color: #fff;
 `;
 
-export const FaUserCircle = styled.div`
-
-`;
+export const FaUserCircle = styled.div``;
 
 export const Card = styled.div`
     position: absolute;
@@ -65,7 +63,7 @@ export const Card = styled.div`
 `;
 
 export const Info = styled.div`
-    p{
+    p {
         font-weight: bold;
         font-size: 14px;
         margin-top: 15px;
