@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import Footer from '../../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
+
+import Footer from '../../components/FooterUser/index';
 import Navbarlogin from '../../components/Navbarlogin/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
@@ -10,6 +12,8 @@ import * as S from './styles';
 export default function PesquisarProfissional() {
     const [Nutricionista, setNutricionista] = useState('');
     const [nome, setNome] = useState('');
+
+    const navigate = useNavigate();
     // const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false);
     // const [searchResultado, setSearchResultado] = useState([]);
 
@@ -91,7 +95,7 @@ export default function PesquisarProfissional() {
                 </S.TextoUm>
 
                 <S.ButaoVerPerfilsUm>
-                    <button onClick="submit">Ver Perfil</button>
+                    <button onClick={() => navigate('/perfilprofissional')}>Ver Perfil</button>
                 </S.ButaoVerPerfilsUm>
             </S.ConteinerUm>
 
@@ -127,7 +131,7 @@ export default function PesquisarProfissional() {
                 </S.TextoU>
 
                 <S.ButaoVerPerfilsU>
-                    <button onClick={handleVerMaisClick}>Ver Perfil</button>
+                    <button onClick={() => navigate('/Ppcarlos')}>Ver Perfil</button>
                 </S.ButaoVerPerfilsU>
             </S.ConteinerDois>
 
@@ -163,7 +167,7 @@ export default function PesquisarProfissional() {
                 </S.TextoTres>
 
                 <S.ButaoVerPerfilsTres>
-                    <button>Ver Perfil</button>
+                    <button onClick={() => navigate('/')}>Ver Perfil</button>
                 </S.ButaoVerPerfilsTres>
             </S.ConteinerTres>
 

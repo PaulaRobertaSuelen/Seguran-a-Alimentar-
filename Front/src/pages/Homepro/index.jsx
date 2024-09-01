@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Navbarpro from '../../components/NavbarPro/index.jsx';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/FooterPro/index.jsx';
 
 import Mother from '../../assets/mother.png';
 import FotoPC from '../../assets/foto-computador.png';

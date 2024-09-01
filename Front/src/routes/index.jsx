@@ -22,6 +22,8 @@ import Pgpro from '../pages/Pgpro/index';
 import Ppcarlos from '../pages/Ppcarlos/index';
 import Perfilmarta from '../pages/Perfilmarta/index';
 import { Pagamento } from '../components/Assinatura/styles';
+import SNosUser from '../pages/SNosUser/index';
+import SNosPro from '../pages/SNosPro/index';
 
 export const router = createBrowserRouter([
     {
@@ -111,5 +113,11 @@ export const router = createBrowserRouter([
     {
         path: '/Perfilmarta',
         element: <Perfilmarta />,
+        path: '/SNosUser',
+        element: <SNosUser />,
+    },
+    {
+        path: '/SNosPro',
+        element: <SNosPro />,
     },
 ]);

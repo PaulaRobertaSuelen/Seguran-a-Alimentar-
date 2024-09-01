@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
 import Navbarpro from '../../components/NavbarPro/index';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
+import FooterPro from '../../components/FooterPro/index';
 import * as S from './styles';
 
 export default function Pgpro() {
@@ -135,7 +135,14 @@ export default function Pgpro() {
                 </S.ButaoVerMaisU>
             </S.ConteinerDois>
 
-            <Footer />
+            <FooterPro />
+                        <S.BtndivDois>
+                            <button>ver mais</button>
+                        </S.BtndivDois>
+                    </S.CaixaDois>
+                </S.ContainerDois>
+            </S.SectionDois>
+            <FooterPro />
         </>
     );
 }
