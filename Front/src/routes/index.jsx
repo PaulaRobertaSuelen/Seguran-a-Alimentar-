@@ -113,6 +113,8 @@ export const router = createBrowserRouter([
     {
         path: '/Perfilmarta',
         element: <Perfilmarta />,
+    },
+    {
         path: '/SNosUser',
         element: <SNosUser />,
     },

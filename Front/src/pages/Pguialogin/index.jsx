@@ -3,25 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import Navbarlogin from '../../components/Navbarlogin';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
-import Navbarlogin from '../../components/Navbarlogin/index';
 import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 
-export default function Pgpro() {
+export default function Pguialogin() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
-    const navigate = useNavigate(); // Hook para navegação
+    const navigate = useNavigate();
 
     const handleBuscarClick = () => {
         alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
     };
 
     const handleVerMaisClick = () => {
-        navigate('/Guia'); // Redireciona para a rota /Guia
+        navigate('/Guia');
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida'); // Redireciona para a rota /GuiaSeletividadeComoLidar
+        navigate('/GuiaSeletividadeComolida');
     };
 
     return (
@@ -61,7 +60,7 @@ export default function Pgpro() {
             <S.ConteinerUm>
                 <S.ConteinerImagem
                     src={Menino}
-                    alt="foto de uma criança-chupando-laranja"
+                    alt="foto de uma criança chupando laranja"
                 />
 
                 <S.TituloUm>
@@ -77,13 +76,13 @@ export default function Pgpro() {
                 </S.TituloSegundo>
 
                 <S.TituloTres>
-                    <h1>Conteúdo:</h1>.
+                    <h1>Conteúdo:</h1>
                 </S.TituloTres>
 
                 <S.TextoUm>
                     <p>
                         A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
                         pela recusa em experimentar novos alimentos, um
                         repertório restrito de alimentos aceitos e resistência a
                         pratos novos...
@@ -122,7 +121,7 @@ export default function Pgpro() {
                 <S.TextoU>
                     <p>
                         A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
                         pela recusa em experimentar novos alimentos, um
                         repertório restrito de alimentos aceitos e resistência a
                         pratos novos...
@@ -131,18 +130,11 @@ export default function Pgpro() {
 
                 <S.ButaoVerMaisU>
                     <button onClick={handleVerMaisComoLidarClick}>
-                        Ver mais
+                        Ver Mais
                     </button>
                 </S.ButaoVerMaisU>
             </S.ConteinerDois>
 
-            <FooterUser />
-                        <S.BtndivDois>
-                            <button>ver mais</button>
-                        </S.BtndivDois>
-                    </S.CaixaDois>
-                </S.ContainerDois>
-            </S.SectionDois>
             <FooterUser />
         </>
     );

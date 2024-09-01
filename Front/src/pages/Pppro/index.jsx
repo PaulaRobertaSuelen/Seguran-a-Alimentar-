@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importando o hook useNavigate
 import Footer from '../../components/Footer/Footer';
 import Navbarpro from '../../components/NavbarPro/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
-//import ModalPesquisa from '../../components/ModalPesquisar';
+// import ModalPesquisa from '../../components/ModalPesquisar';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
@@ -12,10 +13,11 @@ export default function PesquisarProfissional() {
     const [nome, setNome] = useState('');
     // const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false);
     // const [searchResultado, setSearchResultado] = useState([]);
+    const navigate = useNavigate(); // Inicializando o hook useNavigate
 
     const handleBuscarClick = () => {
         // Simula uma pesquisa
-        //const resultado = [
+        // const resultado = [
         // `Nutricionista: ${Nutricionista}`,
         // `Nome: ${nome}`
         // ];
@@ -23,8 +25,8 @@ export default function PesquisarProfissional() {
         // setIsModalPesquisarOpen(true);
     };
 
-    const handleVerMaisClick = () => {
-        alert('Ver Perfil!');
+    const handleVerPerfilClick = (rota) => {
+        navigate(rota);
     };
 
     return (
@@ -91,7 +93,13 @@ export default function PesquisarProfissional() {
                 </S.TextoUm>
 
                 <S.ButaoVerPerfilsUm>
-                    <button onClick="submit">Ver Perfil</button>
+                    <button
+                        onClick={() =>
+                            handleVerPerfilClick('/perfilprofissional')
+                        }
+                    >
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsUm>
             </S.ConteinerUm>
 
@@ -127,7 +135,9 @@ export default function PesquisarProfissional() {
                 </S.TextoU>
 
                 <S.ButaoVerPerfilsU>
-                    <button onClick={handleVerMaisClick}>Ver Perfil</button>
+                    <button onClick={() => handleVerPerfilClick('/Ppcarlos')}>
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsU>
             </S.ConteinerDois>
 
@@ -163,13 +173,17 @@ export default function PesquisarProfissional() {
                 </S.TextoTres>
 
                 <S.ButaoVerPerfilsTres>
-                    <button>Ver Perfil</button>
+                    <button
+                        onClick={() => handleVerPerfilClick('/Perfilmarta')}
+                    >
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsTres>
             </S.ConteinerTres>
 
             <Footer />
 
-            {/* <ModalPesquisa isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}searchResults={searchResults}/> */}
+            {/* <ModalPesquisa isOpen={isModalPesquisarOpen} onClose={() => setIsModalPesquisarOpen(false)} searchResults={searchResults}/> */}
         </>
     );
 }

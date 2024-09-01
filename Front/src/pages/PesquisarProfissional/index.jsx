@@ -95,7 +95,9 @@ export default function PesquisarProfissional() {
                 </S.TextoUm>
 
                 <S.ButaoVerPerfilsUm>
-                    <button onClick={() => navigate('/perfilprofissional')}>Ver Perfil</button>
+                    <button onClick={() => navigate('/perfilprofissional')}>
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsUm>
             </S.ConteinerUm>
 
@@ -131,7 +133,9 @@ export default function PesquisarProfissional() {
                 </S.TextoU>
 
                 <S.ButaoVerPerfilsU>
-                    <button onClick={() => navigate('/Ppcarlos')}>Ver Perfil</button>
+                    <button onClick={() => navigate('/Ppcarlos')}>
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsU>
             </S.ConteinerDois>
 
@@ -167,7 +171,9 @@ export default function PesquisarProfissional() {
                 </S.TextoTres>
 
                 <S.ButaoVerPerfilsTres>
-                    <button onClick={() => navigate('/')}>Ver Perfil</button>
+                    <button onClick={() => navigate('/Perfilmarta')}>
+                        Ver Perfil
+                    </button>
                 </S.ButaoVerPerfilsTres>
             </S.ConteinerTres>
 
