@@ -81,16 +81,11 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    input {
-        width: 80%;
-        max-width: 400px;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
+    justify-content: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
     button {
         text-decoration-style: none;
         background-color: #10b981;
@@ -113,13 +108,9 @@ export const Terms = styled.div`
     width: 50%;
     align-items: center;
     margin-bottom: 10px;
-    /* text-align: center;
-    justify-content: center; */
-
     .check {
         width: 10%;
     }
-
     a {
         color: #101066;
         text-decoration: none;
@@ -128,5 +119,32 @@ export const Terms = styled.div`
         &:hover {
             text-decoration: underline;
         }
+    }
+`;
+
+export const Termos = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+        line-height: 2em;
+        text-align: center;
+    }
+    & p {
+        font-size: 14px;
+        width: 70%;
+        text-align: center;
+    }
+`;
+export const LostPass = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    & a {
+        color: #1976d2;
+        font-size: 14px;
+        font-weight: 200;
+        text-decoration: none;
+        cursor: pointer;
     }
 `;

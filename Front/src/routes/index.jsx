@@ -43,11 +43,11 @@ export const router = createBrowserRouter([
         element: <PesquisarGuia />,
     },
     {
-        path: '/pesquisarprofissional',
+        path: '/pesquisar/profissional',
         element: <PesquisarProfissional />,
     },
     {
-        path: '/perfilprofissional',
+        path: '/perfil/profissional',
         element: <PerfilProfissional />,
     },
     {
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
         element: <Cadastro />,
     },
     {
-        path: '/cadastroprofissional',
+        path: '/cadastro/profissional',
         element: <CadastroProfissional />,
     },
     {
