@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Navbarlogin from '../../components/Navbarlogin';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/FooterUser/index.jsx';
 
 import Mother from '../../assets/mother.png';
 import FotoPC from '../../assets/foto-computador.png';
@@ -106,7 +106,7 @@ export default function Homelogin() {
                     <iframe
                         width="100%"
                         height="100%"
-                        src="https://www.youtube.com/embed/YaoHN6Z3WsI"
+                        src="https://www.youtube.com/embed/_ZGYACainzY"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen

@@ -9,13 +9,15 @@ export const OndasEstilo = styled.div`
     background-size: cover;
     z-index: -1;
 `;
-export const Cabercario = styled.div`
+
+export const Cabecario = styled.div`
     display: flex;
     margin-top: 5rem;
     align-items: center;
     margin-left: 18rem;
     gap: 2rem;
 `;
+
 export const DivFil = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,7 +58,6 @@ export const DivPesq = styled.div`
     }
 `;
 
-//butao de buscar
 export const But = styled.div`
     display: flex;
     margin-top: 2rem;

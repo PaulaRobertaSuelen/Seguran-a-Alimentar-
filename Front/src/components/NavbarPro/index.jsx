@@ -11,9 +11,9 @@ export default function Navbar() {
                 <img src={logonavbar} alt="Logo" />
             </S.LogoWrapper>
             <S.Opcoes>
-                <a href="/Homelogin">Início</a>
-                <a href="/PesquisarProfissional">Serviços</a>
-                <a href="/Pguialogin">Guias</a>
+                <a href="/Homepro">Início</a>
+                <a href="/Pppro">Serviços</a>
+                <a href="/Pgpro">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
                 <a href="/PerfilPrivado">

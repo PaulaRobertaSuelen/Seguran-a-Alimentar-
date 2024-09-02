@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Navbar from '../../components/Navbar/index';
-import Footer from '../../components/Footer/Footer';
+import Navbarpro from '../../components/NavbarPro/index.jsx';
+import Footer from '../../components/FooterPro/index.jsx';
 
 import Mother from '../../assets/mother.png';
 import FotoPC from '../../assets/foto-computador.png';
@@ -10,7 +10,7 @@ import Mira from '../../assets/mira.png';
 import Lampada from '../../assets/lampada.png';
 import OndasDoMeio from '../../assets/ondas-do-meio.png';
 import Legumes from '../../assets/comendo-legumes.png';
-import { IoIosArrowDropdown } from "react-icons/io";
+import { IoIosArrowDropdown } from 'react-icons/io';
 
 import * as S from './styles.js';
 
@@ -43,7 +43,7 @@ export default function Home() {
                 <p> </p>
             </S.OndasEstilo>
 
-            <Navbar />
+            <Navbarpro />
 
             <S.BodyUm>
                 <S.BackgroundContainer>
@@ -106,7 +106,7 @@ export default function Home() {
                     <iframe
                         width="100%"
                         height="100%"
-                        src="https://www.youtube.com/embed/_ZGYACainzY"
+                        src="https://www.youtube.com/embed/YaoHN6Z3WsI"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -186,13 +186,17 @@ export default function Home() {
                         <S.FaqContainer>
                             {faqs.map((faq, index) => (
                                 <div key={index}>
-                                <S.FaqItem onClick={() => toggleAnswer(index)}>
-                                    <span>{faq.question}</span>
-                                    <IoIosArrowDropdown style={{ fontSize: '25px' }} />
-                                </S.FaqItem>
-                            <S.FaqAnswer show={visibleAnswer === index}>
-                                {faq.answer}
-                            </S.FaqAnswer>
+                                    <S.FaqItem
+                                        onClick={() => toggleAnswer(index)}
+                                    >
+                                        <span>{faq.question}</span>
+                                        <IoIosArrowDropdown
+                                            style={{ fontSize: '25px' }}
+                                        />
+                                    </S.FaqItem>
+                                    <S.FaqAnswer show={visibleAnswer === index}>
+                                        {faq.answer}
+                                    </S.FaqAnswer>
                                 </div>
                             ))}
                         </S.FaqContainer>
