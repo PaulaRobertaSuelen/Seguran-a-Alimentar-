@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbarlogin from '../../components/Navbarlogin';
+import Navbarpro from '../../components/NavbarPro';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
-import FooterUser from '../../components/FooterUser/index';
+import FooterPro from '../../components/FooterPro';
 import * as S from './styles';
 
-export default function Pguialogin() {
+export default function Pgpro() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
     const navigate = useNavigate();
@@ -25,13 +25,11 @@ export default function Pguialogin() {
 
     return (
         <>
-            <Navbarlogin />
+            <Navbarpro />
 
-            <S.OndasEstilo>
-                <p> </p>
-            </S.OndasEstilo>
+            <S.OndasEstilo />
 
-            <S.Cabercario>
+            <S.Cabecario>
                 <S.DivFil>
                     <h1>Filtro</h1>
                     <input
@@ -46,7 +44,7 @@ export default function Pguialogin() {
                     <h1>Pesquisar por nome</h1>
                     <input
                         type="text"
-                        placeholder=" "
+                        placeholder="Nome"
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
                     />
@@ -55,30 +53,25 @@ export default function Pguialogin() {
                 <S.But>
                     <button onClick={handleBuscarClick}>Buscar</button>
                 </S.But>
-            </S.Cabercario>
+            </S.Cabecario>
 
             <S.ConteinerUm>
                 <S.ConteinerImagem
                     src={Menino}
                     alt="foto de uma criança chupando laranja"
                 />
-
                 <S.TituloUm>
                     <h1>Entenda a seletividade alimentar</h1>
                 </S.TituloUm>
-
                 <S.TitulUM>
                     <p>Comportamento alimentar</p>
                 </S.TitulUM>
-
                 <S.TituloSegundo>
                     <p>Seletividade</p>
                 </S.TituloSegundo>
-
                 <S.TituloTres>
                     <h1>Conteúdo:</h1>
                 </S.TituloTres>
-
                 <S.TextoUm>
                     <p>
                         A seletividade alimentar é comum em crianças com
@@ -88,11 +81,8 @@ export default function Pguialogin() {
                         pratos novos...
                     </p>
                 </S.TextoUm>
-
                 <S.ButaoVerMaisUm>
-                    <button type="submit" onClick={handleVerMaisClick}>
-                        Ver Mais
-                    </button>
+                    <button onClick={handleVerMaisClick}>Ver Mais</button>
                 </S.ButaoVerMaisUm>
             </S.ConteinerUm>
 
@@ -101,23 +91,18 @@ export default function Pguialogin() {
                     src={Feliz}
                     alt="foto de uma criança feliz"
                 />
-
                 <S.TituloD>
                     <h1>Seletividade Alimentar, como lidar</h1>
                 </S.TituloD>
-
                 <S.TitulD>
                     <p>Comportamento alimentar</p>
                 </S.TitulD>
-
                 <S.TituloS>
                     <p>Seletividade</p>
                 </S.TituloS>
-
                 <S.TituloT>
                     <h1>Conteúdo:</h1>
                 </S.TituloT>
-
                 <S.TextoU>
                     <p>
                         A seletividade alimentar é comum em crianças com
@@ -127,15 +112,14 @@ export default function Pguialogin() {
                         pratos novos...
                     </p>
                 </S.TextoU>
-
                 <S.ButaoVerMaisU>
                     <button onClick={handleVerMaisComoLidarClick}>
-                        Ver Mais
+                        Ver mais
                     </button>
                 </S.ButaoVerMaisU>
             </S.ConteinerDois>
 
-            <FooterUser />
+            <FooterPro />
         </>
     );
 }

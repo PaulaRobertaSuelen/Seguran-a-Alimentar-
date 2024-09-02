@@ -1,118 +1,141 @@
 import { useState } from 'react';
-import Footer from '../../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
+import Footer from '../../components/FooterUser/index';
 import Navbar from '../../components/Navbar/index';
 import Menino from '../../assets/criança.png';
-import Feliz from '../../assets/Feliz.png'
+import Feliz from '../../assets/Feliz.png';
 import * as S from './styles';
 
 export default function PesquisarGuia() {
-    
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
+    const navigate = useNavigate(); // Hook para navegação
 
     const handleBuscarClick = () => {
-        
         alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
     };
 
     const handleVerMaisClick = () => {
-        
-        alert("Ver mais conteúdo!");
+        navigate('/guia'); // Redireciona para a rota /guia
+    };
+
+    const handleVerMaisComoLidarClick = () => {
+        navigate('/GuiaSeletividadeComolida'); // Redireciona para a rota /GuiaSeletividadeComoLidar
     };
 
     return (
         <>
-                        <Navbar />
+            <Navbar />
 
-                            <S.OndasEstilo>
-                                <p> </p>
-                            </S.OndasEstilo>
+            <S.OndasEstilo>
+                <p> </p>
+            </S.OndasEstilo>
 
-                                        <S.Cabercario>
-                                            
-                                                <h1>Filtro</h1>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Guia"
-                                                    value={guia}
-                                                    onChange={(e) => setGuia(e.target.value)} />
-                                            
-                                            
-                                                <h1>Pesquisar por nome</h1>
-                                                <input
-                                                    type="text"
-                                                    placeholder=" "
-                                                    value={nome}
-                                                    onChange={(e) => setNome(e.target.value)} />
-                                            
-                                            <div>
-                                                <button onClick={handleBuscarClick}>Buscar</button>
-                                            </div>
-                                        </S.Cabercario>
+            <S.Cabercario>
+                <S.DivFil>
+                    <h1>Filtro</h1>
+                    <input
+                        type="text"
+                        placeholder="Guia"
+                        value={guia}
+                        onChange={(e) => setGuia(e.target.value)}
+                    />
+                </S.DivFil>
 
-                                            <S.ConteinerUm>
-                                            <S.ConteinerImagem
-                                                    src={Menino} alt="foto de uma criança-chupando-laranja"/>
+                <S.DivPesq>
+                    <h1>Pesquisar por nome</h1>
+                    <input
+                        type="text"
+                        placeholder=" "
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                    />
+                </S.DivPesq>
 
-                                                            <S.TituloUm>
-                                                                <h2>Entenda a seletividade alimentar</h2>
-                                                            </S.TituloUm>
-                                                    
-                                                                <S.TitulUM>
-                                                                    <p>Comportamento alimentar</p>
-                                                                </S.TitulUM>
+                <S.But>
+                    <button onClick={handleBuscarClick}>Buscar</button>
+                </S.But>
+            </S.Cabercario>
 
-                                                                <S.TituloSegundo>
-                                                                    <p>Seletividade</p>
-                                                                </S.TituloSegundo>
+            <S.ConteinerUm>
+                <S.ConteinerImagem
+                    src={Menino}
+                    alt="foto de uma criança-chupando-laranja"
+                />
 
-                                                                <S.TituloTres>
-                                                                    <h1>Conteúdo:</h1>
-                                                                </S.TituloTres>
+                <S.TituloUm>
+                    <h1>Entenda a seletividade alimentar</h1>
+                </S.TituloUm>
 
-                                                                <S.TextoUm>
-                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
-                                                                    
-                                                                </S.TextoUm>
+                <S.TitulUM>
+                    <p>Comportamento alimentar</p>
+                </S.TitulUM>
 
-                                                                <S.ButaoVerMaisUm>
-                                                                    <button onClick={handleVerMaisClick}>Ver mais</button>
-                                                                </S.ButaoVerMaisUm>
-                                            </S.ConteinerUm>
+                <S.TituloSegundo>
+                    <p>Seletividade</p>
+                </S.TituloSegundo>
 
+                <S.TituloTres>
+                    <h1>Conteúdo:</h1>.
+                </S.TituloTres>
 
+                <S.TextoUm>
+                    <p>
+                        A seletividade alimentar é comum em crianças com
+                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        pela recusa em experimentar novos alimentos, um
+                        repertório restrito de alimentos aceitos e resistência a
+                        pratos novos...
+                    </p>
+                </S.TextoUm>
 
-                                            <S.ConteinerDois>
-                                            <S.ConteinerImagemD
-                                                    src={Feliz} alt="foto de uma criança feliz"/>
+                <S.ButaoVerMaisUm>
+                    <button type="submit" onClick={handleVerMaisClick}>
+                        Ver Mais
+                    </button>
+                </S.ButaoVerMaisUm>
+            </S.ConteinerUm>
 
-                                                            <S.TituloD>
-                                                                <h2>Seletividade Alimentar, como lidar</h2>
-                                                            </S.TituloD>
-                                                    
-                                                                <S.TitulD>
-                                                                    <p>Comportamento alimentar</p>
-                                                                </S.TitulD>
+            <S.ConteinerDois>
+                <S.ConteinerImagemD
+                    src={Feliz}
+                    alt="foto de uma criança feliz"
+                />
 
-                                                                <S.TituloS>
-                                                                    <p>Seletividade</p>
-                                                                </S.TituloS>
+                <S.TituloD>
+                    <h1>Seletividade Alimentar, como lidar</h1>
+                </S.TituloD>
 
-                                                                <S.TituloT>
-                                                                    <h1>Conteúdo:</h1>
-                                                                </S.TituloT>
+                <S.TitulD>
+                    <p>Comportamento alimentar</p>
+                </S.TitulD>
 
-                                                                <S.TextoU>
-                                                                    <p>A seletividade alimentar é comum em crianças com Transtorno do 
-                                                                        Espectro Autista (TEA).Ela se caracteriza pela recusa em experimentar novos alimentos, um repertório restrito de alimentos aceitos e resistência a pratos novos...</p>
-                                                                </S.TextoU>
+                <S.TituloS>
+                    <p>Seletividade</p>
+                </S.TituloS>
 
-                                                                <S.ButaoVerMaisU>
-                                                                    <button onClick={handleVerMaisClick}>Ver mais</button>
-                                                                </S.ButaoVerMaisU>
-                                            </S.ConteinerDois>
+                <S.TituloT>
+                    <h1>Conteúdo:</h1>
+                </S.TituloT>
 
-                                <Footer/>
+                <S.TextoU>
+                    <p>
+                        A seletividade alimentar é comum em crianças com
+                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        pela recusa em experimentar novos alimentos, um
+                        repertório restrito de alimentos aceitos e resistência a
+                        pratos novos...
+                    </p>
+                </S.TextoU>
+
+                <S.ButaoVerMaisU>
+                    <button onClick={handleVerMaisComoLidarClick}>
+                        Ver mais
+                    </button>
+                </S.ButaoVerMaisU>
+            </S.ConteinerDois>
+
+            <Footer />
         </>
     );
 }

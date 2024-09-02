@@ -1,4 +1,4 @@
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navbarlogin';
 import * as S from './styles';
 
 export default function SobreNos() {

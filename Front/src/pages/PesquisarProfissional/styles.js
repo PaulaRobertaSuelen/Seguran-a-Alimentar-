@@ -10,53 +10,76 @@ export const OndasEstilo = styled.div`
     z-index: -1;
 `;
 export const Cabercario = styled.div`
-    display: flex;
-    background-size: cover;
-    background-position: 'center';
-    height: 30vh;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    h1 {
+        display: flex;
+        margin-top: 5rem;
+        align-items: center;
+        margin-left: 15rem;
+        gap: 2rem;
         
-        margin-bottom: 3rem;
-        align-items: baseline;
-        font-size: 1rem;
-        margin-bottom: 6rem;
+`;
+export const DivFiltro = styled.div`
+        display: flex;
+        flex-direction: column;
 
-        text-align: left; 
-    }
+        h1 {
+            margin-bottom: 1rem; 
+            font-size: 1rem;
+            font-weight: 10rem;
+            text-align: left; 
+        }
 
-    input {
-        margin: 1rem;
-        border: none;
-        padding: 10px;
-        width: 13rem;
-        border-radius: 20rem;
-        color: black;
-        cursor: pointer;
-    };
-    
+        input {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4rem;
+            width: 200px;
+        }
+`;
 
-        //butao de buscar
-    
-    button {
-        width: 50px;
-        height: 40px;
+export const DivPesq = styled.div`
+        display: flex;
+        flex-direction: column;
+
+    h1 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 10rem;
+            text-align: left; 
+}
+
+        input {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4rem;
+            width: 200px;
+        }
+ `;     //butao de buscar
+export const Butao = styled.div`
+        display: flex;
+        margin-top: 2rem;
+
+button {
+        width: 5rem;
+        height: 2rem;
         align-items: center;
         padding: 5px 10px;
         border: unset;
-        border-radius: 16px;
+        border-radius: 10px;
         color: #888888;
         z-index: 1;
         background: #ffffff;
-        position: relative;
-        /* font-weight: 1000; */
+        position: relative; 
         font-size: 12px;
         -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
         box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
         transition: all 250ms;
         overflow: hidden;
+    }
+
+    div{
+        display: flex;
     }
 
     button::before {
@@ -66,7 +89,6 @@ export const Cabercario = styled.div`
         left: 0;
         height: 100%;
         width: 0;
-        border-radius: 1rem;
         background-color: #33b44d;
         z-index: -1;
         -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -81,12 +103,15 @@ export const Cabercario = styled.div`
     button:hover::before {
         width: 100%;
     }
-    //fim do butao e do cabecario
+  
 `;
+   
+  //fim do butao e do cabecario
+
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 20px;
+    margin: 5rem;
     align-items: center;
     height: 18rem;
     width: 50rem;
@@ -106,13 +131,14 @@ export const ConteinerImagemP = styled.img`
 `;
 
 export const TituloUm = styled.div`
-    h1 {
+    h1{
         display: flex;
-        font-size: 2rem;
+        font-size: 24px;
         width: 100%;
-        margin-bottom: 14rem;
+        margin-bottom: 11rem;
         margin-left: 1rem;
         white-space: nowrap;
+
     }
 `;
 
@@ -122,7 +148,7 @@ export const SubTituloUM = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -18rem;
+        margin-left: -13rem;
         margin-bottom: 6rem;
     }
 `;
@@ -133,7 +159,7 @@ export const TituloSegubd = styled.div`
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -5rem;
+        margin-left: -1.rem;
         margin-bottom: 6rem;
     }
 `;
@@ -141,7 +167,7 @@ export const TituloSegubd = styled.div`
 export const TituloDois = styled.div`
     h1 {
         font-size: 1rem;
-        margin-left: -28rem;
+        margin-left: -29rem;
         margin-top: 1rem;
     }
 `;
@@ -151,7 +177,7 @@ export const TextoUm= styled.div`
         font-size: 1rem;
         color: black;
         line-height: 1.3;
-        margin-left: -29rem;
+        margin-left: -30rem;
         margin-top: 9rem;
     }
 `;
@@ -176,7 +202,7 @@ export const ButaoVerPerfilsUm = styled.div`
         
 export const ConteinerDois = styled.div`
 display: flex;
-margin: 50px;
+margin: -3rem;
 align-items: center;
 height: 18rem;
 width: 50rem;
@@ -198,33 +224,33 @@ margin-bottom: 5rem;
 export const TituloPrimeiro = styled.div`
 h1 {
     display: flex;
-    font-size: 2rem;
-    width: 100%;
-    margin-bottom: 14rem;
-    margin-left: 2rem;
-    white-space: nowrap;
+        font-size: 24px;
+        width: 100%;
+        margin-bottom: 11rem;
+        margin-left: 1rem;
+        white-space: nowrap;
 }
 `;
 
 export const SubTituloPrimeiro = styled.div`
 p {
-    font-size: 1rem;
-    color: #101066;
-    font-weight: 700;
-    white-space: nowrap;
-    margin-left: -16rem;
-    margin-bottom: 6rem;
+        font-size: 1rem;
+        color: #101066;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-left: -11.9rem;
+        margin-bottom: 6rem;
 }
 `;
 
 export const TituloSegundo = styled.div`
 p {
-    font-size: 1rem;
-    color: #101066;
-    font-weight: 700;
-    white-space: nowrap;
-    margin-left: -2rem;
-    margin-bottom: 6rem;
+        font-size: 1rem;
+        color: #101066;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-left: 1rem;
+        margin-bottom: 6rem;
 }
 `;
 
@@ -241,7 +267,7 @@ p {
     font-size: 1rem;
     color: black;
     line-height: 1.3;
-    margin-left: -33rem;
+    margin-left: -29rem;
     margin-top: 9rem;
 }
 `;
@@ -264,7 +290,7 @@ button {
 
         export const ConteinerTres = styled.div`
         display: flex;
-        margin: 50px;
+        margin: 5rem;
         align-items: center;
         height: 18rem;
         width: 50rem;
@@ -284,11 +310,11 @@ button {
         `;
         
         export const TituloTerceiro = styled.div`
-        h2 {
+        h1 {
             display: flex;
-            font-size: 2rem;
+            font-size: 24px;
             width: 100%;
-            margin-bottom: 14rem;
+            margin-bottom: 11rem;
             margin-left: 1rem;
             white-space: nowrap;
         }
@@ -300,10 +326,9 @@ button {
             color: #101066;
             font-weight: 700;
             white-space: nowrap;
-            margin-left: -14rem;
+            margin-left: -10.9rem;
             margin-bottom: 6rem;
-        }
-        `;
+        }`;
         
         export const TituloTres = styled.div`
         p {
@@ -311,15 +336,16 @@ button {
             color: #101066;
             font-weight: 700;
             white-space: nowrap;
-            margin-left: 0rem;
+            margin-left: 1rem;
             margin-bottom: 6rem;
+
         }
         `;
         
         export const TituloTre = styled.div`
         h1 {
             font-size: 1rem;
-            margin-left: -29rem;
+            margin-left: -28rem;
             margin-top: 1rem;
         }
         `;
@@ -329,7 +355,7 @@ button {
             font-size: 1rem;
             color: black;
             line-height: 1.3;
-            margin-left: -30rem;
+            margin-left: -29rem;
             margin-top: 9rem;
         }
         `;

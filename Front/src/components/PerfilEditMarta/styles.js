@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
     margin-top: 50px;
     background-color: #101066;
@@ -57,23 +56,8 @@ export const Botoes = styled.div`
     margin-bottom: 30px;
 `;
 
-export const Assinatura = styled.button`
-    background-color: #6827E8;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    cursor: pointer;
-    width: 200px;
-    &:hover {
-            background-color: #40198C;
-        }
-`;
-
 export const Contato = styled.button`
-    background-color: #33B44D;
+    background-color: #33b44d;
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -85,37 +69,18 @@ export const Contato = styled.button`
     margin-top: 15px;
     width: 200px;
     &:hover {
-            background-color: #1C682C;
-        }
+        background-color: #1c682c;
+    }
 `;
 
 export const Tags = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
 `;
 
 export const TagInfo = styled.text`
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
-`;
-
-export const Sair = styled.button`
-    width: 35px;
-    background-color: transparent;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    color: red;
-
-    &:hover {
-        color: pink;
-    }
-
-    &:focus {
-        outline: none;
-    }
 `;

@@ -8,7 +8,7 @@ import Logo from '../../assets/logo.png';
 export default function Footer() {
     const navigate = useNavigate();
     const handleClique = () => {
-        navigate('/SobreNos');
+        navigate('/SNosPro');
     };
     return (
         <S.Footer>
