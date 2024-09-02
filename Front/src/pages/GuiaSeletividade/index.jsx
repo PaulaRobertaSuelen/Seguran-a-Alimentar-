@@ -3,7 +3,7 @@ import * as S from './styles';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-const GuiaSeletividadeComoLida = () => {
+const GuiaSeletividade = () => {
     return (
         <>
         <Navbar />
@@ -117,4 +117,4 @@ const GuiaSeletividadeComoLida = () => {
     );
   };
   
-  export default GuiaSeletividadeComoLida;
+  export default GuiaSeletividade;

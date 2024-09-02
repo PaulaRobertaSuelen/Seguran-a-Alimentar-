@@ -26,7 +26,7 @@ export default function SobreNos() {
 
             <S.ContImg>
                 <S.ImLinha
-                    src="src/assets/Linha.png   "
+                    src="src/assets/Linha.png"
                     alt="imagem de uma linha"
                 />
             </S.ContImg>

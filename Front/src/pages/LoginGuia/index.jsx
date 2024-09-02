@@ -6,7 +6,7 @@ import Feliz from '../../assets/Feliz.png';
 import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 
-export default function Pguialogin() {
+export default function LoginGuia() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
     const navigate = useNavigate();

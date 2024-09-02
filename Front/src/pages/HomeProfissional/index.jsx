@@ -30,7 +30,7 @@ const faqs = [
     },
 ];
 
-export default function Home() {
+export default function HomeProfissional() {
     const [visibleAnswer, setVisibleAnswer] = useState(null);
 
     const toggleAnswer = (index) => {
