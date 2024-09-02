@@ -7,8 +7,9 @@ const Guia = () => {
     return (
         <>
         <Navbar />
-        <img src="/src/assets/svg/ondaleve.svg" alt="" />
+        
       <S.Container>
+        <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
         <S.Image src="/src/assets/Component 13.png" alt="Criança recusando comida" />
         <S.SectionTitleT><h1>O que é Seletividade Alimentar?</h1></S.SectionTitleT> <br />
         <S.Paragraph>
