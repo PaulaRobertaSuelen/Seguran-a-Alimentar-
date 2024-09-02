@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
-export const body = styled.div`
-    background-image: url('/src/assets/svg/ondaleve.svg');
+export const img = styled.img`
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
-    background-position: center;
+    z-index: -1;
 `;
 
 export const Container = styled.div`
@@ -11,7 +14,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
-  margin-top: -900px;
 `;
 
 export const Paragraph = styled.p`
