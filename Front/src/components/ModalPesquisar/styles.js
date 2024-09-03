@@ -1,37 +1,26 @@
-// import styled from "styled-components";
+import styled from 'styled-components';
 
-// export const Div = styled.div`
+export const ConteinerModal = styled.div`
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+`;
 
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: rgba(0, 0, 0, 0.5);
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+export const ButaoBuscar = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
 
-// `;
-//   export const Conteiner = styled.div`
-  
-//     background: white;
-//     padding: 20px;
-//     border-radius: 8px;
-//     width: 300px;
-//     text-align: center;
-//     position: relative;
-  
-  
-//   `;
-  
-//   export const Button = styled.div`
-//     background: transparent;
-//     border: none;
-//     font-size: 20px;
-//     position: absolute;
-//     top: 10px;
-//     right: 10px;
-//     cursor: pointer;
-//   `;
-  
+export const ClaseButao = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+`;
