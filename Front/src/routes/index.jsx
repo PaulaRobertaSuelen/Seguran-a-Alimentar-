@@ -24,6 +24,9 @@ import Perfilmarta from '../pages/Perfilmarta/index';
 import { Pagamento } from '../components/Assinatura/styles';
 import SNosUser from '../pages/SNosUser/index';
 import SNosPro from '../pages/SNosPro/index';
+import Guiapro from '../pages/Guiapro/index';
+import GuiaSCLUser from '../pages/GuiaSCLUser/index';
+import GuiaSCLPro from '../pages/GuiaSCLPro/index';
 
 export const router = createBrowserRouter([
     {
@@ -51,7 +54,7 @@ export const router = createBrowserRouter([
         element: <PerfilProfissional />,
     },
     {
-        path: '/cadastro',
+        path: '/Cadastro',
         element: <Cadastro />,
     },
     {
@@ -59,11 +62,11 @@ export const router = createBrowserRouter([
         element: <CadastroProfissional />,
     },
     {
-        path: '/perfilprivado',
+        path: '/PerfilPrivado',
         element: <PerfilPrivado />,
     },
     {
-        path: '/guia',
+        path: '/Guia',
         element: <Guia />,
     },
     {
@@ -119,7 +122,19 @@ export const router = createBrowserRouter([
         element: <SNosUser />,
     },
     {
-        path: '/SNosPro',
+        path: '/SobreNosProfissional',
         element: <SNosPro />,
+    },
+    {
+        path: '/Guiapro',
+        element: <Guiapro />,
+    },
+    {
+        path: '/GuiaSCLUser',
+        element: <GuiaSCLUser />,
+    },
+    {
+        path: '/GuiaSCLPro',
+        element: <GuiaSCLPro />,
     },
 ]);
