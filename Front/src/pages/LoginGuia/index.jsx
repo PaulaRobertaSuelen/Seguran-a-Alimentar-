@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbarpro from '../../components/NavbarPro';
+import Navbarlogin from '../../components/Navbarlogin';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
-import FooterPro from '../../components/FooterPro';
+import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 
-export default function Pgpro() {
+export default function LoginGuia() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
     const navigate = useNavigate();
@@ -25,11 +25,13 @@ export default function Pgpro() {
 
     return (
         <>
-            <Navbarpro />
+            <Navbarlogin />
 
-            <S.OndasEstilo />
+            <S.OndasEstilo>
+                <p> </p>
+            </S.OndasEstilo>
 
-            <S.Cabecario>
+            <S.Cabercario>
                 <S.DivFil>
                     <h1>Filtro</h1>
                     <input
@@ -44,7 +46,7 @@ export default function Pgpro() {
                     <h1>Pesquisar por nome</h1>
                     <input
                         type="text"
-                        placeholder="Nome"
+                        placeholder=" "
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
                     />
@@ -53,25 +55,30 @@ export default function Pgpro() {
                 <S.But>
                     <button onClick={handleBuscarClick}>Buscar</button>
                 </S.But>
-            </S.Cabecario>
+            </S.Cabercario>
 
             <S.ConteinerUm>
                 <S.ConteinerImagem
                     src={Menino}
                     alt="foto de uma criança chupando laranja"
                 />
+
                 <S.TituloUm>
                     <h1>Entenda a seletividade alimentar</h1>
                 </S.TituloUm>
+
                 <S.TitulUM>
                     <p>Comportamento alimentar</p>
                 </S.TitulUM>
+
                 <S.TituloSegundo>
                     <p>Seletividade</p>
                 </S.TituloSegundo>
+
                 <S.TituloTres>
                     <h1>Conteúdo:</h1>
                 </S.TituloTres>
+
                 <S.TextoUm>
                     <p>
                         A seletividade alimentar é comum em crianças com
@@ -81,8 +88,11 @@ export default function Pgpro() {
                         pratos novos...
                     </p>
                 </S.TextoUm>
+
                 <S.ButaoVerMaisUm>
-                    <button onClick={handleVerMaisClick}>Ver Mais</button>
+                    <button type="submit" onClick={handleVerMaisClick}>
+                        Ver Mais
+                    </button>
                 </S.ButaoVerMaisUm>
             </S.ConteinerUm>
 
@@ -91,18 +101,23 @@ export default function Pgpro() {
                     src={Feliz}
                     alt="foto de uma criança feliz"
                 />
+
                 <S.TituloD>
                     <h1>Seletividade Alimentar, como lidar</h1>
                 </S.TituloD>
+
                 <S.TitulD>
                     <p>Comportamento alimentar</p>
                 </S.TitulD>
+
                 <S.TituloS>
                     <p>Seletividade</p>
                 </S.TituloS>
+
                 <S.TituloT>
                     <h1>Conteúdo:</h1>
                 </S.TituloT>
+
                 <S.TextoU>
                     <p>
                         A seletividade alimentar é comum em crianças com
@@ -112,14 +127,15 @@ export default function Pgpro() {
                         pratos novos...
                     </p>
                 </S.TextoU>
+
                 <S.ButaoVerMaisU>
                     <button onClick={handleVerMaisComoLidarClick}>
-                        Ver mais
+                        Ver Mais
                     </button>
                 </S.ButaoVerMaisU>
             </S.ConteinerDois>
 
-            <FooterPro />
+            <FooterUser />
         </>
     );
 }

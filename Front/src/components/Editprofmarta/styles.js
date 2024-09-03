@@ -15,7 +15,7 @@ export const Container = styled.div`
         font-size: 12px;
         margin-bottom: 20px;
     }
-    h2{
+    h2 {
         font-size: 16px;
         margin-top: 5px;
         font-weight: bold;

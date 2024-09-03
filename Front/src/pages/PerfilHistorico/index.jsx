@@ -7,7 +7,7 @@ import Navbarlogin from '../../components/Navbarlogin';
 
 import Ondaleve from '../../assets/svg/ondaleve.svg';
 
-const Paginaperfil = () => {
+const PerfilHistorico = () => {
     return (
         <>
             <Navbarlogin />
@@ -21,4 +21,4 @@ const Paginaperfil = () => {
     );
 };
 
-export default Paginaperfil;
+export default PerfilHistorico;

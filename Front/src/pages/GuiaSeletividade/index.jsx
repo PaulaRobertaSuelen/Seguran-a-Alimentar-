@@ -3,12 +3,13 @@ import * as S from './styles';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-const GuiaSeletividadeComoLida = () => {
+const GuiaSeletividade = () => {
     return (
         <>
         <Navbar />
-        <img src="/src/assets/svg/ondaleve.svg" alt="" />
+        
       <S.Container>
+        <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
         <S.Image src="/src/assets/Entenda a seletividade alimentar (1).png" alt="" />
         <S.SectionTitleT><h1>Seletividade alimentar como lida?</h1></S.SectionTitleT> <br />
         <S.Paragraph>
@@ -94,19 +95,19 @@ const GuiaSeletividadeComoLida = () => {
       </S.Container>
 
         <S.CardETM>
-                <S.Image2 src="/src/assets/seletividade-alimentar 2.png" alt="Criança comendo com a ajuda de uma pessoa adulta" />
+                <S.Image2 src="/src/assets/seletividade-alimentar 2.png" alt="" />
                 <S.formBTT action='Guia'>
                 <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
             <S.CardPP>
-                <S.Image2 src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
+                <S.Image2 src="/src/assets/Component 15.png" alt="" />
                 <S.formBTT action="PesquisarProfissional">
                 <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
             <S.CardSA>
-                <S.Image2 src="/src/assets/Component 16.png" alt="Logo da Bem Tea" />
+                <S.Image2 src="/src/assets/Component 16.png" alt="" />
                 <S.formBTT action="SobreNos">
                 <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
                 </S.formBTT>
@@ -116,4 +117,4 @@ const GuiaSeletividadeComoLida = () => {
     );
   };
   
-  export default GuiaSeletividadeComoLida;
+  export default GuiaSeletividade;
