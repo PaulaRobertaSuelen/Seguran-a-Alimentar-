@@ -24,6 +24,9 @@ import Perfilmarta from '../pages/Perfilmarta/index';
 import { Pagamento } from '../components/Assinatura/styles';
 import SNosUser from '../pages/SNosUser/index';
 import SNosPro from '../pages/SNosPro/index';
+import Guiapro from '../pages/Guiapro/index';
+import GuiaSCLUser from '../pages/GuiaSCLUser/index';
+import GuiaSCLPro from '../pages/GuiaSCLPro/index';
 
 export const router = createBrowserRouter([
     {
@@ -121,5 +124,17 @@ export const router = createBrowserRouter([
     {
         path: '/SNosPro',
         element: <SNosPro />,
+    },
+    {
+        path: '/Guiapro',
+        element: <Guiapro />,
+    },
+    {
+        path: '/GuiaSCLUser',
+        element: <GuiaSCLUser />,
+    },
+    {
+        path: '/GuiaSCLPro',
+        element: <GuiaSCLPro />,
     },
 ]);

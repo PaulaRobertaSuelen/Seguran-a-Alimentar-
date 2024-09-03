@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from './styles';
-import Navbar from '../../components/Navbar';
+import Navbarpro from '../../components/NavbarPro/index';
 import Footer from '../../components/Footer/Footer';
 
-const GuiaSeletividadeComoLida = () => {
+const GuiaSCLUser = () => {
     return (
         <>
-            <Navbar />
+            <Navbarpro />
             <img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
                 <S.Image
@@ -142,7 +142,7 @@ const GuiaSeletividadeComoLida = () => {
                     src="/src/assets/seletividade-alimentar 2.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/Guia">
+                <S.formBTT action="/Guiapro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
@@ -151,7 +151,7 @@ const GuiaSeletividadeComoLida = () => {
                     src="/src/assets/Component 15.png"
                     alt="Mulher profissional de saúde com um tablet"
                 />
-                <S.formBTT action="/Login">
+                <S.formBTT action="/Pppro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
@@ -160,7 +160,7 @@ const GuiaSeletividadeComoLida = () => {
                     src="/src/assets/Component 16.png"
                     alt="Logo da Bem Tea"
                 />
-                <S.formBTT action="/SobreNos">
+                <S.formBTT action="/SNosPro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>
@@ -168,4 +168,4 @@ const GuiaSeletividadeComoLida = () => {
     );
 };
 
-export default GuiaSeletividadeComoLida;
+export default GuiaSCLUser;
