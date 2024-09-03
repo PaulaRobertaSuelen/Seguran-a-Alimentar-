@@ -27,6 +27,8 @@ import SNosPro from '../pages/SNosPro/index';
 import Guiapro from '../pages/Guiapro/index';
 import GuiaSCLUser from '../pages/GuiaSCLUser/index';
 import GuiaSCLPro from '../pages/GuiaSCLPro/index';
+import Pguialogin from '../pages/Pguialogin/index';
+import Paginaperfil from '../pages/Paginaperfil';
 
 export const router = createBrowserRouter([
     {
@@ -136,5 +138,13 @@ export const router = createBrowserRouter([
     {
         path: '/GuiaSCLPro',
         element: <GuiaSCLPro />,
+    },
+    {
+        path: '/pesquisar/guia/login',
+        element: <Pguialogin />,
+    },
+    {
+        path: '/perfil/usuario',
+        element: <Paginaperfil />,
     },
 ]);

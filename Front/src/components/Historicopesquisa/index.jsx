@@ -20,7 +20,7 @@ const HistoricoPesquisa = () => {
                 <S.Item key={index}>
                     <S.ProfileImage src={item.imagem} alt={item.nome} />
                     <S.ProfileInfo>{item.nome}</S.ProfileInfo>
-                    <S.ViewButton as={Link} to="/perfilprofissional">
+                    <S.ViewButton as={Link} to="/perfil/profissional">
                         ver perfil
                     </S.ViewButton>
                 </S.Item>

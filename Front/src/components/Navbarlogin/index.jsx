@@ -21,12 +21,12 @@ export default function Navbar() {
                 <div />
             </S.HamburgerMenu>
             <S.Opcoes isOpen={isOpen}>
-                <a href="/Homelogin">Início</a>
-                <a href="/PesquisarProfissional">Serviços</a>
-                <a href="/Pguialogin">Guias</a>
+                <a href="/Home/login">Início</a>
+                <a href="/pesquisar/profissional">Serviços</a>
+                <a href="/Pesquisar/guia/login">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
-                <a href="/Paginaperfil">
+                <a href="/perfil/usuario">
                     <img src={puser} alt="Perfil" />
                 </a>
             </S.Botaoperfil>
