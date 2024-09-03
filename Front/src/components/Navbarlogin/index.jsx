@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
 import * as S from './styles';
-
 import logonavbar from '../../assets/svg/logonavbar.svg';
 import puser from '../../assets/svg/puser.svg';
-import { FaUserCircle } from 'react-icons/fa';
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <S.NavbarOpcoes>
             <S.LogoWrapper>
                 <img src={logonavbar} alt="Logo" />
             </S.LogoWrapper>
-            <S.Opcoes>
-                <a href="/Homelogin">Início</a>
-                <a href="/PesquisarProfissional">Serviços</a>
-                <a href="/Pguialogin">Guias</a>
+            <S.HamburgerMenu onClick={toggleMenu}>
+                <div />
+                <div />
+                <div />
+            </S.HamburgerMenu>
+            <S.Opcoes isOpen={isOpen}>
+                <a href="/Home/login">Início</a>
+                <a href="/pesquisar/profissional">Serviços</a>
+                <a href="/Pesquisar/guia/login">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
-                <a href="/Paginaperfil">
-                    <img src={puser} alt="Logo" />
+                <a href="/perfil/usuario">
+                    <img src={puser} alt="Perfil" />
                 </a>
             </S.Botaoperfil>
         </S.NavbarOpcoes>

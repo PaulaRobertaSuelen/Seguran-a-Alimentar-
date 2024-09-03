@@ -6,7 +6,7 @@ import Feliz from '../../assets/Feliz.png';
 import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 
-export default function LoginGuia() {
+export default function Pguialogin() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
     const navigate = useNavigate();
@@ -16,11 +16,11 @@ export default function LoginGuia() {
     };
 
     const handleVerMaisClick = () => {
-        navigate('/Guialogin');
+        navigate('/Guia');
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSCLUser');
+        navigate('/GuiaSeletividadeComolida');
     };
 
     return (

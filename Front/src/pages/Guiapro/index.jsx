@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from './styles';
-import Navbarlogin from '../../components/Navbarlogin/index';
+import Navbarpro from '../../components/NavbarPro/index';
 import Footer from '../../components/Footer/Footer';
 
-const Guia = () => {
+const Guiapro = () => {
     return (
         <>
-            <Navbarlogin />
+            <Navbarpro />
             <img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
                 <S.Image
@@ -215,7 +215,7 @@ const Guia = () => {
                     src="/src/assets/Component 16.png"
                     alt="Logo da Bem Tea"
                 />
-                <S.formBTT action="/SNosUser">
+                <S.formBTT action="/SNosPro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>
@@ -223,4 +223,4 @@ const Guia = () => {
     );
 };
 
-export default Guia;
+export default Guiapro;

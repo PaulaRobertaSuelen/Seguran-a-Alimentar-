@@ -1,15 +1,14 @@
 import React from 'react';
 import * as S from './styles';
-import Navbar from '../../components/Navbar';
+import Navbarpro from '../../components/NavbarPro/index';
 import Footer from '../../components/Footer/Footer';
 
-const GuiaSeletividade = () => {
+const GuiaSCLUser = () => {
     return (
         <>
-            <Navbar />
-
+            <Navbarpro />
+            <img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
-                <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
                 <S.Image
                     src="/src/assets/Entenda a seletividade alimentar (1).png"
                     alt=""
@@ -141,21 +140,27 @@ const GuiaSeletividade = () => {
             <S.CardETM>
                 <S.Image2
                     src="/src/assets/seletividade-alimentar 2.png"
-                    alt=""
+                    alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/Guia">
+                <S.formBTT action="/Guiapro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
             <S.CardPP>
-                <S.Image2 src="/src/assets/Component 15.png" alt="" />
-                <S.formBTT action="/Login">
+                <S.Image2
+                    src="/src/assets/Component 15.png"
+                    alt="Mulher profissional de saúde com um tablet"
+                />
+                <S.formBTT action="/Pppro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
             <S.CardSA>
-                <S.Image2 src="/src/assets/Component 16.png" alt="" />
-                <S.formBTT action="/SobreNos">
+                <S.Image2
+                    src="/src/assets/Component 16.png"
+                    alt="Logo da Bem Tea"
+                />
+                <S.formBTT action="/SNosPro">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>
@@ -163,4 +168,4 @@ const GuiaSeletividade = () => {
     );
 };
 
-export default GuiaSeletividade;
+export default GuiaSCLUser;

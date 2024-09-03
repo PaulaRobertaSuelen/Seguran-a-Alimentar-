@@ -73,7 +73,7 @@ export default function Cadastro() {
                             password
                         />
 
-                        {/* <S.LostPass> */}
+                         <S.LostPass> 
                         <Checkbox
                             name={'termos'}
                             label={
@@ -85,7 +85,7 @@ export default function Cadastro() {
                                 </>
                             }
                         />
-                        {/* </S.LostPass> */}
+                         </S.LostPass> 
 
                         <S.But>
                             <Button styles={{ width: '40%', padding: '10px' }}>
