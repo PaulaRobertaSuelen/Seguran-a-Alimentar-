@@ -12,6 +12,7 @@ export const Modal = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y: auto;
 
     @media (max-width: 900px) {
         width: 100%;
@@ -31,10 +32,13 @@ export const Conteudo = styled.div`
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 
     @media (max-width: 900px) {
         max-width: 70%;
         margin: 0 5%;
+        max-height: 80vh;
     }
 `;
 
@@ -96,6 +100,7 @@ export const Pagamento = styled.div`
         font-weight: bold;
         margin-bottom: 30px;
     }
+    height: auto;
 `;
 
 export const Sair = styled.button`

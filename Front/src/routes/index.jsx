@@ -29,6 +29,7 @@ import GuiaSCLUser from '../pages/GuiaSCLUser/index';
 import GuiaSCLPro from '../pages/GuiaSCLPro/index';
 import Pguialogin from '../pages/Pguialogin/index';
 import Paginaperfil from '../pages/Paginaperfil';
+import GuiaPro from '../pages/Guiapro/index';
 
 export const router = createBrowserRouter([
     {
@@ -146,5 +147,9 @@ export const router = createBrowserRouter([
     {
         path: '/perfil/usuario',
         element: <Paginaperfil />,
+    },
+    {
+        path: '/pesquisar/guia/profissional',
+        element: <GuiaPro />,
     },
 ]);

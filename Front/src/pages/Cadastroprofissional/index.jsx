@@ -253,7 +253,7 @@ export default function Cadastroprofissional() {
 
                         <button
                             type="submit"
-                            onClick={() => navigate('/Homepro')}
+                            onClick={() => navigate('/home/profissional')}
                         >
                             Cadastrar
                         </button>
