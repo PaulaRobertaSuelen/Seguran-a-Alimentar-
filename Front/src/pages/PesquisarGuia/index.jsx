@@ -68,12 +68,10 @@ export default function PesquisarGuia() {
                 </S.TituloUm>
 
                 <S.TitulUM>
-                    <p>Comportamento alimentar</p>
+                    <p>Comportamento Alimentar,  Seletividade</p>
+                    
                 </S.TitulUM>
 
-                <S.TituloSegundo>
-                    <p>Seletividade</p>
-                </S.TituloSegundo>
 
                 <S.TituloTres>
                     <h1>Conteúdo:</h1>.
@@ -107,12 +105,8 @@ export default function PesquisarGuia() {
                 </S.TituloD>
 
                 <S.TitulD>
-                    <p>Comportamento alimentar</p>
+                    <p>Comportamento alimentar, Seletividade</p>
                 </S.TitulD>
-
-                <S.TituloS>
-                    <p>Seletividade</p>
-                </S.TituloS>
 
                 <S.TituloT>
                     <h1>Conteúdo:</h1>

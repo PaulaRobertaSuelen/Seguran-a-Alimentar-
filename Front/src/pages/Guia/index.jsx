@@ -7,8 +7,9 @@ const Guia = () => {
     return (
         <>
             <Navbar />
-            <img src="/src/assets/svg/ondaleve.svg" alt="" />
+
             <S.Container>
+                <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
                 <S.Image
                     src="/src/assets/Component 13.png"
                     alt="Criança recusando comida"
@@ -205,7 +206,7 @@ const Guia = () => {
                     src="/src/assets/Component 14.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/GuiaSeletividadeComoLida">
+                <S.formBTT action="/guia/seletividade">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>

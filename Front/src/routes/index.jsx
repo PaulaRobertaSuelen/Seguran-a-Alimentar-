@@ -11,12 +11,12 @@ import PerfilPrivado from '../pages/PerfilPrivado/index';
 import PerfilProfissional from '../pages/Perfilprofissional/index';
 import Guia from '../pages/Guia/index';
 import Guialogin from '../pages/Guialogin';
-import PaginaPerfil from '../pages/Paginaperfil/index';
+import PerfilHistorico from '../pages/PerfilHistorico/index';
 import Homelogin from '../pages/Homelogin/index';
-import Pguialogin from '../pages/Pguialogin/index';
+import LoginGuia from '../pages/LoginGuia/index';
 import SobreNos from '../pages/SobreNos/index';
-import GuiaSeletividadeComolida from '../pages/GuiaSeletividadeComoLida/index';
-import Homepro from '../pages/Homepro/index';
+import GuiaSeletividade from '../pages/GuiaSeletividade/index';
+import HomeProfissional from '../pages/HomeProfissional/index';
 import Pppro from '../pages/Pppro/index';
 import Pgpro from '../pages/Pgpro/index';
 import Ppcarlos from '../pages/Ppcarlos/index';
@@ -46,40 +46,40 @@ export const router = createBrowserRouter([
         element: <PesquisarGuia />,
     },
     {
-        path: '/pesquisarprofissional',
+        path: '/pesquisar/profissional',
         element: <PesquisarProfissional />,
     },
     {
-        path: '/perfilprofissional',
+        path: '/perfil/profissional',
         element: <PerfilProfissional />,
     },
     {
-        path: '/cadastro',
+        path: '/Cadastro',
         element: <Cadastro />,
     },
     {
-        path: '/cadastroprofissional',
+        path: '/cadastro/profissional',
         element: <CadastroProfissional />,
     },
     {
-        path: '/perfilprivado',
+        path: '/PerfilPrivado',
         element: <PerfilPrivado />,
     },
     {
-        path: '/guia',
+        path: '/Guia',
         element: <Guia />,
     },
     {
-        path: '/paginaperfil',
-        element: <PaginaPerfil />,
+        path: '/perfil/historico',
+        element: <PerfilHistorico />,
     },
     {
-        path: '/Homelogin',
+        path: '/Home/login',
         element: <Homelogin />,
     },
     {
-        path: '/Pguialogin',
-        element: <Pguialogin />,
+        path: '/login/guia',
+        element: <LoginGuia />,
     },
     {
         path: '/SobreNos',
@@ -90,31 +90,31 @@ export const router = createBrowserRouter([
         element: <Pagamento />,
     },
     {
-        path: '/Guialogin',
+        path: '/Guia/login',
         element: <Guialogin />,
     },
     {
-        path: '/GuiaSeletividadeComolida',
-        element: <GuiaSeletividadeComolida />,
+        path: '/guia/seletividade',
+        element: <GuiaSeletividade />,
     },
     {
-        path: '/Homepro',
-        element: <Homepro />,
+        path: '/Home/profissional',
+        element: <HomeProfissional />,
     },
     {
-        path: '/Pppro',
+        path: '/pesquisar/perfil/profissional',
         element: <Pppro />,
     },
     {
-        path: '/Pgpro',
+        path: '/pesquisar/login/guia',
         element: <Pgpro />,
     },
     {
-        path: '/Ppcarlos',
+        path: '/perfil/profissional/Carlos',
         element: <Ppcarlos />,
     },
     {
-        path: '/Perfilmarta',
+        path: '/perfil/profissional/Marta',
         element: <Perfilmarta />,
     },
     {
@@ -122,7 +122,7 @@ export const router = createBrowserRouter([
         element: <SNosUser />,
     },
     {
-        path: '/SNosPro',
+        path: '/SobreNosProfissional',
         element: <SNosPro />,
     },
     {

@@ -12,8 +12,17 @@ export const OndasEstilo = styled.div`
 
 export const BodyUm = styled.div`
     margin: 0 auto;
-    width: calc(100% - 500px);
+    width: calc(100% - 500px); /* Mantém as margens de 250px de cada lado */
     max-width: 1200px;
+
+    @media (max-width: 900px) {
+        width: calc(100% - 70px);
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100% - 50px);
+    }
+
 `;
 
 export const BackgroundContainer = styled.div`
@@ -23,11 +32,29 @@ export const BackgroundContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+    @media (max-width: 768px) {
+        margin-top: 10%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 8%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 `;
 
 export const ComendoLegumes = styled.img`
     width: 450px;
     height: 310px;
+
+    @media (max-width: 900px) {
+        width: 300px;
+        height: 207px;
+    }
 `;
 
 export const TituloUm = styled.div`
@@ -40,11 +67,25 @@ export const TituloUm = styled.div`
     h2 {
         font-size: 20px;
         font-weight: normal;
-        margin-top: 10%;
     }
     width: 40%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transform: translateY(-60px);
+
+    @media (max-width:900px) {
+        h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: 3%;
+    }
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    }
 `;
 
 export const NosConheca = styled.div`
@@ -60,6 +101,20 @@ export const NosConheca = styled.div`
         font-size: 14px;
         margin-top: 2%;
     }
+
+    @media (max-width: 900px){
+        margin-top: 10%;
+        h1 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 12px;
+        }
+        p {
+            font-size: 10px;
+            margin-top: 2%;
+        }
+    }
 `;
 
 export const QuadroConhecer = styled.div`
@@ -67,6 +122,12 @@ export const QuadroConhecer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: 900px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const TextosConhecer = styled.div`
@@ -84,6 +145,12 @@ export const Card = styled.div`
     text-align: left;
     height: 150px;
     width: 500px;
+
+    @media (max-width: 900px) {
+        height: 100px;
+        width: 330px;
+        margin-top: 20px;
+    }
 `;
 
 export const Barra = styled.div`
@@ -100,6 +167,10 @@ export const Descricao = styled.div`
 export const Mae = styled.img`
     height: 350px;
     width: 320px;
+
+    @media (max-width: 900px){
+        display: none;
+    }
 `;
 
 export const VideoContainer = styled.div`
@@ -111,8 +182,8 @@ export const VideoContainer = styled.div`
     max-width: 650px;
     height: 380px;
 
-    @media (max-width: 768px) {
-        width: 100%;
+    @media (max-width: 900px) {
+        width: 80%;    
         height: auto;
     }
 `;
@@ -130,12 +201,25 @@ export const BodyDois = styled.div`
 `;
 
 export const ConteudoDois = styled.div`
-    margin-left: 250px;
-    margin-right: 250px;
+    margin: 0 auto;
+    width: calc(100% - 500px);
     h1 {
         color: white;
         font-size: 26px;
         margin-bottom: 2%;
+    }
+
+    @media (max-width: 900px) {
+        width: calc(100% - 70px);
+        h1 {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 3%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100% - 50px);
     }
 `;
 
@@ -165,12 +249,22 @@ export const TextoFunciona = styled.div`
         font-weight: bold;
     }
     gap: 10px;
+
+    @media (max-width: 900px) {
+        p{
+            font-size: 10px;
+        }
+    }
 `;
 
 export const BarraDois = styled.div`
     background-color: #7499e8;
     width: 35px;
     border-radius: 20px;
+
+    @media (max-width: 900px) {
+        width: 70px;
+    }
 `;
 
 export const FotoComputador = styled.img`
@@ -187,6 +281,12 @@ export const Compromisso = styled.div`
     h1{
         font-size: 26px;
     }
+
+    @media (max-width: 900px) {
+        h1{
+            font-size: 18px;
+        }
+    }
 `;
 
 export const ViMiId = styled.div`
@@ -194,6 +294,13 @@ export const ViMiId = styled.div`
     flex-direction: row;
     justify-content: space-between;
     gap: 10%;
+
+    @media (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 `;
 
 export const ViMiIdConteudo = styled.div`
@@ -216,21 +323,45 @@ export const ViMiIdConteudo = styled.div`
         font-size: 14px;
         font-weight: normal;
     }
+
+    @media (max-width: 900px) {
+        h2{
+            font-size: 14px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
 `;
 
 export const Visao = styled.img`
     height: 38%;
     width: 44%;
+
+    @media (max-width: 900px) {
+        height: 30%;
+        width: 30%;
+    }
 `;
 
 export const Missao = styled.img`
     height: 38%;
     width: 44%;
+
+    @media (max-width: 900px) {
+        height: 30%;
+        width: 30%;
+    }
 `;
 
 export const Ideal = styled.img`
     height: 38%;
     width: 44%;
+
+    @media (max-width: 900px) {
+        height: 30%;
+        width: 30%;
+    }
 `;
 
 export const DuvidasFrequentes = styled.div`
@@ -243,6 +374,14 @@ export const DuvidasFrequentes = styled.div`
     width: 100%;
     padding: 20px;
     margin-left: auto;
+
+    @media (max-width: 900px) {
+        h1{
+            font-size: 18px;
+        }
+        padding: 0px;
+        padding-bottom: 20px;
+    }
 `;
 
 export const FaqContainer = styled.div`
@@ -264,17 +403,16 @@ export const FaqItem = styled.div`
     color: #101066;
     font-size: 15px;
     font-weight: bold;
-    
-
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     
-    
-
     &:hover {
         background-color: #deedf5;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 12px;
     }
 `;
 
@@ -286,6 +424,10 @@ export const FaqAnswer = styled.div`
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 20px;
+
+    @media (max-width: 900px) {
+        font-size: 12px;
+    }
 `;
 
 export const footer = styled.img`
