@@ -50,31 +50,31 @@ export const router = createBrowserRouter([
         element: <PerfilProfissional />,
     },
     {
-        path: '/cadastro',
+        path: '/Cadastro',
         element: <Cadastro />,
     },
     {
-        path: '/cadastroprofissional',
+        path: '/CadastroDoProfissional',
         element: <CadastroProfissional />,
     },
     {
-        path: '/perfilprivado',
+        path: '/PerfilPrivado',
         element: <PerfilPrivado />,
     },
     {
-        path: '/guia',
+        path: '/Guia',
         element: <Guia />,
     },
     {
-        path: '/paginaperfil',
+        path: '/PaginaPerfil',
         element: <PaginaPerfil />,
     },
     {
-        path: '/Homelogin',
+        path: '/HomeLogin',
         element: <Homelogin />,
     },
     {
-        path: '/Pguialogin',
+        path: '/PaginaGuiaLogin',
         element: <Pguialogin />,
     },
     {
@@ -94,27 +94,27 @@ export const router = createBrowserRouter([
         element: <GuiaSeletividadeComolida />,
     },
     {
-        path: '/Homepro',
+        path: '/HomeDoProfissional',
         element: <Homepro />,
     },
     {
-        path: '/Pppro',
+        path: '/PesquisaDoProfissional',
         element: <Pppro />,
     },
     {
-        path: '/Pgpro',
+        path: '/PaginaGuiaDoProfissional',
         element: <Pgpro />,
     },
     {
-        path: '/Ppcarlos',
+        path: '/PaginaDoCarlos',
         element: <Ppcarlos />,
     },
     {
-        path: '/SNosUser',
+        path: '/SobreNosUser',
         element: <SNosUser />,
     },
     {
-        path: '/SNosPro',
+        path: '/SobreNosProfissional',
         element: <SNosPro />,
     },
 ]);
