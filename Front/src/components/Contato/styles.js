@@ -12,6 +12,13 @@ export const Modal = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 1000;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const Conteudo = styled.div`
@@ -22,6 +29,11 @@ export const Conteudo = styled.div`
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+
+    @media (max-width: 900px) {
+        max-width: 90%;
+        margin: 0 5%;
+    }
 `;
 
 export const Mensagem = styled.div`
