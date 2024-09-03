@@ -20,7 +20,7 @@ export const Tag = styled.div`
         font-size: 2rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-top: 10rem;
         h2 {
             font-size: 1.5rem;
@@ -39,7 +39,7 @@ export const TexUm = styled.div`
         font-size: 20px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 1rem;
         max-width: 100%;
         p {
@@ -54,7 +54,7 @@ export const ContImg = styled.div`
     position: relative;
     margin-top: 0px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 1rem;
         flex-direction: column;
     }
@@ -77,7 +77,7 @@ export const TexDois = styled.div`
         font-size: 20px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 1rem;
         max-width: 100%;
         p {
@@ -93,7 +93,7 @@ export const ContImagem = styled.div`
     margin-top: -10%;
     margin-bottom: 2%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 0;
         flex-direction: column;
         margin-top: 0;
@@ -106,7 +106,7 @@ export const Im = styled.img`
     position: relative;
     top: -12rem; /* Alinha a imagem com o texto */
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 0;
         top: 0;
         width: 100%;
@@ -133,7 +133,7 @@ export const ContAzul = styled.div`
         color: #ffffff;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         flex-direction: column;
         margin: 2rem 1rem;
         p {
@@ -160,7 +160,7 @@ export const ImLogo = styled.img`
     height: auto;
     margin-bottom: 20px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         width: 15rem;
         margin-left: 0;
     }
@@ -176,7 +176,7 @@ export const TexT = styled.div`
         font-size: 1rem ;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin-left: 0;
         max-width: 100%;
         p {
@@ -206,7 +206,7 @@ export const ContImagems = styled.div`
         margin-left: -rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr;
         margin: 5%;
         gap: 1rem;
