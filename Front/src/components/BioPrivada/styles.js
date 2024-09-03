@@ -88,4 +88,11 @@ export const Container = styled.div`
     p {
         font-size: 12px;
     }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 `;

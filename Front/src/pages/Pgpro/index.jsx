@@ -16,11 +16,11 @@ export default function Pgpro() {
     };
 
     const handleVerMaisClick = () => {
-        navigate('/Guia');
+        navigate('/Guiapro');
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida');
+        navigate('/GuiaSCLPro');
     };
 
     return (

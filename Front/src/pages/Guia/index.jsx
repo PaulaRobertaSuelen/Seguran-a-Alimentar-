@@ -9,7 +9,6 @@ const Guia = () => {
         <Navbar />
         
       <S.Container>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
         <S.Image src="/src/assets/Component 13.png" alt="Criança recusando comida" />
         <S.SectionTitleT><h1>O que é Seletividade Alimentar?</h1></S.SectionTitleT> <br />
@@ -102,21 +101,27 @@ const Guia = () => {
             <Footer />
       </S.Container>
 
-        <S.CardETM>
-                <S.ImageCD src="/src/assets/Component 14.png" alt="Criança comendo com a ajuda de uma pessoa adulta" />
-                <S.formBTT action='GuiaSeletividadeComoLida'>
-                <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
+            <S.CardETM>
+                <S.ImageCD
+                    src="/src/assets/Component 14.png"
+                    alt="Criança comendo com a ajuda de uma pessoa adulta"
+                />
+                <S.formBTT action="/guia/seletividade">
+                    <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
             <S.CardPP>
                 <S.ImageCD src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
-                <S.formBTT action="login">
+                <S.formBTT action="PesquisarProfissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
             <S.CardSA>
-                <S.ImageCD src="/src/assets/Component 16.png" alt="Logo da Bem Tea" />
-                <S.formBTT action="SobreNos">
+                <S.ImageCD
+                    src="/src/assets/Component 16.png"
+                    alt="Logo da Bem Tea"
+                />
+                <S.formBTT action="/SobreNos">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>

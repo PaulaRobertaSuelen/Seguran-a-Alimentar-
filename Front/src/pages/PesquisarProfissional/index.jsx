@@ -6,29 +6,26 @@ import Navbarlogin from '../../components/Navbarlogin/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
-//import ModalPesquisa from '../../components/ModalPesquisar';
+import ModalPesquisa from '../../components/ModalPesquisar';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
     const [Nutricionista, setNutricionista] = useState('');
     const [nome, setNome] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
 
     const navigate = useNavigate();
-    // const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false);
-    // const [searchResultado, setSearchResultado] = useState([]);
+    const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false); // Estado do modal
+
+    const openModal = () => {
+        setIsModalPesquisarOpen(true); // Abre o modal
+    };
 
     const handleBuscarClick = () => {
         // Simula uma pesquisa
-        //const resultado = [
-        // `Nutricionista: ${Nutricionista}`,
-        // `Nome: ${nome}`
-        // ];
-        // setSearchResultado(resultado);
-        // setIsModalPesquisarOpen(true);
-    };
-
-    const handleVerMaisClick = () => {
-        alert('Ver Perfil!');
+        const resultado = [`Nutricionista: ${Nutricionista}`, `Nome: ${nome}`];
+        setSearchResults(resultado); // Define os resultados da busca
+        openModal(); // Abre o modal após a busca
     };
 
     return (
@@ -95,13 +92,13 @@ export default function PesquisarProfissional() {
                 </S.TextoUm>
 
                 <S.ButaoVerPerfilsUm>
-                    <button onClick={() => navigate('/perfilprofissional')}>
+                    <button onClick={() => navigate('/perfil/profissional')}>
                         Ver Perfil
                     </button>
                 </S.ButaoVerPerfilsUm>
             </S.ConteinerUm>
 
-            {/* segunda parte do profissional */}
+            {/* Segunda parte do profissional */}
 
             <S.ConteinerDois>
                 <S.ConteinerImagemD src={Carlos} alt="foto do Profissional" />
@@ -133,13 +130,15 @@ export default function PesquisarProfissional() {
                 </S.TextoU>
 
                 <S.ButaoVerPerfilsU>
-                    <button onClick={() => navigate('/Ppcarlos')}>
+                    <button
+                        onClick={() => navigate('/Perfil/profissional/carlos')}
+                    >
                         Ver Perfil
                     </button>
                 </S.ButaoVerPerfilsU>
             </S.ConteinerDois>
 
-            {/* treceira parte do Profissional */}
+            {/* Terceira parte do profissional */}
 
             <S.ConteinerTres>
                 <S.ConteinerImagemTres src={Marta} alt="foto da Profissional" />
@@ -171,7 +170,9 @@ export default function PesquisarProfissional() {
                 </S.TextoTres>
 
                 <S.ButaoVerPerfilsTres>
-                    <button onClick={() => navigate('/Perfilmarta')}>
+                    <button
+                        onClick={() => navigate('/Perfil/profissional/marta')}
+                    >
                         Ver Perfil
                     </button>
                 </S.ButaoVerPerfilsTres>
@@ -179,7 +180,12 @@ export default function PesquisarProfissional() {
 
             <Footer />
 
-            {/* <ModalPesquisa isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}searchResults={searchResults}/> */}
+            {/* Modal Pesquisa */}
+            <ModalPesquisa
+                isOpen={isModalPesquisarOpen}
+                onClose={() => setIsModalPesquisarOpen(false)}
+                searchResults={searchResults}
+            />
         </>
     );
 }

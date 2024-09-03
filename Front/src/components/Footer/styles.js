@@ -15,7 +15,7 @@ export const Footer = styled.footer`
         height: 70px;
         position: absolute;
         left: 150px;
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
             position: initial;
         }
     }
@@ -77,5 +77,8 @@ export const Button = styled.button`
         cursor: default;
         opacity: 0.7;
     }
+    @media (max-width: 900px) {
+            display: none;
+        }
 `;
 

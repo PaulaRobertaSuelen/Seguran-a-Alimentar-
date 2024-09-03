@@ -12,4 +12,13 @@ export const Container = styled.div`
     display: flex;
     padding: 0 300px;
     column-gap: 20px;
+
+    @media (max-width: 900px) {
+        padding: 0;
+        margin: 0 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 15px;
+    }
     `;

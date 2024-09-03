@@ -1,31 +1,31 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
-import Footer from '../../components/FooterUser/index';
-import Navbar from '../../components/Navbar/index';
+import { useNavigate } from 'react-router-dom';
+import Navbarlogin from '../../components/Navbarlogin';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
+import FooterUser from '../../components/FooterUser/index';
 import * as S from './styles';
 
-export default function PesquisarGuia() {
+export default function LoginGuia() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
-    const navigate = useNavigate(); // Hook para navegação
+    const navigate = useNavigate();
 
     const handleBuscarClick = () => {
         alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
     };
 
     const handleVerMaisClick = () => {
-        navigate('/guia'); // Redireciona para a rota /guia
+        navigate('/Guialogin');
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida'); // Redireciona para a rota /GuiaSeletividadeComoLidar
+        navigate('/GuiaSCLUser');
     };
 
     return (
         <>
-            <Navbar />
+            <Navbarlogin />
 
             <S.OndasEstilo>
                 <p> </p>
@@ -60,7 +60,7 @@ export default function PesquisarGuia() {
             <S.ConteinerUm>
                 <S.ConteinerImagem
                     src={Menino}
-                    alt="foto de uma criança-chupando-laranja"
+                    alt="foto de uma criança chupando laranja"
                 />
 
                 <S.TituloUm>
@@ -68,19 +68,21 @@ export default function PesquisarGuia() {
                 </S.TituloUm>
 
                 <S.TitulUM>
-                    <p>Comportamento Alimentar,  Seletividade</p>
-                    
+                    <p>Comportamento alimentar</p>
                 </S.TitulUM>
 
+                <S.TituloSegundo>
+                    <p>Seletividade</p>
+                </S.TituloSegundo>
 
                 <S.TituloTres>
-                    <h1>Conteúdo:</h1>.
+                    <h1>Conteúdo:</h1>
                 </S.TituloTres>
 
                 <S.TextoUm>
                     <p>
                         A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
                         pela recusa em experimentar novos alimentos, um
                         repertório restrito de alimentos aceitos e resistência a
                         pratos novos...
@@ -105,8 +107,12 @@ export default function PesquisarGuia() {
                 </S.TituloD>
 
                 <S.TitulD>
-                    <p>Comportamento alimentar, Seletividade</p>
+                    <p>Comportamento alimentar</p>
                 </S.TitulD>
+
+                <S.TituloS>
+                    <p>Seletividade</p>
+                </S.TituloS>
 
                 <S.TituloT>
                     <h1>Conteúdo:</h1>
@@ -115,7 +121,7 @@ export default function PesquisarGuia() {
                 <S.TextoU>
                     <p>
                         A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA).Ela se caracteriza
+                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
                         pela recusa em experimentar novos alimentos, um
                         repertório restrito de alimentos aceitos e resistência a
                         pratos novos...
@@ -124,12 +130,12 @@ export default function PesquisarGuia() {
 
                 <S.ButaoVerMaisU>
                     <button onClick={handleVerMaisComoLidarClick}>
-                        Ver mais
+                        Ver Mais
                     </button>
                 </S.ButaoVerMaisU>
             </S.ConteinerDois>
 
-            <Footer />
+            <FooterUser />
         </>
     );
 }
