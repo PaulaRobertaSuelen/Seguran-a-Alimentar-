@@ -9,6 +9,7 @@ const Guia = () => {
         <Navbar />
         
       <S.Container>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
         <S.Image src="/src/assets/Component 13.png" alt="Criança recusando comida" />
         <S.SectionTitleT><h1>O que é Seletividade Alimentar?</h1></S.SectionTitleT> <br />
@@ -109,7 +110,7 @@ const Guia = () => {
             </S.CardETM>
             <S.CardPP>
                 <S.ImageCD src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
-                <S.formBTT action="PesquisarProfissional">
+                <S.formBTT action="login">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
@@ -119,6 +120,8 @@ const Guia = () => {
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>
+
+            
         </>
     );
 };

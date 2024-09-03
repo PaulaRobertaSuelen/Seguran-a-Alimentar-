@@ -102,7 +102,7 @@ const GuiaSeletividadeComoLida = () => {
             </S.CardETM>
             <S.CardPP>
                 <S.Image2 src="/src/assets/Component 15.png" alt="" />
-                <S.formBTT action="PesquisarProfissional">
+                <S.formBTT action="login">
                 <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>

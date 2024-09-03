@@ -9,6 +9,10 @@ export const img = styled.img`
     background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
     z-index: -1;
+
+    @media (max-width: 900px) {
+    height: 100%;
+  }
 `;
 
 export const Container = styled.div`
@@ -16,12 +20,25 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
+
+  Footer {
+    top: 0%;
+  };
+
+  @media (max-width: 900px) {
+    padding: 0 10px;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+
+  @media (max-width: 900px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -29,6 +46,11 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   margin-bottom: 10px;
   margin-left: -320px;
+
+  @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const SectionTitle = styled.h3`
@@ -49,6 +71,11 @@ export const ListItem = styled.li`
   list-style-type: disc;
   margin-left: -280px;
   text-align: justify;
+
+  @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
  export const Image = styled.img`
@@ -56,12 +83,21 @@ export const ListItem = styled.li`
   max-width: 950px;
   margin-bottom: 20px;
   margin-top: 20px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const CardTitle = styled.h4`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+    text-align: center;
+  }
 `;
 
 export const CardButton = styled.button`
@@ -73,6 +109,11 @@ export const CardButton = styled.button`
   cursor: pointer;
   margin-top: 0px;
   max-width: 110px;
+
+  @media (max-width: 900px) {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
 `;
 
 export const SectionTitleT = styled.h1`
@@ -81,6 +122,11 @@ export const SectionTitleT = styled.h1`
     color: #3771C8;
     margin-left: -470px;
     flex-direction: column;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const SectionTitleT2 = styled.h1`
@@ -89,6 +135,11 @@ export const SectionTitleT2 = styled.h1`
     color: #3771C8;
     margin-left: -280px;
     //flex-direction: column;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const formBTT = styled.form`
@@ -99,6 +150,10 @@ export const formBTT = styled.form`
   border-radius: 15px;
   cursor: pointer;
   margin-top: -30px;
+
+  @media (max-width: 900px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const SectionTitleFT = styled.p`
@@ -107,6 +162,11 @@ export const SectionTitleFT = styled.p`
     color: #3771C8;
     margin-left: -280px;
     font-size: large;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const CardETM = styled.div`
@@ -121,6 +181,10 @@ export const CardETM = styled.div`
   margin-left: 850px;
   margin-top: -1600px;
   max-width: 250px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CardPP = styled.div`
@@ -135,6 +199,10 @@ export const CardPP = styled.div`
   margin-left: 850px;
   margin-top: 20px;
   max-width: 250px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CardSA = styled.div`
@@ -149,6 +217,10 @@ export const CardSA = styled.div`
   margin-left: 850px;
   margin-top: 20px;
   max-width: 250px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const ImageCD = styled.img`
