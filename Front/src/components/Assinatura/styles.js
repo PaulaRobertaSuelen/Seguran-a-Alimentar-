@@ -33,7 +33,7 @@ export const Conteudo = styled.div`
     position: relative;
 
     @media (max-width: 900px) {
-        max-width: 90%;
+        max-width: 70%;
         margin: 0 5%;
     }
 `;

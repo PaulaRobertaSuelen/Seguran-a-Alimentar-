@@ -20,4 +20,11 @@ export const Container = styled.div`
         margin-top: 5px;
         font-weight: bold;
     }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 `;
