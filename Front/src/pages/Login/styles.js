@@ -30,7 +30,7 @@ export const AsideContainer = styled.div`
         height: 190px;
 
         @media (max-width: 900px) {
-           display: none;
+            display: none;
         }
     }
 `;
@@ -99,7 +99,6 @@ export const Login = styled.div`
 export const LostPass = styled.div`
     display: flex;
     justify-content: space-between;
-
     @media (max-width: 900px) {
         flex-direction: column;
         align-items: center;
@@ -111,6 +110,8 @@ export const LostPass = styled.div`
         font-weight: 200;
         text-decoration: none;
         cursor: pointer;
+        width: 100%;
+        text-align: right;
     }
 `;
 
@@ -180,7 +181,3 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
-
-
-
-
