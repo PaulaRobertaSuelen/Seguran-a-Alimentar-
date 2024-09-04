@@ -34,7 +34,7 @@ export const LogoWrapper = styled.div`
 
 export const Opcoes = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 10px;
 
     a {
         text-decoration: none;
