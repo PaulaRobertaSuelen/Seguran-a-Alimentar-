@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import Footer from '../../components/FooterUser/index';
 import Navbar from '../../components/Navbar/index';
 import Menino from '../../assets/criança.png';
@@ -9,18 +9,18 @@ import * as S from './styles';
 export default function PesquisarGuia() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
-    const navigate = useNavigate(); // Hook para navegação
+    const navigate = useNavigate(); 
 
     const handleBuscarClick = () => {
         alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
     };
 
     const handleVerMaisClick = () => {
-        navigate('/guia'); // Redireciona para a rota /guia
+        navigate('/guia'); 
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida'); // Redireciona para a rota /GuiaSeletividadeComoLidar
+        navigate('/GuiaSeletividadeComolida');
     };
 
     return (

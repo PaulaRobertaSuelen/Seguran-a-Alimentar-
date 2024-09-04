@@ -10,7 +10,7 @@ export const OndasEstilo = styled.div`
     z-index: -1;
 `;
 
-export const Cabercario = styled.div`
+export const Cabecalho = styled.div`
     display: flex;
     margin-top: 5rem;
     align-items: center;
@@ -50,7 +50,8 @@ export const DivFiltro = styled.div`
     }
 `;
 
-export const DivPesq = styled(DivFiltro)``;
+export const DivPesq = styled(DivFiltro)`
+`;
 
 export const Butao = styled.div`
     display: flex;
