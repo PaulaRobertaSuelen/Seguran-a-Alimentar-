@@ -26,7 +26,7 @@ export default function Login() {
         const senha = event.target.senha.value;
         login({ email, senha })
             .then(() => {
-                navigate('/Homelogin');
+                navigate('/Home/login');
             })
             .catch((error) => {
                 alert(error.response.data.error);

@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@paypal/react-paypal-js": "^8.6.0",
-    "react-dom": "^18.3.1"
-  }
-}

@@ -13,6 +13,13 @@ export const Container = styled.div`
     margin-right: 20px;
     height: 480px;
     margin-bottom: 50px;
+
+    @media (max-width: 900px) {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: auto;
+    }
 `;
 
 export const Fotoprof = styled.img`

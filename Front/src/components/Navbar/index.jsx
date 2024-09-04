@@ -20,10 +20,10 @@ export default function Navbar() {
                 <div />
             </S.HamburgerMenu>
             <S.Opcoes isOpen={isOpen}>
-                <a href="/cadastroprofissional">Sou Profissional</a>
+                <a href="/cadastro/profissional">Sou Profissional</a>
                 <a href="/">Início</a>
                 <a href="/Login">Serviços</a>
-                <a href="/PesquisarGuia">Guias</a>
+                <a href="/pesquisarguia">Guias</a>
             </S.Opcoes>
             <S.BotaoEntrar>
                 <a href="/login">Entrar</a>
