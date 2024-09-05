@@ -67,6 +67,9 @@ export const Button = styled.button`
     cursor: pointer;
     box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.3);
     transition: ease background-color 250ms;
+    @media (max-width: 900px) {
+            display: none;
+        }
     &:hover {
         background-color: #101066;
     }
@@ -77,8 +80,6 @@ export const Button = styled.button`
         cursor: default;
         opacity: 0.7;
     }
-    @media (max-width: 900px) {
-            display: none;
-        }
+   
 `;
 

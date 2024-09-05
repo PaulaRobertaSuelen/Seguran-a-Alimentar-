@@ -16,6 +16,13 @@ export default function useAuth() {
     const updateUser = async (id, data) => {
         return await api.patch(`/user/${id}`, data);
     };
+    const regist = async (data) => {
+        return await api.post('/regist', data);
+    };
 
-    return { login, register, userByEmail, updateUser };
+    const log = async (data) => {
+        return await api.post('/log', data);
+    };
+
+    return { login, register, userByEmail, updateUser, regist, log };
 }

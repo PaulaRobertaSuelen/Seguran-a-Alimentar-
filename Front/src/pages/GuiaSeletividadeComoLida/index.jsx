@@ -96,7 +96,7 @@ const GuiaSeletividadeComoLida = () => {
 
         <S.CardETM>
                 <S.Image2 src="/src/assets/seletividade-alimentar 2.png" alt="" />
-                <S.formBTT action='Guia'>
+                <S.formBTT action='/guia/seletividade'>
                 <S.CardButton onClick='submit'>saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>

@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
-export const body = styled.div`
-    background-image: url('/src/assets/svg/ondaleve.svg');
+export const img = styled.img`
+    position: absolute;
+    width: -400px;
+    height: -500px;
+    background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
-    background-position: center;
+    z-index: -1;
+
+    @media (max-width: 900px) {
+    height: 100px;
+  }
 `;
 
 export const Container = styled.div`
@@ -11,29 +18,37 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    margin-top: -900px;
+
+    Footer {
+    top: 0px;
+  };
+
+  @media (max-width: 900px) {
+    padding: 0 10px;
+  }
 `;
 
 export const Title = styled.h2`
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+
+    @media (max-width: 900px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 export const Paragraph = styled.p`
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
-    margin-left: -415px;
-`;
+    margin-left: -320px;
 
-export const SectionTitle = styled.h3`
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: -500px;
-    color: #3771c8;
-    margin-left: -800px;
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const List = styled.ul`
@@ -43,61 +58,75 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     list-style-type: disc;
-    margin-left: -400px;
+    margin-left: -280px;
     text-align: justify;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const Image = styled.img`
-    width: 100%;
+    width: 65%;
     max-width: 950px;
     margin-bottom: 20px;
     margin-top: 20px;
+
+    @media (max-width: 900px) {
+    width: 100px;
+  }
 `;
 
 export const CardTitle = styled.h4`
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+
+    @media (max-width: 900px) {
+    font-size: 16px;
+    text-align: center;
+  }
 `;
 
 export const CardButton = styled.button`
     background-color: #33b44d;
     color: #fff;
-    padding: 5px 20px;
+    padding: 2px 10px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    margin-top: -55px;
+    margin-top: 0px;
+    max-width: 110px;
+
+    @media (max-width: 900px) {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
 `;
 
 export const SectionTitleT = styled.h1`
     font-size: 13px;
     font-weight: bold;
     color: #3771c8;
-    margin-left: -560px;
-`;
-
-export const ListItem2 = styled.p`
-    margin-left: -430px;
-`;
-
-export const ListItem3 = styled.p`
     margin-left: -470px;
+    flex-direction: column;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
-export const ListItemAP = styled.p`
-    margin-left: -420px;
-`;
-
-export const ListItemAN = styled.p`
-    margin-left: -450px;
-`;
-
-export const SectionTitleGSA = styled.h1`
+export const SectionTitleT2 = styled.h1`
     font-size: 13px;
-    font-weight: bold;
     color: #3771c8;
-    margin-left: -490px;
+    margin-left: -280px;
+
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const formBTT = styled.form`
@@ -107,51 +136,24 @@ export const formBTT = styled.form`
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    margin-top: -55px;
+    margin-top: -30px;
+
+    @media (max-width: 900px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const SectionTitleFT = styled.p`
     font-size: 13px;
     font-weight: bold;
     color: #3771c8;
-    margin-left: -650px;
+    margin-left: -280px;
     font-size: large;
-`;
 
-export const SectionTitleEC = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771c8;
-    margin-left: -755px;
-    font-size: large;
-`;
-
-export const SectionTitleIAG = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771c8;
-    margin-left: -615px;
-    font-size: large;
-`;
-
-export const ListItemIA = styled.p`
-    margin-left: -450px;
-`;
-
-export const SectionTitleAPC = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771c8;
-    margin-left: -660px;
-    font-size: large;
-`;
-
-export const SectionTitleBSP = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771c8;
-    margin-left: -725px;
-    font-size: large;
+    @media (max-width: 900px) {
+    margin-left: 0;
+    text-align: center;
+  }
 `;
 
 export const CardETM = styled.div`
@@ -159,13 +161,15 @@ export const CardETM = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
-    //background-color: #fff;
     margin-left: 850px;
-    margin-top: -1400px;
-    max-width: 300px;
+    margin-top: -1600px;
+    max-width: 250px;
+
+    @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CardPP = styled.div`
@@ -173,13 +177,15 @@ export const CardPP = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
-    //background-color: #fff;
+    margin-bottom: 10px;
     margin-left: 850px;
-    margin-top: 30px;
-    max-width: 300px;
+    margin-top: 20px;
+    max-width: 250px;
+
+    @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CardSA = styled.div`
@@ -187,11 +193,18 @@ export const CardSA = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
-    //background-color: #fff;
     margin-left: 850px;
-    margin-top: 40px;
-    max-width: 300px;
+    margin-top: 20px;
+    max-width: 250px;
+
+    @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+export const ImageCD = styled.img`
+    width: 210px;
+    margin-top: -5px;
 `;
