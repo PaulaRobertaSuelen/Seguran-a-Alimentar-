@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: '/redefinirsenha/:id',
+        path: '/redefinirsenha',
         element: <Redefinirsenha />,
     },
     {
@@ -70,10 +70,6 @@ export const router = createBrowserRouter([
     {
         path: '/Guia',
         element: <Guia />,
-    },
-    {
-        path: '/perfil/historico',
-        element: <PerfilHistorico />,
     },
     {
         path: '/Home/login',

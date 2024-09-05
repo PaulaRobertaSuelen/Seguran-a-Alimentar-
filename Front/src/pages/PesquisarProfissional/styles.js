@@ -15,97 +15,79 @@ export const Cabecalho = styled.div`
     margin-top: 5rem;
     align-items: center;
     margin-left: 15rem;
-    gap: 2rem;
 
     @media (max-width: 768px) {
+        margin-left: -30px;
+        margin-top: 20px;
         flex-direction: column;
-        margin-left: 0rem;
-        align-items: flex-start;
+        gap: -30px;
     }
 `;
-
 export const DivFiltro = styled.div`
-    display: flex;
-    flex-direction: column;
+    width: 10rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+        width: 15rem;
+        margin-bottom: 0;
+    }
 
     h1 {
-        margin-bottom: 1rem; 
         font-size: 1rem;
-        font-weight: 10rem;
-        text-align: left; 
+        margin-bottom: 1rem;
     }
+`;
+export const DivPesq = styled(DivFiltro)``;
+export const FiltroContainer = styled.div`
+    position: absolute;
 
     input {
-        padding: 5px;
-        font-size: 14px;
-        border: 1px solid #ccc;
+        padding: 4px;
+        font-size: 1rem;
         border-radius: 4rem;
-        width: 200px;
-    }
+        width: 12rem;
 
-    @media (max-width: 768px) {
-        input {
-            width: 100%;
+        @media (max-width: 768px) {
+            margin-top: 10%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 8%;
+            flex-direction: column;
+            justify-content: center;
         }
     }
-`;
 
-export const DivPesq = styled(DivFiltro)`
-`;
-
-export const Butao = styled.div`
-    display: flex;
-    margin-top: 2rem;
-
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        
+    }
     button {
-        width: 5rem;
-        height: 2rem;
-        align-items: center;
-        padding: 5px 10px;
-        border: unset;
+        padding: 5px;
+        width: 12rem;
         border-radius: 10px;
-        color: #888888;
-        z-index: 1;
-        background: #ffffff;
-        position: relative; 
-        font-size: 12px;
-        -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-        transition: all 250ms;
-        overflow: hidden;
-    }
+        color: black;
+        background-color: #DEEDF5;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
-    button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background-color: #33b44d;
-        z-index: -1;
-        transition: all 250ms;
-    }
-
-    button:hover {
-        color: #e8e8e8;
-    }
-
-    button:hover::before {
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        justify-content: center;
-        button {
-            width: 100%;
-        }
+    &:hover {
+        background-color: #33B44D;
+  }
     }
 `;
+
+
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 8rem;
     align-items: center;
     height: 18rem;
     width: 50rem;
@@ -116,12 +98,14 @@ export const ConteinerUm = styled.div`
     gap: 20px;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         flex-direction: column;
-        margin: 0rem;
-        width: 100%;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
         height: auto;
-        padding: 1rem;
+        margin-top: 40px;
+        margin-bottom: 60px;
     }
 `;
 
@@ -131,8 +115,9 @@ export const ConteinerImagemP = styled.img`
     margin-left: 2rem;
     margin-bottom: 5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin: 0;
+        max-width: 100px;
     }
 `;
 
@@ -145,10 +130,9 @@ export const TituloUm = styled.div`
         margin-left: 1rem;
         white-space: nowrap;
 
-        @media (max-width: 768px) {
-            margin-bottom: 1rem;
-            margin-left: 0;
-            font-size: 20px;
+        @media (max-width: 900px) {
+            margin: -10px 0;
+            font-size: 18px;
         }
     }
 `;
@@ -164,7 +148,7 @@ export const SubTituloUM = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-bottom: 1rem;
+            margin-bottom: -20px;
             font-size: 0.9rem;
         }
     }
@@ -181,7 +165,7 @@ export const TituloSegubd = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-bottom: 1rem;
+            margin-bottom: -20px;
             font-size: 0.9rem;
         }
     }
@@ -194,9 +178,7 @@ export const TituloDois = styled.div`
         margin-top: 1rem;
 
         @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            display: none;
         }
     }
 `;
@@ -210,9 +192,7 @@ export const TextoUm = styled.div`
         margin-top: 9rem;
 
         @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            display: none;
         }
     }
 `;
@@ -230,8 +210,7 @@ export const ButaoVerPerfilsUm = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-top: 1rem;
-            width: 100%;
+            margin-top: -20px;
         }
     }
 `;

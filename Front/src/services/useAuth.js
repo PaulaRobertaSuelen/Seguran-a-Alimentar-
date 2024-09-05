@@ -1,4 +1,4 @@
-import api from '../config/api';
+import api from './authService';
 
 export default function useAuth() {
     const login = async (data) => {
@@ -6,7 +6,7 @@ export default function useAuth() {
     };
 
     const register = async (data) => {
-        return await api.post('/register', data);
+        return await api.post('/user/create', data);
     };
 
     const userByEmail = async (email) => {
@@ -20,9 +20,9 @@ export default function useAuth() {
         return await api.post('/regist', data);
     };
 
-    const log = async (data) => {
-        return await api.post('/log', data);
+    const authStatus = async () => {
+        return await api.get('/auth-status'); // Verifica o status de autenticação
     };
 
-    return { login, register, userByEmail, updateUser, regist, log };
+    return { login, register, userByEmail, updateUser, authStatus };
 }

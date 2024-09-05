@@ -7,7 +7,7 @@ const GuiaSCLUser = () => {
     return (
         <>
             <Navbarpro />
-            <img src="/src/assets/svg/ondaleve.svg" alt="" />
+            <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
                 <S.Image
                     src="/src/assets/Entenda a seletividade alimentar (1).png"
@@ -151,7 +151,7 @@ const GuiaSCLUser = () => {
                     src="/src/assets/Component 15.png"
                     alt="Mulher profissional de saúde com um tablet"
                 />
-                <S.formBTT action="/Pppro">
+                <S.formBTT action="/pesquisar/perfil/profissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
@@ -160,7 +160,7 @@ const GuiaSCLUser = () => {
                     src="/src/assets/Component 16.png"
                     alt="Logo da Bem Tea"
                 />
-                <S.formBTT action="/SNosPro">
+                <S.formBTT action="/SobreNosProfissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>

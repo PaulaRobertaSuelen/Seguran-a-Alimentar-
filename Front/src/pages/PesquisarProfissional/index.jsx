@@ -1,26 +1,33 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/FooterUser/index';
-import Navbarlogin from '../../components/Navbarlogin/index';
+import Navbar from '../../components/Navbar/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
-    const navigate = useNavigate(); 
-    const [especialidade, setEspecialidade] = useState('');
-    const [nome, setNome] = useState('');
+    const navigate = useNavigate();
+    const [mostrarFiltros, setMostrarFiltros] = useState(false);
+    const [mostrarNomes, setMostrarNomes] = useState(false);
 
-    const handleBuscarClick = () => {
     
-        console.log('Buscar por:', { especialidade, nome });
+
+    const handleEspecialidadeClick = (especialidade) => {
         
+        setMostrarFiltros(false); 
+        console.log('Especialidade selecionada:', especialidade);
+    };
+
+    const handleNomeClick = (nome) => {
+        setMostrarNomes(false); 
+        console.log('Nome selecionado:', nome);
     };
 
     return (
         <>
-            <Navbarlogin />
+            <Navbar />
 
             <S.OndasEstilo>
                 <p> </p>
@@ -29,33 +36,63 @@ export default function PesquisarProfissional() {
             <S.Cabecalho>
                 <S.DivFiltro>
                     <h1>Filtros </h1>
-                    <select
-                        value={especialidade}
-                        onChange={(e) => setEspecialidade(e.target.value)}
-                    >
-                        <option value="">Selecione uma especialidade</option>
-                        <option value="">Nutricionista</option>
-                        <option value="">fonoaudiólogo</option>
-                        <option value="">psicólogo</option>
-                        <option value="">terapeuta ocupacional</option>
-                    </select>
+                    <S.FiltroContainer>
+                        <input
+                            type="text"
+                            placeholder="Nutricionista "
+                            onClick={() => setMostrarFiltros(!mostrarFiltros)}
+                            readOnly
+                        />
+                        {mostrarFiltros && (
+                            <div>
+                                <button onClick={() => handleEspecialidadeClick('Nutricionista')}>Nutricionista</button>
+                                <button onClick={() => handleEspecialidadeClick('Fonoaudiólogo')}>Fonoaudiólogo</button>
+                                <button onClick={() => handleEspecialidadeClick('Psicólogo')}>Psicólogo</button>
+                                
+                            </div>
+                        )}
+                    </S.FiltroContainer>
                 </S.DivFiltro>
 
                 <S.DivPesq>
-                    <h1>pesquise por Nome</h1>
-                    <select
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}>
-                        <option value="">Selecione um nome</option>
-                        <option value="">Fernanda Santos</option>
-                        <option value="">Carlos Aschoff</option>
-                        <option value=" ">Marta Portela</option>
-                    </select>
+                    <h1>Pesquise por Nome</h1>
+                    <S.FiltroContainer>
+                        <input
+                            type="text"
+                            placeholder="Pesquisar "
+                            onClick={() => setMostrarNomes(!mostrarNomes)}
+                            readOnly
+                        />
+                        {mostrarNomes && (
+                            <div>
+                                <button
+                                    onClick={() =>
+                                        handleNomeClick('Fernanda Santos')
+                                    }
+                                >
+                                    Fernanda Santos
+                                </button>
+                                <button
+                                    onClick={() =>
+                                        handleNomeClick('Carlos Aschoff')
+                                    }
+                                >
+                                    Carlos Aschoff
+                                </button>
+                                <button
+                                    onClick={() =>
+                                        handleNomeClick('Marta Portela')
+                                    }
+                                >
+                                    {' '}
+                                    Marta Portela
+                                </button>
+                            </div>
+                        )}
+                    </S.FiltroContainer>
                 </S.DivPesq>
 
-                <S.Botao>
-                    <button onClick={handleBuscarClick}>Buscar</button>
-                </S.Botao>
+                
             </S.Cabecalho>
 
             <S.ConteinerUm>
@@ -175,7 +212,6 @@ export default function PesquisarProfissional() {
             </S.ConteinerTres>
 
             <Footer />
-
         </>
     );
 }

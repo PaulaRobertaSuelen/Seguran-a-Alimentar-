@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Navbarlogin from '../../components/Navbarlogin';
+import Navbarlogin from '../../components/Navbarlogin/index.jsx';
 import Footer from '../../components/FooterUser/index.jsx';
 
 import Mother from '../../assets/mother.png';
@@ -10,8 +10,8 @@ import Mira from '../../assets/mira.png';
 import Lampada from '../../assets/lampada.png';
 import OndasDoMeio from '../../assets/ondas-do-meio.png';
 import Legumes from '../../assets/comendo-legumes.png';
-import { IoIosArrowDropdown } from "react-icons/io";
 
+import { IoIosArrowDropdown } from 'react-icons/io';
 import * as S from './styles.js';
 
 const faqs = [
@@ -186,13 +186,17 @@ export default function Homelogin() {
                         <S.FaqContainer>
                             {faqs.map((faq, index) => (
                                 <div key={index}>
-                                <S.FaqItem onClick={() => toggleAnswer(index)}>
-                                    <span>{faq.question}</span>
-                                    <IoIosArrowDropdown style={{ fontSize: '25px' }} />
-                                </S.FaqItem>
-                            <S.FaqAnswer show={visibleAnswer === index}>
-                                {faq.answer}
-                            </S.FaqAnswer>
+                                    <S.FaqItem
+                                        onClick={() => toggleAnswer(index)}
+                                    >
+                                        <span>{faq.question}</span>
+                                        <IoIosArrowDropdown
+                                            style={{ fontSize: '25px' }}
+                                        />
+                                    </S.FaqItem>
+                                    <S.FaqAnswer show={visibleAnswer === index}>
+                                        {faq.answer}
+                                    </S.FaqAnswer>
                                 </div>
                             ))}
                         </S.FaqContainer>

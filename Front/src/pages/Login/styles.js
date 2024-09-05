@@ -5,7 +5,6 @@ export const Container = styled.div`
     flex-direction: row;
 
     @media (max-width: 900px) {
-        padding: 25px;
         flex-direction: column;
     }
 `;
@@ -24,6 +23,7 @@ export const AsideContainer = styled.div`
             display: none;
         }
     }
+
     & .logo {
         position: absolute;
         width: 140px;
@@ -98,20 +98,24 @@ export const Login = styled.div`
 
 export const LostPass = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: space;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+
     @media (max-width: 900px) {
-        flex-direction: column;
         align-items: center;
     }
 
     & a {
         color: #1976d2;
         font-size: 14px;
-        font-weight: 200;
         text-decoration: none;
         cursor: pointer;
-        width: 100%;
-        text-align: right;
+        text-align: left;
+        white-space: nowrap;
+        padding: 10px;
     }
 `;
 
@@ -134,8 +138,8 @@ export const ContainerText = styled.div`
     align-items: center;
 
     & h1 {
-        line-height: 2em;
         text-align: center;
+        margin-left: 40px;
 
         @media (max-width: 900px) {
             font-size: 24px;
@@ -154,7 +158,7 @@ export const ContainerText = styled.div`
     }
 `;
 
-export const ContainerForm = styled.form`
+export const ContainerForm = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -181,9 +185,9 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
-export const Profissional = styled.div`
 
-display: flex;
+export const Profissional = styled.div`
+    display: flex;
     justify-content: space-between;
     width: 100%;
     & a {
@@ -193,7 +197,4 @@ display: flex;
         text-decoration: none;
         cursor: pointer;
     }
-
-
-
 `;

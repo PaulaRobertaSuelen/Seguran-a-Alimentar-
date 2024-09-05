@@ -4,7 +4,7 @@ import Ondatwo from '../../assets/svg/ondaOne.svg';
 import Logo from '../../assets/svg/logoS.svg';
 import * as S from './styles';
 import { useNavigate, useParams } from 'react-router-dom';
-import useAuth from '../../services/useAuth';
+import useAuth from '../../services/authService';
 import TextInput from '../../components/FormFields/Input';
 
 function RedefinirSenha() {

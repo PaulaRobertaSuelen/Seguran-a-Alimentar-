@@ -1,7 +1,7 @@
 import { MdEmail } from 'react-icons/md';
 import * as S from './styles';
 import { useState } from 'react';
-import useAuth from '../../services/useAuth';
+import api from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 
 import Onda from '../../assets/svg/ondaOne.svg';
@@ -14,48 +14,51 @@ import Modal from '../../components/Modal/index';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const { login, userByEmail, log } = useAuth();
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
     const handleButtonClick = () => {
         navigate('/cadastro');
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-        const senha = event.target.senha.value;
-        const profissional = event.target.profissional.value;
-
-        if (!!profissional) {
-            log({ email, senha })
-                .then(() => {
-                    navigate('/Home/login');
+    const handleSubmit = async (event) => {
+        try {
+            await api
+                .post('/user/login', {
+                    email,
+                    senha,
+                })
+                .then((response) => {
+                    localStorage.setItem('token', response.data.token);
+                    localStorage.setItem(
+                        'tipoUsuario',
+                        response.data.tipoUsuario
+                    );
+                    navigate('/');
                 })
                 .catch((error) => {
-                    alert(error.response.data.error);
+                    console.log(error);
                 });
-            return;
+        } catch (error) {
+            console.log(error);
         }
-
-        login({ email, senha })
-            .then(() => {
-                navigate('/Home/login');
-            })
-            .catch((error) => {
-                alert(error.response.data.error);
-            });
     };
 
-    const handlePesquisarEmail = (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-        userByEmail(email)
-            .then((response) => {
-                navigate(`/Redefinirsenha/${response.data.data.id}`);
-            })
-            .catch((error) => {
-                alert(error.response.data.error);
-            });
+    const userByEmail = async () => {
+        try {
+            await api
+                .post(`/redefinirsenha/${email}`
+                )
+                .then((response) => {
+                    console.log('funcionou');
+                    alert('funcionou');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -67,38 +70,44 @@ export default function Login() {
             <S.FormContainer>
                 <S.Login>
                     <h1>LOGIN</h1>
-
-                    <form onSubmit={handleSubmit}>
-                        <TextInput
-                            name="email"
-                            label="Email"
-                            iconLeft={<MdEmail color="#4377FF" />}
+                    <TextInput
+                        name="email"
+                        label="Email"
+                        iconLeft={<MdEmail color="#4377FF" />}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <TextInput
+                        name="senha"
+                        label="Senha"
+                        password
+                        onChange={(e) => setSenha(e.target.value)}
+                    />
+                    <S.LostPass>
+                        <Checkbox
+                            name="lembrar"
+                            label="Lembre-se"
+                            styles={{
+                                padding: '8px',
+                                width: '120%',
+                            }}
                         />
-                        <TextInput name="senha" label="Senha" password />
-                        <S.LostPass>
-                            <Checkbox label="Lembre-se" />
+                        <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
+                            Esqueceu a senha?
+                        </a>
+                    </S.LostPass>
 
-                            <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
-                                Esqueceu a senha?{' '}
-                            </a>
-                        </S.LostPass>
-                        <S.Profissional>
-                            <Checkbox
-                                name="profissional"
-                                label="Login profissional"
-                            />
-                        </S.Profissional>
-                        <S.Bat>
-                            <Button
-                                styles={{
-                                    padding: '10px',
-                                    width: '40%',
-                                }}
-                            >
-                                Entrar
-                            </Button>
-                        </S.Bat>
-                    </form>
+                    <S.Bat>
+                        <Button
+                            styles={{
+                                padding: '8px',
+                                width: '120%',
+                            }}
+                            onClick={() => handleSubmit()}
+                        >
+                            Entrar
+                        </Button>
+                    </S.Bat>
+
                     <p>
                         Não tem uma conta?{' '}
                         <a onClick={handleButtonClick}>Cadastre-se</a>
@@ -114,11 +123,11 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail de
+                            Para redefinir a sua senha, informe o e-mail de
                             cadastro.
                         </p>
                     </S.ContainerText>
-                    <S.ContainerForm onSubmit={handlePesquisarEmail}>
+                    <S.ContainerForm>
                         <TextInput
                             name="email"
                             label="Email"
@@ -126,9 +135,13 @@ export default function Login() {
                             styles={{
                                 width: '80%',
                             }}
+                            onChange={ (e) => setEmail(e.target.value) }
                         />
 
-                        <Button styles={{ width: '60%', padding: '10px' }}>
+                        <Button
+                            styles={{ width: '60%', padding: '10px' }}
+                            onClick={() => userByEmail()}
+                        >
                             Próximo
                         </Button>
                         <a onClick={() => setOpenEsqueciMinhaSenha(false)}>
