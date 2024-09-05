@@ -11,11 +11,23 @@ export default function PesquisarProfissional() {
     const navigate = useNavigate(); 
     const [especialidade, setEspecialidade] = useState('');
     const [nome, setNome] = useState('');
+    const [mostrarFiltros, setMostrarFiltros] = useState(false);
+    const [mostrarNomes, setMostrarNomes] = useState(false);
 
     const handleBuscarClick = () => {
-    
         console.log('Buscar por:', { especialidade, nome });
-        
+    };
+
+    const handleEspecialidadeClick = (especialidade) => {
+        setEspecialidade(especialidade);
+        setMostrarFiltros(false); 
+        console.log('Especialidade selecionada:', especialidade);
+    };
+
+    const handleNomeClick = (nome) => {
+        setNome(nome);
+        setMostrarNomes(false); 
+        console.log('Nome selecionado:', nome);
     };
 
     return (
@@ -29,28 +41,41 @@ export default function PesquisarProfissional() {
             <S.Cabecalho>
                 <S.DivFiltro>
                     <h1>Filtros </h1>
-                    <select
-                        value={especialidade}
-                        onChange={(e) => setEspecialidade(e.target.value)}
-                    >
-                        <option value="">Selecione uma especialidade</option>
-                        <option value="">Nutricionista</option>
-                        <option value="">fonoaudiólogo</option>
-                        <option value="">psicólogo</option>
-                        <option value="">terapeuta ocupacional</option>
-                    </select>
+                    <S.FiltroContainer>
+                        <input
+                            type='text'
+                            placeholder='Nutricionista '
+                            onClick={() => setMostrarFiltros(!mostrarFiltros)}
+                            readOnly
+                        />
+                        {mostrarFiltros && (
+                            <div>
+                                <button onClick={() => handleEspecialidadeClick('Nutricionista')}>Nutricionista</button>
+                                <button onClick={() => handleEspecialidadeClick('Fonoaudiólogo')}>Fonoaudiólogo</button>
+                                <button onClick={() => handleEspecialidadeClick('Psicólogo')}>Psicólogo</button>
+                                <button onClick={() => handleEspecialidadeClick('Terapeuta ocupacional')}>Terapeuta  ocupacional</button>
+                            </div>
+                        )}
+                    </S.FiltroContainer>
                 </S.DivFiltro>
 
                 <S.DivPesq>
-                    <h1>pesquise por Nome</h1>
-                    <select
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}>
-                        <option value="">Selecione um nome</option>
-                        <option value="">Fernanda Santos</option>
-                        <option value="">Carlos Aschoff</option>
-                        <option value=" ">Marta Portela</option>
-                    </select>
+                    <h1>Pesquise por Nome</h1>
+                    <S.FiltroContainer>
+                        <input
+                            type='text'
+                            placeholder='Pesquisar '
+                            onClick={() => setMostrarNomes(!mostrarNomes)}
+                            readOnly
+                        />
+                        {mostrarNomes && (
+                            <div>
+                                <button onClick={() => handleNomeClick('Fernanda Santos')}>Fernanda Santos</button>
+                                <button onClick={() => handleNomeClick('Carlos Aschoff')}>Carlos Aschoff</button>
+                                <button onClick={() => handleNomeClick('Marta Portela')}> Marta Portela</button>
+                            </div>
+                        )}
+                    </S.FiltroContainer>
                 </S.DivPesq>
 
                 <S.Botao>
@@ -58,124 +83,127 @@ export default function PesquisarProfissional() {
                 </S.Botao>
             </S.Cabecalho>
 
-            <S.ConteinerUm>
-                <S.ConteinerImagemP src={Fernanda} alt="foto da Profissional" />
+            
+                            <S.ConteinerUm>
+                                <S.ConteinerImagemP src={Fernanda} alt="foto da Profissional" />
 
-                <S.TituloUm>
-                    <h1>Fernanda Santos</h1>
-                </S.TituloUm>
+                                <S.TituloUm>
+                                    <h1>Fernanda Santos</h1>
+                                </S.TituloUm>
 
-                <S.SubTituloUM>
-                    <p>Nutrição materno infantil</p>
-                </S.SubTituloUM>
+                                <S.SubTituloUM>
+                                    <p>Nutrição materno infantil</p>
+                                </S.SubTituloUM>
 
-                <S.TituloSegubd>
-                    <p>Comportamento alimentar</p>
-                </S.TituloSegubd>
+                                <S.TituloSegubd>
+                                    <p>Comportamento alimentar</p>
+                                </S.TituloSegubd>
 
-                <S.TituloDois>
-                    <h1>Conteúdo:</h1>
-                </S.TituloDois>
+                                <S.TituloDois>
+                                    <h1>Conteúdo:</h1>
+                                </S.TituloDois>
 
-                <S.TextoUm>
-                    <p>
-                        A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
-                        pela recusa em experimentar novos alimentos, um
-                        repertório restrito de alimentos aceitos e resistência a
-                        pratos novos...
-                    </p>
-                </S.TextoUm>
+                                <S.TextoUm>
+                                    <p>
+                                        A seletividade alimentar é comum em crianças com
+                                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
+                                        pela recusa em experimentar novos alimentos, um
+                                        repertório restrito de alimentos aceitos e resistência a
+                                        pratos novos...
+                                    </p>
+                                </S.TextoUm>
 
-                <S.ButaoVerPerfilsUm>
-                    <button onClick={() => navigate('/perfil/profissional')}>
-                        Ver Perfil
-                    </button>
-                </S.ButaoVerPerfilsUm>
-            </S.ConteinerUm>
+                                <S.ButaoVerPerfilsUm>
+                                    <button onClick={() => navigate('/perfil/profissional')}>Ver Perfil</button>
+                                </S.ButaoVerPerfilsUm>
+                            </S.ConteinerUm>
 
-            {/* Segunda parte do profissional */}
 
-            <S.ConteinerDois>
-                <S.ConteinerImagemD src={Carlos} alt="foto do Profissional" />
+                            {/* Segunda parte do profissional */}
 
-                <S.TituloPrimeiro>
-                    <h1>Carlos Aschoff</h1>
-                </S.TituloPrimeiro>
 
-                <S.SubTituloPrimeiro>
-                    <p>Nutrição materno infantil</p>
-                </S.SubTituloPrimeiro>
+                            <S.ConteinerDois>
+                                <S.ConteinerImagemD src={Carlos} alt="foto do Profissional" />
 
-                <S.TituloSegundo>
-                    <p>Comportamento alimentar</p>
-                </S.TituloSegundo>
+                                <S.TituloPrimeiro>
+                                    <h1>Carlos Aschoff</h1>
+                                </S.TituloPrimeiro>
 
-                <S.TituloD>
-                    <h1>Conteúdo:</h1>
-                </S.TituloD>
+                                <S.SubTituloPrimeiro>
+                                    <p>Nutrição materno infantil</p>
+                                </S.SubTituloPrimeiro>
 
-                <S.TextoU>
-                    <p>
-                        A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
-                        pela recusa em experimentar novos alimentos, um
-                        repertório restrito de alimentos aceitos e resistência a
-                        pratos novos...
-                    </p>
-                </S.TextoU>
+                                <S.TituloSegundo>
+                                    <p>Comportamento alimentar</p>
+                                </S.TituloSegundo>
 
-                <S.ButaoVerPerfilsU>
-                    <button
-                        onClick={() => navigate('/Perfil/profissional/carlos')}
-                    >
-                        Ver Perfil
-                    </button>
-                </S.ButaoVerPerfilsU>
-            </S.ConteinerDois>
+                                <S.TituloD>
+                                    <h1>Conteúdo:</h1>
+                                </S.TituloD>
 
-            {/* Terceira parte do profissional */}
+                                <S.TextoU>
+                                    <p>
+                                        A seletividade alimentar é comum em crianças com
+                                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
+                                        pela recusa em experimentar novos alimentos, um
+                                        repertório restrito de alimentos aceitos e resistência a
+                                        pratos novos...
+                                    </p>
+                                </S.TextoU>
 
-            <S.ConteinerTres>
-                <S.ConteinerImagemTres src={Marta} alt="foto da Profissional" />
+                                <S.ButaoVerPerfilsU>
+                                    <button
+                                        onClick={() => navigate('/Perfil/profissional/carlos')}
+                                    >
+                                        Ver Perfil
+                                    </button>
+                                </S.ButaoVerPerfilsU>
+                            </S.ConteinerDois>
 
-                <S.TituloTerceiro>
-                    <h1>Marta Portela</h1>
-                </S.TituloTerceiro>
 
-                <S.SubTituloTer>
-                    <p>Nutrição materno infantil</p>
-                </S.SubTituloTer>
+                            {/* Terceira parte do profissional */}
 
-                <S.TituloTres>
-                    <p>Comportamento alimentar</p>
-                </S.TituloTres>
 
-                <S.TituloTre>
-                    <h1>Conteúdo:</h1>
-                </S.TituloTre>
+                            <S.ConteinerTres>
+                                <S.ConteinerImagemTres src={Marta} alt="foto da Profissional" />
 
-                <S.TextoTres>
-                    <p>
-                        A seletividade alimentar é comum em crianças com
-                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
-                        pela recusa em experimentar novos alimentos, um
-                        repertório restrito de alimentos aceitos e resistência a
-                        pratos novos...
-                    </p>
-                </S.TextoTres>
+                                <S.TituloTerceiro>
+                                    <h1>Marta Portela</h1>
+                                </S.TituloTerceiro>
 
-                <S.ButaoVerPerfilsTres>
-                    <button
-                        onClick={() => navigate('/Perfil/profissional/marta')}
-                    >
-                        Ver Perfil
-                    </button>
-                </S.ButaoVerPerfilsTres>
-            </S.ConteinerTres>
+                                <S.SubTituloTer>
+                                    <p>Nutrição materno infantil</p>
+                                </S.SubTituloTer>
 
-            <Footer />
+                                <S.TituloTres>
+                                    <p>Comportamento alimentar</p>
+                                </S.TituloTres>
 
-        </>
-    );
-}
+                                <S.TituloTre>
+                                    <h1>Conteúdo:</h1>
+                                </S.TituloTre>
+
+                                <S.TextoTres>
+                                    <p>
+                                        A seletividade alimentar é comum em crianças com
+                                        Transtorno do Espectro Autista (TEA). Ela se caracteriza
+                                        pela recusa em experimentar novos alimentos, um
+                                        repertório restrito de alimentos aceitos e resistência a
+                                        pratos novos...
+                                    </p>
+                                </S.TextoTres>
+
+                                <S.ButaoVerPerfilsTres>
+                                    <button
+                                        onClick={() => navigate('/Perfil/profissional/marta')}
+                                    >
+                                        Ver Perfil
+                                    </button>
+                                </S.ButaoVerPerfilsTres>
+                            </S.ConteinerTres>
+
+                            <Footer />
+
+                        </>
+                    );
+                }
