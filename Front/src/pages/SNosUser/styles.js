@@ -52,7 +52,7 @@ export const ContImg = styled.div`
     display: flex;
     margin-left: 192px; /* 12rem = 192px */
     position: relative;
-    margin-top: 0px;
+    margin-top: 0;
 
     @media (max-width: 900px) {
         margin-left: 16px; /* 1rem = 16px */
@@ -193,7 +193,7 @@ export const CaixaDois = styled.div`
 export const ContImagems = styled.div`
     display: grid;
     flex-wrap: wrap;
-    margin: 10%;
+    margin: 160px;
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     width: calc(80% - 1%);

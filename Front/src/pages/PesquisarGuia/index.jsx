@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
 import Footer from '../../components/FooterUser/index';
 import Navbar from '../../components/Navbar/index';
 import Menino from '../../assets/criança.png';
@@ -9,14 +9,14 @@ import * as S from './styles';
 export default function PesquisarGuia() {
     const [guia, setGuia] = useState('');
     const [nome, setNome] = useState('');
-    const navigate = useNavigate(); 
+    const navigate = useNavigate(); // Hook para navegação
 
     const handleBuscarClick = () => {
         alert(`Buscando por Guia: ${guia}, Nome: ${nome}`);
     };
 
     const handleVerMaisClick = () => {
-        navigate('/guia'); 
+        navigate('/guia'); // Redireciona para a rota /guia
     };
 
     const handleVerMaisComoLidarClick = () => {
@@ -31,32 +31,6 @@ export default function PesquisarGuia() {
                 <p> </p>
             </S.OndasEstilo>
 
-            <S.Cabercario>
-                <S.DivFil>
-                    <h1>Filtro</h1>
-                    <input
-                        type="text"
-                        placeholder="Guia"
-                        value={guia}
-                        onChange={(e) => setGuia(e.target.value)}
-                    />
-                </S.DivFil>
-
-                <S.DivPesq>
-                    <h1>Pesquisar por nome</h1>
-                    <input
-                        type="text"
-                        placeholder=""
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}
-                    />
-                </S.DivPesq>
-
-                <S.But>
-                    <button onClick={handleBuscarClick}>Buscar</button>
-                </S.But>
-            </S.Cabercario>
-
             <S.ConteinerUm>
                 <S.ConteinerImagem
                     src={Menino}
@@ -68,10 +42,8 @@ export default function PesquisarGuia() {
                 </S.TituloUm>
 
                 <S.TitulUM>
-                    <p>Comportamento Alimentar,  Seletividade</p>
-                    
+                    <p>Comportamento Alimentar, Seletividade</p>
                 </S.TitulUM>
-
 
                 <S.TituloTres>
                     <h1>Conteúdo:</h1>.

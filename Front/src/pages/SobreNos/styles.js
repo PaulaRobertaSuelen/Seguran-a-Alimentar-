@@ -12,26 +12,26 @@ export const OndasEstilo = styled.div`
 
 export const Tag = styled.div`
     text-align: center;
-    margin-top: 320px; /* 20rem = 320px */
-    margin: 32px; /* 2rem = 32px */
-    color: #101066;
+    margin-top: 20rem;
+    margin: 2rem;
+    color:#101066;
 
     h2 {
-        font-size: 32px; /* 2rem = 32px */
+        font-size: 2rem;
     }
 
     @media (max-width: 900px) {
-        margin-top: 160px; /* 10rem = 160px */
+        margin-top: 10rem;
         h2 {
-            font-size: 24px; /* 1.5rem = 24px */
+            font-size: 1.5rem;
         }
     }
 `;
 
 export const TexUm = styled.div`
-    margin: 32px 0; /* 2rem = 32px */
-    color: #101066;
-    max-width: 400px; /* 25rem = 400px */
+    margin: 2rem 0;
+    color:#101066;
+    max-width: 25rem;
     margin-left: 190px;
     margin-right: auto;
 
@@ -40,37 +40,37 @@ export const TexUm = styled.div`
     }
 
     @media (max-width: 900px) {
-        margin-left: 16px; /* 1rem = 16px */
+        margin-left: 1rem;
         max-width: 100%;
         p {
-            font-size: 16px; /* 1rem = 16px */
+            font-size: 1rem;
         }
     }
 `;
 
 export const ContImg = styled.div`
     display: flex;
-    margin-left: 192px; /* 12rem = 192px */
+    margin-left: 12rem;
     position: relative;
-    margin-top: 0px;
+    margin-top: 0;
 
     @media (max-width: 900px) {
-        margin-left: 16px; /* 1rem = 16px */
+        margin-left: 1rem;
         flex-direction: column;
     }
 `;
 
 export const ImLinha = styled.img`
     width: 100%;
-    max-width: 400px; /* 25rem = 400px */
+    max-width: 25rem;
     height: auto;
 `;
 
 export const TexDois = styled.div`
     margin: 20px 0;
-    color: #101066;
-    max-width: 400px; /* 25rem = 400px */
-    margin-left: 192px; /* 12rem = 192px */
+    color:#101066;
+    max-width: 25rem;
+    margin-left: 12rem;
     margin-right: auto;
 
     p {
@@ -78,10 +78,10 @@ export const TexDois = styled.div`
     }
 
     @media (max-width: 900px) {
-        margin-left: 16px; /* 1rem = 16px */
+        margin-left: 1rem;
         max-width: 100%;
         p {
-            font-size: 16px; /* 1rem = 16px */
+            font-size: 1rem;
         }
     }
 `;
@@ -89,7 +89,7 @@ export const TexDois = styled.div`
 export const ContImagem = styled.div`
     display: flex;
     align-items: flex-start;
-    margin-left: -192px; /* -12rem = -192px */
+    margin-left: -12rem;
     margin-top: -10%;
     margin-bottom: 2%;
 
@@ -101,10 +101,10 @@ export const ContImagem = styled.div`
 `;
 
 export const Im = styled.img`
-    height: auto;
-    margin-left: 848px; /* 53rem = 848px */
+    height:  auto;
+    margin-left: 53rem;
     position: relative;
-    top: -192px; /* -12rem = -192px */
+    top: -12rem; /* Alinha a imagem com o texto */
 
     @media (max-width: 900px) {
         margin-left: 0;
@@ -116,34 +116,34 @@ export const Im = styled.img`
 export const ContAzul = styled.div`
     background-color: #101066;
     padding: 20px;
-    margin: 80px 20; /* 5rem = 80px */
+    margin: 5rem 20;
     display: flex;
     flex-direction: row;
 
     p {
         color: #ffffff;
-        font-size: 16px; /* 1rem = 16px */
-        margin-left: -1440px; /* -90rem = -1440px */
-        margin-top: 640px; /* 40rem = 640px */
-        margin: 16px; /* 1rem = 16px */
+        font-size: 1rem;
+        margin-left: -90rem;
+        margin-top: 40rem;
+        margin: 1rem;
     }
 
     h1 {
-        font-size: 16px; /* 1rem = 16px */
+        font-size: 1rem;
         color: #ffffff;
     }
 
     @media (max-width: 900px) {
         flex-direction: column;
-        margin: 32px 16px; /* 2rem = 32px, 1rem = 16px */
+        margin: 2rem 1rem;
         p {
             margin-left: 0;
             margin-top: 0;
-            font-size: 14px; /* 0.875rem = 14px */
+            font-size: 0.875rem;
         }
 
         h1 {
-            font-size: 14px; /* 0.875rem = 14px */
+            font-size: 0.875rem;
         }
     }
 `;
@@ -155,32 +155,32 @@ export const Caixa = styled.div`
 `;
 
 export const ImLogo = styled.img`
-    width: 320px; /* 20rem = 320px */
-    margin-left: 160px; /* 10rem = 160px */
+    width: 20rem;
+    margin-left: 10rem;
     height: auto;
     margin-bottom: 20px;
 
     @media (max-width: 900px) {
-        width: 240px; /* 15rem = 240px */
+        width: 15rem;
         margin-left: 0;
     }
 `;
 
 export const TexT = styled.div`
-    margin-bottom: 32px; /* 2rem = 32px */
-    max-width: 640px; /* 40rem = 640px */
-    margin-left: 160px; /* 10rem = 160px */
+    margin-bottom: 2rem;
+    max-width: 40rem;
+    margin-left: 10rem;
     color: #ffffff;
 
     p {
-        font-size: 16px; /* 1rem = 16px */
+        font-size: 1rem ;
     }
 
     @media (max-width: 900px) {
         margin-left: 0;
         max-width: 100%;
         p {
-            font-size: 14px; /* 0.875rem = 14px */
+            font-size: 0.875rem;
         }
     }
 `;
@@ -193,23 +193,23 @@ export const CaixaDois = styled.div`
 export const ContImagems = styled.div`
     display: grid;
     flex-wrap: wrap;
-    margin: 10%;
+    margin: 160px;
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     width: calc(80% - 1%);
-    gap: 48px; /* 3rem = 48px */
-    margin-bottom: 160px; /* 10rem = 160px */
+    gap: 3rem;
+    margin-bottom: 10rem;
 
     h1 {
         color: aliceblue;
-        font-size: 32px; /* 2rem = 32px */
-        margin-left: 0;
+        font-size: 2rem;
+        margin-left: -rem;
     }
 
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
         margin: 5%;
-        gap: 16px; /* 1rem = 16px */
+        gap: 1rem;
     }
 `;
 

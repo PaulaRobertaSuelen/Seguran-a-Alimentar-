@@ -14,16 +14,35 @@ export const Cabecalho = styled.div`
     display: flex;
     margin-top: 80px; /* 5rem */
     align-items: center;
+    margin-left: 15rem;
     margin-left: 240px; /* 15rem */
 
     @media (max-width: 768px) {
+        margin-left: -30px;
+        margin-top: 20px;
         margin-left: 32px; /* 2rem */
         flex-direction: column;
+        gap: -30px;
         gap: 16px; /* 1rem */
     }
 `;
-
 export const DivFiltro = styled.div`
+    width: 10rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+        width: 15rem;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+`;
+export const DivPesq = styled(DivFiltro)``;
+export const FiltroContainer = styled.div`
+    position: relative;
     width: 160px; /* 10rem */
     margin-bottom: 32px; /* 2rem */
 
@@ -45,6 +64,21 @@ export const FiltroContainer = styled.div`
 
     input {
         padding: 4px;
+        font-size: 1rem;
+        border-radius: 4rem;
+        width: 12rem;
+
+        @media (max-width: 768px) {
+            margin-top: 10%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 8%;
+            flex-direction: column;
+            justify-content: center;
+        padding: 4px;
         font-size: 16px; /* 1rem */
         border-radius: 64px; /* 4rem */
         width: 192px; /* 12rem */
@@ -57,6 +91,20 @@ export const FiltroContainer = styled.div`
             margin-top: 8%;
         }
     }
+
+    div {
+        display: flex;
+        color: black;
+        flex-direction: column;
+        margin-top: 0.3rem;
+        position: absolute;
+        width: 12rem;
+        z-index: 1;
+    }
+`;
+//Butao de buscar
+export const Botao = styled.div`
+    margin-top: 20px;
 
     div {
         display: flex;
@@ -77,11 +125,14 @@ export const Botao = styled.div`
         height: 32px; /* 2rem */
         align-items: center;
         padding: 2px 10px;
+        padding: 2px 10px;
         border: unset;
         border-radius: 10px;
         color: #888888;
         z-index: 1;
         background: #ffffff;
+        position: relative;
+        font-size: 1rem;
         position: relative;
         font-size: 16px; /* 1rem */
         box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -89,14 +140,20 @@ export const Botao = styled.div`
         overflow: hidden;
 
         &:hover {
+            background-color: #33b44d;
+            color: #ffffff;
+
+        &:hover {
             background-color: #33B44D;
             color: #ffffff;
         }
     }
 `;
+// fim do botao
 
 export const ConteinerUm = styled.div`
     display: flex;
+    margin: 8rem;
     margin: 128px; /* 8rem */
     align-items: center;
     height: 288px; /* 18rem */
@@ -108,11 +165,16 @@ export const ConteinerUm = styled.div`
     gap: 20px;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
         margin: 0;
         width: 100%;
         height: auto;
+        margin-top: 40px;
+        margin-bottom: 60px;
         padding: 16px; /* 1rem */
     }
 `;
@@ -123,8 +185,9 @@ export const ConteinerImagemP = styled.img`
     margin-left: 32px; /* 2rem */
     margin-bottom: 80px; /* 5rem */
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin: 0;
+        max-width: 100px;
     }
 `;
 
@@ -137,6 +200,9 @@ export const TituloUm = styled.div`
         margin-left: 16px; /* 1rem */
         white-space: nowrap;
 
+        @media (max-width: 900px) {
+            margin: -10px 0;
+            font-size: 18px;
         @media (max-width: 768px) {
             margin-bottom: 16px; /* 1rem */
             margin-left: 0;
@@ -156,6 +222,8 @@ export const SubTituloUM = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
+            margin-bottom: -20px;
+            font-size: 0.9rem;
             margin-bottom: 16px; /* 1rem */
             font-size: 14.4px; /* 0.9rem */
         }
@@ -173,6 +241,8 @@ export const TituloSegubd = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
+            margin-bottom: -20px;
+            font-size: 0.9rem;
             margin-bottom: 16px; /* 1rem */
             font-size: 14.4px; /* 0.9rem */
         }
@@ -186,6 +256,7 @@ export const TituloDois = styled.div`
         margin-top: 16px; /* 1rem */
 
         @media (max-width: 768px) {
+            display: none;
             margin-left: 0;
             margin-top: 8px; /* 0.5rem */
             font-size: 14.4px; /* 0.9rem */
@@ -202,6 +273,7 @@ export const TextoUm = styled.div`
         margin-top: 144px; /* 9rem */
 
         @media (max-width: 768px) {
+            display: none;
             margin-left: 0;
             margin-top: 16px; /* 1rem */
             font-size: 14.4px; /* 0.9rem */
@@ -222,6 +294,7 @@ export const ButaoVerPerfilsUm = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
+            margin-top: -20px;
             margin-top: 16px; /* 1rem */
             width: 100%;
         }

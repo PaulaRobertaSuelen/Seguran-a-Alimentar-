@@ -7,6 +7,7 @@ export default function Button({
     disabled,
     onChange,
     styles,
+    ...rest
 }) {
     return (
         <SButton
@@ -15,6 +16,7 @@ export default function Button({
             onChange={onChange}
             disabled={disabled}
             style={styles}
+            {...rest}
         >
             {children}
         </SButton>

@@ -72,10 +72,6 @@ export const router = createBrowserRouter([
         element: <Guia />,
     },
     {
-        path: '/perfil/historico',
-        element: <PerfilHistorico />,
-    },
-    {
         path: '/Home/login',
         element: <Homelogin />,
     },

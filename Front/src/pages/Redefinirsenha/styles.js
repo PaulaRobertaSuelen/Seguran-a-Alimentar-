@@ -5,6 +5,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     height: 100vh;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 `;
 
 // Seção lateral (AsideContainer) com fundo
@@ -13,6 +17,7 @@ export const AsideContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
     & .background {
         object-fit: cover;
         max-height: 100vh;
@@ -21,6 +26,10 @@ export const AsideContainer = styled.div`
         position: absolute;
         width: 140px;
         height: 190px;
+    }
+
+    @media (max-width: 900px) {
+        display: none; /* Esconder a seção lateral em telas menores */
     }
 `;
 
@@ -32,11 +41,19 @@ export const FormContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    @media (max-width: 900px) {
+        padding: 20px;
+    }
 `;
 
 // Container para o título e formulário
 export const Content = styled.div`
     margin-top: 40px;
+
+    @media (max-width: 900px) {
+        margin-top: 20px;
+    }
 `;
 
 // Container para o título
@@ -46,25 +63,17 @@ export const TitleContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+
     & h1 {
         margin-bottom: 30px;
         font-size: 48px;
         font-weight: 300;
     }
-    & form {
-        width: 100%;
-        gap: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    & p {
-        font-size: 14px;
-        font-weight: 200;
-    }
-    & p > a {
-        color: #1976d2;
-        text-decoration: none;
-        cursor: pointer;
+
+    @media (max-width: 900px) {
+        & h1 {
+            font-size: 32px; /* Ajustar tamanho do título */
+        }
     }
 `;
 
@@ -73,6 +82,10 @@ export const Title = styled.h1`
     font-size: 36.8px; /* 2.3rem = 36.8px */
     font-weight: 300;
     margin-bottom: 20px;
+
+    @media (max-width: 900px) {
+        font-size: 1.8rem; /* Ajustar tamanho do título para mobile */
+    }
 `;
 
 // Contêiner para os campos de entrada
@@ -84,6 +97,11 @@ export const InputContainer = styled.form`
     border-radius: 10px;
     width: 100%;
     max-width: 400px;
+
+    @media (max-width: 900px) {
+        padding: 15px;
+        max-width: 100%;
+    }
 `;
 
 // Wrapper para o campo de entrada
@@ -91,6 +109,10 @@ export const InputWrapper = styled.div`
     position: relative;
     width: 110%;
     margin-bottom: 30px;
+
+    @media (max-width: 900px) {
+        width: 100%; /* Ajustar largura do campo de entrada */
+    }
 `;
 
 // Campo de entrada
@@ -110,8 +132,13 @@ export const Icon = styled.div`
     transform: translateY(-50%);
     cursor: pointer;
     color: #1976d2;
+
     &:hover {
         color: #000;
+    }
+
+    @media (max-width: 900px) {
+        left: 90%; /* Ajustar posição do ícone */
     }
 `;
 
@@ -150,11 +177,17 @@ export const Button = styled.button`
     border-radius: 8px;
     font-size: 16px; /* 1rem = 16px */
     cursor: pointer;
+
     &:hover {
         background-color: #218838;
     }
+
     &:disabled {
         background-color: #6c757d;
         cursor: not-allowed;
+    }
+
+    @media (max-width: 900px) {
+        width: 80%; /* Aumentar largura do botão para mobile */
     }
 `;

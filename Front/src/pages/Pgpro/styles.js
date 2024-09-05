@@ -188,7 +188,7 @@ export const ButaoVerMaisUm = styled.div`
     }
 `;
 
-//segunda parte do guia
+// Segunda parte do guia
 
 export const ConteinerDois = styled.div`
     display: flex;

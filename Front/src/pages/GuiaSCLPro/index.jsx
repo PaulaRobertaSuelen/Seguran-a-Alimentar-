@@ -7,7 +7,7 @@ const GuiaSCLUser = () => {
     return (
         <>
             <Navbarpro />
-            <img src="/src/assets/svg/ondaleve.svg" alt="" />
+            <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
                 <S.Image
                     src="/src/assets/Entenda a seletividade alimentar (1).png"

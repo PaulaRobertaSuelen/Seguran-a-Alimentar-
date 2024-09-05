@@ -4,7 +4,7 @@ import OndasDoComeco from '../../assets/ondas-do-comeco.png';
 export const OndasEstilo = styled.div`
     position: absolute;
     width: 100%;
-    height: 140%;
+    height: 100vh;
     background-image: url(${OndasDoComeco});
     background-size: cover;
     z-index: -1;
@@ -95,34 +95,37 @@ export const But = styled.div`
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 80px; // 5rem = 80px
+    margin: 80px;
     align-items: center;
-    height: 288px; // 18rem = 288px
-    width: 800px; // 50rem = 800px
-    margin-left: 288px; // 18rem = 288px
+    height: 288px;
+    width: 800px;
+    margin-left: 288px;
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    gap: 20px;
+    gap: 32px;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         flex-direction: column;
-        width: 100%;
-        margin: 0px;
-        padding: 16px; // 1rem = 16px
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
         height: auto;
+        margin-top: 40px;
+        margin-bottom: 60px;
     }
 `;
 
 export const ConteinerImagem = styled.img`
-    max-width: 144px; // 9rem = 144px
+    max-width: 144px;
     height: auto;
-    margin-left: 32px; // 2rem = 32px
-    margin-bottom: 80px; // 5rem = 80px
+    margin-left: 32px;
+    margin-bottom: 80px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin: 0;
+        max-width: 100px;
     }
 `;
 
@@ -131,12 +134,12 @@ export const TituloUm = styled.div`
         display: flex;
         font-size: 24px;
         width: 100%;
-        margin-bottom: 176px; // 11rem = 176px
-        margin-left: 16px; // 1rem = 16px
+        margin-bottom: 176px;
+        margin-left: 16px;
         white-space: nowrap;
 
-        @media (max-width: 768px) {
-            margin: 16px 0;
+        @media (max-width: 900px) {
+            margin: -10px 0;
             font-size: 18px;
             white-space: normal;
         }
@@ -145,15 +148,14 @@ export const TituloUm = styled.div`
 
 export const TitulUM = styled.div`
     p {
-        font-size: 16px; // 1rem = 16px
+        font-size: 16px;
         color: #101066;
         font-weight: 700;
-        margin-left: -384px; // -24rem = -384px
-        margin-bottom: 96px; // 6rem = 96px
-        
-        @media (max-width: 768px) {
-            margin: 16px 0;
-            white-space: normal;
+        margin-left: -384px;
+        margin-bottom: 96px;
+
+        @media (max-width: 900px) {
+            margin: -10px 30px;
         }
     }
 `;
@@ -162,45 +164,47 @@ export const TituloSegundo = styled(TitulUM)``;
 
 export const TituloTres = styled.div`
     h1 {
-        font-size: 16px; // 1rem = 16px
-        margin-left: -416px; // -26rem = -416px
-        margin-top: 16px; // 1rem = 16px
+        font-size: 16px;
+        margin-left: -416px;
+        margin-top: 16px;
 
-        @media (max-width: 768px) {
-            margin-left: 0px;
+        @media (max-width: 900px) {
+            display: none;
         }
     }
 `;
 
 export const TextoUm = styled.div`
     p {
-        font-size: 16px; // 1rem = 16px
+        font-size: 16px;
         color: black;
         line-height: 1.3;
-        margin-left: -448px; // -28rem = -448px
-        margin-top: 144px; // 9rem = 144px
+        margin-left: -448px;
+        margin-top: 144px;
 
-        @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 16px; // 1rem = 16px
+        @media (max-width: 900px) {
+            display: none;
         }
     }
 `;
 
 export const ButaoVerMaisUm = styled.div`
     button {
-        padding: 10px 20px;
-        margin-left: -736px; // -46rem = -736px
-        margin-top: 160px; // 10rem = 160px
+        padding: 10px 22px;
+        margin-left: -740px;
+        margin-top: 160px;
         background-color: #33b44d;
         color: white;
         border: none;
         border-radius: 10px;
         cursor: pointer;
 
-        @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 16px; // 1rem = 16px
+        @media (max-width: 900px) {
+            margin: -1px 0;
+            padding: 10px 22px;
+            position: absolute;
+            top: 240px;
+            left: 105px;
         }
     }
 `;
