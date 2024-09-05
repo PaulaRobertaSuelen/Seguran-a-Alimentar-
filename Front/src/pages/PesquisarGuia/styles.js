@@ -18,8 +18,9 @@ export const Cabercario = styled.div`
     margin-left: 300px;
 
     @media (max-width: 900px) {
+        margin-left: 15px;
         flex-direction: column;
-        gap: 10px;
+        gap: 16px;
     }
 `;
 
@@ -40,6 +41,10 @@ export const DivFil = styled.div`
         border: 1px solid #ccc;
         border-radius: 40px;
         width: 200px;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
     }
 `;
 
@@ -86,6 +91,10 @@ export const But = styled.div`
     button:hover::before {
         width: 100%;
     }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 `;
 
 export const ConteinerUm = styled.div`
@@ -100,6 +109,16 @@ export const ConteinerUm = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     gap: 32px;
     position: relative;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        height: auto;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
 `;
 
 export const ConteinerImagem = styled.img`
@@ -107,6 +126,11 @@ export const ConteinerImagem = styled.img`
     height: auto;
     margin-left: 32px;
     margin-bottom: 80px;
+
+    @media (max-width: 900px) {
+        margin: 0;
+        max-width: 100px;
+    }
 `;
 
 export const TituloUm = styled.div`
@@ -117,6 +141,12 @@ export const TituloUm = styled.div`
         margin-bottom: 176px;
         margin-left: 16px;
         white-space: nowrap;
+
+        @media (max-width: 900px) {
+            margin: -10px 0;
+            font-size: 18px;
+            white-space: normal;
+        }
     }
 `;
 
@@ -127,6 +157,10 @@ export const TitulUM = styled.div`
         font-weight: 700;
         margin-left: -384px;
         margin-bottom: 96px;
+
+        @media (max-width: 900px) {
+            margin: -10px 30px;
+        }
     }
 `;
 
@@ -137,6 +171,10 @@ export const TituloTres = styled.div`
         font-size: 16px;
         margin-left: -416px;
         margin-top: 16px;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 `;
 
@@ -147,6 +185,10 @@ export const TextoUm = styled.div`
         line-height: 1.3;
         margin-left: -448px;
         margin-top: 144px;
+
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
 `;
 
@@ -160,6 +202,14 @@ export const ButaoVerMaisUm = styled.div`
         border: none;
         border-radius: 10px;
         cursor: pointer;
+
+        @media (max-width: 900px) {
+            margin: -1px 0;
+            padding: 10px 22px;
+            position: absolute;
+            top: 240px;
+            left: 105px;
+        }
     }
 `;
 
