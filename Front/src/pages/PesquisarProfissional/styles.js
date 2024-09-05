@@ -41,7 +41,7 @@ export const DivPesq = styled(DivFiltro)`
 
 `;
 export const FiltroContainer = styled.div`
-    position: relative;
+    position: absolute;
 
     input {
         padding: 4px;
@@ -64,41 +64,27 @@ export const FiltroContainer = styled.div`
 
     div {
         display: flex;
-        color: black;
         flex-direction: column;
-        margin-top: 0.3rem;
-        position: absolute;
-        width: 12rem;
-        z-index: 1;
+        gap: 3px;
+        
     }
-`;
- //Butao de buscar 
-export const Botao = styled.div`
-    margin-top: 20px;
-
     button {
-        width: 5rem;
-        height: 2rem;
-        align-items: center;
-        padding: 2px 10px;
-        border: unset;
+        padding: 5px;
+        width: 12rem;
         border-radius: 10px;
-        color: #888888;
-        z-index: 1;
-        background: #ffffff;
-        position: relative;
-        font-size: 1rem;
-        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-        transition: all 250ms;
-        overflow: hidden;
+        color: black;
+        background-color: #DEEDF5;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: #33B44D;
-            color: #ffffff;
-        }
+      &:hover {
+        background-color: #33B44D;
+      }
     }
 `;
- // fim do botao
+
 
 
 export const ConteinerUm = styled.div`

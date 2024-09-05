@@ -9,23 +9,19 @@ import * as S from './styles';
 
 export default function PesquisarProfissional() {
     const navigate = useNavigate(); 
-    const [especialidade, setEspecialidade] = useState('');
-    const [nome, setNome] = useState('');
+    
     const [mostrarFiltros, setMostrarFiltros] = useState(false);
     const [mostrarNomes, setMostrarNomes] = useState(false);
 
-    const handleBuscarClick = () => {
-        console.log('Buscar por:', { especialidade, nome });
-    };
+    
 
     const handleEspecialidadeClick = (especialidade) => {
-        setEspecialidade(especialidade);
+        
         setMostrarFiltros(false); 
         console.log('Especialidade selecionada:', especialidade);
     };
 
     const handleNomeClick = (nome) => {
-        setNome(nome);
         setMostrarNomes(false); 
         console.log('Nome selecionado:', nome);
     };
@@ -53,7 +49,7 @@ export default function PesquisarProfissional() {
                                 <button onClick={() => handleEspecialidadeClick('Nutricionista')}>Nutricionista</button>
                                 <button onClick={() => handleEspecialidadeClick('Fonoaudiólogo')}>Fonoaudiólogo</button>
                                 <button onClick={() => handleEspecialidadeClick('Psicólogo')}>Psicólogo</button>
-                                <button onClick={() => handleEspecialidadeClick('Terapeuta ocupacional')}>Terapeuta  ocupacional</button>
+                                
                             </div>
                         )}
                     </S.FiltroContainer>
@@ -78,9 +74,7 @@ export default function PesquisarProfissional() {
                     </S.FiltroContainer>
                 </S.DivPesq>
 
-                <S.Botao>
-                    <button onClick={handleBuscarClick}>Buscar</button>
-                </S.Botao>
+                
             </S.Cabecalho>
 
             
