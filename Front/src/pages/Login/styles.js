@@ -185,3 +185,16 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
+
+export const Profissional = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    & a {
+        color: #1976d2;
+        font-size: 14px;
+        font-weight: 200;
+        text-decoration: none;
+        cursor: pointer;
+    }
+`;
