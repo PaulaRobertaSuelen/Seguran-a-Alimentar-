@@ -4,14 +4,14 @@ import styled from 'styled-components';
 
 export const img = styled.img`
     position: absolute;
-    width: 100%;
-    height: 140%;
+    width: -400px;
+    height: -500px;
     background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
     z-index: -1;
 
     @media (max-width: 900px) {
-    height: 100%;
+    height: 100px;
   }
 `;
 
@@ -22,7 +22,7 @@ export const Container = styled.div`
   font-family: Arial, sans-serif;
 
   Footer {
-    top: 0%;
+    top: 0px;
   };
 
   @media (max-width: 900px) {
@@ -53,18 +53,9 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const SectionTitle = styled.h3`
-  //font-size: 18px;
-  //font-weight: bold;
-  //margin-bottom: 10px;
-  //margin-left: -500px;
-  //color: #3771C8;
-  //margin-left: -800px;
-`;
-
 export const List = styled.ul`
-  //margin: 0;
-  //padding: 0;
+  margin: 0;
+  padding: 0;
 `;
 
 export const ListItem = styled.li`
@@ -85,7 +76,7 @@ export const ListItem = styled.li`
   margin-top: 20px;
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 100px;
   }
 `;
 
@@ -131,10 +122,8 @@ export const SectionTitleT = styled.h1`
 
 export const SectionTitleT2 = styled.h1`
     font-size: 13px;
-    //font-weight: bold;
     color: #3771C8;
     margin-left: -280px;
-    //flex-direction: column;
 
     @media (max-width: 900px) {
     margin-left: 0;
@@ -174,10 +163,8 @@ export const CardETM = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  //border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;
-  //background-color: #fff;
   margin-left: 850px;
   margin-top: -1600px;
   max-width: 250px;
@@ -192,10 +179,8 @@ export const CardPP = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  //border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
-  //background-color: #fff;
   margin-left: 850px;
   margin-top: 20px;
   max-width: 250px;
@@ -210,10 +195,8 @@ export const CardSA = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  //border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;
-  //background-color: #fff;
   margin-left: 850px;
   margin-top: 20px;
   max-width: 250px;
@@ -224,6 +207,6 @@ export const CardSA = styled.div`
 `;
 
 export const ImageCD = styled.img`
-    width: 100%;
+    width: 210px;
     margin-top: -5px;
 `;

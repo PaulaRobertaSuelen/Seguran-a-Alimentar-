@@ -7,7 +7,7 @@ const Guia = () => {
     return (
         <>
             <Navbarlogin />
-            <img src="/src/assets/svg/ondaleve.svg" alt="" />
+            <S.img src="/src/assets/svg/ondaleve.svg" alt="" />
             <S.Container>
                 <S.Image
                     src="/src/assets/Component 13.png"
@@ -27,8 +27,9 @@ const Guia = () => {
                     maneiras:
                 </S.Paragraph>{' '}
                 <br />
-                <S.SectionTitle>1. Fatores Sensoriais</S.SectionTitle>
+                
                 <S.List>
+                    <S.SectionTitleFT>1. Fatores Sensoriais</S.SectionTitleFT>
                     <S.ListItem>
                         Sabor: Algumas pessoas têm aversões a sabores
                         específicos, como amargo ou <br /> picante, que podem
@@ -47,12 +48,10 @@ const Guia = () => {
                         parecem apetitosos podem ser rejeitados.
                     </S.ListItem>{' '}
                     <br />
-                </S.List>
                 <S.SectionTitleFT>
                     <p> 2. Fatores Emocionais e Psicológicos</p>
                 </S.SectionTitleFT>
-                <S.List>
-                    <S.ListItem2>
+                    <S.ListItem>
                         {' '}
                         <p>
                             {' '}
@@ -60,73 +59,65 @@ const Guia = () => {
                             experiências negativas <br /> associadas a certos
                             alimentos podem levar a aversões duradouras.
                         </p>{' '}
-                    </S.ListItem2>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                    <S.ListItem2>
+                    <S.ListItem>
                         Associar Comida a Emoções: Alimentos podem estar ligados
                         a experiências <br /> emocionais ou culturais, afetando
                         a forma como são percebidos e aceitos.
-                    </S.ListItem2>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitle>3. Fatores de Saúde</S.SectionTitle>
-                <S.List>
-                    <S.ListItem3>
+                <S.SectionTitleFT>3. Fatores de Saúde</S.SectionTitleFT>
+                    <S.ListItem>
                         Sensibilidades e Intolerâncias: Condições como
                         intolerância à lactose <br /> ou alergias alimentares
                         podem levar a uma seletividade alimentar.
-                    </S.ListItem3>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                    <S.ListItem3>
+                    <S.ListItem>
                         Problemas Digestivos: Algumas pessoas podem evitar
                         certos <br /> alimentos devido a desconforto digestivo
                         ou problemas <br /> gastrointestinais.
-                    </S.ListItem3>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitleT>
+                <S.SectionTitleT2>
                     <h1>Impacto da Seletividade Alimentar</h1>
-                </S.SectionTitleT>{' '}
+                </S.SectionTitleT2>{' '}
                 <br />
-                <S.SectionTitle>Aspectos Positivos</S.SectionTitle>
-                <S.List>
-                    <S.ListItemAP>
+                <S.SectionTitleFT>Aspectos Positivos</S.SectionTitleFT>
+                    <S.ListItem>
                         Controle e Satisfação: Ter controle sobre o que se come
                         pode levar a uma <br /> maior satisfação pessoal e
                         bem-estar.
-                    </S.ListItemAP>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                    <S.ListItemAP>
+                    <S.ListItem>
                         Evitação de Alimentos Não Saudáveis: Às vezes, a
                         seletividade pode resultar <br /> na eliminação de
                         alimentos processados ou menos saudáveis.
-                    </S.ListItemAP>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitle>Aspectos Negativos</S.SectionTitle>
-                <S.List>
-                    <S.ListItemAN>
+                <S.SectionTitleFT>Aspectos Negativos</S.SectionTitleFT>
+                    <S.ListItem>
                         Desbalanço Nutricional: A seletividade alimentar pode
                         levar a deficiências <br /> nutricionais se não for
                         abordada adequadamente.
-                    </S.ListItemAN>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                    <S.ListItemAN>
+                    <S.ListItem>
                         Problemas Sociais: Pode causar dificuldades em situações
                         sociais, como <br /> refeições em grupo ou eventos
                         familiares.
-                    </S.ListItemAN>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitleGSA>
+                <S.SectionTitleT2>
                     <h1>Como Gerenciar a Seletividade Alimentar</h1>
-                </S.SectionTitleGSA>{' '}
+                </S.SectionTitleT2>{' '}
                 <br />
-                <S.SectionTitleEC>
+                <S.SectionTitleFT>
                     <p>1. Educação e Consciência</p>
-                </S.SectionTitleEC>{' '}
+                </S.SectionTitleFT>{' '}
                 <br />
-                <S.List>
                     <S.ListItem>
                         Entenda suas Preferências: Reflita sobre o que você
                         gosta e não gosta e por quê.
@@ -138,44 +129,38 @@ const Guia = () => {
                         alimentares.
                     </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitleIAG>
+                <S.SectionTitleFT>
                     <p>2. Introduza Novos Alimentos Gradualmente</p>
-                </S.SectionTitleIAG>{' '}
+                </S.SectionTitleFT>{' '}
                 <br />
-                <S.List>
-                    <S.ListItemIA>
+                    <S.ListItem>
                         <p>
                             Experimentos: Tente introduzir novos alimentos de
                             forma gradual e em <br /> pequenas quantidades.
                         </p>
-                    </S.ListItemIA>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                    <S.ListItemIA>
+                    <S.ListItem>
                         <p>
                             Combinações: Misture novos alimentos com aqueles que
                             você já gosta para <br /> facilitar a aceitação.
                         </p>
-                    </S.ListItemIA>{' '}
+                    </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitleAPC>
+                <S.SectionTitleFT>
                     <p>3. Adapte a Preparação e o Cozimento</p>
-                </S.SectionTitleAPC>{' '}
+                </S.SectionTitleFT>{' '}
                 <br />
-                <S.List>
                     <S.ListItem>
                         Textura e Temperatura: Experimente diferentes métodos de
                         preparo para encontrar <br /> formas de tornar os
                         alimentos mais agradáveis.
                     </S.ListItem>{' '}
                     <br />
-                </S.List>
-                <S.SectionTitleBSP>
+                <S.SectionTitleFT>
                     4. Busque Suporte Profissional
-                </S.SectionTitleBSP>{' '}
+                </S.SectionTitleFT>{' '}
                 <br />
-                <S.List>
                     <S.ListItem>
                         Consultoria Nutricional: Um nutricionista pode ajudar a
                         criar um plano alimentar <br /> equilibrado e
@@ -188,34 +173,31 @@ const Guia = () => {
                         relações sociais, a ajuda de um psicólogo pode ser útil.
                     </S.ListItem>{' '}
                     <br />
-                </S.List>
+                    </S.List>
                 <Footer />
             </S.Container>
 
             <S.CardETM>
-                <S.Image
+                <S.ImageCD
                     src="/src/assets/Component 14.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/GuiaSeletividadeComoLida">
+                <S.formBTT action="/guia/seletividade">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
             <S.CardPP>
-                <S.Image
-                    src="/src/assets/Component 15.png"
-                    alt="Mulher profissional de saúde com um tablet"
-                />
-                <S.formBTT action="/PesquisarProfissional">
+                <S.ImageCD src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
+                <S.formBTT action="PesquisarProfissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
             <S.CardSA>
-                <S.Image
+                <S.ImageCD
                     src="/src/assets/Component 16.png"
                     alt="Logo da Bem Tea"
                 />
-                <S.formBTT action="/SNosUser">
+                <S.formBTT action="/SobreNos">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardSA>
