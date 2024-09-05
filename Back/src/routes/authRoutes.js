@@ -9,4 +9,6 @@ router.post('/user/login', authController.userLogin)
 
 router.post('/user/create', userController.createUser)
 
+router.post('/redefinirsenha/:email', userController.passwordReset)
+
 module.exports = router;

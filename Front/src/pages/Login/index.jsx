@@ -14,8 +14,8 @@ import Modal from '../../components/Modal/index';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const [email,setEmail] = useState('')
-    const [senha,setSenha] = useState('')
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
     const handleButtonClick = () => {
         navigate('/cadastro');
@@ -23,30 +23,41 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         try {
-            await api.post('/user/login', {
-                email,
-                senha
-            }).then((response) => {
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('tipoUsuario', response.data.tipoUsuario)
-                navigate('/')
-            }).catch((error) => {
-                console.log(error)
-            })
+            await api
+                .post('/user/login', {
+                    email,
+                    senha,
+                })
+                .then((response) => {
+                    localStorage.setItem('token', response.data.token);
+                    localStorage.setItem(
+                        'tipoUsuario',
+                        response.data.tipoUsuario
+                    );
+                    navigate('/');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     };
 
-    const handlePesquisarEmail = async (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-
+    const userByEmail = async () => {
         try {
-            const response = await userByEmail(email);
-            navigate(`/Redefinirsenha/${response.data.id}`);
+            await api
+                .post(`/redefinirsenha/${email}`
+                )
+                .then((response) => {
+                    console.log('funcionou');
+                    alert('funcionou');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         } catch (error) {
-            alert(error.response?.data?.error || 'Erro ao buscar usuário');
+            console.log(error);
         }
     };
 
@@ -60,30 +71,35 @@ export default function Login() {
                 <S.Login>
                     <h1>LOGIN</h1>
 
-                        <TextInput
-                            name="email"
-                            label="Email"
-                            iconLeft={<MdEmail color="#4377FF" />}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <TextInput name="senha" label="Senha" password onChange={(e) => setSenha(e.target.value)} />
-                        <S.LostPass>
-                            <Checkbox name="lembrar" label="Lembre-se" />
-                            <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
-                                Esqueceu a senha?
-                            </a>
-                        </S.LostPass>
-                        <S.Bat>
-                            <Button
-                                styles={{
-                                    padding: '10px',
-                                    width: '40%',
-                                }}
-                        onClick={() => handleSubmit()}
-                            >
-                                Entrar
-                            </Button>
-                        </S.Bat>
+                    <TextInput
+                        name="email"
+                        label="Email"
+                        iconLeft={<MdEmail color="#4377FF" />}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <TextInput
+                        name="senha"
+                        label="Senha"
+                        password
+                        onChange={(e) => setSenha(e.target.value)}
+                    />
+                    <S.LostPass>
+                        <Checkbox name="lembrar" label="Lembre-se" />
+                        <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
+                            Esqueceu a senha?
+                        </a>
+                    </S.LostPass>
+                    <S.Bat>
+                        <Button
+                            styles={{
+                                padding: '10px',
+                                width: '40%',
+                            }}
+                            onClick={() => handleSubmit()}
+                        >
+                            Entrar
+                        </Button>
+                    </S.Bat>
 
                     <p>
                         Não tem uma conta?{' '}
@@ -104,7 +120,7 @@ export default function Login() {
                             cadastro.
                         </p>
                     </S.ContainerText>
-                    <S.ContainerForm onSubmit={handlePesquisarEmail}>
+                    <S.ContainerForm>
                         <TextInput
                             name="email"
                             label="Email"
@@ -112,9 +128,13 @@ export default function Login() {
                             styles={{
                                 width: '80%',
                             }}
+                            onChange={ (e) => setEmail(e.target.value) }
                         />
 
-                        <Button styles={{ width: '60%', padding: '10px' }}>
+                        <Button
+                            styles={{ width: '60%', padding: '10px' }}
+                            onClick={() => userByEmail()}
+                        >
                             Próximo
                         </Button>
                         <a onClick={() => setOpenEsqueciMinhaSenha(false)}>
@@ -126,5 +146,3 @@ export default function Login() {
         </S.Container>
     );
 }
-
-
