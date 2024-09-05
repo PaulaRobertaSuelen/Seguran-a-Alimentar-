@@ -8,6 +8,7 @@ export const NavbarOpcoes = styled.div`
     align-items: center;
     padding: 15px;
     position: relative;
+    z-index: 2;
 
     @media (max-width: 900px) {
         padding: 10px;
@@ -21,13 +22,13 @@ export const LogoWrapper = styled.div`
     margin-left: 260px;
 
     img {
-        width: 180px; /* Aumenta o tamanho da logo na versão normal */
+        width: 180px;
     }
 
     @media (max-width: 900px) {
-        margin-left: 0;
+        margin-left: 10px;
         img {
-            width: 100px; /* Tamanho menor da logo na versão mobile */
+            width: 150px;
         }
     }
 `;
@@ -53,13 +54,12 @@ export const Opcoes = styled.div`
         gap: 10px;
         display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 50px;
         right: 0;
         background-color: #101066;
         padding: 10px;
-        width: 100%;
-        justify-content: space-around;
+        z-index: 3;
+        align-items: flex-end;
     }
 `;
 
@@ -81,9 +81,8 @@ export const BotaoEntrar = styled.button`
     }
 
     @media (max-width: 900px) {
-        margin-right: 0;
+        margin-right: -50px;
         width: auto;
-        order: 3; /* Move o botão para o final na versão mobile */
     }
 `;
 
@@ -94,6 +93,7 @@ export const HamburgerMenu = styled.div`
     width: 30px;
     height: 21px;
     cursor: pointer;
+    z-index: 4;
 
     div {
         width: 100%;
@@ -104,6 +104,6 @@ export const HamburgerMenu = styled.div`
 
     @media (max-width: 900px) {
         display: flex;
-        order: 2; /* Move o menu hambúrguer para a direita na versão mobile */
+        order: 2;
     }
 `;

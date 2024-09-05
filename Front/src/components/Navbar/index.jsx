@@ -22,7 +22,7 @@ export default function Navbar() {
             <S.Opcoes isOpen={isOpen}>
                 <a href="/cadastro/profissional">Sou Profissional</a>
                 <a href="/">Início</a>
-                <a href="/Login">Serviços</a>
+                <a href="/login">Serviços</a>
                 <a href="/pesquisarguia">Guias</a>
             </S.Opcoes>
             <S.BotaoEntrar>

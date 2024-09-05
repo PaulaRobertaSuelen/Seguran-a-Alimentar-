@@ -12,26 +12,26 @@ export const OndasEstilo = styled.div`
 
 export const Tag = styled.div`
     text-align: center;
-    margin-top: 20rem;
-    margin: 2rem;
-    color:#101066;
+    margin-top: 320px;
+    margin: 32px;
+    color: #101066;
 
     h2 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     @media (max-width: 900px) {
-        margin-top: 10rem;
+        margin-top: 40px;
         h2 {
-            font-size: 1.5rem;
+            font-size: 24px;
         }
     }
 `;
 
 export const TexUm = styled.div`
-    margin: 2rem 0;
-    color:#101066;
-    max-width: 25rem;
+    margin: 32px 0;
+    color: #101066;
+    max-width: 400px;
     margin-left: 190px;
     margin-right: auto;
 
@@ -40,37 +40,37 @@ export const TexUm = styled.div`
     }
 
     @media (max-width: 900px) {
-        margin-left: 1rem;
+        margin-left: 16px;
         max-width: 100%;
         p {
-            font-size: 1rem;
+            font-size: 16px;
         }
     }
 `;
 
 export const ContImg = styled.div`
     display: flex;
-    margin-left: 12rem;
+    margin-left: 192px;
     position: relative;
-    margin-top: 0px;
+    margin-top: 0;
 
     @media (max-width: 900px) {
-        margin-left: 1rem;
+        margin-left: 16px;
         flex-direction: column;
     }
 `;
 
 export const ImLinha = styled.img`
     width: 100%;
-    max-width: 25rem;
+    max-width: 400px;
     height: auto;
 `;
 
 export const TexDois = styled.div`
     margin: 20px 0;
-    color:#101066;
-    max-width: 25rem;
-    margin-left: 12rem;
+    color: #101066;
+    max-width: 400px;
+    margin-left: 192px;
     margin-right: auto;
 
     p {
@@ -78,10 +78,10 @@ export const TexDois = styled.div`
     }
 
     @media (max-width: 900px) {
-        margin-left: 1rem;
+        margin-left: 16px;
         max-width: 100%;
         p {
-            font-size: 1rem;
+            font-size: 16px;
         }
     }
 `;
@@ -89,7 +89,7 @@ export const TexDois = styled.div`
 export const ContImagem = styled.div`
     display: flex;
     align-items: flex-start;
-    margin-left: -12rem;
+    margin-left: -192px;
     margin-top: -10%;
     margin-bottom: 2%;
 
@@ -101,10 +101,10 @@ export const ContImagem = styled.div`
 `;
 
 export const Im = styled.img`
-    height:  auto;
-    margin-left: 53rem;
+    height: auto;
+    margin-left: 848px;
     position: relative;
-    top: -12rem; /* Alinha a imagem com o texto */
+    top: -192px;
 
     @media (max-width: 900px) {
         margin-left: 0;
@@ -116,34 +116,34 @@ export const Im = styled.img`
 export const ContAzul = styled.div`
     background-color: #101066;
     padding: 20px;
-    margin: 5rem 20;
+    margin: 80px 20px;
     display: flex;
     flex-direction: row;
 
     p {
         color: #ffffff;
-        font-size: 1rem;
-        margin-left: -90rem;
-        margin-top: 40rem;
-        margin: 1rem;
+        font-size: 16px;
+        margin-left: -1440px;
+        margin-top: 640px;
+        margin: 16px;
     }
 
     h1 {
-        font-size: 1rem;
+        font-size: 16px;
         color: #ffffff;
     }
 
     @media (max-width: 900px) {
         flex-direction: column;
-        margin: 2rem 1rem;
+        margin: 32px 16px;
         p {
             margin-left: 0;
             margin-top: 0;
-            font-size: 0.875rem;
+            font-size: 14px;
         }
 
         h1 {
-            font-size: 0.875rem;
+            font-size: 14px;
         }
     }
 `;
@@ -155,32 +155,32 @@ export const Caixa = styled.div`
 `;
 
 export const ImLogo = styled.img`
-    width: 20rem;
-    margin-left: 10rem;
+    width: 320px;
+    margin-left: 160px;
     height: auto;
     margin-bottom: 20px;
 
     @media (max-width: 900px) {
-        width: 15rem;
+        width: 240px;
         margin-left: 0;
     }
 `;
 
 export const TexT = styled.div`
-    margin-bottom: 2rem;
-    max-width: 40rem;
-    margin-left: 10rem;
+    margin-bottom: 32px;
+    max-width: 640px;
+    margin-left: 160px;
     color: #ffffff;
 
     p {
-        font-size: 1rem ;
+        font-size: 16px;
     }
 
     @media (max-width: 900px) {
         margin-left: 0;
         max-width: 100%;
         p {
-            font-size: 0.875rem;
+            font-size: 14px;
         }
     }
 `;
@@ -193,23 +193,23 @@ export const CaixaDois = styled.div`
 export const ContImagems = styled.div`
     display: grid;
     flex-wrap: wrap;
-    margin: 10%;
+    margin: 160px;
     justify-content: space-between;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: calc(80% - 1%);
-    gap: 3rem;
-    margin-bottom: 10rem;
+    gap: 48px;
+    margin-bottom: 160px;
 
     h1 {
         color: aliceblue;
-        font-size: 2rem;
-        margin-left: -rem;
+        font-size: 32px;
+        margin-left: 0;
     }
 
     @media (max-width: 900px) {
         grid-template-columns: 1fr;
-        margin: 5%;
-        gap: 1rem;
+        margin: 80px;
+        gap: 16px;
     }
 `;
 

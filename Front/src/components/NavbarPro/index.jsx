@@ -27,7 +27,7 @@ export default function Navbar() {
                 <a href="/pesquisar/login/guia">Guias</a>
             </S.Opcoes>
             <S.Botaoperfil>
-                <a href="/PerfilPrivado">
+                <a href="/perfil/privado">
                     <img src={puser} alt="Perfil" />
                 </a>
             </S.Botaoperfil>

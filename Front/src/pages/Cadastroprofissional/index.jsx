@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import * as S from './styles';
 import Ondaleve from '../../assets/svg/ondaleve.svg';
@@ -7,13 +8,82 @@ import Celular from '../../assets/svg/celular.svg';
 import Cartao from '../../assets/svg/cartao.svg';
 import Modal from '../../components/Modal/index';
 import Checkbox from '../../components/FormFields/CheckBox';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import TextInput from '../../components/FormFields/Input';
 
 export default function Cadastroprofissional() {
     const navigate = useNavigate();
     const [openTermos, setOpenTermos] = useState(false);
+    const [formValues, setFormValues] = useState({
+        nome: '',
+        email: '',
+        telefone: '',
+        profissao: '',
+        especialidade: '',
+        crm: '',
+        senha: '',
+        confirmarSenha: '',
+        termosAceitos: false,
+    });
+    const [formErrors, setFormErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormValues({
+            ...formValues,
+            [name]: type === 'checkbox' ? checked : value,
+        });
+    };
+
+    const validate = () => {
+        let errors = {};
+        if (!formValues.nome.trim()) {
+            errors.nome = 'Nome é obrigatório';
+        }
+        if (!formValues.email) {
+            errors.email = 'Email é obrigatório';
+        } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
+            errors.email = 'Email inválido';
+        }
+        if (!formValues.telefone) {
+            errors.telefone = 'Telefone é obrigatório';
+        }
+        if (!formValues.profissao.trim()) {
+            errors.profissao = 'Profissão é obrigatória';
+        }
+        if (!formValues.especialidade.trim()) {
+            errors.especialidade = 'Especialidade é obrigatória';
+        }
+        if (!formValues.crm.trim()) {
+            errors.crm = 'CRM é obrigatório';
+        }
+        if (!formValues.senha) {
+            errors.senha = 'Senha é obrigatória';
+        } else if (formValues.senha.length < 6) {
+            errors.senha = 'A senha precisa ter no mínimo 6 caracteres';
+        }
+        if (!formValues.confirmarSenha) {
+            errors.confirmarSenha = 'Confirmação de senha é obrigatória';
+        } else if (formValues.confirmarSenha !== formValues.senha) {
+            errors.confirmarSenha = 'As senhas não coincidem';
+        }
+        if (!formValues.termosAceitos) {
+            errors.termosAceitos = 'Você deve aceitar os termos de uso';
+        }
+        return errors;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setFormErrors(validate(formValues));
+        setIsSubmitting(true);
+    };
+
+    React.useEffect(() => {
+        if (Object.keys(formErrors).length === 0 && isSubmitting) {
+            navigate('/home/profissional');
+        }
+    }, [formErrors]);
 
     return (
         <S.PageWrapper backgroundImage={Ondaleve}>
@@ -71,43 +141,109 @@ export default function Cadastroprofissional() {
 
                 <S.FormSection>
                     <h3>Formulário</h3>
-                    <S.Form>
-                        <TextInput type="text" placeholder="Nome" required />
-                        <TextInput type="email" placeholder="Email" required />
-                        <TextInput type="tel" placeholder="Telefone" required />
+                    <S.Form onSubmit={handleSubmit}>
                         <TextInput
                             type="text"
+                            name="nome"
+                            placeholder="Nome"
+                            value={formValues.nome}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        {formErrors.nome && <p>{formErrors.nome}</p>}
+
+                        <TextInput
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formValues.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        {formErrors.email && <p>{formErrors.email}</p>}
+
+                        <TextInput
+                            type="tel"
+                            name="telefone"
+                            placeholder="Telefone"
+                            value={formValues.telefone}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        {formErrors.telefone && <p>{formErrors.telefone}</p>}
+
+                        <TextInput
+                            type="text"
+                            name="profissao"
                             placeholder="Profissão"
+                            value={formValues.profissao}
+                            onChange={handleInputChange}
                             required
                         />
+                        {formErrors.profissao && <p>{formErrors.profissao}</p>}
+
                         <TextInput
                             type="text"
+                            name="especialidade"
                             placeholder="Especialidade"
+                            value={formValues.especialidade}
+                            onChange={handleInputChange}
                             required
                         />
-                        <TextInput type="text" placeholder="CRM" required />
+                        {formErrors.especialidade && (
+                            <p>{formErrors.especialidade}</p>
+                        )}
+
+                        <TextInput
+                            type="text"
+                            name="crm"
+                            placeholder="CRM"
+                            value={formValues.crm}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        {formErrors.crm && <p>{formErrors.crm}</p>}
+
                         <TextInput
                             type="password"
+                            name="senha"
                             placeholder="Senha"
+                            value={formValues.senha}
+                            onChange={handleInputChange}
                             required
                         />
+                        {formErrors.senha && <p>{formErrors.senha}</p>}
+
                         <TextInput
                             type="password"
+                            name="confirmarSenha"
                             placeholder="Confirmar Senha"
+                            value={formValues.confirmarSenha}
+                            onChange={handleInputChange}
                             required
                         />
+                        {formErrors.confirmarSenha && (
+                            <p>{formErrors.confirmarSenha}</p>
+                        )}
+
                         <S.LostPass>
                             <Checkbox
-                                name={'termos'}
+                                name="termosAceitos"
                                 label={
                                     <>
                                         Li e aceito os{' '}
                                         <a onClick={() => setOpenTermos(true)}>
-                                            termos de uso{' '}
+                                            termos de uso
                                         </a>
                                     </>
                                 }
+                                checked={formValues.termosAceitos}
+                                onChange={handleInputChange}
+                                required
                             />
+                            {formErrors.termosAceitos && (
+                                <p>{formErrors.termosAceitos}</p>
+                            )}
                         </S.LostPass>
 
                         <S.Termos>
@@ -127,7 +263,6 @@ export default function Cadastroprofissional() {
                                     Site.
                                 </p>
                                 <p>
-                                    {' '}
                                     1. Descrição dos Serviços O BemTEA é uma
                                     plataforma que conecta profissionais da
                                     saúde especializados em Transtorno do
@@ -147,116 +282,31 @@ export default function Cadastroprofissional() {
                                     única opção é não utilizar o Site.
                                 </p>
                                 <p>
-                                    3. Cadastro e Conta 3.1 Registro: Para
-                                    acessar certas funcionalidades do Site, você
-                                    deve criar uma conta. O cadastro requer
-                                    informações precisas e completas. É sua
-                                    responsabilidade manter a confidencialidade
-                                    das informações da sua conta e notificar-nos
-                                    imediatamente sobre qualquer uso não
-                                    autorizado. 3.2 Responsabilidade: Você é
-                                    responsável por todas as atividades
-                                    realizadas através da sua conta. O BemTea
-                                    não será responsável por qualquer dano
-                                    decorrente do uso não autorizado da sua
-                                    conta.
+                                    3. Cadastro e Conta Para acessar os
+                                    serviços, você deverá criar uma conta
+                                    fornecendo informações verdadeiras, precisas
+                                    e completas. Você é responsável por manter a
+                                    confidencialidade de sua conta e senha, bem
+                                    como por todas as atividades realizadas sob
+                                    sua conta.{' '}
                                 </p>
                                 <p>
-                                    4. Uso do Site 4.1 Proibição de Abuso: Você
-                                    concorda em não utilizar o Site para
-                                    qualquer propósito ilegal ou não autorizado.
-                                    É proibido publicar, transmitir ou
-                                    disponibilizar qualquer conteúdo que seja
-                                    ofensivo, difamatório, enganoso ou violador
-                                    de direitos de terceiros. 4.2 Interação com
-                                    Profissionais: O BemTEA não é responsável
-                                    pela qualidade, precisão ou eficácia dos
-                                    serviços prestados pelos profissionais de
-                                    saúde listados no Site. As interações entre
-                                    pacientes e profissionais devem ser
-                                    realizadas com cautela e sob sua própria
-                                    responsabilidade.
+                                    4. Pagamento e Remuneração Os profissionais
+                                    da saúde cadastrados na plataforma são
+                                    remunerados diretamente pelos pacientes.{' '}
                                 </p>
                                 <p>
-                                    5. Proteção de Dados 5.1 Privacidade: A
-                                    coleta e o uso de suas informações pessoais
-                                    estão sujeitos à nossa Política de
-                                    Privacidade, que está incorporada a estes
-                                    Termos por referência. Recomendamos que você
-                                    leia nossa Política de Privacidade para
-                                    entender como suas informações são tratadas.
-                                    5.2 Consentimento: Ao usar nosso Site, você
-                                    consente com a coleta e o uso de suas
-                                    informações conforme descrito na nossa
-                                    Política de Privacidade.
+                                    5. Privacidade e Proteção de Dados Pessoais
+                                    O BemTEA se compromete a proteger a
+                                    privacidade dos usuários e a segurança dos
+                                    dados pessoais coletados. A coleta e o uso
+                                    de informações pessoais estão sujeitos à
+                                    nossa Política de Privacidade.
                                 </p>
-                                <p>
-                                    {' '}
-                                    6. Propriedade Intelectual Todo o conteúdo e
-                                    materiais disponibilizados no Site,
-                                    incluindo, mas não se limitando a, textos,
-                                    gráficos, logotipos e software, são
-                                    propriedade do BemTEA ou de seus
-                                    licenciadores e estão protegidos por leis de
-                                    direitos autorais e outras leis de
-                                    propriedade intelectual. É proibido copiar,
-                                    modificar, distribuir ou exibir qualquer
-                                    material do Site sem nossa autorização
-                                    expressa.
-                                </p>
-                                <p>
-                                    {' '}
-                                    7. Isenção de Responsabilidade O BemTEA
-                                    fornece a plataforma para conectar
-                                    profissionais e pacientes, mas não endossa
-                                    ou garante a qualidade dos serviços
-                                    prestados por profissionais de saúde. O uso
-                                    do Site é feito por sua conta e risco. O
-                                    BemTEA não se responsabiliza por qualquer
-                                    dano, perda ou prejuízo resultante da
-                                    utilização do Site ou dos serviços
-                                    oferecidos.
-                                </p>
-                                <p>
-                                    {' '}
-                                    8. Modificações Podemos atualizar estes
-                                    Termos a qualquer momento. Notificaremos
-                                    você sobre quaisquer mudanças substanciais
-                                    através de um aviso no Site. É sua
-                                    responsabilidade revisar regularmente estes
-                                    Termos para estar ciente de quaisquer
-                                    alterações. O uso contínuo do Site após a
-                                    modificação dos Termos constitui aceitação
-                                    das mudanças.
-                                </p>
-                                <p>
-                                    {' '}
-                                    9. Encerramento Podemos suspender ou
-                                    encerrar sua conta a qualquer momento, com
-                                    ou sem motivo, se considerarmos que você
-                                    violou estes Termos ou que o uso da sua
-                                    conta está em desacordo com nossas
-                                    políticas.
-                                </p>
-                                <p>
-                                    10. Lei Aplicável e Jurisdição Estes Termos
-                                    serão regidos e interpretados de acordo com
-                                    as leis do Estado/País, sem considerar os
-                                    princípios de conflito de leis. Quaisquer
-                                    disputas que surgirem em relação a estes
-                                    Termos serão resolvidas exclusivamente nos
-                                    tribunais competentes do Estado/País.
-                                </p>
-                                <p> Última atualização: [28/08/2024]</p>
                             </Modal>
                         </S.Termos>
 
-                        <button
-                            type="submit"
-                            onClick={() => navigate('/home/profissional')}
-                        >
-                            Cadastrar
-                        </button>
+                        <button type="submit">Cadastrar</button>
                     </S.Form>
                 </S.FormSection>
             </S.Container>
