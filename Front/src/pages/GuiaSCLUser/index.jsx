@@ -142,7 +142,7 @@ const GuiaSCLUser = () => {
                     src="/src/assets/seletividade-alimentar 2.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/Guialogin">
+                <S.formBTT action="/Guia/login">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
@@ -151,7 +151,7 @@ const GuiaSCLUser = () => {
                     src="/src/assets/Component 15.png"
                     alt="Mulher profissional de saúde com um tablet"
                 />
-                <S.formBTT action="/PesquisarProfissional">
+                <S.formBTT action="/pesquisar/profissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>

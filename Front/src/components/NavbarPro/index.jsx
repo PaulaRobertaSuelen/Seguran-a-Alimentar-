@@ -22,7 +22,7 @@ export default function Navbar() {
                 <div />
             </S.HamburgerMenu>
             <S.Opcoes isOpen={isOpen}>
-                <a href="/home/profissional">Início</a>
+                <a href="/Home/profissional">Início</a>
                 <a href="/pesquisar/perfil/profissional">Serviços</a>
                 <a href="/pesquisar/login/guia">Guias</a>
             </S.Opcoes>

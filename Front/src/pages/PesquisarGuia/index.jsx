@@ -20,7 +20,7 @@ export default function PesquisarGuia() {
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida');
+        navigate('/guia/seletividade'); // Redireciona para a rota /GuiaSeletividadeComoLidar
     };
 
     return (
@@ -46,7 +46,7 @@ export default function PesquisarGuia() {
                     <h1>Pesquisar por nome</h1>
                     <input
                         type="text"
-                        placeholder=" "
+                        placeholder=""
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
                     />

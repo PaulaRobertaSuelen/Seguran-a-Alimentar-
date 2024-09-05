@@ -16,11 +16,11 @@ export default function Pguialogin() {
     };
 
     const handleVerMaisClick = () => {
-        navigate('/Guia');
+        navigate('/guia/login');
     };
 
     const handleVerMaisComoLidarClick = () => {
-        navigate('/GuiaSeletividadeComolida');
+        navigate('/GuiaSCLUser');
     };
 
     return (

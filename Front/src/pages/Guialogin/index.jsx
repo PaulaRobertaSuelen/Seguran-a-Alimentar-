@@ -182,13 +182,16 @@ const Guia = () => {
                     src="/src/assets/Component 14.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/guia/seletividade">
+                <S.formBTT action="/GuiaSeletividadeComoLida">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
             <S.CardPP>
-                <S.ImageCD src="/src/assets/Component 15.png" alt="Mulher profissional de saúde com um tablet" />
-                <S.formBTT action="PesquisarProfissional">
+                <S.Image
+                    src="/src/assets/Component 15.png"
+                    alt="Mulher profissional de saúde com um tablet"
+                />
+                <S.formBTT action="/PesquisarProfissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
