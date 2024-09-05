@@ -12,10 +12,10 @@ export const OndasEstilo = styled.div`
 
 export const Cabecario = styled.div`
     display: flex;
-    margin-top: 5rem;
+    margin-top: 80px;
     align-items: center;
-    margin-left: 18rem;
-    gap: 2rem;
+    margin-left: 288px;
+    gap: 32px;
 `;
 
 export const DivFil = styled.div`
@@ -23,9 +23,9 @@ export const DivFil = styled.div`
     flex-direction: column;
 
     h1 {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 10rem;
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 160px;
         text-align: left;
     }
 
@@ -33,7 +33,7 @@ export const DivFil = styled.div`
         padding: 5px;
         font-size: 14px;
         border: 1px solid #ccc;
-        border-radius: 4rem;
+        border-radius: 64px;
         width: 200px;
     }
 `;
@@ -43,9 +43,9 @@ export const DivPesq = styled.div`
     flex-direction: column;
 
     h1 {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 10rem;
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 160px;
         text-align: left;
     }
 
@@ -53,18 +53,18 @@ export const DivPesq = styled.div`
         padding: 5px;
         font-size: 14px;
         border: 1px solid #ccc;
-        border-radius: 4rem;
+        border-radius: 64px;
         width: 200px;
     }
 `;
 
 export const But = styled.div`
     display: flex;
-    margin-top: 2rem;
+    margin-top: 32px;
 
     button {
-        width: 5rem;
-        height: 2rem;
+        width: 80px;
+        height: 32px;
         align-items: center;
         padding: 5px 10px;
         border: unset;
@@ -105,11 +105,11 @@ export const But = styled.div`
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 80px;
     align-items: center;
-    height: 18rem;
-    width: 50rem;
-    margin-left: 18rem;
+    height: 288px;
+    width: 720px;
+    margin-left: 288px;
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,10 +118,10 @@ export const ConteinerUm = styled.div`
 `;
 
 export const ConteinerImagem = styled.img`
-    max-width: 9rem;
+    max-width: 144px;
     height: auto;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-left: 32px;
+    margin-bottom: 80px;
 `;
 
 export const TituloUm = styled.div`
@@ -129,57 +129,57 @@ export const TituloUm = styled.div`
         display: flex;
         font-size: 24px;
         width: 100%;
-        margin-bottom: 11rem;
-        margin-left: 1rem;
+        margin-bottom: 176px;
+        margin-left: 16px;
         white-space: nowrap;
     }
 `;
 
 export const TitulUM = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px;
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -24.7rem;
-        margin-bottom: 6rem;
+        margin-left: -395.2px;
+        margin-bottom: 96px;
     }
 `;
 
 export const TituloSegundo = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px;
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -10rem;
-        margin-bottom: 6rem;
+        margin-left: -160px;
+        margin-bottom: 96px;
     }
 `;
 
 export const TituloTres = styled.div`
     h1 {
-        font-size: 1rem;
-        margin-left: -27rem;
-        margin-top: 1rem;
+        font-size: 16px;
+        margin-left: -432px;
+        margin-top: 16px;
     }
 `;
 
 export const TextoUm = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 15px;
         color: black;
         line-height: 1.3;
-        margin-left: -28rem;
-        margin-top: 9rem;
+        margin-left: -450px;
+        margin-top: 144px;
     }
 `;
 
 export const ButaoVerMaisUm = styled.div`
     button {
         padding: 10px 20px;
-        margin-left: -46rem;
-        margin-top: 10rem;
+        margin-left: -660px;
+        margin-top: 160px;
         background-color: #33b44d;
         color: white;
         border: none;
@@ -188,15 +188,15 @@ export const ButaoVerMaisUm = styled.div`
     }
 `;
 
-//segunda parte do guia
+// Segunda parte do guia
 
 export const ConteinerDois = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 80px;
     align-items: center;
-    height: 18rem;
-    width: 50rem;
-    margin-left: 18rem;
+    height: 288px;
+    width: 720px;
+    margin-left: 288px;
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -205,10 +205,10 @@ export const ConteinerDois = styled.div`
 `;
 
 export const ConteinerImagemD = styled.img`
-    max-width: 9rem;
+    max-width: 144px;
     height: auto;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-left: 32px;
+    margin-bottom: 80px;
 `;
 
 export const TituloD = styled.div`
@@ -216,57 +216,57 @@ export const TituloD = styled.div`
         display: flex;
         font-size: 24px;
         width: 100%;
-        margin-bottom: 11rem;
-        margin-left: 1rem;
+        margin-bottom: 176px;
+        margin-left: 16px;
         white-space: nowrap;
     }
 `;
 
 export const TitulD = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px;
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -25.5rem;
-        margin-bottom: 6rem;
+        margin-left: -408px;
+        margin-bottom: 96px;
     }
 `;
 
 export const TituloS = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px;
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -11rem;
-        margin-bottom: 6rem;
+        margin-left: -176px;
+        margin-bottom: 96px;
     }
 `;
 
 export const TituloT = styled.div`
     h1 {
-        font-size: 1rem;
-        margin-left: -28rem;
-        margin-top: 1rem;
+        font-size: 16px;
+        margin-left: -448px;
+        margin-top: 16px;
     }
 `;
 
 export const TextoU = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px;
         color: black;
         line-height: 1.3;
-        margin-left: -29rem;
-        margin-top: 9rem;
+        margin-left: -464px;
+        margin-top: 144px;
     }
 `;
 
 export const ButaoVerMaisU = styled.div`
     button {
         padding: 10px 20px;
-        margin-left: -46rem;
-        margin-top: 12rem;
+        margin-left: -664px;
+        margin-top: 192px;
         background-color: #33b44d;
         color: white;
         border: none;
