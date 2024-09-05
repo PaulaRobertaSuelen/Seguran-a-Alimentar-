@@ -15,12 +15,12 @@ export const Cabecalho = styled.div`
     margin-top: 5rem;
     align-items: center;
     margin-left: 15rem;
-    
 
     @media (max-width: 768px) {
-        margin-left: 2rem;
+        margin-left: -30px;
+        margin-top: 20px;
         flex-direction: column;
-        gap: 1rem;
+        gap: -30px;
     }
 `;
 export const DivFiltro = styled.div`
@@ -37,11 +37,9 @@ export const DivFiltro = styled.div`
         margin-bottom: 1rem;
     }
 `;
-export const DivPesq = styled(DivFiltro)`
-
-`;
+export const DivPesq = styled(DivFiltro)``;
 export const FiltroContainer = styled.div`
-    position: relative;
+    position: absolute;
 
     input {
         padding: 4px;
@@ -49,56 +47,42 @@ export const FiltroContainer = styled.div`
         border-radius: 4rem;
         width: 12rem;
 
-    @media (max-width: 768px) {
-        margin-top: 10%;
-        flex-direction: column;
-        justify-content: center;
-    }
+        @media (max-width: 768px) {
+            margin-top: 10%;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    @media (max-width: 480px) {
-        margin-top: 8%;
-        flex-direction: column;
-        justify-content: center;
-    }
+        @media (max-width: 480px) {
+            margin-top: 8%;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     div {
         display: flex;
-        color: black;
         flex-direction: column;
-        margin-top: 0.3rem;
-        position: absolute;
-        width: 12rem;
-        z-index: 1;
+        gap: 3px;
+        
     }
-`;
- //Butao de buscar 
-export const Botao = styled.div`
-    margin-top: 20px;
-
     button {
-        width: 5rem;
-        height: 2rem;
-        align-items: center;
-        padding: 2px 10px;
-        border: unset;
+        padding: 5px;
+        width: 12rem;
         border-radius: 10px;
-        color: #888888;
-        z-index: 1;
-        background: #ffffff;
-        position: relative;
-        font-size: 1rem;
-        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-        transition: all 250ms;
-        overflow: hidden;
+        color: black;
+        background-color: #DEEDF5;
+        color: black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: #33B44D;
-            color: #ffffff;
-        }
+    &:hover {
+        background-color: #33B44D;
+  }
     }
 `;
- // fim do botao
+
 
 
 export const ConteinerUm = styled.div`
@@ -114,12 +98,14 @@ export const ConteinerUm = styled.div`
     gap: 20px;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         flex-direction: column;
-        margin: 0rem;
-        width: 100%;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
         height: auto;
-        padding: 1rem;
+        margin-top: 40px;
+        margin-bottom: 60px;
     }
 `;
 
@@ -129,8 +115,9 @@ export const ConteinerImagemP = styled.img`
     margin-left: 2rem;
     margin-bottom: 5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         margin: 0;
+        max-width: 100px;
     }
 `;
 
@@ -143,10 +130,9 @@ export const TituloUm = styled.div`
         margin-left: 1rem;
         white-space: nowrap;
 
-        @media (max-width: 768px) {
-            margin-bottom: 1rem;
-            margin-left: 0;
-            font-size: 20px;
+        @media (max-width: 900px) {
+            margin: -10px 0;
+            font-size: 18px;
         }
     }
 `;
@@ -162,7 +148,7 @@ export const SubTituloUM = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-bottom: 1rem;
+            margin-bottom: -20px;
             font-size: 0.9rem;
         }
     }
@@ -179,7 +165,7 @@ export const TituloSegubd = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-bottom: 1rem;
+            margin-bottom: -20px;
             font-size: 0.9rem;
         }
     }
@@ -192,9 +178,7 @@ export const TituloDois = styled.div`
         margin-top: 1rem;
 
         @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            display: none;
         }
     }
 `;
@@ -208,9 +192,7 @@ export const TextoUm = styled.div`
         margin-top: 9rem;
 
         @media (max-width: 768px) {
-            margin-left: 0;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            display: none;
         }
     }
 `;
@@ -228,8 +210,7 @@ export const ButaoVerPerfilsUm = styled.div`
 
         @media (max-width: 768px) {
             margin-left: 0;
-            margin-top: 1rem;
-            width: 100%;
+            margin-top: -20px;
         }
     }
 `;

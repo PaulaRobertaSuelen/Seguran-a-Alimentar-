@@ -70,7 +70,6 @@ export default function Login() {
             <S.FormContainer>
                 <S.Login>
                     <h1>LOGIN</h1>
-
                     <TextInput
                         name="email"
                         label="Email"
@@ -84,16 +83,24 @@ export default function Login() {
                         onChange={(e) => setSenha(e.target.value)}
                     />
                     <S.LostPass>
-                        <Checkbox name="lembrar" label="Lembre-se" />
+                        <Checkbox
+                            name="lembrar"
+                            label="Lembre-se"
+                            styles={{
+                                padding: '8px',
+                                width: '120%',
+                            }}
+                        />
                         <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
                             Esqueceu a senha?
                         </a>
                     </S.LostPass>
+
                     <S.Bat>
                         <Button
                             styles={{
-                                padding: '10px',
-                                width: '40%',
+                                padding: '8px',
+                                width: '120%',
                             }}
                             onClick={() => handleSubmit()}
                         >

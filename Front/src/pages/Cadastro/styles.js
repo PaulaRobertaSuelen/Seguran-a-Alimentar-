@@ -17,7 +17,8 @@ export const AsideContainer = styled.div`
 
     & .background {
         object-fit: cover;
-        max-height: 100vh;
+        max-height: 800px;
+
         @media (max-width: 900px) {
             display: none;
         }
@@ -39,7 +40,7 @@ export const FormContainer = styled.div`
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 1200px;
 `;
 
 export const Button = styled.div`
@@ -55,7 +56,8 @@ export const Cadastro = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 500px;
+
     @media (max-width: 900px) {
         width: 90%;
     }
@@ -105,7 +107,7 @@ export const RadioGroup = styled.div`
 
         & input {
             margin-right: 10px;
-            accent-color: #4377FF; /* Cor do botão de rádio */
+            accent-color: #4377ff; /* Cor do botão de rádio */
         }
     }
 
@@ -114,9 +116,7 @@ export const RadioGroup = styled.div`
     }
 `;
 
-export const CampoProfissional = styled.div`
-    
-`;
+export const CampoProfissional = styled.div``;
 
 export const LostPass = styled.div`
     display: flex;
