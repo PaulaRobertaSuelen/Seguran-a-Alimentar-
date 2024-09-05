@@ -14,8 +14,8 @@ import Modal from '../../components/Modal/index';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const [email,setEmail] = useState('')
-    const [senha,setSenha] = useState('')
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
     const handleButtonClick = () => {
         navigate('/cadastro');
@@ -23,18 +23,24 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         try {
-            await api.post('/user/login', {
-                email,
-                senha
-            }).then((response) => {
-                localStorage.setItem('token', response.data.token)
-                localStorage.setItem('tipoUsuario', response.data.tipoUsuario)
-                navigate('/')
-            }).catch((error) => {
-                console.log(error)
-            })
+            await api
+                .post('/user/login', {
+                    email,
+                    senha,
+                })
+                .then((response) => {
+                    localStorage.setItem('token', response.data.token);
+                    localStorage.setItem(
+                        'tipoUsuario',
+                        response.data.tipoUsuario
+                    );
+                    navigate('/');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     };
 
@@ -59,31 +65,43 @@ export default function Login() {
             <S.FormContainer>
                 <S.Login>
                     <h1>LOGIN</h1>
-
-                        <TextInput
-                            name="email"
-                            label="Email"
-                            iconLeft={<MdEmail color="#4377FF" />}
-                            onChange={(e) => setEmail(e.target.value)}
+                    <TextInput
+                        name="email"
+                        label="Email"
+                        iconLeft={<MdEmail color="#4377FF" />}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <TextInput
+                        name="senha"
+                        label="Senha"
+                        password
+                        onChange={(e) => setSenha(e.target.value)}
+                    />
+                    <S.LostPass>
+                        <Checkbox
+                            name="lembrar"
+                            label="Lembre-se"
+                            styles={{
+                                padding: '8px',
+                                width: '120%',
+                            }}
                         />
-                        <TextInput name="senha" label="Senha" password onChange={(e) => setSenha(e.target.value)} />
-                        <S.LostPass>
-                            <Checkbox name="lembrar" label="Lembre-se" />
-                            <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
-                                Esqueceu a senha?
-                            </a>
-                        </S.LostPass>
-                        <S.Bat>
-                            <Button
-                                styles={{
-                                    padding: '10px',
-                                    width: '40%',
-                                }}
-                        onClick={() => handleSubmit()}
-                            >
-                                Entrar
-                            </Button>
-                        </S.Bat>
+                        <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
+                            Esqueceu a senha?
+                        </a>
+                    </S.LostPass>
+
+                    <S.Bat>
+                        <Button
+                            styles={{
+                                padding: '8px',
+                                width: '120%',
+                            }}
+                            onClick={() => handleSubmit()}
+                        >
+                            Entrar
+                        </Button>
+                    </S.Bat>
 
                     <p>
                         Não tem uma conta?{' '}
@@ -126,5 +144,3 @@ export default function Login() {
         </S.Container>
     );
 }
-
-

@@ -17,7 +17,8 @@ export const AsideContainer = styled.div`
 
     & .background {
         object-fit: cover;
-        max-height: 100vh;
+        max-height: 800px;
+
         @media (max-width: 900px) {
             display: none;
         }
@@ -105,7 +106,7 @@ export const RadioGroup = styled.div`
 
         & input {
             margin-right: 10px;
-            accent-color: #4377FF; /* Cor do botão de rádio */
+            accent-color: #4377ff; /* Cor do botão de rádio */
         }
     }
 
@@ -114,9 +115,7 @@ export const RadioGroup = styled.div`
     }
 `;
 
-export const CampoProfissional = styled.div`
-    
-`;
+export const CampoProfissional = styled.div``;
 
 export const LostPass = styled.div`
     display: flex;

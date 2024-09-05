@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    padding: 25px;
 
     @media (max-width: 900px) {
         flex-direction: column;
@@ -99,22 +98,24 @@ export const Login = styled.div`
 
 export const LostPass = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: space;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
 
     @media (max-width: 900px) {
-        flex-direction: column;
         align-items: center;
     }
 
     & a {
         color: #1976d2;
         font-size: 14px;
-        font-weight: 200;
         text-decoration: none;
         cursor: pointer;
-        width: 100%;
-        text-align: right;
+        text-align: left;
+        white-space: nowrap;
+        padding: 10px;
     }
 `;
 
@@ -137,8 +138,8 @@ export const ContainerText = styled.div`
     align-items: center;
 
     & h1 {
-        line-height: 2em;
         text-align: center;
+        margin-left: 40px;
 
         @media (max-width: 900px) {
             font-size: 24px;
