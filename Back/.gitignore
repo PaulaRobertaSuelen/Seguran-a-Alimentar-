@@ -1,24 +1,14 @@
-# Logs
-logs
+# Ignorar a pasta node_modules
+node_modules/
+
+# Ignorar arquivos de log
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ignorar arquivos de configuração do ambiente
+.env
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar o diretório build
+build/

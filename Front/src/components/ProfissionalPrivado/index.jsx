@@ -19,6 +19,12 @@ export default function Perfiledit() {
 
     const navigate = useNavigate()
 
+    const logoutUser = () => {
+        localStorage.removeItem('token')
+        localStorage.removeItem('tipoUsuario')
+        navigate('/')
+    };
+
     return (
         <S.Container>
             <S.Fotoprof src={FotoPorfissional} alt="Fotoprof" />
@@ -40,7 +46,7 @@ export default function Perfiledit() {
                 <S.TagInfo>Nutrição em TEA</S.TagInfo>
                 <S.TagInfo>Comportamento alimentar</S.TagInfo>
             </S.Tags>
-            <S.Sair onClick={() => navigate('/')}>Sair</S.Sair>
+            <S.Sair onClick={logoutUser}>Sair</S.Sair>
         </S.Container>
     );
 }

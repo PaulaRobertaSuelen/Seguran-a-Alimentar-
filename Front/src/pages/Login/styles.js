@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+    padding: 25px;
 
     @media (max-width: 900px) {
-        padding: 25px;
         flex-direction: column;
     }
 `;
@@ -24,6 +24,7 @@ export const AsideContainer = styled.div`
             display: none;
         }
     }
+
     & .logo {
         position: absolute;
         width: 140px;
@@ -99,6 +100,8 @@ export const Login = styled.div`
 export const LostPass = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     @media (max-width: 900px) {
         flex-direction: column;
         align-items: center;
