@@ -14,7 +14,7 @@ import Modal from '../../components/Modal/index';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const { login, userByEmail } = useAuth();
+    const { login, userByEmail, log } = useAuth();
 
     const handleButtonClick = () => {
         navigate('/cadastro');
@@ -24,6 +24,19 @@ export default function Login() {
         event.preventDefault();
         const email = event.target.email.value;
         const senha = event.target.senha.value;
+        const profissional = event.target.profissional.value;
+
+        if (!!profissional) {
+            log({ email, senha })
+                .then(() => {
+                    navigate('/Home/login');
+                })
+                .catch((error) => {
+                    alert(error.response.data.error);
+                });
+            return;
+        }
+
         login({ email, senha })
             .then(() => {
                 navigate('/Home/login');
@@ -64,10 +77,17 @@ export default function Login() {
                         <TextInput name="senha" label="Senha" password />
                         <S.LostPass>
                             <Checkbox label="Lembre-se" />
+
                             <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
                                 Esqueceu a senha?{' '}
                             </a>
                         </S.LostPass>
+                        <S.Profissional>
+                            <Checkbox
+                                name="profissional"
+                                label="Login profissional"
+                            />
+                        </S.Profissional>
                         <S.Bat>
                             <Button
                                 styles={{

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const img = styled.img`
     position: absolute;
     width: 100%;
@@ -21,23 +19,8 @@ export const Container = styled.div`
   align-items: center;
   font-family: Arial, sans-serif;
 
-  Footer {
-    top: 0%;
-  };
-
   @media (max-width: 900px) {
     padding: 0 10px;
-  }
-`;
-
-export const Title = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-
-  @media (max-width: 900px) {
-    font-size: 20px;
-    text-align: center;
   }
 `;
 
@@ -45,7 +28,7 @@ export const Paragraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
-  margin-left: -320px;
+  margin-left: -370px;
 
   @media (max-width: 900px) {
     margin-left: 0;
@@ -53,29 +36,29 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const SectionTitle = styled.h3`
-  //font-size: 18px;
-  //font-weight: bold;
-  //margin-bottom: 10px;
-  //margin-left: -500px;
-  //color: #3771C8;
-  //margin-left: -800px;
-`;
-
 export const List = styled.ul`
-  //margin: 0;
-  //padding: 0;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 900px) {
+    padding: 0 10px;
+  }
 `;
 
 export const ListItem = styled.li`
   list-style-type: disc;
-  margin-left: -280px;
+  margin-left: -240px;
   text-align: justify;
+  list-style: none;
 
   @media (max-width: 900px) {
     margin-left: 0;
     text-align: center;
   }
+
+  span {
+        font-weight: bold;
+    }
 `;
 
  export const Image = styled.img`
@@ -85,7 +68,7 @@ export const ListItem = styled.li`
   margin-top: 20px;
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -107,7 +90,7 @@ export const CardButton = styled.button`
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 0px;
+  margin-top: -5px;
   max-width: 110px;
 
   @media (max-width: 900px) {
@@ -120,25 +103,13 @@ export const SectionTitleT = styled.h1`
     font-size: 13px;
     font-weight: bold;
     color: #3771C8;
-    margin-left: -470px;
+    margin-left: -425px;
     flex-direction: column;
 
     @media (max-width: 900px) {
     margin-left: 0;
     text-align: center;
-  }
-`;
-
-export const SectionTitleT2 = styled.h1`
-    font-size: 13px;
-    //font-weight: bold;
-    color: #3771C8;
-    margin-left: -280px;
-    //flex-direction: column;
-
-    @media (max-width: 900px) {
-    margin-left: 0;
-    text-align: center;
+    font-size: 10px;
   }
 `;
 
@@ -156,30 +127,17 @@ export const formBTT = styled.form`
   }
 `;
 
-export const SectionTitleFT = styled.p`
-    font-size: 13px;
-    font-weight: bold;
-    color: #3771C8;
-    margin-left: -280px;
-    font-size: large;
-
-    @media (max-width: 900px) {
-    margin-left: 0;
-    text-align: center;
-  }
-`;
-
 export const CardETM = styled.div`
     display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: -1600px;
+  margin-left: 900px;
+  margin-top: -800px;
   max-width: 250px;
 
   @media (max-width: 900px) {
@@ -193,11 +151,11 @@ export const CardPP = styled.div`
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: 20px;
+  margin-left: 900px;
+  margin-top: 50px;
   max-width: 250px;
 
   @media (max-width: 900px) {
@@ -211,11 +169,11 @@ export const CardSA = styled.div`
   align-items: center;
   padding: 20px;
   //border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  //border-radius: 5px;
+  //margin-bottom: 20px;
   //background-color: #fff;
-  margin-left: 850px;
-  margin-top: 20px;
+  margin-left: 900px;
+  margin-top: 50px;
   max-width: 250px;
 
   @media (max-width: 900px) {
@@ -223,7 +181,11 @@ export const CardSA = styled.div`
   }
 `;
 
-export const ImageCD = styled.img`
+export const Image2 = styled.img`
     width: 100%;
     margin-top: -5px;
+
+    @media (max-width: 900px) {
+    margin-top: 0;
+  }
 `;

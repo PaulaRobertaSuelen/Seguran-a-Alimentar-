@@ -1,31 +1,21 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import Footer from '../../components/FooterUser/index';
 import Navbarlogin from '../../components/Navbarlogin/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
-import ModalPesquisa from '../../components/ModalPesquisar';
 import * as S from './styles';
 
 export default function PesquisarProfissional() {
-    const [Nutricionista, setNutricionista] = useState('');
+    const navigate = useNavigate(); 
+    const [especialidade, setEspecialidade] = useState('');
     const [nome, setNome] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
-
-    const navigate = useNavigate();
-    const [isModalPesquisarOpen, setIsModalPesquisarOpen] = useState(false); // Estado do modal
-
-    const openModal = () => {
-        setIsModalPesquisarOpen(true); // Abre o modal
-    };
 
     const handleBuscarClick = () => {
-        // Simula uma pesquisa
-        const resultado = [`Nutricionista: ${Nutricionista}`, `Nome: ${nome}`];
-        setSearchResults(resultado); // Define os resultados da busca
-        openModal(); // Abre o modal após a busca
+    
+        console.log('Buscar por:', { especialidade, nome });
+        
     };
 
     return (
@@ -36,31 +26,37 @@ export default function PesquisarProfissional() {
                 <p> </p>
             </S.OndasEstilo>
 
-            <S.Cabercario>
+            <S.Cabecalho>
                 <S.DivFiltro>
-                    <h1>Filtro</h1>
-                    <input
-                        type="text"
-                        placeholder="Nutricionista"
-                        value={Nutricionista}
-                        onChange={(e) => setNutricionista(e.target.value)}
-                    />
+                    <h1>Filtros </h1>
+                    <select
+                        value={especialidade}
+                        onChange={(e) => setEspecialidade(e.target.value)}
+                    >
+                        <option value="">Selecione uma especialidade</option>
+                        <option value="">Nutricionista</option>
+                        <option value="">fonoaudiólogo</option>
+                        <option value="">psicólogo</option>
+                        <option value="">terapeuta ocupacional</option>
+                    </select>
                 </S.DivFiltro>
 
                 <S.DivPesq>
-                    <h1>Pesquisar por nome</h1>
-                    <input
-                        type="text"
-                        placeholder=" "
+                    <h1>pesquise por Nome</h1>
+                    <select
                         value={nome}
-                        onChange={(e) => setNome(e.target.value)}
-                    />
+                        onChange={(e) => setNome(e.target.value)}>
+                        <option value="">Selecione um nome</option>
+                        <option value="">Fernanda Santos</option>
+                        <option value="">Carlos Aschoff</option>
+                        <option value=" ">Marta Portela</option>
+                    </select>
                 </S.DivPesq>
 
-                <S.Butao>
+                <S.Botao>
                     <button onClick={handleBuscarClick}>Buscar</button>
-                </S.Butao>
-            </S.Cabercario>
+                </S.Botao>
+            </S.Cabecalho>
 
             <S.ConteinerUm>
                 <S.ConteinerImagemP src={Fernanda} alt="foto da Profissional" />
@@ -180,12 +176,6 @@ export default function PesquisarProfissional() {
 
             <Footer />
 
-            {/* Modal Pesquisa */}
-            <ModalPesquisa
-                isOpen={isModalPesquisarOpen}
-                onClose={() => setIsModalPesquisarOpen(false)}
-                searchResults={searchResults}
-            />
         </>
     );
 }

@@ -77,7 +77,7 @@ export const FormSection = styled.section`
     }
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,3 +148,4 @@ export const LostPass = styled.div`
         cursor: pointer;
     }
 `;
+
