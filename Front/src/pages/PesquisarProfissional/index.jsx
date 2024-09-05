@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/FooterUser/index';
-import Navbarlogin from '../../components/Navbarlogin/index';
+import Navbar from '../../components/Navbar/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
 import Carlos from '../../assets/Carlos.png';
@@ -32,7 +32,7 @@ export default function PesquisarProfissional() {
 
     return (
         <>
-            <Navbarlogin />
+            <Navbar />
 
             <S.OndasEstilo>
                 <p> </p>

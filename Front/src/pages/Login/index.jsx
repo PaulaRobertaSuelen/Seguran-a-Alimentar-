@@ -1,7 +1,7 @@
 import { MdEmail } from 'react-icons/md';
 import * as S from './styles';
 import { useState } from 'react';
-import useAuth from '../../services/useAuth';
+import api from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 
 import Onda from '../../assets/svg/ondaOne.svg';
@@ -14,48 +14,40 @@ import Modal from '../../components/Modal/index';
 export default function Login() {
     const [openEsqueciMinhaSenha, setOpenEsqueciMinhaSenha] = useState(false);
     const navigate = useNavigate();
-    const { login, userByEmail, log } = useAuth();
+    const [email,setEmail] = useState('')
+    const [senha,setSenha] = useState('')
 
     const handleButtonClick = () => {
         navigate('/cadastro');
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-        const senha = event.target.senha.value;
-        const profissional = event.target.profissional.value;
-
-        if (!!profissional) {
-            log({ email, senha })
-                .then(() => {
-                    navigate('/Home/login');
-                })
-                .catch((error) => {
-                    alert(error.response.data.error);
-                });
-            return;
-        }
-
-        login({ email, senha })
-            .then(() => {
-                navigate('/Home/login');
+    const handleSubmit = async (event) => {
+        try {
+            await api.post('/user/login', {
+                email,
+                senha
+            }).then((response) => {
+                localStorage.setItem('token', response.data.token)
+                localStorage.setItem('tipoUsuario', response.data.tipoUsuario)
+                navigate('/')
+            }).catch((error) => {
+                console.log(error)
             })
-            .catch((error) => {
-                alert(error.response.data.error);
-            });
+        } catch (error) {
+            console.log(error)
+        }
     };
 
-    const handlePesquisarEmail = (event) => {
+    const handlePesquisarEmail = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;
-        userByEmail(email)
-            .then((response) => {
-                navigate(`/Redefinirsenha${response.data.data.id}`);
-            })
-            .catch((error) => {
-                alert(error.response.data.error);
-            });
+
+        try {
+            const response = await userByEmail(email);
+            navigate(`/Redefinirsenha/${response.data.id}`);
+        } catch (error) {
+            alert(error.response?.data?.error || 'Erro ao buscar usuário');
+        }
     };
 
     return (
@@ -68,18 +60,17 @@ export default function Login() {
                 <S.Login>
                     <h1>LOGIN</h1>
 
-                    <form onSubmit={handleSubmit}>
                         <TextInput
                             name="email"
                             label="Email"
                             iconLeft={<MdEmail color="#4377FF" />}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <TextInput name="senha" label="Senha" password />
+                        <TextInput name="senha" label="Senha" password onChange={(e) => setSenha(e.target.value)} />
                         <S.LostPass>
-                            <Checkbox label="Lembre-se" />
-
+                            <Checkbox name="lembrar" label="Lembre-se" />
                             <a onClick={() => setOpenEsqueciMinhaSenha(true)}>
-                                Esqueceu a senha?{' '}
+                                Esqueceu a senha?
                             </a>
                         </S.LostPass>
                         <S.Profissional>
@@ -94,11 +85,12 @@ export default function Login() {
                                     padding: '10px',
                                     width: '40%',
                                 }}
+                        onClick={() => handleSubmit()}
                             >
                                 Entrar
                             </Button>
                         </S.Bat>
-                    </form>
+
                     <p>
                         Não tem uma conta?{' '}
                         <a onClick={handleButtonClick}>Cadastre-se</a>
@@ -114,7 +106,7 @@ export default function Login() {
                     <S.ContainerText>
                         <h1>Esqueci minha senha</h1>
                         <p>
-                            Para redefinir a sua senha, informe e-mail de
+                            Para redefinir a sua senha, informe o e-mail de
                             cadastro.
                         </p>
                     </S.ContainerText>

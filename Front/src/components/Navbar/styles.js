@@ -22,20 +22,20 @@ export const LogoWrapper = styled.div`
     margin-left: 260px;
 
     img {
-        width: 180px;
+        width: 180px; /* Tamanho padrão da logo */
     }
 
     @media (max-width: 900px) {
         margin-left: 10px;
         img {
-            width: 150px;
+            width: 100px; /* Tamanho da logo na versão mobile */
         }
     }
 `;
 
 export const Opcoes = styled.div`
     display: flex;
-    gap: 10px;
+    gap: 30px;
 
     a {
         text-decoration: none;
@@ -50,7 +50,7 @@ export const Opcoes = styled.div`
     }
 
     @media (max-width: 900px) {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
         position: absolute;
@@ -86,6 +86,19 @@ export const BotaoEntrar = styled.button`
     }
 `;
 
+export const Botaoperfil = styled.button`
+    margin-right: 320px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    @media (max-width: 900px) {
+        margin-right: 0;
+        order: 2;
+    }
+`;
+
 export const HamburgerMenu = styled.div`
     display: none;
     flex-direction: column;
@@ -104,6 +117,7 @@ export const HamburgerMenu = styled.div`
 
     @media (max-width: 900px) {
         display: flex;
-        order: 2;
+        margin-left: 15px;
+        order: 2; /* Ajuste de ordem do menu hambúrguer na versão mobile */
     }
 `;

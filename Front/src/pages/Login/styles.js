@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+    padding: 25px;
 
     @media (max-width: 900px) {
-        padding: 25px;
         flex-direction: column;
     }
 `;
@@ -24,6 +24,7 @@ export const AsideContainer = styled.div`
             display: none;
         }
     }
+
     & .logo {
         position: absolute;
         width: 140px;
@@ -99,6 +100,8 @@ export const Login = styled.div`
 export const LostPass = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     @media (max-width: 900px) {
         flex-direction: column;
         align-items: center;
@@ -181,19 +184,11 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
-export const Profissional = styled.div`
 
-display: flex;
-    justify-content: space-between;
-    width: 100%;
-    & a {
-        color: #1976d2;
-        font-size: 14px;
-        font-weight: 200;
-        text-decoration: none;
-        cursor: pointer;
-    }
+export const Modal = styled.div`
 
+`;
 
+export const TextInput = styled.div`
 
 `;
