@@ -184,3 +184,11 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
+
+export const Modal = styled.div`
+
+`;
+
+export const TextInput = styled.div`
+
+`;
