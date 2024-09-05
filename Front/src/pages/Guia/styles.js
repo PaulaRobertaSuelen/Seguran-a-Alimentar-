@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 export const img = styled.img`
     position: absolute;
-    width: 100%;
-    height: 140%;
+    width: 100px;
+    height: 140px;
     background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
     z-index: -1;
@@ -22,7 +22,7 @@ export const Container = styled.div`
   font-family: Arial, sans-serif;
 
   Footer {
-    top: 0%;
+    top: 0px;
   };
 
   @media (max-width: 900px) {
@@ -43,7 +43,7 @@ export const Title = styled.h2`
 
 export const Paragraph = styled.p`
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   margin-bottom: 10px;
   margin-left: -320px;
 
@@ -79,7 +79,7 @@ export const ListItem = styled.li`
 `;
 
  export const Image = styled.img`
-  width: 65%;
+  width: 650px;
   max-width: 950px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -224,6 +224,6 @@ export const CardSA = styled.div`
 `;
 
 export const ImageCD = styled.img`
-    width: 100%;
+    width: 230px;
     margin-top: -5px;
 `;

@@ -36,7 +36,6 @@ export const FormContainer = styled.div`
 
 // Container para o título e formulário
 export const Content = styled.div`
-    /* text-align: center; */
     margin-top: 40px;
 `;
 
@@ -71,7 +70,7 @@ export const TitleContainer = styled.div`
 
 // Título
 export const Title = styled.h1`
-    font-size: 2.3rem;
+    font-size: 36.8px; /* 2.3rem = 36.8px */
     font-weight: 300;
     margin-bottom: 20px;
 `;
@@ -81,7 +80,6 @@ export const InputContainer = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: transparent; */
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -101,7 +99,7 @@ export const Input = styled.input`
     padding: 15px 40px 10px 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px; /* 1rem = 16px */
 `;
 
 // Ícone de visibilidade da senha
@@ -136,7 +134,7 @@ export const PasswordStrength = styled.p`
             : theme === 'strong'
               ? '#28a745'
               : '#28a745'};
-    font-size: 0.8rem;
+    font-size: 12.8px; /* 0.8rem = 12.8px */
     margin-top: 5px;
     margin-bottom: 10px;
 `;
@@ -150,7 +148,7 @@ export const Button = styled.button`
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px; /* 1rem = 16px */
     cursor: pointer;
     &:hover {
         background-color: #218838;

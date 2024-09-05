@@ -134,7 +134,7 @@ export const ContainerText = styled.div`
     align-items: center;
 
     & h1 {
-        line-height: 2em;
+        line-height: 32px; // 2rem = 32px
         text-align: center;
 
         @media (max-width: 900px) {
@@ -181,9 +181,9 @@ export const Bat = styled.div`
     gap: 8px;
     margin-top: 20px;
 `;
-export const Profissional = styled.div`
 
-display: flex;
+export const Profissional = styled.div`
+    display: flex;
     justify-content: space-between;
     width: 100%;
     & a {
@@ -193,7 +193,5 @@ display: flex;
         text-decoration: none;
         cursor: pointer;
     }
-
-
-
 `;
+

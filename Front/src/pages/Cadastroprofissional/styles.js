@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PageWrapper = styled.div`
     position: relative;
-    min-height: 100vh;
+    min-height: 100px;
     background: url(${(props) => props.backgroundImage}) no-repeat center center;
     background-size: cover;
 `;
@@ -19,7 +19,7 @@ export const InfoSection = styled.section`
     margin-bottom: 40px;
 
     h2 {
-        font-size: 2rem;
+        font-size: 32px;
         color: #101066;
     }
 `;
@@ -33,7 +33,7 @@ export const InfoCards = styled.div`
 `;
 
 export const InfoCard = styled.div`
-    flex: 1 1 30%;
+    flex: 1 1 30px;
     max-width: 300px;
     text-align: center;
     margin: 10px;
@@ -44,7 +44,7 @@ export const InfoCard = styled.div`
     }
 
     p {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: bold;
         margin-top: 10px;
     }
@@ -58,7 +58,7 @@ export const StepsSection = styled.section`
     margin-bottom: 40px;
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 26px;
         color: #101066;
     }
 
@@ -72,7 +72,7 @@ export const FormSection = styled.section`
     text-align: center;
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 26px;
         color: #101066;
     }
 `;
@@ -109,7 +109,7 @@ export const Terms = styled.div`
     align-items: center;
     margin-bottom: 10px;
     .check {
-        width: 10%;
+        width: 10px;
     }
     a {
         color: #101066;
@@ -127,12 +127,11 @@ export const Termos = styled.div`
     flex-direction: column;
     align-items: center;
     & h1 {
-        line-height: 2em;
+        
         text-align: center;
     }
     & p {
         font-size: 14px;
-        width: 70%;
         text-align: center;
     }
 `;
@@ -143,7 +142,6 @@ export const LostPass = styled.div`
     & a {
         color: #1976d2;
         font-size: 14px;
-        font-weight: 200;
         text-decoration: none;
         cursor: pointer;
     }

@@ -12,10 +12,10 @@ export const OndasEstilo = styled.div`
 
 export const Cabecario = styled.div`
     display: flex;
-    margin-top: 5rem;
+    margin-top: 80px; /* 5rem = 80px */
     align-items: center;
-    margin-left: 18rem;
-    gap: 2rem;
+    margin-left: 288px; /* 18rem = 288px */
+    gap: 32px; /* 2rem = 32px */
 `;
 
 export const DivFil = styled.div`
@@ -23,9 +23,9 @@ export const DivFil = styled.div`
     flex-direction: column;
 
     h1 {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 10rem;
+        margin-bottom: 16px; /* 1rem = 16px */
+        font-size: 16px; /* 1rem = 16px */
+        font-weight: 160px; /* 10rem = 160px */
         text-align: left;
     }
 
@@ -33,7 +33,7 @@ export const DivFil = styled.div`
         padding: 5px;
         font-size: 14px;
         border: 1px solid #ccc;
-        border-radius: 4rem;
+        border-radius: 64px; /* 4rem = 64px */
         width: 200px;
     }
 `;
@@ -43,9 +43,9 @@ export const DivPesq = styled.div`
     flex-direction: column;
 
     h1 {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 10rem;
+        margin-bottom: 16px; /* 1rem = 16px */
+        font-size: 16px; /* 1rem = 16px */
+        font-weight: 160px; /* 10rem = 160px */
         text-align: left;
     }
 
@@ -53,18 +53,18 @@ export const DivPesq = styled.div`
         padding: 5px;
         font-size: 14px;
         border: 1px solid #ccc;
-        border-radius: 4rem;
+        border-radius: 64px; /* 4rem = 64px */
         width: 200px;
     }
 `;
 
 export const But = styled.div`
     display: flex;
-    margin-top: 2rem;
+    margin-top: 32px; /* 2rem = 32px */
 
     button {
-        width: 5rem;
-        height: 2rem;
+        width: 80px; /* 5rem = 80px */
+        height: 32px; /* 2rem = 32px */
         align-items: center;
         padding: 5px 10px;
         border: unset;
@@ -105,11 +105,11 @@ export const But = styled.div`
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 80px; /* 5rem = 80px */
     align-items: center;
-    height: 18rem;
-    width: 50rem;
-    margin-left: 18rem;
+    height: 288px; /* 18rem = 288px */
+    width: 800px; /* 50rem = 800px */
+    margin-left: 288px; /* 18rem = 288px */
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -118,10 +118,10 @@ export const ConteinerUm = styled.div`
 `;
 
 export const ConteinerImagem = styled.img`
-    max-width: 9rem;
+    max-width: 144px; /* 9rem = 144px */
     height: auto;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-left: 32px; /* 2rem = 32px */
+    margin-bottom: 80px; /* 5rem = 80px */
 `;
 
 export const TituloUm = styled.div`
@@ -129,57 +129,57 @@ export const TituloUm = styled.div`
         display: flex;
         font-size: 24px;
         width: 100%;
-        margin-bottom: 11rem;
-        margin-left: 1rem;
+        margin-bottom: 176px; /* 11rem = 176px */
+        margin-left: 16px; /* 1rem = 16px */
         white-space: nowrap;
     }
 `;
 
 export const TitulUM = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -24.7rem;
-        margin-bottom: 6rem;
+        margin-left: -395.2px; /* -24.7rem = -395.2px */
+        margin-bottom: 96px; /* 6rem = 96px */
     }
 `;
 
 export const TituloSegundo = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -10rem;
-        margin-bottom: 6rem;
+        margin-left: -160px; /* -10rem = -160px */
+        margin-bottom: 96px; /* 6rem = 96px */
     }
 `;
 
 export const TituloTres = styled.div`
     h1 {
-        font-size: 1rem;
-        margin-left: -27rem;
-        margin-top: 1rem;
+        font-size: 16px; /* 1rem = 16px */
+        margin-left: -432px; /* -27rem = -432px */
+        margin-top: 16px; /* 1rem = 16px */
     }
 `;
 
 export const TextoUm = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: black;
         line-height: 1.3;
-        margin-left: -28rem;
-        margin-top: 9rem;
+        margin-left: -448px; /* -28rem = -448px */
+        margin-top: 144px; /* 9rem = 144px */
     }
 `;
 
 export const ButaoVerMaisUm = styled.div`
     button {
         padding: 10px 20px;
-        margin-left: -46rem;
-        margin-top: 10rem;
+        margin-left: -736px; /* -46rem = -736px */
+        margin-top: 160px; /* 10rem = 160px */
         background-color: #33b44d;
         color: white;
         border: none;
@@ -192,11 +192,11 @@ export const ButaoVerMaisUm = styled.div`
 
 export const ConteinerDois = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 80px; /* 5rem = 80px */
     align-items: center;
-    height: 18rem;
-    width: 50rem;
-    margin-left: 18rem;
+    height: 288px; /* 18rem = 288px */
+    width: 800px; /* 50rem = 800px */
+    margin-left: 288px; /* 18rem = 288px */
     border-radius: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -205,10 +205,10 @@ export const ConteinerDois = styled.div`
 `;
 
 export const ConteinerImagemD = styled.img`
-    max-width: 9rem;
+    max-width: 144px; /* 9rem = 144px */
     height: auto;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+    margin-left: 32px; /* 2rem = 32px */
+    margin-bottom: 80px; /* 5rem = 80px */
 `;
 
 export const TituloD = styled.div`
@@ -216,57 +216,57 @@ export const TituloD = styled.div`
         display: flex;
         font-size: 24px;
         width: 100%;
-        margin-bottom: 11rem;
-        margin-left: 1rem;
+        margin-bottom: 176px; /* 11rem = 176px */
+        margin-left: 16px; /* 1rem = 16px */
         white-space: nowrap;
     }
 `;
 
 export const TitulD = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -25.5rem;
-        margin-bottom: 6rem;
+        margin-left: -408px; /* -25.5rem = -408px */
+        margin-bottom: 96px; /* 6rem = 96px */
     }
 `;
 
 export const TituloS = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: #101066;
         font-weight: 700;
         white-space: nowrap;
-        margin-left: -11rem;
-        margin-bottom: 6rem;
+        margin-left: -176px; /* -11rem = -176px */
+        margin-bottom: 96px; /* 6rem = 96px */
     }
 `;
 
 export const TituloT = styled.div`
     h1 {
-        font-size: 1rem;
-        margin-left: -28rem;
-        margin-top: 1rem;
+        font-size: 16px; /* 1rem = 16px */
+        margin-left: -448px; /* -28rem = -448px */
+        margin-top: 16px; /* 1rem = 16px */
     }
 `;
 
 export const TextoU = styled.div`
     p {
-        font-size: 1rem;
+        font-size: 16px; /* 1rem = 16px */
         color: black;
         line-height: 1.3;
-        margin-left: -29rem;
-        margin-top: 9rem;
+        margin-left: -464px; /* -29rem = -464px */
+        margin-top: 144px; /* 9rem = 144px */
     }
 `;
 
 export const ButaoVerMaisU = styled.div`
     button {
         padding: 10px 20px;
-        margin-left: -46rem;
-        margin-top: 12rem;
+        margin-left: -736px; /* -46rem = -736px */
+        margin-top: 192px; /* 12rem = 192px */
         background-color: #33b44d;
         color: white;
         border: none;
@@ -274,3 +274,4 @@ export const ButaoVerMaisU = styled.div`
         cursor: pointer;
     }
 `;
+
