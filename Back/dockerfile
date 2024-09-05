@@ -1,0 +1,21 @@
+#Use uma imagem base do Node.js
+FROM node:14
+
+#Cria um diretório de trabalho no container
+WORKDIR /Seguran-a-Alimentar-
+
+#Copia o package.json e instala as dependências
+COPY package*.json ./
+RUN npm install
+
+#Copia o restante do código para o container
+COPY . .
+
+#Apagando a pasta node_modules
+RUN rm -rf node_mudules
+
+#Expõe a porta
+EXPOSE 5000
+
+#Comando para rodar o app
+CMD ["npm", "start"]
