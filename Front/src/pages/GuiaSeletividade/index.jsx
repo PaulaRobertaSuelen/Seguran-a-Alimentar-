@@ -139,10 +139,7 @@ const GuiaSeletividade = () => {
             </S.Container>
 
             <S.CardETM>
-                <S.Image2
-                    src="/src/assets/seletividade-alimentar 2.png"
-                    alt=""
-                />
+                <S.Image2 src="/src/assets/seletividade-alimentar 2.png"alt=""/>
                 <S.formBTT action="/Guia">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>

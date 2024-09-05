@@ -2,15 +2,15 @@ import React from 'react';
 import * as S from './styles';
 import { Link } from 'react-router-dom'; // Importando Link do react-router-dom
 
-import homem from '../../assets/homem.jpg';
-import hbarba from '../../assets/hbarba.jpg';
 import mperfil from '../../assets/mperfil.png';
+import Marta from '../../assets/Marta.png';
+import Carlos from '../../assets/Carlos.png';
 
 const HistoricoPesquisa = () => {
     const historico = [
         { nome: 'Fernanda Santos', imagem: mperfil },
-        { nome: 'Carlos Miranda', imagem: homem },
-        { nome: 'Bruno Alves', imagem: hbarba },
+        { nome: 'Carlos Aschoff', imagem: Carlos },
+        { nome: 'Marta Portela', imagem: Marta },
     ];
 
     return (

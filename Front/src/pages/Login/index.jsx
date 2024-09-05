@@ -51,7 +51,7 @@ export default function Login() {
         const email = event.target.email.value;
         userByEmail(email)
             .then((response) => {
-                navigate(`/Redefinirsenha/${response.data.data.id}`);
+                navigate(`/Redefinirsenha${response.data.data.id}`);
             })
             .catch((error) => {
                 alert(error.response.data.error);

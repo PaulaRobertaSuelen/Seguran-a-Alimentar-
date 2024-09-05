@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const img = styled.img`
     position: absolute;
-    width: 100%;
-    height: 140%;
+    width: -400px;
+    height: -500px;
     background-image: url(/src/assets/svg/ondaleve.svg);
     background-size: cover;
     z-index: -1;
@@ -20,7 +20,12 @@ export const Paragraph = styled.p`
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
-    margin-left: -370px;
+    margin-right: 340px;
+
+    @media (max-width: 900px) {
+        margin-left: 0;
+        text-align: center;
+    }
 `;
 
 export const List = styled.ul`
@@ -30,19 +35,28 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     list-style-type: disc;
-    margin-left: -240px;
+    margin-right: 210px;
     text-align: justify;
     list-style: none;
+
+    @media (max-width: 900px) {
+        margin-left: 0;
+        text-align: left;
+    }
     span {
         font-weight: bold;
     }
 `;
 
 export const Image = styled.img`
-    width: 65%;
-    max-width: 950px;
+    width: 850px;
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-left: 20px;
+
+    @media (max-width: 900px) {
+        width: 100px;
+    }
 `;
 
 export const CardTitle = styled.h4`
@@ -66,8 +80,13 @@ export const SectionTitleT = styled.h1`
     font-size: 13px;
     font-weight: bold;
     color: #3771c8;
-    margin-left: -425px;
+    margin-right: 395px;
     flex-direction: column;
+
+    @media (max-width: 900px) {
+        margin-left: 0;
+        text-align: center;
+    }
 `;
 
 export const formBTT = styled.form`
@@ -85,13 +104,13 @@ export const CardETM = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
-    //border-radius: 5px;
-    //margin-bottom: 20px;
-    //background-color: #fff;
-    margin-left: 900px;
-    margin-top: -800px;
+    margin-left: 820px;
+    margin-top: -950px;
     max-width: 250px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 `;
 
 export const CardPP = styled.div`
@@ -99,13 +118,13 @@ export const CardPP = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
-    //border-radius: 5px;
-    //margin-bottom: 20px;
-    //background-color: #fff;
-    margin-left: 900px;
+    margin-left: 820px;
     margin-top: 50px;
     max-width: 250px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 `;
 
 export const CardSA = styled.div`
@@ -113,16 +132,16 @@ export const CardSA = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    //border: 1px solid #ddd;
-    //border-radius: 5px;
-    //margin-bottom: 20px;
-    //background-color: #fff;
-    margin-left: 900px;
+    margin-left: 820px;
     margin-top: 50px;
     max-width: 250px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 `;
 
 export const Image2 = styled.img`
-    width: 100%;
+    width: 210px;
     margin-top: -5px;
 `;
