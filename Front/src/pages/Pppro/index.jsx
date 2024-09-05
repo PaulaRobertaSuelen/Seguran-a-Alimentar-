@@ -95,7 +95,7 @@ export default function PesquisarProfissional() {
                 <S.ButaoVerPerfilsUm>
                     <button
                         onClick={() =>
-                            handleVerPerfilClick('/perfilprofissional')
+                            handleVerPerfilClick('/perfil/profissional')
                         }
                     >
                         Ver Perfil
@@ -135,7 +135,7 @@ export default function PesquisarProfissional() {
                 </S.TextoU>
 
                 <S.ButaoVerPerfilsU>
-                    <button onClick={() => handleVerPerfilClick('/Ppcarlos')}>
+                    <button onClick={() => handleVerPerfilClick('/perfil/profissional/Carlos')}>
                         Ver Perfil
                     </button>
                 </S.ButaoVerPerfilsU>
@@ -174,7 +174,7 @@ export default function PesquisarProfissional() {
 
                 <S.ButaoVerPerfilsTres>
                     <button
-                        onClick={() => handleVerPerfilClick('/Perfilmarta')}
+                        onClick={() => handleVerPerfilClick('/perfil/profissional/Marta')}
                     >
                         Ver Perfil
                     </button>

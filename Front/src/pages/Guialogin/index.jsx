@@ -197,7 +197,7 @@ const Guia = () => {
                     src="/src/assets/Component 14.png"
                     alt="Criança comendo com a ajuda de uma pessoa adulta"
                 />
-                <S.formBTT action="/GuiaSeletividadeComoLida">
+                <S.formBTT action="/GuiaSCLUser">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardETM>
@@ -206,7 +206,7 @@ const Guia = () => {
                     src="/src/assets/Component 15.png"
                     alt="Mulher profissional de saúde com um tablet"
                 />
-                <S.formBTT action="/PesquisarProfissional">
+                <S.formBTT action="/pesquisar/perfil/profissional">
                     <S.CardButton onClick="submit">saiba mais!</S.CardButton>
                 </S.formBTT>
             </S.CardPP>
