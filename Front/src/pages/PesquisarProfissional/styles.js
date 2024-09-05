@@ -10,101 +10,100 @@ export const OndasEstilo = styled.div`
     z-index: -1;
 `;
 
-export const Cabercario = styled.div`
+export const Cabecalho = styled.div`
     display: flex;
     margin-top: 5rem;
     align-items: center;
     margin-left: 15rem;
-    gap: 2rem;
+    
 
     @media (max-width: 768px) {
+        margin-left: 2rem;
         flex-direction: column;
-        margin-left: 0rem;
-        align-items: flex-start;
+        gap: 1rem;
     }
 `;
-
 export const DivFiltro = styled.div`
-    display: flex;
-    flex-direction: column;
+    width: 10rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+        width: 15rem;
+        margin-bottom: 0;
+    }
 
     h1 {
-        margin-bottom: 1rem; 
         font-size: 1rem;
-        font-weight: 10rem;
-        text-align: left; 
-    }
-
-    input {
-        padding: 5px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 4rem;
-        width: 200px;
-    }
-
-    @media (max-width: 768px) {
-        input {
-            width: 100%;
-        }
+        margin-bottom: 1rem;
     }
 `;
+export const DivPesq = styled(DivFiltro)`
 
-export const DivPesq = styled(DivFiltro)``;
+`;
+export const FiltroContainer = styled.div`
+    position: relative;
 
-export const Butao = styled.div`
-    display: flex;
-    margin-top: 2rem;
+    input {
+        padding: 4px;
+        font-size: 1rem;
+        border-radius: 4rem;
+        width: 12rem;
+
+    @media (max-width: 768px) {
+        margin-top: 10%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 8%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    }
+
+    div {
+        display: flex;
+        color: black;
+        flex-direction: column;
+        margin-top: 0.3rem;
+        position: absolute;
+        width: 12rem;
+        z-index: 1;
+    }
+`;
+ //Butao de buscar 
+export const Botao = styled.div`
+    margin-top: 20px;
 
     button {
         width: 5rem;
         height: 2rem;
         align-items: center;
-        padding: 5px 10px;
+        padding: 2px 10px;
         border: unset;
         border-radius: 10px;
         color: #888888;
         z-index: 1;
         background: #ffffff;
-        position: relative; 
-        font-size: 12px;
-        -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        position: relative;
+        font-size: 1rem;
         box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
         transition: all 250ms;
         overflow: hidden;
-    }
 
-    button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background-color: #33b44d;
-        z-index: -1;
-        transition: all 250ms;
-    }
-
-    button:hover {
-        color: #e8e8e8;
-    }
-
-    button:hover::before {
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        justify-content: center;
-        button {
-            width: 100%;
+        &:hover {
+            background-color: #33B44D;
+            color: #ffffff;
         }
     }
 `;
+ // fim do botao
+
 
 export const ConteinerUm = styled.div`
     display: flex;
-    margin: 5rem;
+    margin: 8rem;
     align-items: center;
     height: 18rem;
     width: 50rem;

@@ -16,6 +16,9 @@ export default function useAuth() {
     const updateUser = async (id, data) => {
         return await api.patch(`/user/${id}`, data);
     };
+    const regist = async (data) => {
+        return await api.post('/regist', data);
+    };
 
     const authStatus = async () => {
         return await api.get('/auth-status'); // Verifica o status de autenticação

@@ -73,6 +73,12 @@ export default function Login() {
                                 Esqueceu a senha?
                             </a>
                         </S.LostPass>
+                        <S.Profissional>
+                            <Checkbox
+                                name="profissional"
+                                label="Login profissional"
+                            />
+                        </S.Profissional>
                         <S.Bat>
                             <Button
                                 styles={{

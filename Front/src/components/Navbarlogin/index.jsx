@@ -3,7 +3,7 @@ import * as S from './styles';
 import logonavbar from '../../assets/svg/logonavbar.svg';
 import puser from '../../assets/svg/puser.svg';
 
-export default function Navbar() {
+export default function Navbarlogin() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
