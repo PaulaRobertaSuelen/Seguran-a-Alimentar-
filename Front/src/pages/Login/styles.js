@@ -158,7 +158,7 @@ export const ContainerText = styled.div`
     }
 `;
 
-export const ContainerForm = styled.form`
+export const ContainerForm = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;

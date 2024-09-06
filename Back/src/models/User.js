@@ -41,6 +41,10 @@ const User = db.define('usuarios', {
         allowNull: false,
         unique: true,
     },
+    codigo_recuperacao: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
 }, {
     timestamps: false, // Adiciona os campos createdAt e updatedAt automaticamente
 });

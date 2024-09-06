@@ -18,6 +18,12 @@ app.listen(PORT, () => {
 });
 
 
+
+
+
+
+
+
 // //buscar usuário pelo email
 // app.get("/user/:email", async (req, res) => {
 //     const email = req.params.email;

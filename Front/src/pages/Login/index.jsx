@@ -44,15 +44,20 @@ export default function Login() {
         }
     };
 
-    const handlePesquisarEmail = async (event) => {
-        event.preventDefault();
-        const email = event.target.email.value;
-
+    const userByEmail = async () => {
         try {
-            const response = await userByEmail(email);
-            navigate(`/Redefinirsenha/${response.data.id}`);
+            await api
+                .post(`/redefinirsenha/${email}`
+                )
+                .then((response) => {
+                    console.log('funcionou');
+                    alert('funcionou');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         } catch (error) {
-            alert(error.response?.data?.error || 'Erro ao buscar usuário');
+            console.log(error);
         }
     };
 
@@ -122,7 +127,7 @@ export default function Login() {
                             cadastro.
                         </p>
                     </S.ContainerText>
-                    <S.ContainerForm onSubmit={handlePesquisarEmail}>
+                    <S.ContainerForm>
                         <TextInput
                             name="email"
                             label="Email"
@@ -130,9 +135,13 @@ export default function Login() {
                             styles={{
                                 width: '80%',
                             }}
+                            onChange={ (e) => setEmail(e.target.value) }
                         />
 
-                        <Button styles={{ width: '60%', padding: '10px' }}>
+                        <Button
+                            styles={{ width: '60%', padding: '10px' }}
+                            onClick={() => userByEmail()}
+                        >
                             Próximo
                         </Button>
                         <a onClick={() => setOpenEsqueciMinhaSenha(false)}>
