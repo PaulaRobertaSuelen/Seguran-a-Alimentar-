@@ -48,6 +48,10 @@ module.exports = class userController {
         }
     }
 
+    
+
+    // EM DESENVOLVIMENTO
+
     static async passwordReset(req, res) {           
         
             try {
@@ -65,9 +69,9 @@ module.exports = class userController {
                 user
             });
             } catch (error) {
-              console.error("Erro ao realizar registro:", error);
-              res.status(500).json({ error: "Erro interno do servidor" });
+            console.error("Erro ao realizar registro:", error);
+            res.status(500).json({ error: "Erro interno do servidor" });
             }
-          }
+        }
 
 }

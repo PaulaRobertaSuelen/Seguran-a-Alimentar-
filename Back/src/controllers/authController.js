@@ -34,70 +34,60 @@ module.exports = class authController {
         }
     }
 
-    static async redefinirSenha(request, response) {
+static async redefinirSenha(request, response) {
+    try {
+        const { email } = request.body;
+
+        const userExist = await User.findOne({
+            where: { email }
+        });
+
+        if (!userExist) {
+            return response.status(404).json({ message: 'Credencial inválida.' });
+        }
+
+        const randomCode = Math.floor(Math.random() * 100000) + 1;
+        userExist.codigo_recuperacao = randomCode;
+        await userExist.save();
+
+        return response.status(201).json({ message: 'Código enviado para o email!' });
+
+    } catch (error) {
+        console.log(error);
+        return response.status(500).json({ message: 'Erro de servidor', error });
+    }
+}
+
+// trocar senha (EM DESENVOLVIMENTO)
+
+    static async trocarSenha(request, response) {
         try {
-            const { email } = request.body
+            const { email, codigo_recuperacao, nova_senha } = request.body;
+        const userExist = await User.findOne({
+            where: { email }
+        });
 
-            const userExist = await User.findOne({
-                where: {email}
-            })
+        if (!userExist) {
+            return response.status(404).json({ message: 'Credencial inválida.' });
+        }
 
-            if (!userExist) {
-                return response.status(404).json({ message: 'Credencial inválida.' })
-            }
+        if (userExist.codigo_recuperacao === codigo_recuperacao){
 
-            const randomCode = Math.floor(Math.random() * 100000) + 1
-            userExist.codigo_recuperacao = randomCode
-            await userExist.save()
+            const salt = await bcrypt.genSalt(12);
+            const encryptPass = await bcrypt.hash(nova_senha, parseInt(salt));
+            await User.update(
+                {senha: encryptPass, codigo_recuperacao: null}, {where: { email }}
+            )
+            return response.status(200).json({ message: 'Senha redefinida com sucesso.' });
 
-            return response.status(201).json({ message: 'Código enviado para o email!' })
+        } else {
+            return response.status(404).json({ message: 'Código de verificação inválido.' });
+        }
 
         } catch (error) {
-            console.log(error)
-            return response.status(500).json({ message: 'erro de servidor', error})
+            console.log(error);
+        return response.status(500).json({ message: 'Erro de servidor', error });
         }
     }
 
-
-    // envio de código (teste)
-
-    // static async enviarCodigo(request, response) {
-    //     try {
-    //         const { email } = request.body
-
-    //         const emailExist = await User.findOne({
-    //             where: {email}
-    //         })
-
-    //         if (!emailExist) {
-    //             return response.status(404).json({ message: 'Usuário não encontrado.' })
-    //         }
-
-    //         const randomCode = Math.floor(Math.random() * 100000) + 1
-    //         userExist.codigo_recuperacao = randomCode
-    //         await userExist.save()
-
-    //         return response.status(201).json({ message: 'Código enviado para o email!' })
-
-    //     } catch (error) {
-    //         console.log(error)
-    //         return response.status(500).json({ message: 'erro de servidor', error})
-    //     }
-    // }
-
-    
 }
-
-// function generateRandomCode(length) {
-//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     let result = '';
-//     const charactersLength = characters.length;
-
-//     for (let i = 0; i < length; i++) {
-//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
-//     }
-
-//     return result;
-// }
-
-// console.log(generateRandomCode(8));

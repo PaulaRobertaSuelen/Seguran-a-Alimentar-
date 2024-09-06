@@ -37,6 +37,7 @@ export default function Login() {
                     navigate('/');
                 })
                 .catch((error) => {
+                    alert('Email ou senha incorreto.')
                     console.log(error);
                 });
         } catch (error) {
@@ -47,13 +48,18 @@ export default function Login() {
     const userByEmail = async () => {
         try {
             await api
-                .post(`/redefinirsenha/${email}`
-                )
+                .post('/redefinirsenha', { email }) // Enviando o email no corpo da requisição
                 .then((response) => {
                     console.log('funcionou');
-                    alert('funcionou');
+                    alert('Código enviado para o email');
+                    navigate('/redefinirsenha');
                 })
                 .catch((error) => {
+                    if (error.response && error.response.status === 404) {
+                        alert('Usuário não encontrado');
+                    } else {
+                        alert('Erro no servidor');
+                    }
                     console.log(error);
                 });
         } catch (error) {

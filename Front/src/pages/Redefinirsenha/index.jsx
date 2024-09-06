@@ -1,3 +1,9 @@
+
+// EM DESENVOLVIMENTO
+
+
+
+
 import React, { useState } from 'react';
 import { IoEyeSharp, IoEyeOffSharp, IoLockClosedSharp } from 'react-icons/io5';
 import Ondatwo from '../../assets/svg/ondaOne.svg';
@@ -46,23 +52,46 @@ function RedefinirSenha() {
         setPasswordMatch(inputValue === value);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if (passwordMatch && inputValue.length >= 8) {
-            const novaSenha = event.target.password.value;
-            // Lógica para redefinir a senha
-            updateUser(params.id, { senha: novaSenha })
-                .then((res) => {
-                    alert(res.data.message);
-                    navigate('/login');
+
+    //ANTIGO (NÃO FUNCIONA)
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     if (passwordMatch && inputValue.length >= 8) {
+    //         const novaSenha = event.target.password.value;
+    //         // Lógica para redefinir a senha
+    //         updateUser(params.id, { senha: novaSenha })
+    //             .then((res) => {
+    //                 alert(res.data.message);
+    //                 navigate('/login');
+    //             })
+    //             .catch((err) => {
+    //                 alert(err.response.data.error);
+    //             });
+    //     } else {
+    //         alert('Verifique se as senhas coincidem e se a senha é forte.');
+    //     }
+    // };
+
+    // NOVO (PRECISA DE UMA CORREÇÃO)
+
+    const trocaSenha = async (event) => {
+        try {
+            await api
+                .post('/atualizarsenha', {
+                    email,
                 })
-                .catch((err) => {
-                    alert(err.response.data.error);
+                .then((response) => {
+                    alert('Senha redefinida com sucesso.')
+                    navigate('/login')
+                })
+                .catch((error) => {
+                    console.log(error);
                 });
-        } else {
-            alert('Verifique se as senhas coincidem e se a senha é forte.');
+        } catch (error) {
+            console.log(error);
         }
     };
+    
 
     return (
         <S.Container>
@@ -75,7 +104,15 @@ function RedefinirSenha() {
                     <S.TitleContainer>
                         <S.Title>Redefinir sua senha</S.Title>
                     </S.TitleContainer>
-                    <S.InputContainer onSubmit={handleSubmit}>
+                    <S.InputContainer onSubmit={trocaSenha}>
+                    <TextInput
+                            name="codigo"
+                            label="Código de Recuperação"
+                            password
+                            value={inputValue}
+                            onChange={handlePasswordChange}
+                            placeholder="Código de Recuperação"
+                        />
                         <TextInput
                             name="password"
                             label="Nova Senha"
