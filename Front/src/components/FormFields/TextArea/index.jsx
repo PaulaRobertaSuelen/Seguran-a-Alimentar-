@@ -3,18 +3,21 @@ import * as S from './styles';
 import { IoMdEye, IoIosEyeOff } from 'react-icons/io';
 import { MdLock } from 'react-icons/md';
 
-function TextInput({
+function TextAreaInput({
     label,
     name,
     placeholder,
     styles,
     value,
+    defaultValue,
     onChange,
     onBlur,
     iconLeft,
     iconRight,
+    rows = 4,
     password = false,
     type = 'text',
+    disabled,
 }) {
     const [openEye, setOpenEye] = useState(true);
 
@@ -35,6 +38,9 @@ function TextInput({
                     onChange={onChange}
                     onBlur={onBlur}
                     value={value}
+                    rows={rows}
+                    disabled={disabled}
+                    defaultValue={defaultValue}
                 />
                 {password &&
                     (openEye ? (
@@ -48,4 +54,4 @@ function TextInput({
     );
 }
 
-export default TextInput;
+export default TextAreaInput;

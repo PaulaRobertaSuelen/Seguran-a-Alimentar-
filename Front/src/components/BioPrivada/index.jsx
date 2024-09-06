@@ -1,103 +1,110 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import { FaInstagram,FaWhatsapp, } from "react-icons/fa";
-import { CiEdit } from "react-icons/ci";
+import useProfile from '../../services/useProfile';
+import TextAreaInput from '../FormFields/TextArea';
+import Button from '../FormFields/Button';
+import { MdEdit } from 'react-icons/md';
 
-export default function BioPublica (
-    ){
+export default function BioPublica() {
+    const { createProfile, updateProfile, getProfile, getUserAuthenticated } =
+        useProfile();
 
-        // Sobre editável
-        const [isEditing, setIsEditing] = useState(false);
-        const [text, setText] = useState("Olá, sou Fernanda, nutricionista especializada em TEA. Minhas consultas nutricionais visam resolver problemas alimentares, melhorando hábitos e promovendo uma vida saudável. Utilizo abordagens personalizadas e integrativas, focadas no autoconhecimento e na autocompaixão. Cada consulta dura 50 minutos e é realizada em um ambiente confortável e sigiloso.");
+    const [dataUser, setDataUser] = useState();
+    const [dataProfile, setDataProfile] = useState();
+    const [edit, setEdit] = useState(false);
 
-        const handleEditClick = () => {
-            setIsEditing(true);
-        };
-        const handleConfirmClick = () => {
-            setIsEditing(false);
-        };
-        const handleChange = (e) => {
-            setText(e.target.value);
-        };
+    useEffect(() => {
+        getUserAuthenticated().then((response) => {
+            setDataUser(response.data);
+            getProfile(response.data.id).then((response) => {
+                setDataProfile(response.data);
+            });
+        });
+    }, []);
 
-
-        // Contato editável
-        const [isEditing2, setIsEditing2] = useState(false);
-        const [text2, setText2] = useState("Whatsapp: (00) 0 0000-0000; Instagram: @fernandanutrisilvatea");
-
-        const handleEditClick2 = () => {
-            setIsEditing2(true);
-        };
-        const handleConfirmClick2 = () => {
-            setIsEditing2(false);
-        };
-        const handleChange2 = (e) => {
-            setText2(e.target.value);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const data = {
+            userId: dataUser.id,
+            sobre: event.target.sobre.value,
+            contatos: event.target.contatos.value,
+            anexos: event.target.anexos.value,
         };
 
-
-
-        // Anexos editável
-        const [isEditing3, setIsEditing3] = useState(false);
-        const [text3, setText3] = useState("https://linktr.ee/fernandanutri");
-
-        const handleEditClick3 = () => {
-            setIsEditing3(true);
-        };
-        const handleConfirmClick3 = () => {
-            setIsEditing3(false);
-        };
-        const handleChange3 = (e) => {
-            setText3(e.target.value);
-        };
-
-
+        if (dataProfile) {
+            updateProfile(dataUser.id, data)
+                .then((response) => {
+                    alert('Perfil atualizado com sucesso!');
+                    setEdit(false);
+                })
+                .catch((error) => {
+                    alert(error.response.data.error);
+                });
+        } else {
+            createProfile(data)
+                .then(() => {
+                    alert('Perfil atualizado com sucesso!');
+                    setEdit(false);
+                })
+                .catch((error) => {
+                    alert(error.response.data.error);
+                });
+        }
+    };
 
     return (
         <S.Container>
-            
-            <S.EditarSobre>
-                <h1>Sobre:</h1>
-                <S.TextoEditavel>
-                    {isEditing ? (
-                    <S.TextArea value={text} onChange={handleChange} />
-                    ) : (
-                    <S.Paragraph>{text}</S.Paragraph>
-                    )}
-                    <S.Button editing={isEditing} onClick={isEditing ? handleConfirmClick : handleEditClick}>
-                        {isEditing ? 'Confirmar' : 'Editar'}
-                    </S.Button>
-                </S.TextoEditavel>
-            </S.EditarSobre>
-
-            <S.EditarContato>
-                <h1>Contatos:</h1>
-                <S.TextoEditavel>
-                    {isEditing2 ? (
-                    <S.TextArea value={text2} onChange={handleChange2} />
-                    ) : (
-                    <S.Paragraph>{text2}</S.Paragraph>
-                    )}
-                    <S.Button editing={isEditing2} onClick={isEditing2 ? handleConfirmClick2 : handleEditClick2}>
-                        {isEditing2 ? 'Confirmar' : 'Editar'}
-                    </S.Button>
-                </S.TextoEditavel>
-            </S.EditarContato>
-
-            <S.EditarAnexos>
-                <h1>Anexos:</h1>
-                <S.TextoEditavel>
-                    {isEditing3 ? (
-                    <S.TextArea value={text3} onChange={handleChange3} />
-                    ) : (
-                    <S.Paragraph>{text3}</S.Paragraph>
-                    )}
-                    <S.Button editing={isEditing3} onClick={isEditing3 ? handleConfirmClick3 : handleEditClick3}>
-                        {isEditing3 ? 'Confirmar' : 'Editar'}
-                    </S.Button>
-                </S.TextoEditavel>
-            </S.EditarAnexos>
-
+            <MdEdit
+                size={20}
+                onClick={() => setEdit(!edit)}
+                style={{
+                    cursor: 'pointer',
+                    position: 'absolute',
+                    right: '20px',
+                    top: '20px',
+                }}
+            />
+            <form onSubmit={handleSubmit}>
+                <TextAreaInput
+                    name="sobre"
+                    label="Sobre"
+                    disabled={!edit}
+                    defaultValue={dataProfile?.sobre ?? ''}
+                    styles={{ marginTop: '20px' }}
+                />
+                <TextAreaInput
+                    name="contatos"
+                    label="Contatos"
+                    disabled={!edit}
+                    defaultValue={dataProfile?.contatos ?? ''}
+                    styles={{ marginTop: '20px' }}
+                />
+                <TextAreaInput
+                    name="anexos"
+                    label="Anexos"
+                    disabled={!edit}
+                    defaultValue={dataProfile?.anexos ?? ''}
+                    styles={{ marginTop: '20px' }}
+                />
+                {edit && (
+                    <div
+                        style={{
+                            display: 'flex',
+                            gap: '10px',
+                            justifyContent: 'flex-end',
+                        }}
+                    >
+                        <Button
+                            onClick={() => setEdit(false)}
+                            type="button"
+                            styles={{ backgroundColor: 'red' }}
+                        >
+                            Cancelar
+                        </Button>
+                        <Button>Salvar</Button>
+                    </div>
+                )}
+            </form>
         </S.Container>
     );
-};
+}

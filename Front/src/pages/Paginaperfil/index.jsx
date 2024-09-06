@@ -3,14 +3,14 @@ import * as S from './styles';
 
 import Perfiluser from '../../components/Perfiluser';
 import HistoricoPesquisa from '../../components/Historicopesquisa';
-import Navbarlogin from '../../components/Navbarlogin';
+import Navbar from '../../components/Navbar';
 
 import Ondaleve from '../../assets/svg/ondaleve.svg';
 
 const Paginaperfil = () => {
     return (
         <>
-            <Navbarlogin />
+            <Navbar />
             <S.Container backgroundImage={Ondaleve}>
                 <S.Content>
                     <Perfiluser />

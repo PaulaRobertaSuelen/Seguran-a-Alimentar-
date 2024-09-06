@@ -7,11 +7,12 @@ export default function Button({
     disabled,
     onChange,
     styles,
+    type = 'submit',
     ...rest
 }) {
     return (
         <SButton
-            type="submit"
+            type={type}
             onClick={onClick}
             onChange={onChange}
             disabled={disabled}

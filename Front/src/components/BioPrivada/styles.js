@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-
 export const EditarSobre = styled.div`
-    h1{
+    h1 {
         font-size: 16px;
         font-weight: bold;
     }
@@ -10,7 +9,7 @@ export const EditarSobre = styled.div`
 `;
 
 export const EditarContato = styled.div`
-    h1{
+    h1 {
         font-size: 16px;
         font-weight: bold;
     }
@@ -18,7 +17,7 @@ export const EditarContato = styled.div`
 `;
 
 export const EditarAnexos = styled.div`
-    h1{
+    h1 {
         font-size: 16px;
         font-weight: bold;
     }
@@ -44,11 +43,11 @@ export const TextArea = styled.textarea`
     border: none;
     border-radius: 20px;
     resize: none;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
 
     &:focus {
-        border-color: #007BFF;
+        border-color: #007bff;
         outline: none;
     }
 `;
@@ -59,7 +58,7 @@ export const Button = styled.button`
     font-size: 10px;
     font-weight: bold;
     color: white;
-    background-color: ${props => props.editing ? '#33B44D' : '#101066'};
+    background-color: ${(props) => (props.editing ? '#33B44D' : '#101066')};
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -67,7 +66,7 @@ export const Button = styled.button`
     width: 60px;
 
     &:hover {
-        background-color: ${props => props.editing ? '#1C682C' : '#09093A'};
+        background-color: ${(props) => (props.editing ? '#1C682C' : '#09093A')};
     }
 
     &:focus {
@@ -76,6 +75,7 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
+    position: relative;
     background-color: white;
     margin-top: 50px;
     border-radius: 20px;
