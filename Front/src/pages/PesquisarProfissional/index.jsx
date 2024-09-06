@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/FooterUser/index';
+import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/index';
 import Fernanda from '../../assets/foto-perfil-fernanda-silva.png';
 import Marta from '../../assets/Marta.png';
@@ -12,16 +12,13 @@ export default function PesquisarProfissional() {
     const [mostrarFiltros, setMostrarFiltros] = useState(false);
     const [mostrarNomes, setMostrarNomes] = useState(false);
 
-    
-
     const handleEspecialidadeClick = (especialidade) => {
-        
-        setMostrarFiltros(false); 
+        setMostrarFiltros(false);
         console.log('Especialidade selecionada:', especialidade);
     };
 
     const handleNomeClick = (nome) => {
-        setMostrarNomes(false); 
+        setMostrarNomes(false);
         console.log('Nome selecionado:', nome);
     };
 
@@ -45,10 +42,31 @@ export default function PesquisarProfissional() {
                         />
                         {mostrarFiltros && (
                             <div>
-                                <button onClick={() => handleEspecialidadeClick('Nutricionista')}>Nutricionista</button>
-                                <button onClick={() => handleEspecialidadeClick('Fonoaudiólogo')}>Fonoaudiólogo</button>
-                                <button onClick={() => handleEspecialidadeClick('Psicólogo')}>Psicólogo</button>
-                                
+                                <button
+                                    onClick={() =>
+                                        handleEspecialidadeClick(
+                                            'Nutricionista'
+                                        )
+                                    }
+                                >
+                                    Nutricionista
+                                </button>
+                                <button
+                                    onClick={() =>
+                                        handleEspecialidadeClick(
+                                            'Fonoaudiólogo'
+                                        )
+                                    }
+                                >
+                                    Fonoaudiólogo
+                                </button>
+                                <button
+                                    onClick={() =>
+                                        handleEspecialidadeClick('Psicólogo')
+                                    }
+                                >
+                                    Psicólogo
+                                </button>
                             </div>
                         )}
                     </S.FiltroContainer>
@@ -91,8 +109,6 @@ export default function PesquisarProfissional() {
                         )}
                     </S.FiltroContainer>
                 </S.DivPesq>
-
-                
             </S.Cabecalho>
 
             <S.ConteinerUm>

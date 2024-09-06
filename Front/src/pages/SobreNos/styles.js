@@ -197,8 +197,8 @@ export const ContImagems = styled.div`
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     width: calc(80% - 1%);
-    gap: 48px;
-    margin-bottom: 160px;
+    gap: 80px;
+    margin-bottom: 140px;
 
     h1 {
         color: aliceblue;

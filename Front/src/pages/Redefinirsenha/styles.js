@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// Container principal
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -11,7 +10,6 @@ export const Container = styled.div`
     }
 `;
 
-// Seção lateral (AsideContainer) com fundo
 export const AsideContainer = styled.div`
     position: relative;
     display: flex;
@@ -29,11 +27,10 @@ export const AsideContainer = styled.div`
     }
 
     @media (max-width: 900px) {
-        display: none; /* Esconder a seção lateral em telas menores */
+        display: none;
     }
 `;
 
-// Seção principal (FormContainer) com conteúdo
 export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -47,7 +44,6 @@ export const FormContainer = styled.div`
     }
 `;
 
-// Container para o título e formulário
 export const Content = styled.div`
     margin-top: 40px;
 
@@ -56,7 +52,6 @@ export const Content = styled.div`
     }
 `;
 
-// Container para o título
 export const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -72,23 +67,21 @@ export const TitleContainer = styled.div`
 
     @media (max-width: 900px) {
         & h1 {
-            font-size: 32px; /* Ajustar tamanho do título */
+            font-size: 32px;
         }
     }
 `;
 
-// Título
 export const Title = styled.h1`
-    font-size: 2.3rem;
+    font-size: 36.8px;
     font-weight: 300;
     margin-bottom: 20px;
 
     @media (max-width: 900px) {
-        font-size: 1.8rem; /* Ajustar tamanho do título para mobile */
+        font-size: 28.8px;
     }
 `;
 
-// Contêiner para os campos de entrada
 export const InputContainer = styled.form`
     display: flex;
     flex-direction: column;
@@ -104,32 +97,29 @@ export const InputContainer = styled.form`
     }
 `;
 
-// Wrapper para o campo de entrada
 export const InputWrapper = styled.div`
     position: relative;
     width: 110%;
     margin-bottom: 30px;
 
     @media (max-width: 900px) {
-        width: 100%; /* Ajustar largura do campo de entrada */
+        width: 100%;
     }
 `;
 
-// Campo de entrada
 export const Input = styled.input`
     width: 110%;
     padding: 15px 40px 10px 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px;
 
     @media (max-width: 900px) {
-        width: 100%; /* Ajustar largura do campo de entrada */
-        padding: 10px 35px 10px 25px; /* Ajustar padding */
+        width: 100%;
+        padding: 10px 35px 10px 25px;
     }
 `;
 
-// Ícone de visibilidade da senha
 export const Icon = styled.div`
     position: absolute;
     left: 400px;
@@ -143,7 +133,7 @@ export const Icon = styled.div`
     }
 
     @media (max-width: 900px) {
-        left: 90%; /* Ajustar posição do ícone */
+        left: 90%;
     }
 `;
 
@@ -161,12 +151,8 @@ export const PasswordStrength = styled.p`
     text-align: left;
     width: 100%;
     color: ${({ theme }) =>
-        theme === 'error'
-            ? '#dc3545'
-            : theme === 'strong'
-              ? '#28a745'
-              : '#28a745'};
-    font-size: 0.8rem;
+        theme === 'error' ? '#000' : theme === 'strong' ? '#000' : '#000'};
+    font-size: 12.8px;
     margin-top: 5px;
     margin-bottom: 10px;
 `;
@@ -180,7 +166,7 @@ export const Button = styled.button`
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
 
     &:hover {
@@ -193,6 +179,6 @@ export const Button = styled.button`
     }
 
     @media (max-width: 900px) {
-        width: 80%; /* Aumentar largura do botão para mobile */
+        width: 80%;
     }
 `;
