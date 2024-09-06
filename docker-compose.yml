@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Serviço do MYSQL
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root 
+      MYSQL_DATABASE: bem_tea 
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password 
+    ports:
+      - "5000:5000"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-networks
+
+  backend:
+    build: 
+      context: ./back
+    ports:
+      - "3003:3003"
+    environment:
+      DB_HOST: db
+      BD_PORT: 5000
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: bem_tea
+    depends_on:
+      - db
+    networks:
+      - app-networks
+
+  frontend:
+    build:
+      context: ./front
+    ports:
+      - "3001:80" 
+    depends_on:
+      - backend
+    networks:
+      - app-networks
+
+volumes:
+  db_data:
+
+networks:
+  app-networks:
+          

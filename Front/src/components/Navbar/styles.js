@@ -36,13 +36,15 @@ export const LogoWrapper = styled.div`
 export const Opcoes = styled.div`
     display: flex;
     gap: 40px;
+    align-items: center;
 
     a {
         text-decoration: none;
         color: inherit;
-        /* padding: 10px 25px; */
+        padding: 10px ;
+        font-size: 15px;
         transition: background-color 0.3s ease;
-        border-radius: 10px;
+        border-radius: 20px;
 
         &:hover {
             background-color: #33b44d;

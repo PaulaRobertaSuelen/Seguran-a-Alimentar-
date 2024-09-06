@@ -2,7 +2,7 @@ import Navbar from '../../components/Navbar';
 import * as S from './styles';
 import Ondaleve from '../../assets/svg/ondaleve.svg';
 import Editprofmarta from '../../components/Editprofmarta';
-import Perfileditmarta from '../../components/Perfileditmarta';
+import Perfileditmarta from '../../components/PerfilEditMarta';
 
 export default function PerfilProfissional() {
     return (

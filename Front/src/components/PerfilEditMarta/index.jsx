@@ -3,7 +3,7 @@ import * as S from './styles';
 
 import Marta from '../../assets/Marta.png';
 
-import ContatoPopUp from '../../components/Contato/index';
+
 
 export default function Pefileditmarta() {
     const handleClick = () => {
