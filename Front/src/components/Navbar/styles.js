@@ -19,7 +19,7 @@ export const NavbarOpcoes = styled.div`
 export const LogoWrapper = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 260px;
+    margin-left: 230px;
 
     img {
         width: 180px; /* Tamanho padrão da logo */
@@ -35,7 +35,7 @@ export const LogoWrapper = styled.div`
 
 export const Opcoes = styled.div`
     display: flex;
-    gap: 30px;
+    gap: 40px;
 
     a {
         text-decoration: none;

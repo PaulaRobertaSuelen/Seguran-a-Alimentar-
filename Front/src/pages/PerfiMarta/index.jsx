@@ -1,17 +1,18 @@
-import Navbar from '../../components/Navbar';
+import NavbarLogin from '../../components/Navbarlogin/index';
 import * as S from './styles';
 import Ondaleve from '../../assets/svg/ondaleve.svg';
-import Perfiledit from '../../components/Perfiledit';
+import PerfilEditMarta from '../../components/PerfilEditMarta';
 import EditProf from '../../components/EditProf/index,';
+
 
 export default function PerfilProfissional() {
     return (
         <S.PageWrapper backgroundImage={Ondaleve}>
-            <Navbar />
+            <NavbarLogin />
             <S.Container>
-                <Perfiledit />
-                <EditProf />
-            </S.Container>
+                <PerfilEditMarta/>
+                <EditProf/>
+            </S.Container>  
         </S.PageWrapper>
     );
 }

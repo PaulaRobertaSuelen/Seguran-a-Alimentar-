@@ -1,4 +1,5 @@
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer/Footer';
 import * as S from './styles';
 
 export default function SobreNos() {
@@ -118,6 +119,7 @@ export default function SobreNos() {
                     </S.ContImagems>
                 </S.CaixaDois>
             </S.ContAzul>
+            <Footer />
         </>
     );
 }

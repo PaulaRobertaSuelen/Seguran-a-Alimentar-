@@ -1,4 +1,4 @@
-import Navbarpro from '../../components/NavbarPro/index';
+import Navbar from '../../components/Navbar';
 
 import * as S from './styles';
 
@@ -10,7 +10,7 @@ import BioPrivada from '../../components/BioPrivada/index';
 export default function PerfilPrivado() {
     return (
         <S.PageWrapper backgroundImage={Ondaleve}>
-            <Navbarpro />
+            <Navbar />
             <S.Container>
                 <ProfissionalPrivado />
                 <BioPrivada />

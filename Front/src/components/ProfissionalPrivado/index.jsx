@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import * as S from './styles';
 
-import FotoPorfissional from '../../assets/fotoProfissional.png';
+import { IoPersonCircleOutline } from 'react-icons/io5';
 
 import ContatoPopUp from '../Contato/index';
 import AssinaturaPopUp from '../Assinatura/index';
+import useProfile from '../../services/useProfile';
 
 export default function Perfiledit() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const { getUserAuthenticated } = useProfile();
+    const [dataUser, setDataUser] = useState();
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
@@ -17,21 +21,27 @@ export default function Perfiledit() {
     const openModal2 = () => setIsModalOpen2(true);
     const closeModal2 = () => setIsModalOpen2(false);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const logoutUser = () => {
-        localStorage.removeItem('token')
-        localStorage.removeItem('tipoUsuario')
-        navigate('/')
+        localStorage.removeItem('token');
+        localStorage.removeItem('tipoUsuario');
+        navigate('/');
     };
+
+    useEffect(() => {
+        getUserAuthenticated().then((response) => {
+            setDataUser(response.data);
+        });
+    }, []);
 
     return (
         <S.Container>
-            <S.Fotoprof src={FotoPorfissional} alt="Fotoprof" />
+            <IoPersonCircleOutline size={150} alt="Fotoprof" />
             <S.Info>
-                <S.Nome>Fernanda Santos</S.Nome>
-                <S.Especialidade>NUTRICIONISTA</S.Especialidade>
-                <S.CRN>CRN: 00/00000</S.CRN>
+                <S.Nome>{dataUser?.nome}</S.Nome>
+                <S.Especialidade>{dataUser?.especialidade}</S.Especialidade>
+                <S.CRN>CRN: {dataUser?.crn}</S.CRN>
             </S.Info>
             <S.Botoes>
                 <S.Assinatura onClick={openModal}>Assinatura</S.Assinatura>

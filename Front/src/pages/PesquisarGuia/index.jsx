@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
-import Footer from '../../components/FooterUser/index';
+import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/index';
 import Menino from '../../assets/criança.png';
 import Feliz from '../../assets/Feliz.png';
