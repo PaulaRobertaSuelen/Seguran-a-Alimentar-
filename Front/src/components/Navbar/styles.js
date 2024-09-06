@@ -40,7 +40,7 @@ export const Opcoes = styled.div`
     a {
         text-decoration: none;
         color: inherit;
-        padding: 10px 15px;
+        /* padding: 10px 25px; */
         transition: background-color 0.3s ease;
         border-radius: 10px;
 
