@@ -11,7 +11,6 @@ import PerfilPrivado from '../pages/PerfilPrivado/index';
 import PerfilProfissional from '../pages/Perfilprofissional/index';
 import Guia from '../pages/Guia/index';
 import Guialogin from '../pages/Guialogin';
-import PerfilHistorico from '../pages/PerfilHistorico/index';
 import Homelogin from '../pages/Homelogin/index';
 import LoginGuia from '../pages/LoginGuia/index';
 import SobreNos from '../pages/SobreNos/index';
@@ -29,6 +28,7 @@ import GuiaSCLUser from '../pages/GuiaSCLUser/index';
 import GuiaSCLPro from '../pages/GuiaSCLPro/index';
 import Pguialogin from '../pages/Pguialogin/index';
 import Paginaperfil from '../pages/Paginaperfil';
+import Pesquisar from '../pages/Pesquisar';
 
 export const router = createBrowserRouter([
     {
@@ -142,5 +142,9 @@ export const router = createBrowserRouter([
     {
         path: '/perfil/usuario',
         element: <Paginaperfil />,
+    },
+    {
+        path: '/Pesquisar',
+        element: <Pesquisar/>,
     },
 ]);
